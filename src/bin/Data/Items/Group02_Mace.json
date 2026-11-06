@@ -8,7 +8,8 @@
         "en": "Mace",
         "de": "Streitkolben",
         "es": "Maza",
-        "pt": "Maça"
+        "pt": "Maça",
+        "zh-CN": "石槌"
       },
       "width": 1,
       "height": 3,
@@ -37,7 +38,8 @@
         "en": "Morning Star",
         "de": "Morgenstern",
         "es": "Estrella del Alba",
-        "pt": "Estrela da manhã"
+        "pt": "Estrela da manhã",
+        "zh-CN": "流星槌"
       },
       "width": 1,
       "height": 3,
@@ -67,7 +69,8 @@
         "en": "Flail",
         "de": "Flegel",
         "es": "Mayal",
-        "pt": "Mangual"
+        "pt": "Mangual",
+        "zh-CN": "破坏之槌"
       },
       "width": 1,
       "height": 3,
@@ -97,7 +100,8 @@
         "en": "Great Hammer",
         "de": "Großartiger Hammer",
         "es": "Gran Martillo",
-        "pt": "Martelo grande"
+        "pt": "Martelo grande",
+        "zh-CN": "白金之槌"
       },
       "width": 2,
       "height": 3,
@@ -127,7 +131,8 @@
         "en": "Crystal Morning Star",
         "de": "Kristallmorgenstern",
         "es": "Estrella del Alba de Cristal",
-        "pt": "Estrela da manhã de cristal"
+        "pt": "Estrela da manhã de cristal",
+        "zh-CN": "水晶流星"
       },
       "width": 2,
       "height": 3,
@@ -159,7 +164,8 @@
         "en": "Crystal Sword",
         "de": "Kristallschwert",
         "es": "Espada de Cristal",
-        "pt": "Espada de cristal"
+        "pt": "Espada de cristal",
+        "zh-CN": "玄冰剑"
       },
       "width": 2,
       "height": 4,
@@ -191,7 +197,8 @@
         "en": "Chaos Dragon Axe",
         "de": "Chaos-Drachenaxt",
         "es": "Hacha Dragón del Caos",
-        "pt": "Machado do dragão do caos"
+        "pt": "Machado do dragão do caos",
+        "zh-CN": "玛雅龙斧"
       },
       "width": 2,
       "height": 4,
@@ -221,7 +228,8 @@
         "en": "Elemental Mace",
         "de": "Elementarstreitkolben",
         "es": "Maza Elemental",
-        "pt": "Maça elemental"
+        "pt": "Maça elemental",
+        "zh-CN": "精灵之槌"
       },
       "width": 1,
       "height": 3,
@@ -248,9 +256,12 @@
         "en": "Battle Scepter",
         "de": "Kampfzepter",
         "es": "Cetro de Batalla",
-        "pt": "Cetro de batalha"
+        "pt": "Cetro de batalha",
+        "zh-CN": "战斗权杖"
       },
-      "tags": ["sceptre"],
+      "tags": [
+        "sceptre"
+      ],
       "width": 1,
       "height": 3,
       "slot": "mainHand",
@@ -278,9 +289,12 @@
         "en": "Master Scepter",
         "de": "Meisterzepter",
         "es": "Cetro Maestro",
-        "pt": "Cetro do mestre"
+        "pt": "Cetro do mestre",
+        "zh-CN": "征服权杖"
       },
-      "tags": ["sceptre"],
+      "tags": [
+        "sceptre"
+      ],
       "width": 1,
       "height": 3,
       "slot": "mainHand",
@@ -308,9 +322,12 @@
         "en": "Great Scepter",
         "de": "Großartiges Zepter",
         "es": "Gran Cetro",
-        "pt": "Grande cetro"
+        "pt": "Grande cetro",
+        "zh-CN": "圣剑权杖"
       },
-      "tags": ["sceptre"],
+      "tags": [
+        "sceptre"
+      ],
       "width": 1,
       "height": 4,
       "slot": "mainHand",
@@ -338,9 +355,12 @@
         "en": "Lord Scepter",
         "de": "Lordzepter",
         "es": "Cetro del Señor",
-        "pt": "Cetro do Lorde"
+        "pt": "Cetro do Lorde",
+        "zh-CN": "王者权杖"
       },
-      "tags": ["sceptre"],
+      "tags": [
+        "sceptre"
+      ],
       "width": 1,
       "height": 4,
       "slot": "mainHand",
@@ -368,9 +388,12 @@
         "en": "Great Lord Scepter",
         "de": "Großartiges Lordzepter",
         "es": "Gran Cetro del Señor",
-        "pt": "Grande cetro do Lorde"
+        "pt": "Grande cetro do Lorde",
+        "zh-CN": "至尊权杖"
       },
-      "tags": ["sceptre"],
+      "tags": [
+        "sceptre"
+      ],
       "width": 1,
       "height": 4,
       "slot": "mainHand",
@@ -398,16 +421,24 @@
         "en": "Divine Scepter of Archangel",
         "de": "Göttliches Zepter des Erzengels",
         "es": "Cetro Divino de Arcángel",
-        "pt": "Cetro divino do arcanjo"
+        "pt": "Cetro divino do arcanjo",
+        "zh-CN": "大天使权杖"
       },
-      "tags": ["divineArchangelWeapon", "sceptre", "valuable"],
+      "tags": [
+        "divineArchangelWeapon",
+        "sceptre",
+        "valuable"
+      ],
       "nameLines": [
         {
           "text": {
             "en": "{name}"
           },
           "color": "purple",
-          "levels": [0, 0]
+          "levels": [
+            0,
+            0
+          ]
         },
         {
           "text": {
@@ -443,9 +474,12 @@
         "en": "Soleil Sceptor",
         "de": "Sonnenzepter",
         "es": "Cetro Soleil",
-        "pt": "Cetro Soleil"
+        "pt": "Cetro Soleil",
+        "zh-CN": "太阳权杖"
       },
-      "tags": ["sceptre"],
+      "tags": [
+        "sceptre"
+      ],
       "width": 1,
       "height": 4,
       "slot": "mainHand",
@@ -474,9 +508,12 @@
         "en": "Shining Scepter",
         "de": "Strahlendes Zepter",
         "es": "Cetro Brillante",
-        "pt": "Cetro brilhante"
+        "pt": "Cetro brilhante",
+        "zh-CN": "弹奏权杖"
       },
-      "tags": ["sceptre"],
+      "tags": [
+        "sceptre"
+      ],
       "width": 1,
       "height": 4,
       "slot": "mainHand",
@@ -503,7 +540,8 @@
         "en": "Frost Mace",
         "de": "Froststreitkolben",
         "es": "Mazo Congelado",
-        "pt": "Maça de gelo"
+        "pt": "Maça de gelo",
+        "zh-CN": "巨毒之刺"
       },
       "width": 1,
       "height": 3,
@@ -531,9 +569,12 @@
         "en": "Absolute Scepter",
         "de": "Absolutes Zepter",
         "es": "Cetro Absoluto",
-        "pt": "Cetro absoluto"
+        "pt": "Cetro absoluto",
+        "zh-CN": "独裁权杖"
       },
-      "tags": ["sceptre"],
+      "tags": [
+        "sceptre"
+      ],
       "width": 1,
       "height": 4,
       "slot": "mainHand",
@@ -561,9 +602,12 @@
         "en": "Striker Scepter",
         "de": "Stürmerzepter",
         "es": "Cero Ariete",
-        "pt": "Cetro golpeador"
+        "pt": "Cetro golpeador",
+        "zh-CN": "前锋权杖"
       },
-      "tags": ["sceptre"],
+      "tags": [
+        "sceptre"
+      ],
       "width": 1,
       "height": 4,
       "slot": "mainHand",

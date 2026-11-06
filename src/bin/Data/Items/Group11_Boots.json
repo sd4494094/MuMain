@@ -8,7 +8,8 @@
         "en": "Bronze Boots",
         "de": "Bronzestiefel",
         "es": "Botas de Bronce",
-        "pt": "Botas de bronze"
+        "pt": "Botas de bronze",
+        "zh-CN": "青铜靴"
       },
       "width": 2,
       "height": 2,
@@ -35,7 +36,8 @@
         "en": "Dragon Boots",
         "de": "Drachenstiefel",
         "es": "Botas Dragón",
-        "pt": "Botas do dragão"
+        "pt": "Botas do dragão",
+        "zh-CN": "龙王之靴"
       },
       "width": 2,
       "height": 2,
@@ -61,7 +63,8 @@
         "en": "Pad Boots",
         "de": "Polsterstiefel",
         "es": "Botas Rellenas",
-        "pt": "Botas acolchoadas"
+        "pt": "Botas acolchoadas",
+        "zh-CN": "革靴"
       },
       "width": 2,
       "height": 2,
@@ -86,7 +89,8 @@
         "en": "Legendary Boots",
         "de": "Legendäre Stiefel",
         "es": "Botas Legendarias",
-        "pt": "Botas lendárias"
+        "pt": "Botas lendárias",
+        "zh-CN": "传说之靴"
       },
       "width": 2,
       "height": 2,
@@ -110,7 +114,8 @@
         "en": "Bone Boots",
         "de": "Knochenstiefel",
         "es": "Botas de Hueso",
-        "pt": "Botas de osso"
+        "pt": "Botas de osso",
+        "zh-CN": "骷髅靴"
       },
       "width": 2,
       "height": 2,
@@ -135,7 +140,8 @@
         "en": "Leather Boots",
         "de": "Lederstiefel",
         "es": "Botas de Cuero",
-        "pt": "Botas de couro"
+        "pt": "Botas de couro",
+        "zh-CN": "皮靴"
       },
       "width": 2,
       "height": 2,
@@ -162,7 +168,8 @@
         "en": "Scale Boots",
         "de": "Schuppenstiefel",
         "es": "Botas de Escamas",
-        "pt": "Botas de escamas"
+        "pt": "Botas de escamas",
+        "zh-CN": "翡翠靴"
       },
       "width": 2,
       "height": 2,
@@ -189,7 +196,8 @@
         "en": "Sphinx Boots",
         "de": "Sphinxstiefel",
         "es": "Botas Esfinge",
-        "pt": "Botas da esfinge"
+        "pt": "Botas da esfinge",
+        "zh-CN": "魔王靴"
       },
       "width": 2,
       "height": 2,
@@ -214,7 +222,8 @@
         "en": "Brass Boots",
         "de": "Messingstiefel",
         "es": "Botas de Metal",
-        "pt": "Botas de latão"
+        "pt": "Botas de latão",
+        "zh-CN": "黄金靴"
       },
       "width": 2,
       "height": 2,
@@ -241,7 +250,8 @@
         "en": "Plate Boots",
         "de": "Plattenstiefel",
         "es": "Botas de Plata",
-        "pt": "Botas de placa"
+        "pt": "Botas de placa",
+        "zh-CN": "白金靴"
       },
       "width": 2,
       "height": 2,
@@ -267,7 +277,8 @@
         "en": "Vine Boots",
         "de": "Rankenstiefel",
         "es": "Botas Vid",
-        "pt": "Botas da vinha"
+        "pt": "Botas da vinha",
+        "zh-CN": "藤靴"
       },
       "width": 2,
       "height": 2,
@@ -291,7 +302,8 @@
         "en": "Silk Boots",
         "de": "Seidenstiefel",
         "es": "Botas de Seda",
-        "pt": "Botas de seda"
+        "pt": "Botas de seda",
+        "zh-CN": "天蚕之靴"
       },
       "width": 2,
       "height": 2,
@@ -315,7 +327,8 @@
         "en": "Wind Boots",
         "de": "Windstiefel",
         "es": "Botas Viento",
-        "pt": "Botas do vento"
+        "pt": "Botas do vento",
+        "zh-CN": "风之靴"
       },
       "width": 2,
       "height": 2,
@@ -339,7 +352,8 @@
         "en": "Spirit Boots",
         "de": "Geisterstiefel",
         "es": "Botas Espíritu",
-        "pt": "Botas do espírito"
+        "pt": "Botas do espírito",
+        "zh-CN": "精灵之靴"
       },
       "width": 2,
       "height": 2,
@@ -363,7 +377,8 @@
         "en": "Guardian Boots",
         "de": "Wächterstiefel",
         "es": "Botas Guardián",
-        "pt": "Botas do guardião"
+        "pt": "Botas do guardião",
+        "zh-CN": "女神之靴"
       },
       "width": 2,
       "height": 2,
@@ -387,7 +402,8 @@
         "en": "Storm Crow Boots",
         "de": "Sturmkrähenstiefel",
         "es": "Botas Cuervo de Tormenta",
-        "pt": "Botas do corvo da tempestade"
+        "pt": "Botas do corvo da tempestade",
+        "zh-CN": "亚特兰蒂斯之靴"
       },
       "width": 2,
       "height": 2,
@@ -412,7 +428,8 @@
         "en": "Black Dragon Boots",
         "de": "Schwarzdrachenstiefel",
         "es": "Botas Dragón Negro",
-        "pt": "Botas do dragão negro"
+        "pt": "Botas do dragão negro",
+        "zh-CN": "黑龙王之靴"
       },
       "width": 2,
       "height": 2,
@@ -437,7 +454,8 @@
         "en": "Dark Phoenix Boots",
         "de": "Dunkelphönixstiefel",
         "es": "Botas Fénix Oscuro",
-        "pt": "Botas da fênix negra"
+        "pt": "Botas da fênix negra",
+        "zh-CN": "黑凤凰之靴"
       },
       "width": 2,
       "height": 2,
@@ -462,7 +480,8 @@
         "en": "Grand Soul Boots",
         "de": "Großseelenstiefel",
         "es": "Botas Gran Alma",
-        "pt": "Botas da grande alma"
+        "pt": "Botas da grande alma",
+        "zh-CN": "火麒麟靴"
       },
       "width": 2,
       "height": 2,
@@ -486,7 +505,8 @@
         "en": "Divine Boots",
         "de": "Göttliche Stiefel",
         "es": "Botas Divinas",
-        "pt": "Botas divinas"
+        "pt": "Botas divinas",
+        "zh-CN": "圣灵之靴"
       },
       "width": 2,
       "height": 2,
@@ -510,7 +530,8 @@
         "en": "Thunder Hawk Boots",
         "de": "Donnerfalkenstiefel",
         "es": "Botas Halcón de Trueno",
-        "pt": "Botas de Thunder Hawk"
+        "pt": "Botas de Thunder Hawk",
+        "zh-CN": "奔雷之靴"
       },
       "width": 2,
       "height": 2,
@@ -535,7 +556,8 @@
         "en": "Great Dragon Boots",
         "de": "Großartige Drachenstiefel",
         "es": "Botas Gran Dragón",
-        "pt": "Botas do grande dragão"
+        "pt": "Botas do grande dragão",
+        "zh-CN": "龙炎之靴"
       },
       "width": 2,
       "height": 2,
@@ -559,7 +581,8 @@
         "en": "Dark Soul Boots",
         "de": "Dunkelseelenstiefel",
         "es": "Botas Alma Oscura",
-        "pt": "Botas da alma negra"
+        "pt": "Botas da alma negra",
+        "zh-CN": "黑炎之靴"
       },
       "width": 2,
       "height": 2,
@@ -583,7 +606,8 @@
         "en": "Hurricane Boots",
         "de": "Orkanstiefel",
         "es": "Botas Huracán",
-        "pt": "Botas do furacão"
+        "pt": "Botas do furacão",
+        "zh-CN": "魔神之靴"
       },
       "width": 2,
       "height": 2,
@@ -607,7 +631,8 @@
         "en": "Red Spirit Boots",
         "de": "Rotgeisterstiefel",
         "es": "Botas Espíritu Rojo",
-        "pt": "Botas do espírito vermelho"
+        "pt": "Botas do espírito vermelho",
+        "zh-CN": "红羽之靴"
       },
       "width": 2,
       "height": 2,
@@ -631,7 +656,8 @@
         "en": "Light Plate Boots",
         "de": "Leichtplattenstiefel",
         "es": "Botas Plata de Luz",
-        "pt": "Botas de placa leve"
+        "pt": "Botas de placa leve",
+        "zh-CN": "圣元之靴"
       },
       "width": 2,
       "height": 2,
@@ -655,7 +681,8 @@
         "en": "Adamantine Boots",
         "de": "Adamantstiefel",
         "es": "Botas Adamantinas",
-        "pt": "Botas de adamantina"
+        "pt": "Botas de adamantina",
+        "zh-CN": "圣魂之靴"
       },
       "width": 2,
       "height": 2,
@@ -679,7 +706,8 @@
         "en": "Dark Steel Boots",
         "de": "Dunkelstahlstiefel",
         "es": "Botas Acero Oscuro",
-        "pt": "Botas de aço negro"
+        "pt": "Botas de aço negro",
+        "zh-CN": "神圣之靴"
       },
       "width": 2,
       "height": 2,
@@ -703,7 +731,8 @@
         "en": "Dark Master Boots",
         "de": "Dunkelmeisterstiefel",
         "es": "Botas Amo Oscuro",
-        "pt": "Botas do Mestre negro"
+        "pt": "Botas do Mestre negro",
+        "zh-CN": "至尊之靴"
       },
       "width": 2,
       "height": 2,
@@ -727,7 +756,8 @@
         "en": "Dragon Knight Boots",
         "de": "Drachenritterstiefel",
         "es": "Botas Caballero Dragón",
-        "pt": "Botas do cavaleiro dragão"
+        "pt": "Botas do cavaleiro dragão",
+        "zh-CN": "暗黑斗神之靴"
       },
       "width": 2,
       "height": 2,
@@ -752,7 +782,8 @@
         "en": "Venom Mist Boots",
         "de": "Giftnebelstiefel",
         "es": "Botas Bruma de Veneno",
-        "pt": "Botas da névoa de veneno"
+        "pt": "Botas da névoa de veneno",
+        "zh-CN": "法魂玄灵之靴"
       },
       "width": 2,
       "height": 2,
@@ -777,7 +808,8 @@
         "en": "Sylphid Ray Boots",
         "de": "Sylphenstrahlstiefel",
         "es": "Botas Rayo de Sílfide",
-        "pt": "Botas do raio silfídico"
+        "pt": "Botas do raio silfídico",
+        "zh-CN": "紫灵之靴"
       },
       "width": 2,
       "height": 2,
@@ -802,7 +834,8 @@
         "en": "Volcano Boots",
         "de": "Vulkanstiefel",
         "es": "Botas Volcán",
-        "pt": "Botas do vulcão"
+        "pt": "Botas do vulcão",
+        "zh-CN": "天魔斗神之靴"
       },
       "width": 2,
       "height": 2,
@@ -827,7 +860,8 @@
         "en": "Sunlight Boots",
         "de": "Sonnenlichtstiefel",
         "es": "Botas Luz Solar",
-        "pt": "Botas da luz do sol"
+        "pt": "Botas da luz do sol",
+        "zh-CN": "宙斯之靴"
       },
       "width": 2,
       "height": 2,
@@ -852,7 +886,8 @@
         "en": "Ashcrow Boots",
         "de": "Aschkrähenstiefel",
         "es": "Botas Cuervo Ceniza",
-        "pt": "Botas de Ashcrow"
+        "pt": "Botas de Ashcrow",
+        "zh-CN": "暴风之靴"
       },
       "width": 2,
       "height": 2,
@@ -875,7 +910,8 @@
         "en": "Eclipse Boots",
         "de": "Finsternisstiefel",
         "es": "Botas Eclipse",
-        "pt": "Botas do eclipse"
+        "pt": "Botas do eclipse",
+        "zh-CN": "幻月之靴"
       },
       "width": 2,
       "height": 2,
@@ -898,7 +934,8 @@
         "en": "Iris Boots",
         "de": "Iris-Stiefel",
         "es": "Botas Iris",
-        "pt": "Botas de Iris"
+        "pt": "Botas de Iris",
+        "zh-CN": "碧影之靴"
       },
       "width": 2,
       "height": 2,
@@ -921,7 +958,8 @@
         "en": "Valiant Boots",
         "de": "Kühne Stiefel",
         "es": "Botas Valientes",
-        "pt": "Botas do valor"
+        "pt": "Botas do valor",
+        "zh-CN": "烈火之靴"
       },
       "width": 2,
       "height": 2,
@@ -944,7 +982,8 @@
         "en": "Glorious Boots",
         "de": "Glorreiche Stiefel",
         "es": "Botas Gloriosas",
-        "pt": "Botas gloriosas"
+        "pt": "Botas gloriosas",
+        "zh-CN": "圣光之靴"
       },
       "width": 2,
       "height": 2,
@@ -967,7 +1006,8 @@
         "en": "Violent Wind Boots",
         "de": "Sturmwindstiefel",
         "es": "Botas Viento Violento",
-        "pt": "Botas do vento violento"
+        "pt": "Botas do vento violento",
+        "zh-CN": "飓风之靴"
       },
       "width": 2,
       "height": 2,
@@ -990,7 +1030,8 @@
         "en": "Red Wing Boots",
         "de": "Rotschwingenstiefel",
         "es": "Botas Ala Roja",
-        "pt": "Botas da asa vermelha"
+        "pt": "Botas da asa vermelha",
+        "zh-CN": "红翼之靴"
       },
       "width": 2,
       "height": 2,
@@ -1014,7 +1055,8 @@
         "en": "Ancient Boots",
         "de": "Uralte Stiefel",
         "es": "Botas Antiguas",
-        "pt": "Botas antigas"
+        "pt": "Botas antigas",
+        "zh-CN": "远古之靴"
       },
       "width": 2,
       "height": 2,
@@ -1038,7 +1080,8 @@
         "en": "Demonic Boots",
         "de": "Dämonische Stiefel",
         "es": "Botas Demoníacas",
-        "pt": "Botas demoníacas"
+        "pt": "Botas demoníacas",
+        "zh-CN": "恶魔靴子"
       },
       "width": 2,
       "height": 2,
@@ -1061,7 +1104,8 @@
         "en": "Storm Blitz Boots",
         "de": "Sturmblitzstiefel",
         "es": "Botas Ráfaga Tormentosa",
-        "pt": "Botas Relâmpago de Tempest."
+        "pt": "Botas Relâmpago de Tempest.",
+        "zh-CN": "风暴闪电战靴"
       },
       "width": 2,
       "height": 2,
@@ -1086,7 +1130,8 @@
         "en": "Eternal Wing Boots",
         "de": "Ewigschwingenstiefel",
         "es": "Botas Ala Eterna",
-        "pt": "Botas da asa eterna"
+        "pt": "Botas da asa eterna",
+        "zh-CN": "永恒之翼靴子"
       },
       "width": 2,
       "height": 2,
@@ -1111,7 +1156,8 @@
         "en": "Titan Boots",
         "de": "Titanenstiefel",
         "es": "Botas Titán",
-        "pt": "Botas do titã"
+        "pt": "Botas do titã",
+        "zh-CN": "泰坦之靴"
       },
       "width": 2,
       "height": 2,
@@ -1135,7 +1181,8 @@
         "en": "Brave Boots",
         "de": "Tapfere Stiefel",
         "es": "Botas Valerosas",
-        "pt": "Botas da coragem"
+        "pt": "Botas da coragem",
+        "zh-CN": "勇气之靴"
       },
       "width": 2,
       "height": 2,
@@ -1159,7 +1206,8 @@
         "en": "Phantom Boots",
         "de": "Phantom-Stiefel",
         "es": "Botas Fantasma",
-        "pt": "Botas do fantasma"
+        "pt": "Botas do fantasma",
+        "zh-CN": "破灭之靴"
       },
       "width": 2,
       "height": 2,
@@ -1183,7 +1231,8 @@
         "en": "Destroy Boots",
         "de": "Zerstörerstiefel",
         "es": "Botas Destructoras",
-        "pt": "Botas da destruição"
+        "pt": "Botas da destruição",
+        "zh-CN": "摧毁靴子"
       },
       "width": 2,
       "height": 2,
@@ -1208,7 +1257,8 @@
         "en": "Seraphim Boots",
         "de": "Seraphim-Stiefel",
         "es": "Botas Serafín",
-        "pt": "Botas do serafim"
+        "pt": "Botas do serafim",
+        "zh-CN": "恐惧之靴"
       },
       "width": 2,
       "height": 2,
@@ -1232,7 +1282,8 @@
         "en": "Faith Boots",
         "de": "Glaubensstiefel",
         "es": "Botas de Fe",
-        "pt": "Botas da fé"
+        "pt": "Botas da fé",
+        "zh-CN": "信仰之靴"
       },
       "width": 2,
       "height": 2,
@@ -1257,7 +1308,8 @@
         "en": "Royal Boots",
         "de": "Königliche Stiefel",
         "es": "Botas Reales",
-        "pt": "Botas reais"
+        "pt": "Botas reais",
+        "zh-CN": "皇家靴子"
       },
       "width": 2,
       "height": 2,
@@ -1281,7 +1333,8 @@
         "en": "Hades Boots",
         "de": "Hades-Stiefel",
         "es": "Botas Hades",
-        "pt": "Botas de Hades"
+        "pt": "Botas de Hades",
+        "zh-CN": "冥王之靴"
       },
       "width": 2,
       "height": 2,
@@ -1309,7 +1362,8 @@
         "en": "Sacred Fire Boots",
         "de": "Heiligfeuerstiefel",
         "es": "Botas de Fuego Sagrado",
-        "pt": "Botas de Fogo Sagrado"
+        "pt": "Botas de Fogo Sagrado",
+        "zh-CN": "神圣火靴"
       },
       "width": 2,
       "height": 2,
@@ -1333,7 +1387,8 @@
         "en": "Storm Jahad Boots",
         "de": "Sturm-Jahad-Stiefel",
         "es": "Botas de Tormenta Zahard",
-        "pt": "Botas de Tempestade Zahard"
+        "pt": "Botas de Tempestade Zahard",
+        "zh-CN": "暴风扎哈德之靴"
       },
       "width": 2,
       "height": 2,
@@ -1356,7 +1411,8 @@
         "en": "Piercing Groove Boots",
         "de": "Durchbohrerstiefel",
         "es": "Botas de Tallo Perforador",
-        "pt": "Botas de Entalhe Perfurante"
+        "pt": "Botas de Entalhe Perfurante",
+        "zh-CN": "穿孔靴子"
       },
       "width": 2,
       "height": 2,
@@ -1379,9 +1435,12 @@
         "en": "Scale Boots",
         "de": "Schuppenstiefel",
         "es": "Botas de Escamas",
-        "pt": "Botas de escamas"
+        "pt": "Botas de escamas",
+        "zh-CN": "翡翠靴"
       },
-      "tags": ["luckyItem"],
+      "tags": [
+        "luckyItem"
+      ],
       "width": 2,
       "height": 2,
       "slot": "boots",
@@ -1413,9 +1472,12 @@
         "en": "Silk Boots",
         "de": "Seidenstiefel",
         "es": "Botas de Seda",
-        "pt": "Botas de seda"
+        "pt": "Botas de seda",
+        "zh-CN": "天蚕之靴"
       },
-      "tags": ["luckyItem"],
+      "tags": [
+        "luckyItem"
+      ],
       "width": 2,
       "height": 2,
       "slot": "boots",
@@ -1443,9 +1505,12 @@
         "en": "Sphinx Boots",
         "de": "Sphinxstiefel",
         "es": "Botas Esfinge",
-        "pt": "Botas de Esfinge"
+        "pt": "Botas de Esfinge",
+        "zh-CN": "魔王靴"
       },
-      "tags": ["luckyItem"],
+      "tags": [
+        "luckyItem"
+      ],
       "width": 2,
       "height": 2,
       "slot": "boots",
@@ -1475,9 +1540,12 @@
         "en": "Violent Wind Boots",
         "de": "Sturmwindstiefel",
         "es": "Botas Viento Violento",
-        "pt": "Botas do vento violento"
+        "pt": "Botas do vento violento",
+        "zh-CN": "飓风之靴"
       },
-      "tags": ["luckyItem"],
+      "tags": [
+        "luckyItem"
+      ],
       "width": 2,
       "height": 2,
       "slot": "boots",
@@ -1505,9 +1573,12 @@
         "en": "Adamantine Boots",
         "de": "Adamantstiefel",
         "es": "Botas Adamantinas",
-        "pt": "Botas de adamantina"
+        "pt": "Botas de adamantina",
+        "zh-CN": "圣魂之靴"
       },
-      "tags": ["luckyItem"],
+      "tags": [
+        "luckyItem"
+      ],
       "width": 2,
       "height": 2,
       "slot": "boots",
@@ -1535,9 +1606,12 @@
         "en": "Dragon Boots",
         "de": "Drachenstiefel",
         "es": "Botas Dragón",
-        "pt": "Botas de Dragão"
+        "pt": "Botas de Dragão",
+        "zh-CN": "龙王之靴"
       },
-      "tags": ["luckyItem"],
+      "tags": [
+        "luckyItem"
+      ],
       "width": 2,
       "height": 2,
       "slot": "boots",
@@ -1567,9 +1641,12 @@
         "en": "Guardian Boots",
         "de": "Wächterstiefel",
         "es": "Botas Guardián",
-        "pt": "Botas de Guardião"
+        "pt": "Botas de Guardião",
+        "zh-CN": "女神之靴"
       },
-      "tags": ["luckyItem"],
+      "tags": [
+        "luckyItem"
+      ],
       "width": 2,
       "height": 2,
       "slot": "boots",
@@ -1597,9 +1674,12 @@
         "en": "Legendary Boots",
         "de": "Legendäre Stiefel",
         "es": "Botas Legendarias",
-        "pt": "Botas Lendárias"
+        "pt": "Botas Lendárias",
+        "zh-CN": "传说之靴"
       },
-      "tags": ["luckyItem"],
+      "tags": [
+        "luckyItem"
+      ],
       "width": 2,
       "height": 2,
       "slot": "boots",
@@ -1628,9 +1708,12 @@
         "en": "Red Wing Boots",
         "de": "Rotschwingenstiefel",
         "es": "Botas Ala Roja",
-        "pt": "Botas da asa vermelha"
+        "pt": "Botas da asa vermelha",
+        "zh-CN": "红翼之靴"
       },
-      "tags": ["luckyItem"],
+      "tags": [
+        "luckyItem"
+      ],
       "width": 2,
       "height": 2,
       "slot": "boots",
@@ -1658,9 +1741,12 @@
         "en": "Atlans Boots",
         "de": "Atlans-Stiefel",
         "es": "Botas Cuervo de Tormenta",
-        "pt": "Botas do corvo da tempestade"
+        "pt": "Botas do corvo da tempestade",
+        "zh-CN": "亚特兰蒂斯之靴"
       },
-      "tags": ["luckyItem"],
+      "tags": [
+        "luckyItem"
+      ],
       "width": 2,
       "height": 2,
       "slot": "boots",
@@ -1689,9 +1775,12 @@
         "en": "Storm Jahad Boots",
         "de": "Sturm-Jahad-Stiefel",
         "es": "Botas de Tormenta Zahard",
-        "pt": "Botas de Tempestade Zahard"
+        "pt": "Botas de Tempestade Zahard",
+        "zh-CN": "暴风扎哈德之靴"
       },
-      "tags": ["luckyItem"],
+      "tags": [
+        "luckyItem"
+      ],
       "width": 2,
       "height": 2,
       "slot": "boots",
@@ -1719,7 +1808,8 @@
         "en": "Phoenix Soul Boots",
         "de": "Phönixseelenstiefel",
         "es": "Botas de Alma de Fénix",
-        "pt": "Botas de Alma de Fênix"
+        "pt": "Botas de Alma de Fênix",
+        "zh-CN": "凤魂之靴"
       },
       "width": 2,
       "height": 2,

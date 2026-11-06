@@ -8,13 +8,18 @@
         "en": "Apple",
         "de": "Apfel",
         "es": "Manzana",
-        "pt": "Maçã"
+        "pt": "Maçã",
+        "zh-CN": "苹果"
       },
-      "tags": ["healingPotion"],
+      "tags": [
+        "healingPotion"
+      ],
       "description": [
         {
           "text": "@numberOfItems",
-          "when": ["durability"]
+          "when": [
+            "durability"
+          ]
         }
       ],
       "width": 1,
@@ -30,13 +35,18 @@
         "en": "Small Healing Potion",
         "de": "Kleiner Heiltrank",
         "es": "Pócima de Curación Pequeña",
-        "pt": "Pequena poção de cura"
+        "pt": "Pequena poção de cura",
+        "zh-CN": "小瓶治疗药水"
       },
-      "tags": ["healingPotion"],
+      "tags": [
+        "healingPotion"
+      ],
       "description": [
         {
           "text": "@numberOfItems",
-          "when": ["durability"]
+          "when": [
+            "durability"
+          ]
         }
       ],
       "width": 1,
@@ -52,13 +62,18 @@
         "en": "Healing Potion",
         "de": "Heiltrank",
         "es": "Pócima de Curación",
-        "pt": "Poção de cura"
+        "pt": "Poção de cura",
+        "zh-CN": "治疗药水"
       },
-      "tags": ["healingPotion"],
+      "tags": [
+        "healingPotion"
+      ],
       "description": [
         {
           "text": "@numberOfItems",
-          "when": ["durability"]
+          "when": [
+            "durability"
+          ]
         }
       ],
       "width": 1,
@@ -74,13 +89,18 @@
         "en": "Large Healing Potion",
         "de": "Großer Heiltrank",
         "es": "Pócima de Curación Grande",
-        "pt": "Grande poção de cura"
+        "pt": "Grande poção de cura",
+        "zh-CN": "大瓶治疗药水"
       },
-      "tags": ["healingPotion"],
+      "tags": [
+        "healingPotion"
+      ],
       "description": [
         {
           "text": "@numberOfItems",
-          "when": ["durability"]
+          "when": [
+            "durability"
+          ]
         }
       ],
       "width": 1,
@@ -96,13 +116,18 @@
         "en": "Small Mana Potion",
         "de": "Kleiner Manatrank",
         "es": "Pócima de Maná Pequeña",
-        "pt": "Pequena poção de mana"
+        "pt": "Pequena poção de mana",
+        "zh-CN": "小瓶魔力药水"
       },
-      "tags": ["manaPotion"],
+      "tags": [
+        "manaPotion"
+      ],
       "description": [
         {
           "text": "@numberOfItems",
-          "when": ["durability"]
+          "when": [
+            "durability"
+          ]
         }
       ],
       "width": 1,
@@ -118,13 +143,18 @@
         "en": "Mana Potion",
         "de": "Manatrank",
         "es": "Pócima de Maná",
-        "pt": "Poção de mana"
+        "pt": "Poção de mana",
+        "zh-CN": "魔法值药水"
       },
-      "tags": ["manaPotion"],
+      "tags": [
+        "manaPotion"
+      ],
       "description": [
         {
           "text": "@numberOfItems",
-          "when": ["durability"]
+          "when": [
+            "durability"
+          ]
         }
       ],
       "width": 1,
@@ -140,13 +170,18 @@
         "en": "Large Mana Potion",
         "de": "Großer Manatrank",
         "es": "Pócima de Maná Grande",
-        "pt": "Grande poção de mana"
+        "pt": "Grande poção de mana",
+        "zh-CN": "大瓶魔力药水"
       },
-      "tags": ["manaPotion"],
+      "tags": [
+        "manaPotion"
+      ],
       "description": [
         {
           "text": "@numberOfItems",
-          "when": ["durability"]
+          "when": [
+            "durability"
+          ]
         }
       ],
       "width": 1,
@@ -162,7 +197,8 @@
         "en": "Siege Potion",
         "de": "Belagerungstrank",
         "es": "Pócima de Asedio",
-        "pt": "Poção de sítio"
+        "pt": "Poção de sítio",
+        "zh-CN": "攻城药水"
       },
       "description": [
         {
@@ -177,10 +213,14 @@
             "ru": "Урон +20% увеличение эффекта",
             "tl": "Pinsala +20% pagtaas na epekto",
             "uk": "Пошкодження +20% посилення ефекту",
-            "zh-TW": "傷害+20% 效果增加"
+            "zh-TW": "傷害+20% 效果增加",
+            "zh-CN": "伤害提高20%"
           },
           "color": "darkRed",
-          "levels": [0, 0]
+          "levels": [
+            0,
+            0
+          ]
         },
         {
           "text": {
@@ -194,10 +234,14 @@
             "ru": "Продолжительность 60 секунд",
             "tl": "Tagal 60 segundo",
             "uk": "Тривалість 60 секунд",
-            "zh-TW": "持續時間 60 秒"
+            "zh-TW": "持續時間 60 秒",
+            "zh-CN": "持续时间60秒"
           },
           "color": "darkRed",
-          "levels": [0, 0]
+          "levels": [
+            0,
+            0
+          ]
         },
         {
           "text": {
@@ -211,10 +255,14 @@
             "ru": "Применимо только для ворот замка и статуи.",
             "tl": "Naaangkop lamang para sa gate ng kastilyo at rebulto",
             "uk": "Застосовується лише для воріт і статуї замку",
-            "zh-TW": "僅適用於城堡大門和雕像"
+            "zh-TW": "僅適用於城堡大門和雕像",
+            "zh-CN": "仅适用于城门和雕像"
           },
           "color": "darkRed",
-          "levels": [0, 0]
+          "levels": [
+            0,
+            0
+          ]
         },
         {
           "text": {
@@ -228,10 +276,14 @@
             "ru": "Увеличение скорости восстановления AG на +8.",
             "tl": "Taasan ang +8 AG na bilis ng pagbawi",
             "uk": "Збільшити швидкість відновлення AG на +8",
-            "zh-TW": "增加+8 AG恢復速度"
+            "zh-TW": "增加+8 AG恢復速度",
+            "zh-CN": "增加 +8 AG 恢复速度"
           },
           "color": "darkRed",
-          "levels": [1, 1]
+          "levels": [
+            1,
+            1
+          ]
         },
         {
           "text": {
@@ -245,10 +297,14 @@
             "ru": "Увеличение сопротивления молнии и льду.",
             "tl": "Dagdagan ang resistensya ng Kidlat at Yelo",
             "uk": "Збільшити опір блискавки та льоду",
-            "zh-TW": "增加閃電和冰的抗性"
+            "zh-TW": "增加閃電和冰的抗性",
+            "zh-CN": "增加闪电和冰的抗性"
           },
           "color": "darkRed",
-          "levels": [1, 1]
+          "levels": [
+            1,
+            1
+          ]
         },
         {
           "text": {
@@ -262,10 +318,14 @@
             "ru": "Скорость атаки увеличится +20.",
             "tl": "Ang bilis ng pag-atake ay tataas ang +20",
             "uk": "Швидкість атаки збільшиться на +20",
-            "zh-TW": "攻擊速度增加+20"
+            "zh-TW": "攻擊速度增加+20",
+            "zh-CN": "攻击速度增加+20"
           },
           "color": "darkRed",
-          "levels": [1, 1]
+          "levels": [
+            1,
+            1
+          ]
         }
       ],
       "nameLines": [
@@ -281,9 +341,13 @@
             "ru": "Зелье благословения",
             "tl": "Gayuma ng pagpapala",
             "uk": "Зілля благословення",
-            "zh-TW": "祝福藥水"
+            "zh-TW": "祝福藥水",
+            "zh-CN": "祝福药水"
           },
-          "levels": [0, 0]
+          "levels": [
+            0,
+            0
+          ]
         },
         {
           "text": {
@@ -297,12 +361,20 @@
             "ru": "Зелье души",
             "tl": "Gayuma ng kaluluwa",
             "uk": "Зілля душі",
-            "zh-TW": "靈魂藥水"
+            "zh-TW": "靈魂藥水",
+            "zh-CN": "灵魂药水"
           },
-          "levels": [1, 1]
+          "levels": [
+            1,
+            1
+          ]
         }
       ],
-      "groundLabels": [{"style": "white"}],
+      "groundLabels": [
+        {
+          "style": "white"
+        }
+      ],
       "width": 1,
       "height": 1,
       "sellValue": 30,
@@ -314,12 +386,15 @@
         "en": "Antidote",
         "de": "Gegengift",
         "es": "Antídoto",
-        "pt": "Antídoto"
+        "pt": "Antídoto",
+        "zh-CN": "解毒剂"
       },
       "description": [
         {
           "text": "@numberOfItems",
-          "when": ["durability"]
+          "when": [
+            "durability"
+          ]
         }
       ],
       "width": 1,
@@ -334,21 +409,36 @@
         "en": "Ale",
         "de": "Bier",
         "es": "Cerveza",
-        "pt": "Cerveja"
+        "pt": "Cerveja",
+        "zh-CN": "酒"
       },
       "nameLines": [
         {
           "text": {
             "en": "{name}"
           },
-          "levels": [0, 0]
+          "levels": [
+            0,
+            0
+          ]
         },
         {
           "text": "@oliveOfLove",
-          "levels": [1, 1]
+          "levels": [
+            1,
+            1
+          ]
         }
       ],
-      "groundLabels": [{"style": "white", "levels": [1, 1]}],
+      "groundLabels": [
+        {
+          "style": "white",
+          "levels": [
+            1,
+            1
+          ]
+        }
+      ],
       "width": 1,
       "height": 2,
       "level": 15,
@@ -361,7 +451,8 @@
         "en": "Town Portal Scroll",
         "de": "Stadtportal-Schriftrolle",
         "es": "Rollo del Portal del Pueblo",
-        "pt": "Perg. de Portal para a Cidade"
+        "pt": "Perg. de Portal para a Cidade",
+        "zh-CN": "回城卷轴"
       },
       "description": [
         {
@@ -376,9 +467,13 @@
             "ru": "Переместитесь в соответствующую область через 3 секунд.",
             "tl": "Warp sa kaukulang lugar pagkatapos ng 3 segundo",
             "uk": "Деформація до відповідної області через 3 секунд",
-            "zh-TW": "3秒後扭曲到對應區域"
+            "zh-TW": "3秒後扭曲到對應區域",
+            "zh-CN": "3秒后扭曲到对应区域"
           },
-          "levels": [1, 8]
+          "levels": [
+            1,
+            8
+          ]
         }
       ],
       "width": 1,
@@ -393,7 +488,8 @@
         "en": "Box of Luck",
         "de": "Glücksbox",
         "es": "Caja de la Suerte",
-        "pt": "Caixa da sorte"
+        "pt": "Caixa da sorte",
+        "zh-CN": "幸运宝箱"
       },
       "description": [
         {
@@ -408,9 +504,13 @@
             "ru": "Когда ты уронишь его на землю,",
             "tl": "Kapag ibinagsak mo ito sa lupa,",
             "uk": "Коли ти впустиш його на землю,",
-            "zh-TW": "當你把它丟到地上時，"
+            "zh-TW": "當你把它丟到地上時，",
+            "zh-CN": "当你把它扔到地上时，"
           },
-          "levels": [7, 7]
+          "levels": [
+            7,
+            7
+          ]
         },
         {
           "text": {
@@ -424,9 +524,13 @@
             "ru": "[Рена/Дзен/Драгоценный камень/Предмет]",
             "tl": "[Rena/Zen/Jewel/Item]",
             "uk": "[Rena/Zen/Jewel/Item]",
-            "zh-TW": "[蕾娜/禪/寶石/物品]"
+            "zh-TW": "[蕾娜/禪/寶石/物品]",
+            "zh-CN": "[宝石/金币/宝石/物品]"
           },
-          "levels": [7, 7]
+          "levels": [
+            7,
+            7
+          ]
         },
         {
           "text": {
@@ -440,9 +544,13 @@
             "ru": "вы получите один из вышеперечисленных предметов.",
             "tl": "makakakuha ka ng isa sa mga item sa itaas.",
             "uk": "ви отримаєте один із зазначених вище предметів.",
-            "zh-TW": "您將獲得上述物品之一。"
+            "zh-TW": "您將獲得上述物品之一。",
+            "zh-CN": "你将得到上述物品之一。"
           },
-          "levels": [7, 7]
+          "levels": [
+            7,
+            7
+          ]
         },
         {
           "text": {
@@ -456,9 +564,13 @@
             "ru": "Бесплатный вход в Калиму.",
             "tl": "Libreng pasukan sa Kalima",
             "uk": "Безкоштовний вхід в Каліму",
-            "zh-TW": "免費進入卡利馬"
+            "zh-TW": "免費進入卡利馬",
+            "zh-CN": "免费进入卡利马"
           },
-          "levels": [14, 14]
+          "levels": [
+            14,
+            14
+          ]
         },
         {
           "text": {
@@ -472,13 +584,20 @@
             "ru": "Увеличение выносливости",
             "tl": "Dagdagan ang tibay",
             "uk": "Підвищити витривалість",
-            "zh-TW": "增加耐力"
+            "zh-TW": "增加耐力",
+            "zh-CN": "增加体力"
           },
-          "levels": [14, 14]
+          "levels": [
+            14,
+            14
+          ]
         },
         {
           "text": "@throwForZenOrItems",
-          "when": ["level!=7", "level!=14"]
+          "when": [
+            "level!=7",
+            "level!=14"
+          ]
         },
         {
           "text": "@cannotBeSold",
@@ -487,7 +606,10 @@
         {
           "text": "@cannotStoreInVault",
           "color": "red",
-          "levels": [13, 13]
+          "levels": [
+            13,
+            13
+          ]
         }
       ],
       "nameLines": [
@@ -495,7 +617,10 @@
           "text": {
             "en": "{name}"
           },
-          "levels": [0, 0]
+          "levels": [
+            0,
+            0
+          ]
         },
         {
           "text": {
@@ -509,9 +634,13 @@
             "ru": "Звезда Священного Рождения",
             "tl": "Bituin ng Sagradong Kapanganakan",
             "uk": "Зірка священного народження",
-            "zh-TW": "神聖誕生之星"
+            "zh-TW": "神聖誕生之星",
+            "zh-CN": "神圣诞生之星"
           },
-          "levels": [1, 1]
+          "levels": [
+            1,
+            1
+          ]
         },
         {
           "text": {
@@ -525,9 +654,13 @@
             "ru": "Петарда",
             "tl": "Paputok",
             "uk": "петарда",
-            "zh-TW": "鞭炮"
+            "zh-TW": "鞭炮",
+            "zh-CN": "烟花"
           },
-          "levels": [2, 2]
+          "levels": [
+            2,
+            2
+          ]
         },
         {
           "text": {
@@ -541,13 +674,20 @@
             "ru": "Сердце любви",
             "tl": "Puso ng pag-ibig",
             "uk": "Серце кохання",
-            "zh-TW": "愛的心"
+            "zh-TW": "愛的心",
+            "zh-CN": "爱之心"
           },
-          "levels": [3, 3]
+          "levels": [
+            3,
+            3
+          ]
         },
         {
           "text": "@oliveOfLove",
-          "levels": [4, 4]
+          "levels": [
+            4,
+            4
+          ]
         },
         {
           "text": {
@@ -561,9 +701,13 @@
             "ru": "Серебряная медаль",
             "tl": "medalyang pilak",
             "uk": "Срібна медаль",
-            "zh-TW": "銀牌"
+            "zh-TW": "銀牌",
+            "zh-CN": "银牌"
           },
-          "levels": [5, 5]
+          "levels": [
+            5,
+            5
+          ]
         },
         {
           "text": {
@@ -577,9 +721,13 @@
             "ru": "Золотая медаль",
             "tl": "Gintong medalya",
             "uk": "Золота медаль",
-            "zh-TW": "金牌"
+            "zh-TW": "金牌",
+            "zh-CN": "金牌"
           },
-          "levels": [6, 6]
+          "levels": [
+            6,
+            6
+          ]
         },
         {
           "text": {
@@ -593,9 +741,13 @@
             "ru": "Коробка Небес",
             "tl": "Kahon ng Langit",
             "uk": "Скринька Неба",
-            "zh-TW": "天堂之盒"
+            "zh-TW": "天堂之盒",
+            "zh-CN": "天堂之盒"
           },
-          "levels": [7, 7]
+          "levels": [
+            7,
+            7
+          ]
         },
         {
           "text": {
@@ -609,9 +761,13 @@
             "ru": "Коробка Кундуна +1",
             "tl": "Kahon ng Kundun +1",
             "uk": "Коробка Кундуна +1",
-            "zh-TW": "昆頓之盒 +1"
+            "zh-TW": "昆頓之盒 +1",
+            "zh-CN": "昆顿之盒+1"
           },
-          "levels": [8, 8]
+          "levels": [
+            8,
+            8
+          ]
         },
         {
           "text": {
@@ -625,9 +781,13 @@
             "ru": "Коробка Кундуна +2",
             "tl": "Kahon ng Kundun +2",
             "uk": "Коробка Кундуна +2",
-            "zh-TW": "昆頓之盒 +2"
+            "zh-TW": "昆頓之盒 +2",
+            "zh-CN": "昆顿之盒+2"
           },
-          "levels": [9, 9]
+          "levels": [
+            9,
+            9
+          ]
         },
         {
           "text": {
@@ -641,9 +801,13 @@
             "ru": "Коробка Кундуна +3",
             "tl": "Kahon ng Kundun +3",
             "uk": "Коробка Кундуна +3",
-            "zh-TW": "昆頓之盒 +3"
+            "zh-TW": "昆頓之盒 +3",
+            "zh-CN": "昆顿之盒+3"
           },
-          "levels": [10, 10]
+          "levels": [
+            10,
+            10
+          ]
         },
         {
           "text": {
@@ -657,9 +821,13 @@
             "ru": "Коробка Кундуна +4",
             "tl": "Kahon ng Kundun +4",
             "uk": "Коробка Кундуна +4",
-            "zh-TW": "昆頓之盒 +4"
+            "zh-TW": "昆頓之盒 +4",
+            "zh-CN": "昆顿之盒+4"
           },
-          "levels": [11, 11]
+          "levels": [
+            11,
+            11
+          ]
         },
         {
           "text": {
@@ -673,9 +841,13 @@
             "ru": "Коробка Кундуна +5",
             "tl": "Kahon ng Kundun +5",
             "uk": "Коробка Кундуна +5",
-            "zh-TW": "昆頓之盒 +5"
+            "zh-TW": "昆頓之盒 +5",
+            "zh-CN": "昆顿之盒+5"
           },
-          "levels": [12, 12]
+          "levels": [
+            12,
+            12
+          ]
         },
         {
           "text": {
@@ -689,9 +861,13 @@
             "ru": "Сердце Темного Лорда",
             "tl": "Puso ng Dark Lord",
             "uk": "Серце Темного Лорда",
-            "zh-TW": "黑暗領主之心"
+            "zh-TW": "黑暗領主之心",
+            "zh-CN": "圣导师之心"
           },
-          "levels": [13, 13]
+          "levels": [
+            13,
+            13
+          ]
         },
         {
           "text": {
@@ -705,9 +881,13 @@
             "ru": "Синий счастливый мешочек",
             "tl": "Blue lucky pouch",
             "uk": "Синій мішечок на щастя",
-            "zh-TW": "藍色福袋"
+            "zh-TW": "藍色福袋",
+            "zh-CN": "蓝色福袋"
           },
-          "levels": [14, 14]
+          "levels": [
+            14,
+            14
+          ]
         },
         {
           "text": {
@@ -721,12 +901,48 @@
             "ru": "Красный счастливый мешочек",
             "tl": "Pulang lucky pouch",
             "uk": "Червоний щасливчик",
-            "zh-TW": "紅色福袋"
+            "zh-TW": "紅色福袋",
+            "zh-CN": "红色福袋"
           },
-          "levels": [15, 15]
+          "levels": [
+            15,
+            15
+          ]
         }
       ],
-      "groundLabels": [{"style": "white", "levels": [1, 1]}, {"style": "white", "levels": [3, 3]}, {"style": "white", "levels": [5, 6]}, {"style": "white", "levels": [8, 12]}, {"style": "eventItem"}],
+      "groundLabels": [
+        {
+          "style": "white",
+          "levels": [
+            1,
+            1
+          ]
+        },
+        {
+          "style": "white",
+          "levels": [
+            3,
+            3
+          ]
+        },
+        {
+          "style": "white",
+          "levels": [
+            5,
+            6
+          ]
+        },
+        {
+          "style": "white",
+          "levels": [
+            8,
+            12
+          ]
+        },
+        {
+          "style": "eventItem"
+        }
+      ],
       "width": 1,
       "height": 1,
       "sellable": false,
@@ -738,7 +954,8 @@
         "en": "Heart",
         "de": "Herz",
         "es": "Corazón",
-        "pt": "Coração"
+        "pt": "Coração",
+        "zh-CN": "心"
       },
       "description": [
         {
@@ -753,9 +970,13 @@
             "ru": "Зарегистрироваться можно отдав его NPC.",
             "tl": "Maaari kang magparehistro sa pamamagitan ng pagbibigay nito sa NPC",
             "uk": "Ви можете зареєструватися, передавши його NPC",
-            "zh-TW": "交給NPC即可註冊"
+            "zh-TW": "交給NPC即可註冊",
+            "zh-CN": "您可以将其交给 NPC 来注册"
           },
-          "levels": [0, 1]
+          "levels": [
+            0,
+            1
+          ]
         }
       ],
       "nameLines": [
@@ -771,9 +992,13 @@
             "ru": "Дзен",
             "tl": "Zen",
             "uk": "Дзен",
-            "zh-TW": "禪"
+            "zh-TW": "禪",
+            "zh-CN": "金币"
           },
-          "levels": [0, 0]
+          "levels": [
+            0,
+            0
+          ]
         },
         {
           "text": {
@@ -787,9 +1012,13 @@
             "ru": "Сердце",
             "tl": "Puso",
             "uk": "серце",
-            "zh-TW": "心"
+            "zh-TW": "心",
+            "zh-CN": "心"
           },
-          "levels": [1, 1]
+          "levels": [
+            1,
+            1
+          ]
         },
         {
           "text": {
@@ -803,12 +1032,20 @@
             "ru": "Подарочный сертификат на событие Хаоса",
             "tl": "Chaos Event Gift Certificate",
             "uk": "Подарунковий сертифікат на подію Chaos",
-            "zh-TW": "混沌活動禮券"
+            "zh-TW": "混沌活動禮券",
+            "zh-CN": "混沌活动礼券"
           },
-          "levels": [2, 2]
+          "levels": [
+            2,
+            2
+          ]
         }
       ],
-      "groundLabels": [{"style": "white"}],
+      "groundLabels": [
+        {
+          "style": "white"
+        }
+      ],
       "width": 1,
       "height": 1,
       "repairable": false
@@ -819,9 +1056,13 @@
         "en": "Jewel of Bless",
         "de": "Juwel des Segens",
         "es": "Joya de Bendición",
-        "pt": "Joia da bênção"
+        "pt": "Joia da bênção",
+        "zh-CN": "祝福宝石"
       },
-      "tags": ["jewel", "valuable"],
+      "tags": [
+        "jewel",
+        "valuable"
+      ],
       "description": [
         {
           "text": {
@@ -845,7 +1086,11 @@
           "color": "yellow"
         }
       ],
-      "groundLabels": [{"style": "jewel"}],
+      "groundLabels": [
+        {
+          "style": "jewel"
+        }
+      ],
       "width": 1,
       "height": 1,
       "level": 25,
@@ -858,9 +1103,13 @@
         "en": "Jewel of Soul",
         "de": "Juwel der Seele",
         "es": "Joya de Alma",
-        "pt": "Joia da alma"
+        "pt": "Joia da alma",
+        "zh-CN": "灵魂宝石"
       },
-      "tags": ["jewel", "valuable"],
+      "tags": [
+        "jewel",
+        "valuable"
+      ],
       "description": [
         {
           "text": {
@@ -884,7 +1133,11 @@
           "color": "yellow"
         }
       ],
-      "groundLabels": [{"style": "jewel"}],
+      "groundLabels": [
+        {
+          "style": "jewel"
+        }
+      ],
       "width": 1,
       "height": 1,
       "level": 30,
@@ -897,9 +1150,14 @@
         "en": "Zen",
         "de": "Zen",
         "es": "Zen",
-        "pt": "Zen"
+        "pt": "Zen",
+        "zh-CN": "金币"
       },
-      "groundLabels": [{"style": "zen"}],
+      "groundLabels": [
+        {
+          "style": "zen"
+        }
+      ],
       "width": 1,
       "height": 1,
       "repairable": false
@@ -910,9 +1168,13 @@
         "en": "Jewel of Life",
         "de": "Juwel des Lebens",
         "es": "Joya de Vida",
-        "pt": "Joia da vida"
+        "pt": "Joia da vida",
+        "zh-CN": "生命宝石"
       },
-      "tags": ["jewel", "valuable"],
+      "tags": [
+        "jewel",
+        "valuable"
+      ],
       "description": [
         {
           "text": {
@@ -936,7 +1198,11 @@
           "color": "yellow"
         }
       ],
-      "groundLabels": [{"style": "jewel"}],
+      "groundLabels": [
+        {
+          "style": "jewel"
+        }
+      ],
       "width": 1,
       "height": 1,
       "level": 72,
@@ -948,7 +1214,8 @@
         "en": "Devil's Eye",
         "de": "Auge des Teufels",
         "es": "Ojo del Diablo",
-        "pt": "Olho do diabo"
+        "pt": "Olho do diabo",
+        "zh-CN": "恶魔之眼"
       },
       "description": [
         {
@@ -960,7 +1227,11 @@
           "color": "yellow"
         }
       ],
-      "groundLabels": [{"style": "devilSquareEntry"}],
+      "groundLabels": [
+        {
+          "style": "devilSquareEntry"
+        }
+      ],
       "width": 1,
       "height": 1,
       "level": 1,
@@ -972,7 +1243,8 @@
         "en": "Devil's Key",
         "de": "Schlüssel des Teufels",
         "es": "Llave del Diablo",
-        "pt": "Chave do diabo"
+        "pt": "Chave do diabo",
+        "zh-CN": "恶魔之钥"
       },
       "description": [
         {
@@ -984,7 +1256,11 @@
           "color": "yellow"
         }
       ],
-      "groundLabels": [{"style": "devilSquareEntry"}],
+      "groundLabels": [
+        {
+          "style": "devilSquareEntry"
+        }
+      ],
       "width": 1,
       "height": 1,
       "level": 1,
@@ -996,7 +1272,8 @@
         "en": "Devil's Invitation",
         "de": "Einladung des Teufels",
         "es": "Invitación del Diablo",
-        "pt": "Convite do diabo"
+        "pt": "Convite do diabo",
+        "zh-CN": "恶魔广场入场券"
       },
       "description": [
         {
@@ -1011,7 +1288,11 @@
           "color": "yellow"
         }
       ],
-      "groundLabels": [{"style": "devilSquareEntry"}],
+      "groundLabels": [
+        {
+          "style": "devilSquareEntry"
+        }
+      ],
       "width": 1,
       "height": 1,
       "repairable": false
@@ -1022,7 +1303,8 @@
         "en": "Remedy of Love",
         "de": "Heilmittel der Liebe",
         "es": "Remedio de Amor",
-        "pt": "Remédio do amor"
+        "pt": "Remédio do amor",
+        "zh-CN": "爱的良药"
       },
       "width": 1,
       "height": 1,
@@ -1034,7 +1316,8 @@
         "en": "Rena",
         "de": "Rena",
         "es": "Rena",
-        "pt": "Rena"
+        "pt": "Rena",
+        "zh-CN": "蕾娜"
       },
       "description": [
         {
@@ -1049,9 +1332,13 @@
             "ru": "Используется в онлайн-мероприятии",
             "tl": "Ginamit sa online na kaganapan",
             "uk": "Використовується в онлайн-події",
-            "zh-TW": "用於線上活動"
+            "zh-TW": "用於線上活動",
+            "zh-CN": "用于在线活动"
           },
-          "levels": [1, 1]
+          "levels": [
+            1,
+            1
+          ]
         },
         {
           "text": {
@@ -1065,9 +1352,13 @@
             "ru": "Используется в событии «Мой друг».",
             "tl": "Ginamit sa kaganapang Aking Kaibigan.",
             "uk": "Використовується в події My Friend.",
-            "zh-TW": "在「我的朋友」活動中使用。"
+            "zh-TW": "在「我的朋友」活動中使用。",
+            "zh-CN": "用于“我的朋友”事件。"
           },
-          "levels": [2, 2]
+          "levels": [
+            2,
+            2
+          ]
         },
         {
           "text": {
@@ -1081,14 +1372,23 @@
             "ru": "Использование при регистрации осады",
             "tl": "Gamitin sa pagpaparehistro ng pagkubkob",
             "uk": "Використання при реєстрації облоги",
-            "zh-TW": "用於攻城登記"
+            "zh-TW": "用於攻城登記",
+            "zh-CN": "用于围攻登记"
           },
-          "levels": [3, 3]
+          "levels": [
+            3,
+            3
+          ]
         },
         {
           "text": "@numberOfItems",
-          "when": ["durability"],
-          "levels": [3, 3]
+          "when": [
+            "durability"
+          ],
+          "levels": [
+            3,
+            3
+          ]
         }
       ],
       "nameLines": [
@@ -1097,7 +1397,10 @@
             "en": "{name}"
           },
           "color": "yellow",
-          "levels": [0, 0]
+          "levels": [
+            0,
+            0
+          ]
         },
         {
           "text": {
@@ -1111,10 +1414,14 @@
             "ru": "Камень",
             "tl": "Bato",
             "uk": "Камінь",
-            "zh-TW": "結石"
+            "zh-TW": "結石",
+            "zh-CN": "石头"
           },
           "color": "yellow",
-          "levels": [1, 1]
+          "levels": [
+            1,
+            1
+          ]
         },
         {
           "text": {
@@ -1128,10 +1435,14 @@
             "ru": "Камень Дружбы",
             "tl": "Bato ng Pagkakaibigan",
             "uk": "Камінь Дружби",
-            "zh-TW": "友誼之石"
+            "zh-TW": "友誼之石",
+            "zh-CN": "友谊之石"
           },
           "color": "yellow",
-          "levels": [2, 2]
+          "levels": [
+            2,
+            2
+          ]
         },
         {
           "text": {
@@ -1145,16 +1456,28 @@
             "ru": "Знак лорда",
             "tl": "Tanda ng panginoon",
             "uk": "Знак владики",
-            "zh-TW": "主的標誌"
+            "zh-TW": "主的標誌",
+            "zh-CN": "领主的印记"
           },
           "color": "yellow",
-          "levels": [3, 3]
+          "levels": [
+            3,
+            3
+          ]
         },
         {
           "color": "yellow"
         }
       ],
-      "groundLabels": [{"style": "eventItem", "levels": [1, 3]}],
+      "groundLabels": [
+        {
+          "style": "eventItem",
+          "levels": [
+            1,
+            3
+          ]
+        }
+      ],
       "width": 1,
       "height": 1,
       "tradable": false,
@@ -1168,9 +1491,13 @@
         "en": "Jewel of Creation",
         "de": "Juwel der Schöpfung",
         "es": "Joya de la Creación",
-        "pt": "Joia da criação"
+        "pt": "Joia da criação",
+        "zh-CN": "创造宝石"
       },
-      "tags": ["jewel", "valuable"],
+      "tags": [
+        "jewel",
+        "valuable"
+      ],
       "description": [
         {
           "text": {
@@ -1194,7 +1521,11 @@
           "color": "yellow"
         }
       ],
-      "groundLabels": [{"style": "jewel"}],
+      "groundLabels": [
+        {
+          "style": "jewel"
+        }
+      ],
       "width": 1,
       "height": 1,
       "level": 78,
@@ -1206,9 +1537,12 @@
         "en": "Scroll of the Emperor",
         "de": "Schriftrolle des Imperators",
         "es": "Rollo del Emperador",
-        "pt": "Pergaminho do Imperador"
+        "pt": "Pergaminho do Imperador",
+        "zh-CN": "帝皇卷轴"
       },
-      "tags": ["secondClassQuestItem"],
+      "tags": [
+        "secondClassQuestItem"
+      ],
       "description": [
         {
           "text": "@questItem"
@@ -1228,7 +1562,10 @@
             "en": "{name}"
           },
           "color": "yellow",
-          "levels": [0, 0]
+          "levels": [
+            0,
+            0
+          ]
         },
         {
           "text": {
@@ -1242,16 +1579,28 @@
             "ru": "Кольцо Почета",
             "tl": "Ring of Honor",
             "uk": "Перстень Пошани",
-            "zh-TW": "榮譽戒指"
+            "zh-TW": "榮譽戒指",
+            "zh-CN": "荣誉之戒"
           },
           "color": "yellow",
-          "levels": [1, 1]
+          "levels": [
+            1,
+            1
+          ]
         },
         {
           "color": "yellow"
         }
       ],
-      "groundLabels": [{"style": "questItem", "levels": [1, 1]}],
+      "groundLabels": [
+        {
+          "style": "questItem",
+          "levels": [
+            1,
+            1
+          ]
+        }
+      ],
       "width": 1,
       "height": 1,
       "tradable": false,
@@ -1266,9 +1615,12 @@
         "en": "Broken Sword",
         "de": "Zerbrochenes Schwert",
         "es": "Espada Quebrada",
-        "pt": "Espada quebrada"
+        "pt": "Espada quebrada",
+        "zh-CN": "断剑"
       },
-      "tags": ["secondClassQuestItem"],
+      "tags": [
+        "secondClassQuestItem"
+      ],
       "description": [
         {
           "text": "@questItem"
@@ -1288,7 +1640,10 @@
             "en": "{name}"
           },
           "color": "yellow",
-          "levels": [0, 0]
+          "levels": [
+            0,
+            0
+          ]
         },
         {
           "text": {
@@ -1302,16 +1657,28 @@
             "ru": "Темный камень",
             "tl": "Madilim na Bato",
             "uk": "Темний камінь",
-            "zh-TW": "暗黑石"
+            "zh-TW": "暗黑石",
+            "zh-CN": "暗石"
           },
           "color": "yellow",
-          "levels": [1, 1]
+          "levels": [
+            1,
+            1
+          ]
         },
         {
           "color": "yellow"
         }
       ],
-      "groundLabels": [{"style": "questItem", "levels": [1, 1]}],
+      "groundLabels": [
+        {
+          "style": "questItem",
+          "levels": [
+            1,
+            1
+          ]
+        }
+      ],
       "width": 1,
       "height": 2,
       "tradable": false,
@@ -1326,9 +1693,12 @@
         "en": "Tear of Elf",
         "de": "Träne der Elfe",
         "es": "Lágrima de Elfa",
-        "pt": "Lágrima do elfo"
+        "pt": "Lágrima do elfo",
+        "zh-CN": "精灵之泪"
       },
-      "tags": ["secondClassQuestItem"],
+      "tags": [
+        "secondClassQuestItem"
+      ],
       "description": [
         {
           "text": "@questItem"
@@ -1364,9 +1734,12 @@
         "en": "Soul Shard of Wizard",
         "de": "Seelensplitter des Zauberers",
         "es": "Fragmento de Alma de Mago",
-        "pt": "Fragmento da alma do Mago"
+        "pt": "Fragmento da alma do Mago",
+        "zh-CN": "先知之魂"
       },
-      "tags": ["secondClassQuestItem"],
+      "tags": [
+        "secondClassQuestItem"
+      ],
       "description": [
         {
           "text": "@questItem"
@@ -1405,7 +1778,8 @@
         "en": "Lost Map",
         "de": "Verlorene Karte",
         "es": "Mapa Perdido",
-        "pt": "Mapa perdido"
+        "pt": "Mapa perdido",
+        "zh-CN": "失落地图"
       },
       "nameLines": [
         {
@@ -1413,7 +1787,10 @@
             "en": "{name}"
           },
           "color": "yellow",
-          "levels": [0, 0]
+          "levels": [
+            0,
+            0
+          ]
         },
         {
           "text": {
@@ -1422,7 +1799,11 @@
           "color": "yellow"
         }
       ],
-      "groundLabels": [{"style": "questItem"}],
+      "groundLabels": [
+        {
+          "style": "questItem"
+        }
+      ],
       "width": 1,
       "height": 1,
       "repairable": false
@@ -1433,14 +1814,18 @@
         "en": "Symbol of Kundun",
         "de": "Symbol des Kundun",
         "es": "Símbolo de Kundun",
-        "pt": "Símbolo de Kundun"
+        "pt": "Símbolo de Kundun",
+        "zh-CN": "昆顿印记"
       },
       "nameLines": [
         {
           "text": {
             "en": "{name}"
           },
-          "levels": [0, 0]
+          "levels": [
+            0,
+            0
+          ]
         },
         {
           "text": {
@@ -1448,7 +1833,11 @@
           }
         }
       ],
-      "groundLabels": [{"style": "questItem"}],
+      "groundLabels": [
+        {
+          "style": "questItem"
+        }
+      ],
       "width": 1,
       "height": 1,
       "repairable": false
@@ -1459,9 +1848,13 @@
         "en": "Jewel of Guardian",
         "de": "Juwel des Wächters",
         "es": "Joya de Guardián",
-        "pt": "Joia do guardião"
+        "pt": "Joia do guardião",
+        "zh-CN": "守护宝石"
       },
-      "tags": ["jewel", "valuable"],
+      "tags": [
+        "jewel",
+        "valuable"
+      ],
       "description": [
         {
           "text": {
@@ -1485,7 +1878,11 @@
           "color": "yellow"
         }
       ],
-      "groundLabels": [{"style": "jewel"}],
+      "groundLabels": [
+        {
+          "style": "jewel"
+        }
+      ],
       "width": 1,
       "height": 1,
       "sellValue": 75,
@@ -1497,14 +1894,17 @@
         "en": "Pink Chocolate Box",
         "de": "Rosa Pralinenschachtel",
         "es": "Caja de Chocolate Rosa",
-        "pt": "Caixa de chocolate rosa"
+        "pt": "Caixa de chocolate rosa",
+        "zh-CN": "粉色巧克力盒"
       },
       "description": [
         {
           "text": "@dropItToReceiveTheGift",
           "colors": [
             {
-              "when": ["level<=1"],
+              "when": [
+                "level<=1"
+              ],
               "color": "purple"
             }
           ]
@@ -1515,7 +1915,10 @@
           "text": {
             "en": "{name}"
           },
-          "levels": [0, 0]
+          "levels": [
+            0,
+            0
+          ]
         },
         {
           "text": {
@@ -1529,12 +1932,27 @@
             "ru": "Коробка конфет сиреневого цвета",
             "tl": "Lilac na kahon ng kendi",
             "uk": "Бузкова цукерниця",
-            "zh-TW": "紫丁香糖果盒"
+            "zh-TW": "紫丁香糖果盒",
+            "zh-CN": "丁香糖果盒"
           },
-          "levels": [1, 1]
+          "levels": [
+            1,
+            1
+          ]
         }
       ],
-      "groundLabels": [{"style": "giftBoxPink", "levels": [0, 1]}, {"style": "white"}],
+      "groundLabels": [
+        {
+          "style": "giftBoxPink",
+          "levels": [
+            0,
+            1
+          ]
+        },
+        {
+          "style": "white"
+        }
+      ],
       "width": 1,
       "height": 1,
       "repairable": false
@@ -1545,14 +1963,17 @@
         "en": "Red Chocolate Box",
         "de": "Rote Pralinenschachtel",
         "es": "Caja de Chocolate Roja",
-        "pt": "Caixa de chocolate vermelha"
+        "pt": "Caixa de chocolate vermelha",
+        "zh-CN": "红色巧克力盒"
       },
       "description": [
         {
           "text": "@dropItToReceiveTheGift",
           "colors": [
             {
-              "when": ["level<=1"],
+              "when": [
+                "level<=1"
+              ],
               "color": "red"
             }
           ]
@@ -1563,7 +1984,10 @@
           "text": {
             "en": "{name}"
           },
-          "levels": [0, 0]
+          "levels": [
+            0,
+            0
+          ]
         },
         {
           "text": {
@@ -1577,12 +2001,27 @@
             "ru": "Коробочка апельсиновых конфет",
             "tl": "Kahon ng orange na kendi",
             "uk": "Помаранчева цукерниця",
-            "zh-TW": "橘色糖果盒"
+            "zh-TW": "橘色糖果盒",
+            "zh-CN": "橙色糖果盒"
           },
-          "levels": [1, 1]
+          "levels": [
+            1,
+            1
+          ]
         }
       ],
-      "groundLabels": [{"style": "giftBoxRed", "levels": [0, 1]}, {"style": "white"}],
+      "groundLabels": [
+        {
+          "style": "giftBoxRed",
+          "levels": [
+            0,
+            1
+          ]
+        },
+        {
+          "style": "white"
+        }
+      ],
       "width": 1,
       "height": 1,
       "repairable": false
@@ -1593,14 +2032,17 @@
         "en": "Blue Chocolate Box",
         "de": "Blaue Pralinenschachtel",
         "es": "Caja de Chocolate Azul",
-        "pt": "Caixa de chocolate azul"
+        "pt": "Caixa de chocolate azul",
+        "zh-CN": "蓝色巧克力盒"
       },
       "description": [
         {
           "text": "@dropItToReceiveTheGift",
           "colors": [
             {
-              "when": ["level<=1"],
+              "when": [
+                "level<=1"
+              ],
               "color": "blue"
             }
           ]
@@ -1611,7 +2053,10 @@
           "text": {
             "en": "{name}"
           },
-          "levels": [0, 0]
+          "levels": [
+            0,
+            0
+          ]
         },
         {
           "text": {
@@ -1625,12 +2070,27 @@
             "ru": "Коробка конфет темно-синего цвета",
             "tl": "Navy na kahon ng kendi",
             "uk": "Темно-синя цукерниця",
-            "zh-TW": "海軍藍糖果盒"
+            "zh-TW": "海軍藍糖果盒",
+            "zh-CN": "海军糖果盒"
           },
-          "levels": [1, 1]
+          "levels": [
+            1,
+            1
+          ]
         }
       ],
-      "groundLabels": [{"style": "giftBoxBlue", "levels": [0, 1]}, {"style": "white"}],
+      "groundLabels": [
+        {
+          "style": "giftBoxBlue",
+          "levels": [
+            0,
+            1
+          ]
+        },
+        {
+          "style": "white"
+        }
+      ],
       "width": 1,
       "height": 1,
       "repairable": false
@@ -1641,13 +2101,18 @@
         "en": "Small SD Potion",
         "de": "Kleiner SD-Trank",
         "es": "Pócima de SD Pequeña",
-        "pt": "Pequena poção de SD"
+        "pt": "Pequena poção de SD",
+        "zh-CN": "小 SD 药水"
       },
-      "tags": ["shieldPotion"],
+      "tags": [
+        "shieldPotion"
+      ],
       "description": [
         {
           "text": "@numberOfItems",
-          "when": ["durability"]
+          "when": [
+            "durability"
+          ]
         }
       ],
       "width": 1,
@@ -1662,13 +2127,18 @@
         "en": "SD Potion",
         "de": "SD-Trank",
         "es": "Pócima de SD",
-        "pt": "Poção de SD"
+        "pt": "Poção de SD",
+        "zh-CN": "SD 药水"
       },
-      "tags": ["shieldPotion"],
+      "tags": [
+        "shieldPotion"
+      ],
       "description": [
         {
           "text": "@numberOfItems",
-          "when": ["durability"]
+          "when": [
+            "durability"
+          ]
         }
       ],
       "width": 1,
@@ -1683,13 +2153,18 @@
         "en": "Large SD Potion",
         "de": "Großer SD-Trank",
         "es": "Pócima de SD Grande",
-        "pt": "Grande poção de SD"
+        "pt": "Grande poção de SD",
+        "zh-CN": "大 SD 药水"
       },
-      "tags": ["shieldPotion"],
+      "tags": [
+        "shieldPotion"
+      ],
       "description": [
         {
           "text": "@numberOfItems",
-          "when": ["durability"]
+          "when": [
+            "durability"
+          ]
         }
       ],
       "width": 1,
@@ -1704,13 +2179,18 @@
         "en": "Small Complex Potion",
         "de": "Kleiner Komplextrank",
         "es": "Pócima Compleja Pequeña",
-        "pt": "Pequena poção complexa"
+        "pt": "Pequena poção complexa",
+        "zh-CN": "小瓶复合药水"
       },
-      "tags": ["complexPotion"],
+      "tags": [
+        "complexPotion"
+      ],
       "description": [
         {
           "text": "@numberOfItems",
-          "when": ["durability"]
+          "when": [
+            "durability"
+          ]
         }
       ],
       "width": 1,
@@ -1726,13 +2206,18 @@
         "en": "Complex Potion",
         "de": "Komplextrank",
         "es": "Pócima Compleja",
-        "pt": "Poção complexa"
+        "pt": "Poção complexa",
+        "zh-CN": "复合药水"
       },
-      "tags": ["complexPotion"],
+      "tags": [
+        "complexPotion"
+      ],
       "description": [
         {
           "text": "@numberOfItems",
-          "when": ["durability"]
+          "when": [
+            "durability"
+          ]
         }
       ],
       "width": 1,
@@ -1748,13 +2233,18 @@
         "en": "Large Complex Potion",
         "de": "Großer Komplextrank",
         "es": "Pócima Compleja Grande",
-        "pt": "Grande poção complexa"
+        "pt": "Grande poção complexa",
+        "zh-CN": "大瓶复合药水"
       },
-      "tags": ["complexPotion"],
+      "tags": [
+        "complexPotion"
+      ],
       "description": [
         {
           "text": "@numberOfItems",
-          "when": ["durability"]
+          "when": [
+            "durability"
+          ]
         }
       ],
       "width": 1,
@@ -1770,9 +2260,12 @@
         "en": "Gemstone",
         "de": "Edelstein",
         "es": "Gema",
-        "pt": "Pedra preciosa"
+        "pt": "Pedra preciosa",
+        "zh-CN": "再生原石"
       },
-      "tags": ["valuable"],
+      "tags": [
+        "valuable"
+      ],
       "description": [
         {
           "text": {
@@ -1799,7 +2292,11 @@
           "color": "yellow"
         }
       ],
-      "groundLabels": [{"style": "jewel"}],
+      "groundLabels": [
+        {
+          "style": "jewel"
+        }
+      ],
       "width": 1,
       "height": 1,
       "level": 25,
@@ -1812,9 +2309,12 @@
         "en": "Jewel of Harmony",
         "de": "Juwel der Harmonie",
         "es": "Joya de la Armonía",
-        "pt": "Joia da harmonia"
+        "pt": "Joia da harmonia",
+        "zh-CN": "再生宝石"
       },
-      "tags": ["valuable"],
+      "tags": [
+        "valuable"
+      ],
       "description": [
         {
           "text": "@reinforcementJewel"
@@ -1828,7 +2328,11 @@
           "color": "yellow"
         }
       ],
-      "groundLabels": [{"style": "jewel"}],
+      "groundLabels": [
+        {
+          "style": "jewel"
+        }
+      ],
       "width": 1,
       "height": 1,
       "level": 25,
@@ -1841,9 +2345,13 @@
         "en": "Lower refining stone",
         "de": "Niederer Verfeinerungsstein",
         "es": "Piedra de Más Baja Refinación",
-        "pt": "Pedra refinada inferior"
+        "pt": "Pedra refinada inferior",
+        "zh-CN": "下级炼化石"
       },
-      "tags": ["refineStone", "valuable"],
+      "tags": [
+        "refineStone",
+        "valuable"
+      ],
       "description": [
         {
           "text": "@grantPowerToReinforcedItem"
@@ -1857,7 +2365,11 @@
           "color": "yellow"
         }
       ],
-      "groundLabels": [{"style": "jewel"}],
+      "groundLabels": [
+        {
+          "style": "jewel"
+        }
+      ],
       "width": 1,
       "height": 1,
       "level": 25,
@@ -1870,9 +2382,13 @@
         "en": "Higher refining stone",
         "de": "Höherer Verfeinerungsstein",
         "es": "Piedra de Más Alta Refinación",
-        "pt": "Pedra refinada superior"
+        "pt": "Pedra refinada superior",
+        "zh-CN": "高等精炼石"
       },
-      "tags": ["refineStone", "valuable"],
+      "tags": [
+        "refineStone",
+        "valuable"
+      ],
       "description": [
         {
           "text": "@grantPowerToReinforcedItem"
@@ -1886,7 +2402,11 @@
           "color": "yellow"
         }
       ],
-      "groundLabels": [{"style": "jewel"}],
+      "groundLabels": [
+        {
+          "style": "jewel"
+        }
+      ],
       "width": 1,
       "height": 1,
       "level": 25,
@@ -1899,7 +2419,8 @@
         "en": "Pumpkin of Luck",
         "de": "Glückskürbis",
         "es": "Calabaza de la Suerte",
-        "pt": "Abóbora da sorte"
+        "pt": "Abóbora da sorte",
+        "zh-CN": "幸运南瓜"
       },
       "description": [
         {
@@ -1914,7 +2435,11 @@
           }
         }
       ],
-      "groundLabels": [{"style": "halloween"}],
+      "groundLabels": [
+        {
+          "style": "halloween"
+        }
+      ],
       "width": 1,
       "height": 1,
       "level": 1,
@@ -1926,7 +2451,8 @@
         "en": "Jack O'Lantern Blessings",
         "de": "Segen von Jack O'Lantern",
         "es": "Bendiciones de Jack O'Lantern",
-        "pt": "Bênçãos do Jack O'Lantern"
+        "pt": "Bênçãos do Jack O'Lantern",
+        "zh-CN": "南瓜灯的祝福"
       },
       "description": [
         {
@@ -1941,13 +2467,16 @@
             "ru": "Увеличение скорости атаки +{addOptionValue1}",
             "tl": "Tumaas ang Bilis ng Pag-atake +{addOptionValue1}",
             "uk": "Збільшення швидкості атаки +{addOptionValue1}",
-            "zh-TW": "攻擊速度增加+{addOptionValue1}"
+            "zh-TW": "攻擊速度增加+{addOptionValue1}",
+            "zh-CN": "攻击速度增加+{addOptionValue1}"
           },
           "color": "darkYellow"
         },
         {
           "text": "@numberOfItems",
-          "when": ["durability"]
+          "when": [
+            "durability"
+          ]
         }
       ],
       "nameLines": [
@@ -1957,7 +2486,11 @@
           }
         }
       ],
-      "groundLabels": [{"style": "halloween"}],
+      "groundLabels": [
+        {
+          "style": "halloween"
+        }
+      ],
       "width": 1,
       "height": 2,
       "repairable": false
@@ -1968,7 +2501,8 @@
         "en": "Jack O'Lantern Wrath",
         "de": "Wut von Jack O'Lantern",
         "es": "Ira de Jack O'Lantern",
-        "pt": "Ira do Jack O'Lantern"
+        "pt": "Ira do Jack O'Lantern",
+        "zh-CN": "南瓜灯的愤怒"
       },
       "description": [
         {
@@ -1983,13 +2517,16 @@
             "ru": "Увеличение силы атаки +{addOptionValue1}",
             "tl": "Pagtaas ng Attack Power +{addOptionValue1}",
             "uk": "Збільшення сили атаки +{addOptionValue1}",
-            "zh-TW": "攻擊力增加+{addOptionValue1}"
+            "zh-TW": "攻擊力增加+{addOptionValue1}",
+            "zh-CN": "攻击力增加+{addOptionValue1}"
           },
           "color": "darkYellow"
         },
         {
           "text": "@numberOfItems",
-          "when": ["durability"]
+          "when": [
+            "durability"
+          ]
         }
       ],
       "nameLines": [
@@ -1999,7 +2536,11 @@
           }
         }
       ],
-      "groundLabels": [{"style": "halloween"}],
+      "groundLabels": [
+        {
+          "style": "halloween"
+        }
+      ],
       "width": 1,
       "height": 2,
       "repairable": false
@@ -2010,7 +2551,8 @@
         "en": "Jack O'Lantern Cry",
         "de": "Schrei von Jack O'Lantern",
         "es": "Grito de Jack O'Lantern",
-        "pt": "Grito do Jack O'Lantern"
+        "pt": "Grito do Jack O'Lantern",
+        "zh-CN": "南瓜灯的呐喊"
       },
       "description": [
         {
@@ -2025,13 +2567,16 @@
             "ru": "Увеличение защитной силы +{addOptionValue1}",
             "tl": "Pagtaas ng Defense Power +{addOptionValue1}",
             "uk": "Збільшення сили захисту +{addOptionValue1}",
-            "zh-TW": "防禦力增加+{addOptionValue1}"
+            "zh-TW": "防禦力增加+{addOptionValue1}",
+            "zh-CN": "防御力增加+{addOptionValue1}"
           },
           "color": "darkYellow"
         },
         {
           "text": "@numberOfItems",
-          "when": ["durability"]
+          "when": [
+            "durability"
+          ]
         }
       ],
       "nameLines": [
@@ -2041,7 +2586,11 @@
           }
         }
       ],
-      "groundLabels": [{"style": "halloween"}],
+      "groundLabels": [
+        {
+          "style": "halloween"
+        }
+      ],
       "width": 1,
       "height": 2,
       "repairable": false
@@ -2052,7 +2601,8 @@
         "en": "Jack O'Lantern Food",
         "de": "Essen von Jack O'Lantern",
         "es": "Alimento de Jack O'Lantern",
-        "pt": "Comida do Jack O'Lantern"
+        "pt": "Comida do Jack O'Lantern",
+        "zh-CN": "南瓜灯的食物"
       },
       "description": [
         {
@@ -2067,13 +2617,16 @@
             "ru": "Увеличить макс. жизнь +{addOptionValue1}",
             "tl": "Taasan ang max. buhay +{addOptionValue1}",
             "uk": "Збільшити макс. життя +{addOptionValue1}",
-            "zh-TW": "增加最大生命+{addOptionValue1}"
+            "zh-TW": "增加最大生命+{addOptionValue1}",
+            "zh-CN": "增加最大生命+{addOptionValue1}"
           },
           "color": "darkYellow"
         },
         {
           "text": "@numberOfItems",
-          "when": ["durability"]
+          "when": [
+            "durability"
+          ]
         }
       ],
       "nameLines": [
@@ -2083,7 +2636,11 @@
           }
         }
       ],
-      "groundLabels": [{"style": "halloween"}],
+      "groundLabels": [
+        {
+          "style": "halloween"
+        }
+      ],
       "width": 1,
       "height": 1,
       "repairable": false
@@ -2094,7 +2651,8 @@
         "en": "Jack O'Lantern Drink",
         "de": "Getränk von Jack O'Lantern",
         "es": "Trago de Jack O'Lantern",
-        "pt": "Bebida do Jack O'Lantern"
+        "pt": "Bebida do Jack O'Lantern",
+        "zh-CN": "南瓜灯的饮料"
       },
       "description": [
         {
@@ -2109,13 +2667,16 @@
             "ru": "Увеличить макс. мана +{addOptionValue1}",
             "tl": "Taasan ang max. mana +{addOptionValue1}",
             "uk": "Збільшити макс. мана +{addOptionValue1}",
-            "zh-TW": "增加最大法力+{addOptionValue1}"
+            "zh-TW": "增加最大法力+{addOptionValue1}",
+            "zh-CN": "增加最大法力+{addOptionValue1}"
           },
           "color": "darkYellow"
         },
         {
           "text": "@numberOfItems",
-          "when": ["durability"]
+          "when": [
+            "durability"
+          ]
         }
       ],
       "nameLines": [
@@ -2125,7 +2686,11 @@
           }
         }
       ],
-      "groundLabels": [{"style": "halloween"}],
+      "groundLabels": [
+        {
+          "style": "halloween"
+        }
+      ],
       "width": 1,
       "height": 1,
       "repairable": false
@@ -2136,7 +2701,8 @@
         "en": "Chistmas Star",
         "de": "Weihnachtsstern",
         "es": "Estrella de Navidad",
-        "pt": "Estrela de Natal"
+        "pt": "Estrela de Natal",
+        "zh-CN": "圣诞星"
       },
       "description": [
         {
@@ -2155,7 +2721,8 @@
         "en": "GM Gift",
         "de": "GM-Geschenk",
         "es": "Regalo de GM",
-        "pt": "Presente de GM"
+        "pt": "Presente de GM",
+        "zh-CN": "GM礼物宝箱"
       },
       "description": [
         {
@@ -2170,7 +2737,8 @@
             "ru": "Компания GM подарила эту специальную коробку.",
             "tl": "Niregalo ni GM ang espesyal na kahon na ito.",
             "uk": "GM подарував цю особливу коробку.",
-            "zh-TW": "通用汽車贈送了這個特殊的盒子。"
+            "zh-TW": "通用汽車贈送了這個特殊的盒子。",
+            "zh-CN": "GM赠送了这个特殊的盒子。"
           },
           "after": "options"
         },
@@ -2190,9 +2758,12 @@
         "en": "Talisman of Luck",
         "de": "Talisman des Glücks",
         "es": "Talismán de la Suerte",
-        "pt": "Talismã da sorte"
+        "pt": "Talismã da sorte",
+        "zh-CN": "幸运符咒"
       },
-      "tags": ["cashShop"],
+      "tags": [
+        "cashShop"
+      ],
       "description": [
         {
           "text": {
@@ -2206,7 +2777,8 @@
             "ru": "Увеличивает коэффициент комбинации, но только до максимального коэффициента.",
             "tl": "Pinapataas ang rate ng kumbinasyon, ngunit hanggang sa maximum na rate lamang.",
             "uk": "Збільшує швидкість комбінації, але лише до максимальної швидкості.",
-            "zh-TW": "增加組合速率，但僅達最大速率。"
+            "zh-TW": "增加組合速率，但僅達最大速率。",
+            "zh-CN": "增加合成速率，但仅达到最大速率。"
           },
           "color": "blue"
         },
@@ -2222,12 +2794,19 @@
             "ru": "{durability}% Увеличение шанса успешной комбинации",
             "tl": "{durability}% Pagtaas ng rate ng tagumpay ng kumbinasyon",
             "uk": "{durability}% Збільшення рівня успіху комбінації",
-            "zh-TW": "{durability}% 組合成功率提升"
+            "zh-TW": "{durability}% 組合成功率提升",
+            "zh-CN": "合成成功率提高{durability}%"
           },
-          "when": ["durability"]
+          "when": [
+            "durability"
+          ]
         }
       ],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "tooltipLayout": "noClassLines",
       "width": 1,
       "height": 1,
@@ -2243,16 +2822,23 @@
         "en": "Chaos Card",
         "de": "Chaoskarte",
         "es": "Tarjeta de Caos",
-        "pt": "Cartão do caos"
+        "pt": "Cartão do caos",
+        "zh-CN": "混沌卡"
       },
-      "tags": ["cashShop"],
+      "tags": [
+        "cashShop"
+      ],
       "description": [
         {
           "text": "@specialItemsWithCombinations",
           "color": "blue"
         }
       ],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "tooltipLayout": "noClassLines",
       "width": 1,
       "height": 1,
@@ -2268,7 +2854,8 @@
         "en": "Green Chaos Box",
         "de": "Grüne Chaosbox",
         "es": "Caja de Caos Verde",
-        "pt": "Caixa do caos verde"
+        "pt": "Caixa do caos verde",
+        "zh-CN": "绿色混沌盒"
       },
       "width": 1,
       "height": 1,
@@ -2280,7 +2867,8 @@
         "en": "Red Chaos Box",
         "de": "Rote Chaosbox",
         "es": "Caja de Caos Roja",
-        "pt": "Caixa do caos vermelha"
+        "pt": "Caixa do caos vermelha",
+        "zh-CN": "红色混沌盒"
       },
       "width": 1,
       "height": 1,
@@ -2292,7 +2880,8 @@
         "en": "Purple Chaos Box",
         "de": "Lila Chaosbox",
         "es": "Caja de Caos Púrpura",
-        "pt": "Caixa do caos roxa"
+        "pt": "Caixa do caos roxa",
+        "zh-CN": "紫色混沌盒"
       },
       "width": 1,
       "height": 1,
@@ -2304,16 +2893,23 @@
         "en": "Rare Item Ticket1",
         "de": "Ticket für seltenen Gegenstand 1",
         "es": "Boleto de Ítem Raro1",
-        "pt": "Bilhete de item raro1"
+        "pt": "Bilhete de item raro1",
+        "zh-CN": "稀有物品门票1"
       },
-      "tags": ["cashShop"],
+      "tags": [
+        "cashShop"
+      ],
       "description": [
         {
           "text": "@contactCsTeam",
           "color": "blue"
         }
       ],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "tooltipLayout": "noClassLines",
       "width": 1,
       "height": 1,
@@ -2329,16 +2925,23 @@
         "en": "Rare Item Ticket2",
         "de": "Ticket für seltenen Gegenstand 2",
         "es": "Boleto de Ítem Raro2",
-        "pt": "Bilhete de item raro2"
+        "pt": "Bilhete de item raro2",
+        "zh-CN": "稀有物品门票2"
       },
-      "tags": ["cashShop"],
+      "tags": [
+        "cashShop"
+      ],
       "description": [
         {
           "text": "@contactCsTeam",
           "color": "blue"
         }
       ],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "tooltipLayout": "noClassLines",
       "width": 1,
       "height": 1,
@@ -2354,16 +2957,23 @@
         "en": "Rare Item Ticket3",
         "de": "Ticket für seltenen Gegenstand 3",
         "es": "Boleto de Ítem Raro3",
-        "pt": "Bilhete de item raro3"
+        "pt": "Bilhete de item raro3",
+        "zh-CN": "稀有物品门票3"
       },
-      "tags": ["cashShop"],
+      "tags": [
+        "cashShop"
+      ],
       "description": [
         {
           "text": "@contactCsTeam",
           "color": "blue"
         }
       ],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "tooltipLayout": "noClassLines",
       "width": 1,
       "height": 1,
@@ -2379,16 +2989,23 @@
         "en": "Rare Item Ticket4",
         "de": "Ticket für seltenen Gegenstand 4",
         "es": "Boleto de Ítem Raro4",
-        "pt": "Bilhete de item raro4"
+        "pt": "Bilhete de item raro4",
+        "zh-CN": "稀有物品门票4"
       },
-      "tags": ["cashShop"],
+      "tags": [
+        "cashShop"
+      ],
       "description": [
         {
           "text": "@contactCsTeam",
           "color": "blue"
         }
       ],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "tooltipLayout": "noClassLines",
       "width": 1,
       "height": 1,
@@ -2404,16 +3021,23 @@
         "en": "Rare Item Ticket5",
         "de": "Ticket für seltenen Gegenstand 5",
         "es": "Boleto de Ítem Raro5",
-        "pt": "Bilhete de item raro5"
+        "pt": "Bilhete de item raro5",
+        "zh-CN": "稀有物品票5"
       },
-      "tags": ["cashShop"],
+      "tags": [
+        "cashShop"
+      ],
       "description": [
         {
           "text": "@contactCsTeam",
           "color": "blue"
         }
       ],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "tooltipLayout": "noClassLines",
       "width": 1,
       "height": 1,
@@ -2429,7 +3053,8 @@
         "en": "Firecracker",
         "de": "Knallkörper",
         "es": "Petardo",
-        "pt": "Fogos de artifício"
+        "pt": "Fogos de artifício",
+        "zh-CN": "烟花"
       },
       "description": [
         {
@@ -2447,7 +3072,8 @@
         "en": "Cursed Castle Water",
         "de": "Verfluchtes Burgwasser",
         "es": "Agua de Castillo Maldito",
-        "pt": "Água do Castelo Amaldiçoado"
+        "pt": "Água do Castelo Amaldiçoado",
+        "zh-CN": "诅咒城堡之水"
       },
       "description": [
         {
@@ -2462,12 +3088,17 @@
             "ru": "Скорость мобильности снижается при достижении.",
             "tl": "Ang bilis ng paggalaw ay bumababa kapag nakamit.",
             "uk": "Швидкість рухливості знижується після досягнення.",
-            "zh-TW": "成就後移動速度會降低。"
+            "zh-TW": "成就後移動速度會降低。",
+            "zh-CN": "成就后移动速度会降低。"
           },
           "color": "blue"
         }
       ],
-      "groundLabels": [{"style": "questItem"}],
+      "groundLabels": [
+        {
+          "style": "questItem"
+        }
+      ],
       "width": 1,
       "height": 1,
       "tradable": false,
@@ -2479,9 +3110,12 @@
         "en": "Death-beam Knight Flame",
         "de": "Flamme des Death Beam Knight",
         "es": "Llama Caballero Haz Mortal",
-        "pt": "Chama do Cav. Raio da Morte"
+        "pt": "Chama do Cav. Raio da Morte",
+        "zh-CN": "死亡-黑炎魔火焰"
       },
-      "tags": ["thirdClassQuestItem"],
+      "tags": [
+        "thirdClassQuestItem"
+      ],
       "description": [
         {
           "text": "@questItem"
@@ -2514,9 +3148,12 @@
         "en": "Hell-Miner Horn",
         "de": "Horn des Hell Maine",
         "es": "Cuerno de Minero Infiernal",
-        "pt": "Chifre do Mineiro do Inferno"
+        "pt": "Chifre do Mineiro do Inferno",
+        "zh-CN": "地狱矿工号角"
       },
-      "tags": ["thirdClassQuestItem"],
+      "tags": [
+        "thirdClassQuestItem"
+      ],
       "description": [
         {
           "text": "@questItem"
@@ -2549,9 +3186,12 @@
         "en": "Dark Phoenix Feather",
         "de": "Feder des Dunkelphönix",
         "es": "Pluma de Fénix Oscuro",
-        "pt": "Pena de fênix negra"
+        "pt": "Pena de fênix negra",
+        "zh-CN": "天魔菲尼斯羽毛"
       },
-      "tags": ["thirdClassQuestItem"],
+      "tags": [
+        "thirdClassQuestItem"
+      ],
       "description": [
         {
           "text": "@questItem"
@@ -2584,9 +3224,12 @@
         "en": "Abyssal Eye",
         "de": "Auge des Abgrunds",
         "es": "Ojo Abismal",
-        "pt": "Olho abissal"
+        "pt": "Olho abissal",
+        "zh-CN": "深渊之眼"
       },
-      "tags": ["thirdClassQuestItem"],
+      "tags": [
+        "thirdClassQuestItem"
+      ],
       "description": [
         {
           "text": "@questItem"
@@ -2619,9 +3262,13 @@
         "en": "Elite Healing Potion",
         "de": "Elite-Heiltrank",
         "es": "Pócima de Curación de Élite",
-        "pt": "Poção de cura de elite"
+        "pt": "Poção de cura de elite",
+        "zh-CN": "精华治疗药水"
       },
-      "tags": ["elitePotion", "cashShop"],
+      "tags": [
+        "elitePotion",
+        "cashShop"
+      ],
       "description": [
         {
           "text": "@numberOfItems",
@@ -2639,12 +3286,17 @@
             "ru": "Мгновенно восстанавливает HP на 100% i.",
             "tl": "Ibinabalik ang HP nang 100% i kaagad.",
             "uk": "Негайно відновлює HP на 100% i.",
-            "zh-TW": "立即恢復HP 100% i。"
+            "zh-TW": "立即恢復HP 100% i。",
+            "zh-CN": "立即恢复HP 100% i。"
           },
           "color": "blue"
         }
       ],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "tooltipLayout": "noClassLines",
       "width": 1,
       "height": 1,
@@ -2660,9 +3312,13 @@
         "en": "Elite Mana Potion",
         "de": "Elite-Manatrank",
         "es": "Pócima de Maná de Élite",
-        "pt": "Poção de mana de elite"
+        "pt": "Poção de mana de elite",
+        "zh-CN": "精华魔力药水"
       },
-      "tags": ["elitePotion", "cashShop"],
+      "tags": [
+        "elitePotion",
+        "cashShop"
+      ],
       "description": [
         {
           "text": "@numberOfItems",
@@ -2680,12 +3336,17 @@
             "ru": "Мгновенно восстанавливает ману на 100% i.",
             "tl": "Ibinabalik ang Mana ng 100% i kaagad.",
             "uk": "Негайно відновлює ману на 100% i.",
-            "zh-TW": "立即恢復 100% i 法力。"
+            "zh-TW": "立即恢復 100% i 法力。",
+            "zh-CN": "立即恢复 100% i 法力。"
           },
           "color": "blue"
         }
       ],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "tooltipLayout": "noClassLines",
       "width": 1,
       "height": 1,
@@ -2701,9 +3362,13 @@
         "en": "Scroll of Quickness",
         "de": "Schriftrolle der Schnelligkeit",
         "es": "Rollo de Rapidez",
-        "pt": "Pergaminho da rapidez"
+        "pt": "Pergaminho da rapidez",
+        "zh-CN": "迅捷卷轴"
       },
-      "tags": ["buffScroll", "cashShop"],
+      "tags": [
+        "buffScroll",
+        "cashShop"
+      ],
       "description": [
         {
           "text": {
@@ -2717,7 +3382,8 @@
             "ru": "Увеличивает скорость атаки на {addOptionValue1}.",
             "tl": "Pinapataas ng {addOptionValue1} ang Bilis ng Pag-atake",
             "uk": "Збільшує швидкість атаки на {addOptionValue1}",
-            "zh-TW": "攻擊速度增加 {addOptionValue1}"
+            "zh-TW": "攻擊速度增加 {addOptionValue1}",
+            "zh-CN": "攻击速度增加 {addOptionValue1}"
           },
           "color": "blue"
         },
@@ -2726,7 +3392,11 @@
           "color": "blue"
         }
       ],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "tooltipLayout": "noClassLines",
       "width": 2,
       "height": 2,
@@ -2742,9 +3412,13 @@
         "en": "Scroll of Defense",
         "de": "Schriftrolle der Verteidigung",
         "es": "Rollo de Defensa",
-        "pt": "Pergaminho da defesa"
+        "pt": "Pergaminho da defesa",
+        "zh-CN": "防御卷轴"
       },
-      "tags": ["buffScroll", "cashShop"],
+      "tags": [
+        "buffScroll",
+        "cashShop"
+      ],
       "description": [
         {
           "text": {
@@ -2758,7 +3432,8 @@
             "ru": "Увеличивает защиту на {addOptionValue1}.",
             "tl": "Pinapataas ang Depensa ng {addOptionValue1}",
             "uk": "Збільшує захист на {addOptionValue1}",
-            "zh-TW": "防禦力增加 {addOptionValue1}"
+            "zh-TW": "防禦力增加 {addOptionValue1}",
+            "zh-CN": "防御力增加 {addOptionValue1}"
           },
           "color": "blue"
         },
@@ -2767,7 +3442,11 @@
           "color": "blue"
         }
       ],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "tooltipLayout": "noClassLines",
       "width": 2,
       "height": 2,
@@ -2783,9 +3462,13 @@
         "en": "Scroll of Wrath",
         "de": "Schriftrolle des Zorns",
         "es": "Rollo de Ira",
-        "pt": "Pergaminho da ira"
+        "pt": "Pergaminho da ira",
+        "zh-CN": "愤怒卷轴"
       },
-      "tags": ["buffScroll", "cashShop"],
+      "tags": [
+        "buffScroll",
+        "cashShop"
+      ],
       "description": [
         {
           "text": {
@@ -2799,7 +3482,8 @@
             "ru": "Увеличивает силу атаки на {addOptionValue1}.",
             "tl": "Pinapataas ng {addOptionValue1} ang Attack Power",
             "uk": "Збільшує силу атаки на {addOptionValue1}",
-            "zh-TW": "攻擊力增加 {addOptionValue1}"
+            "zh-TW": "攻擊力增加 {addOptionValue1}",
+            "zh-CN": "攻击力增加 {addOptionValue1}"
           },
           "color": "blue"
         },
@@ -2808,7 +3492,11 @@
           "color": "blue"
         }
       ],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "tooltipLayout": "noClassLines",
       "width": 2,
       "height": 2,
@@ -2824,9 +3512,13 @@
         "en": "Scroll of Wizardry",
         "de": "Schriftrolle der Zauberkraft",
         "es": "Rollo de Magia",
-        "pt": "Pergaminho do poder de magia"
+        "pt": "Pergaminho do poder de magia",
+        "zh-CN": "魔力卷轴"
       },
-      "tags": ["buffScroll", "cashShop"],
+      "tags": [
+        "buffScroll",
+        "cashShop"
+      ],
       "description": [
         {
           "text": {
@@ -2840,7 +3532,8 @@
             "ru": "Увеличивает волшебство на {addOptionValue1}",
             "tl": "Pinapataas ang Wizardry ng {addOptionValue1}",
             "uk": "Збільшує Wizardry на {addOptionValue1}",
-            "zh-TW": "增加巫術 {addOptionValue1}"
+            "zh-TW": "增加巫術 {addOptionValue1}",
+            "zh-CN": "增加巫术 {addOptionValue1}"
           },
           "color": "blue"
         },
@@ -2849,7 +3542,11 @@
           "color": "blue"
         }
       ],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "tooltipLayout": "noClassLines",
       "width": 2,
       "height": 2,
@@ -2865,9 +3562,13 @@
         "en": "Scroll of Health",
         "de": "Schriftrolle des Lebens",
         "es": "Rollo de Salud",
-        "pt": "Pergaminho de vida"
+        "pt": "Pergaminho de vida",
+        "zh-CN": "生命卷轴"
       },
-      "tags": ["buffScroll", "cashShop"],
+      "tags": [
+        "buffScroll",
+        "cashShop"
+      ],
       "description": [
         {
           "text": {
@@ -2881,7 +3582,8 @@
             "ru": "Увеличивает HP на {addOptionValue1}.",
             "tl": "Tumataas ang HP ng {addOptionValue1}",
             "uk": "Збільшує HP на {addOptionValue1}",
-            "zh-TW": "HP 增加 {addOptionValue1}"
+            "zh-TW": "HP 增加 {addOptionValue1}",
+            "zh-CN": "HP 增加 {addOptionValue1}"
           },
           "color": "blue"
         },
@@ -2890,7 +3592,11 @@
           "color": "blue"
         }
       ],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "tooltipLayout": "noClassLines",
       "width": 2,
       "height": 2,
@@ -2906,9 +3612,13 @@
         "en": "Scroll of Mana",
         "de": "Schriftrolle des Manas",
         "es": "Rollo de Maná",
-        "pt": "Pergaminho de mana"
+        "pt": "Pergaminho de mana",
+        "zh-CN": "法力卷轴"
       },
-      "tags": ["buffScroll", "cashShop"],
+      "tags": [
+        "buffScroll",
+        "cashShop"
+      ],
       "description": [
         {
           "text": {
@@ -2922,7 +3632,8 @@
             "ru": "Увеличивает ману на {addOptionValue1}.",
             "tl": "Pinapataas ang Mana ng {addOptionValue1}",
             "uk": "Збільшує ману на {addOptionValue1}",
-            "zh-TW": "法力增加 {addOptionValue1}"
+            "zh-TW": "法力增加 {addOptionValue1}",
+            "zh-CN": "法力增加 {addOptionValue1}"
           },
           "color": "blue"
         },
@@ -2931,7 +3642,11 @@
           "color": "blue"
         }
       ],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "tooltipLayout": "noClassLines",
       "width": 2,
       "height": 2,
@@ -2947,9 +3662,13 @@
         "en": "Elixir of Strength",
         "de": "Elixier der Stärke",
         "es": "Elixir de Fuerza",
-        "pt": "Elixir da força"
+        "pt": "Elixir da força",
+        "zh-CN": "力量秘药"
       },
-      "tags": ["elixir", "cashShop"],
+      "tags": [
+        "elixir",
+        "cashShop"
+      ],
       "description": [
         {
           "text": "@numberOfItems",
@@ -2967,7 +3686,8 @@
             "ru": "Прирост силы +{addOptionValue1}",
             "tl": "Pagtaas ng lakas +{addOptionValue1}",
             "uk": "Приріст сили +{addOptionValue1}",
-            "zh-TW": "強度增量+{addOptionValue1}"
+            "zh-TW": "強度增量+{addOptionValue1}",
+            "zh-CN": "强度增量+{addOptionValue1}"
           },
           "color": "blue"
         },
@@ -2989,7 +3709,11 @@
           "text": "@available"
         }
       ],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "tooltipLayout": "noClassLines",
       "width": 1,
       "height": 2,
@@ -3005,9 +3729,13 @@
         "en": "Elixir of Agility",
         "de": "Elixier der Beweglichkeit",
         "es": "Elixir de Agilidad",
-        "pt": "Elixir da agilidade"
+        "pt": "Elixir da agilidade",
+        "zh-CN": "敏捷秘药"
       },
-      "tags": ["elixir", "cashShop"],
+      "tags": [
+        "elixir",
+        "cashShop"
+      ],
       "description": [
         {
           "text": "@numberOfItems",
@@ -3025,7 +3753,8 @@
             "ru": "Увеличение быстроты +{addOptionValue1}",
             "tl": "Pagtaas ng bilis +{addOptionValue1}",
             "uk": "Приріст швидкості +{addOptionValue1}",
-            "zh-TW": "速度增量+{addOptionValue1}"
+            "zh-TW": "速度增量+{addOptionValue1}",
+            "zh-CN": "速度增量+{addOptionValue1}"
           },
           "color": "blue"
         },
@@ -3047,7 +3776,11 @@
           "text": "@available"
         }
       ],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "tooltipLayout": "noClassLines",
       "width": 1,
       "height": 2,
@@ -3063,9 +3796,13 @@
         "en": "Elixir of Health",
         "de": "Elixier der Vitalität",
         "es": "Elixir de Salud",
-        "pt": "Elixir da vida"
+        "pt": "Elixir da vida",
+        "zh-CN": "体力秘药"
       },
-      "tags": ["elixir", "cashShop"],
+      "tags": [
+        "elixir",
+        "cashShop"
+      ],
       "description": [
         {
           "text": "@numberOfItems",
@@ -3083,7 +3820,8 @@
             "ru": "прирост выносливости +{addOptionValue1}",
             "tl": "pagtaas ng tibay +{addOptionValue1}",
             "uk": "приріст витривалості +{addOptionValue1}",
-            "zh-TW": "體力增量+{addOptionValue1}"
+            "zh-TW": "體力增量+{addOptionValue1}",
+            "zh-CN": "体力增量+{addOptionValue1}"
           },
           "color": "blue"
         },
@@ -3105,7 +3843,11 @@
           "text": "@available"
         }
       ],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "tooltipLayout": "noClassLines",
       "width": 1,
       "height": 2,
@@ -3121,9 +3863,13 @@
         "en": "Elixir of Energy",
         "de": "Elixier der Energie",
         "es": "Elixir de Energía",
-        "pt": "Elixir da energia"
+        "pt": "Elixir da energia",
+        "zh-CN": "智力秘药"
       },
-      "tags": ["elixir", "cashShop"],
+      "tags": [
+        "elixir",
+        "cashShop"
+      ],
       "description": [
         {
           "text": "@numberOfItems",
@@ -3141,7 +3887,8 @@
             "ru": "Приращение энергии +{addOptionValue1}",
             "tl": "Pagtaas ng enerhiya +{addOptionValue1}",
             "uk": "Приріст енергії +{addOptionValue1}",
-            "zh-TW": "能量增量+{addOptionValue1}"
+            "zh-TW": "能量增量+{addOptionValue1}",
+            "zh-CN": "能量增量+{addOptionValue1}"
           },
           "color": "blue"
         },
@@ -3163,7 +3910,11 @@
           "text": "@available"
         }
       ],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "tooltipLayout": "noClassLines",
       "width": 1,
       "height": 2,
@@ -3179,9 +3930,13 @@
         "en": "Elixir of Control",
         "de": "Elixier der Führung",
         "es": "Elixir de Control",
-        "pt": "Elixir do controle"
+        "pt": "Elixir do controle",
+        "zh-CN": "统率秘药"
       },
-      "tags": ["elixir", "cashShop"],
+      "tags": [
+        "elixir",
+        "cashShop"
+      ],
       "description": [
         {
           "text": "@numberOfItems",
@@ -3199,7 +3954,8 @@
             "ru": "Приращение управления +{addOptionValue1}",
             "tl": "Kontrolin ang pagtaas +{addOptionValue1}",
             "uk": "Приріст контролю +{addOptionValue1}",
-            "zh-TW": "控制增量+{addOptionValue1}"
+            "zh-TW": "控制增量+{addOptionValue1}",
+            "zh-CN": "控制增量+{addOptionValue1}"
           },
           "color": "blue"
         },
@@ -3222,7 +3978,8 @@
             "ru": "Используйте только Темного Лорда.",
             "tl": "Dark Lord gamitin lang.",
             "uk": "Темний Лорд використовувати тільки.",
-            "zh-TW": "僅限黑暗領主使用。"
+            "zh-TW": "僅限黑暗領主使用。",
+            "zh-CN": "圣导师仅使用。"
           },
           "color": "yellow"
         },
@@ -3236,7 +3993,11 @@
           "text": "@available"
         }
       ],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "tooltipLayout": "noClassLines",
       "width": 1,
       "height": 2,
@@ -3252,7 +4013,8 @@
         "en": "Rare Item Ticket",
         "de": "Ticket für seltenen Gegenstand",
         "es": "Boleto de Ítem Raro",
-        "pt": "Bilhete de item raro"
+        "pt": "Bilhete de item raro",
+        "zh-CN": "稀有物品门票"
       },
       "description": [
         {
@@ -3260,7 +4022,11 @@
           "color": "blue"
         }
       ],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "width": 1,
       "height": 1,
       "repairable": false
@@ -3271,7 +4037,8 @@
         "en": "Cherry Blossom Play-Box",
         "de": "Kirschblüten-Spielbox",
         "es": "Caja Juegos Flor de Cerezo",
-        "pt": "Cx. de Brinq. Flor de Cereja"
+        "pt": "Cx. de Brinq. Flor de Cereja",
+        "zh-CN": "樱花游戏箱"
       },
       "description": [
         {
@@ -3279,7 +4046,11 @@
           "color": "blue"
         }
       ],
-      "groundLabels": [{"style": "cherryBlossom"}],
+      "groundLabels": [
+        {
+          "style": "cherryBlossom"
+        }
+      ],
       "width": 1,
       "height": 1,
       "repairable": false
@@ -3290,7 +4061,8 @@
         "en": "Cherry Blossom Wine",
         "de": "Kirschblütenwein",
         "es": "Vino de Flor de Cerezo",
-        "pt": "Vinho de flor de cereja"
+        "pt": "Vinho de flor de cereja",
+        "zh-CN": "樱花酒"
       },
       "description": [
         {
@@ -3305,7 +4077,8 @@
             "ru": "700 Максимальное приращение маны",
             "tl": "700 Maximum Mana increment",
             "uk": "700 Максимальний приріст мани",
-            "zh-TW": "700 最大法力增量"
+            "zh-TW": "700 最大法力增量",
+            "zh-CN": "700最大魔法值增量"
           },
           "color": "blue"
         },
@@ -3316,7 +4089,11 @@
           "color": "purple"
         }
       ],
-      "groundLabels": [{"style": "cherryBlossom"}],
+      "groundLabels": [
+        {
+          "style": "cherryBlossom"
+        }
+      ],
       "width": 1,
       "height": 2,
       "repairable": false
@@ -3327,7 +4104,8 @@
         "en": "Cherry Blossom Rice Cake",
         "de": "Kirschblüten-Reiskuchen",
         "es": "Pastel Arroz Flor de Cerezo",
-        "pt": "Bolo de Arroz Flor de Cereja"
+        "pt": "Bolo de Arroz Flor de Cereja",
+        "zh-CN": "樱花年糕"
       },
       "description": [
         {
@@ -3342,7 +4120,8 @@
             "ru": "700 максимального увеличения жизни",
             "tl": "700 Maximum Life increment",
             "uk": "700 Максимальний приріст життя",
-            "zh-TW": "700 最大生命增量"
+            "zh-TW": "700 最大生命增量",
+            "zh-CN": "700最大生命增量"
           },
           "color": "blue"
         },
@@ -3353,7 +4132,11 @@
           "color": "purple"
         }
       ],
-      "groundLabels": [{"style": "cherryBlossom"}],
+      "groundLabels": [
+        {
+          "style": "cherryBlossom"
+        }
+      ],
       "width": 1,
       "height": 1,
       "repairable": false
@@ -3364,7 +4147,8 @@
         "en": "Cherry Blossom Flower Petal",
         "de": "Kirschblütenblatt",
         "es": "Pétalo de Flor de Cerezo",
-        "pt": "Pétala da flor de cereja"
+        "pt": "Pétala da flor de cereja",
+        "zh-CN": "樱花花瓣"
       },
       "description": [
         {
@@ -3379,7 +4163,8 @@
             "ru": "Увеличение силы атаки +40.",
             "tl": "Pagtaas ng lakas ng pag-atake +40",
             "uk": "Приріст сили атаки +40",
-            "zh-TW": "攻擊力增量+40"
+            "zh-TW": "攻擊力增量+40",
+            "zh-CN": "攻击力增量+40"
           },
           "color": "blue"
         },
@@ -3390,7 +4175,11 @@
           "color": "purple"
         }
       ],
-      "groundLabels": [{"style": "cherryBlossom"}],
+      "groundLabels": [
+        {
+          "style": "cherryBlossom"
+        }
+      ],
       "width": 1,
       "height": 1,
       "repairable": false
@@ -3401,7 +4190,8 @@
         "en": "White Cherry Blossom Branch",
         "de": "Weißer Kirschblütenzweig",
         "es": "Rama Blanca Flor de Cerezo",
-        "pt": "Galho de cereja branco"
+        "pt": "Galho de cereja branco",
+        "zh-CN": "白樱花枝"
       },
       "description": [
         {
@@ -3413,7 +4203,11 @@
           "color": "blue"
         }
       ],
-      "groundLabels": [{"style": "cherryBlossom"}],
+      "groundLabels": [
+        {
+          "style": "cherryBlossom"
+        }
+      ],
       "width": 1,
       "height": 2,
       "repairable": false
@@ -3424,7 +4218,8 @@
         "en": "Red Cherry Blossom Branch",
         "de": "Roter Kirschblütenzweig",
         "es": "Rama Roja de Flor de Cerezo",
-        "pt": "Galho de cereja vermelho"
+        "pt": "Galho de cereja vermelho",
+        "zh-CN": "红樱花枝"
       },
       "description": [
         {
@@ -3436,7 +4231,11 @@
           "color": "blue"
         }
       ],
-      "groundLabels": [{"style": "cherryBlossom"}],
+      "groundLabels": [
+        {
+          "style": "cherryBlossom"
+        }
+      ],
       "width": 1,
       "height": 2,
       "repairable": false
@@ -3447,7 +4246,8 @@
         "en": "Golden Cherry Blossom Branch",
         "de": "Goldener Kirschblütenzweig",
         "es": "Rama Dorada Flor de Cerezo",
-        "pt": "Galho de cereja dourado"
+        "pt": "Galho de cereja dourado",
+        "zh-CN": "黄色樱花树枝"
       },
       "description": [
         {
@@ -3459,7 +4259,11 @@
           "color": "blue"
         }
       ],
-      "groundLabels": [{"style": "cherryBlossom"}],
+      "groundLabels": [
+        {
+          "style": "cherryBlossom"
+        }
+      ],
       "width": 1,
       "height": 2,
       "repairable": false
@@ -3470,10 +4274,17 @@
         "en": "Summoner Character Card",
         "de": "Charakterkarte: Beschwörer",
         "es": "Tarjeta Personaje Invocador",
-        "pt": "Cartão do Pers. Invocador"
+        "pt": "Cartão do Pers. Invocador",
+        "zh-CN": "召唤术师角色卡"
       },
-      "tags": ["cashShop"],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "tags": [
+        "cashShop"
+      ],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "tooltipLayout": "noClassLines",
       "width": 1,
       "height": 1,
@@ -3489,16 +4300,23 @@
         "en": "Chaos Card Gold",
         "de": "Chaoskarte (Gold)",
         "es": "Tarjeta de Caos Oro",
-        "pt": "Cartão dourado do caos"
+        "pt": "Cartão dourado do caos",
+        "zh-CN": "混沌卡金"
       },
-      "tags": ["cashShop"],
+      "tags": [
+        "cashShop"
+      ],
       "description": [
         {
           "text": "@specialItemsWithCombinations",
           "color": "blue"
         }
       ],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "tooltipLayout": "noClassLines",
       "width": 1,
       "height": 1,
@@ -3514,16 +4332,23 @@
         "en": "Chaos Card Rare",
         "de": "Chaoskarte (Selten)",
         "es": "Tarjeta de Caos Rara",
-        "pt": "Cartão raro do caos"
+        "pt": "Cartão raro do caos",
+        "zh-CN": "混沌卡稀有"
       },
-      "tags": ["cashShop"],
+      "tags": [
+        "cashShop"
+      ],
       "description": [
         {
           "text": "@specialItemsWithCombinations",
           "color": "blue"
         }
       ],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "tooltipLayout": "noClassLines",
       "width": 1,
       "height": 1,
@@ -3539,9 +4364,12 @@
         "en": "Medium Elite Healing Potion",
         "de": "Mittlerer Elite-Heiltrank",
         "es": "Pócima Curación Élite Media",
-        "pt": "Poção média de cura de elite"
+        "pt": "Poção média de cura de elite",
+        "zh-CN": "中瓶精华治疗药水"
       },
-      "tags": ["cashShop"],
+      "tags": [
+        "cashShop"
+      ],
       "description": [
         {
           "text": "@numberOfItems",
@@ -3559,12 +4387,17 @@
             "ru": "Мгновенно восстанавливает HP на 65% i.",
             "tl": "Ibinabalik ang HP nang 65% i kaagad.",
             "uk": "Відновлює HP на 65% iмразово.",
-            "zh-TW": "立即恢復生命值65% i。"
+            "zh-TW": "立即恢復生命值65% i。",
+            "zh-CN": "立即恢复生命值65% i。"
           },
           "color": "blue"
         }
       ],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "tooltipLayout": "noClassLines",
       "width": 1,
       "height": 1,
@@ -3580,16 +4413,23 @@
         "en": "Chaos Card  Mini",
         "de": "Chaoskarte (Mini)",
         "es": "Tarjeta de Caos Mini",
-        "pt": "Mini cartão do caos"
+        "pt": "Mini cartão do caos",
+        "zh-CN": "混沌卡迷你"
       },
-      "tags": ["cashShop"],
+      "tags": [
+        "cashShop"
+      ],
       "description": [
         {
           "text": "@specialItemsWithCombinations",
           "color": "blue"
         }
       ],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "tooltipLayout": "noClassLines",
       "width": 1,
       "height": 1,
@@ -3605,9 +4445,12 @@
         "en": "Talisman of Chaos Assembly",
         "de": "Talisman der Chaos-Kombination",
         "es": "Ensamble Talismán del Caos",
-        "pt": "Talismã do Agrup. do Caos"
+        "pt": "Talismã do Agrup. do Caos",
+        "zh-CN": "混沌合成符咒"
       },
-      "tags": ["cashShop"],
+      "tags": [
+        "cashShop"
+      ],
       "description": [
         {
           "text": {
@@ -3621,7 +4464,8 @@
             "ru": "Минимум +10–+15 повышение уровня предмета.",
             "tl": "Pinakamababang +10 - +15 na antas ng pag-upgrade ng item",
             "uk": "Мінімальне підвищення рівня +10 - +15",
-            "zh-TW": "最低 +10 - +15 級物品升級"
+            "zh-TW": "最低 +10 - +15 級物品升級",
+            "zh-CN": "最低 +10 - +15级物品升级"
           },
           "color": "blue"
         },
@@ -3637,7 +4481,8 @@
             "ru": "блокирует рассеивание предмета.",
             "tl": "hinaharangan ang pagwawaldas ng item.",
             "uk": "блокує розсіювання предмета.",
-            "zh-TW": "阻止物品耗散。"
+            "zh-TW": "阻止物品耗散。",
+            "zh-CN": "阻止物品耗散。"
           },
           "color": "purple"
         },
@@ -3653,12 +4498,17 @@
             "ru": "+10~+15 При обновлении предмета уровня поместите его в окно комбинации.",
             "tl": "+10~+15 Kapag nag-a-upgrade ng item sa antas, mangyaring ilagay ito sa window ng kumbinasyon.",
             "uk": "+10~+15 Під час підвищення рівня предмета, будь ласка, помістіть його у вікно комбінацій.",
-            "zh-TW": "+10~+15 升級等級項目時請將其放在組合視窗中。"
+            "zh-TW": "+10~+15 升級等級項目時請將其放在組合視窗中。",
+            "zh-CN": "+10~+15升级物品级别时，请将其放在合成窗口中。"
           },
           "color": "purple"
         }
       ],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "tooltipLayout": "noClassLines",
       "width": 1,
       "height": 1,
@@ -3674,9 +4524,13 @@
         "en": "Scroll of Battle",
         "de": "Schriftrolle des Kampfes",
         "es": "Rollo de Batalla",
-        "pt": "Pergaminho da batalha"
+        "pt": "Pergaminho da batalha",
+        "zh-CN": "战斗卷轴"
       },
-      "tags": ["battleOrStrengthScroll", "cashShop"],
+      "tags": [
+        "battleOrStrengthScroll",
+        "cashShop"
+      ],
       "description": [
         {
           "text": {
@@ -3690,7 +4544,8 @@
             "ru": "Увеличивает критический урон на 20%",
             "tl": "Pinapataas ng 20% ang Kritikal na Pinsala",
             "uk": "Збільшує критичну шкоду на 20%",
-            "zh-TW": "暴擊傷害增加 20%"
+            "zh-TW": "暴擊傷害增加 20%",
+            "zh-CN": "暴击伤害增加 20%"
           },
           "color": "blue"
         },
@@ -3699,7 +4554,11 @@
           "color": "blue"
         }
       ],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "tooltipLayout": "noClassLines",
       "width": 2,
       "height": 2,
@@ -3715,9 +4574,13 @@
         "en": "Scroll of Strength",
         "de": "Schriftrolle der Stärke",
         "es": "Rollo de Fuerza",
-        "pt": "Pergaminho da força"
+        "pt": "Pergaminho da força",
+        "zh-CN": "强化卷轴"
       },
-      "tags": ["battleOrStrengthScroll", "cashShop"],
+      "tags": [
+        "battleOrStrengthScroll",
+        "cashShop"
+      ],
       "description": [
         {
           "text": {
@@ -3731,7 +4594,8 @@
             "ru": "Увеличивает отличный урон на 20%",
             "tl": "Pinapataas ng 20% ang Napakahusay na Pinsala",
             "uk": "Збільшує чудову шкоду на 20%",
-            "zh-TW": "優秀傷害增加20%"
+            "zh-TW": "優秀傷害增加20%",
+            "zh-CN": "优秀伤害增加20%"
           },
           "color": "blue"
         },
@@ -3740,7 +4604,11 @@
           "color": "blue"
         }
       ],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "tooltipLayout": "noClassLines",
       "width": 2,
       "height": 2,
@@ -3756,7 +4624,8 @@
         "en": "Christmas Firecracker",
         "de": "Weihnachtsknallkörper",
         "es": "Petardo de Navidad",
-        "pt": "Fogos de artifício de Natal"
+        "pt": "Fogos de artifício de Natal",
+        "zh-CN": "圣诞烟花"
       },
       "width": 1,
       "height": 1,
@@ -3768,12 +4637,15 @@
         "en": "Lucky Coin",
         "de": "Glücksmünze",
         "es": "Moneda de la Suerte",
-        "pt": "Moeda da sorte"
+        "pt": "Moeda da sorte",
+        "zh-CN": "幸运币"
       },
       "description": [
         {
           "text": "@numberOfItems",
-          "when": ["durability"]
+          "when": [
+            "durability"
+          ]
         },
         {
           "text": {
@@ -3787,7 +4659,8 @@
             "ru": "Зарегистрируйтесь у NPC, чтобы получать различные подарки.",
             "tl": "Magrehistro sa NPC upang makatanggap ng iba't ibang mga regalo.",
             "uk": "Зареєструйтесь у NPC, щоб отримувати різні подарунки.",
-            "zh-TW": "註冊NPC即可領取各種禮物。"
+            "zh-TW": "註冊NPC即可領取各種禮物。",
+            "zh-CN": "注册NPC即可获得各种礼物。"
           },
           "color": "blue",
           "after": "options"
@@ -3798,7 +4671,11 @@
           "color": "yellow"
         }
       ],
-      "groundLabels": [{"style": "eventItem"}],
+      "groundLabels": [
+        {
+          "style": "eventItem"
+        }
+      ],
       "width": 1,
       "height": 1,
       "repairable": false
@@ -3809,7 +4686,8 @@
         "en": "Suspicious Scrap of Paper",
         "de": "Verdächtiger Papierfetzen",
         "es": "Trozo de Papel Sospechoso",
-        "pt": "Pedaço de papel suspeito"
+        "pt": "Pedaço de papel suspeito",
+        "zh-CN": "奇怪的小纸条"
       },
       "description": [
         {
@@ -3830,7 +4708,8 @@
             "ru": "Это потертый листок бумаги с непонятным текстом.",
             "tl": "Isa itong pagod na papel na naglalaman ng hindi maintindihang teksto.",
             "uk": "Це потертий аркуш паперу з незрозумілим текстом.",
-            "zh-TW": "這是一張破舊的紙，上面寫著難以理解的文字。"
+            "zh-TW": "這是一張破舊的紙，上面寫著難以理解的文字。",
+            "zh-CN": "这是一张破旧的纸，其中包含难以理解的文字。"
           }
         }
       ],
@@ -3842,7 +4721,11 @@
           "color": "yellow"
         }
       ],
-      "groundLabels": [{"style": "questItem"}],
+      "groundLabels": [
+        {
+          "style": "questItem"
+        }
+      ],
       "width": 1,
       "height": 1,
       "level": 32,
@@ -3854,7 +4737,8 @@
         "en": "Gaion's Order",
         "de": "Gaions Befehl",
         "es": "Órden de Gaion",
-        "pt": "Ordem de Gaion"
+        "pt": "Ordem de Gaion",
+        "zh-CN": "凯文的指令"
       },
       "description": [
         {
@@ -3869,7 +4753,8 @@
             "ru": "В нем содержатся планы Гайона по разрушению империи.",
             "tl": "Naglalaman ito ng mga plano ni Gaion para sa pagkawasak ng imperyo",
             "uk": "Він містить плани Гайона щодо знищення імперії",
-            "zh-TW": "它包含蓋昂毀滅帝國的計劃"
+            "zh-TW": "它包含蓋昂毀滅帝國的計劃",
+            "zh-CN": "它包含盖昂毁灭帝国的计划"
           }
         },
         {
@@ -3884,7 +4769,8 @@
             "ru": "и заказы для Стражей Империи.",
             "tl": "at mga order para sa Empire Guardians.",
             "uk": "і накази для Вартових Імперії.",
-            "zh-TW": "以及帝國守護者的命令。"
+            "zh-TW": "以及帝國守護者的命令。",
+            "zh-CN": "和帝国守护者的命令。"
           }
         },
         {
@@ -3899,7 +4785,8 @@
             "ru": "Вы можете войти в Крепость Хранителей Империи.",
             "tl": "Maaari kang pumasok sa Fortress of Empire Guardians.",
             "uk": "Ви можете увійти до Фортеці Вартових Імперії.",
-            "zh-TW": "您可以進入帝國守護者要塞。"
+            "zh-TW": "您可以進入帝國守護者要塞。",
+            "zh-CN": "你可以进入帝国守护者要塞。"
           }
         }
       ],
@@ -3911,7 +4798,11 @@
           "color": "yellow"
         }
       ],
-      "groundLabels": [{"style": "questItem"}],
+      "groundLabels": [
+        {
+          "style": "questItem"
+        }
+      ],
       "width": 1,
       "height": 1,
       "repairable": false
@@ -3922,7 +4813,8 @@
         "en": "First Secromicon Fragment",
         "de": "Erstes Secromicon-Fragment",
         "es": "1er Fragmento de Secromicon",
-        "pt": "Prim. Frag. de Secromicon"
+        "pt": "Prim. Frag. de Secromicon",
+        "zh-CN": "希克拉碎片1"
       },
       "description": [
         {
@@ -3937,7 +4829,11 @@
           "color": "yellow"
         }
       ],
-      "groundLabels": [{"style": "questItem"}],
+      "groundLabels": [
+        {
+          "style": "questItem"
+        }
+      ],
       "width": 1,
       "height": 1,
       "repairable": false
@@ -3948,7 +4844,8 @@
         "en": "Second Secromicon Fragment",
         "de": "Zweites Secromicon-Fragment",
         "es": "2do Fragmento de Secromicon",
-        "pt": "Seg. Frag. de Secromicon"
+        "pt": "Seg. Frag. de Secromicon",
+        "zh-CN": "希克拉碎片2"
       },
       "description": [
         {
@@ -3963,7 +4860,11 @@
           "color": "yellow"
         }
       ],
-      "groundLabels": [{"style": "questItem"}],
+      "groundLabels": [
+        {
+          "style": "questItem"
+        }
+      ],
       "width": 1,
       "height": 1,
       "repairable": false
@@ -3974,7 +4875,8 @@
         "en": "Third Secromicon Fragment",
         "de": "Drittes Secromicon-Fragment",
         "es": "3er Fragmento de Secromicon",
-        "pt": "Ter. Frag. de Secromicon"
+        "pt": "Ter. Frag. de Secromicon",
+        "zh-CN": "希克拉碎片3"
       },
       "description": [
         {
@@ -3989,7 +4891,11 @@
           "color": "yellow"
         }
       ],
-      "groundLabels": [{"style": "questItem"}],
+      "groundLabels": [
+        {
+          "style": "questItem"
+        }
+      ],
       "width": 1,
       "height": 1,
       "repairable": false
@@ -4000,7 +4906,8 @@
         "en": "Fourth Secromicon Fragment",
         "de": "Viertes Secromicon-Fragment",
         "es": "4to Fragmento de Secromicon",
-        "pt": "Quarto Frag. de Secromicon"
+        "pt": "Quarto Frag. de Secromicon",
+        "zh-CN": "希克拉碎片4"
       },
       "description": [
         {
@@ -4015,7 +4922,11 @@
           "color": "yellow"
         }
       ],
-      "groundLabels": [{"style": "questItem"}],
+      "groundLabels": [
+        {
+          "style": "questItem"
+        }
+      ],
       "width": 1,
       "height": 1,
       "repairable": false
@@ -4026,7 +4937,8 @@
         "en": "Fifth Secromicon Fragment",
         "de": "Fünftes Secromicon-Fragment",
         "es": "5to Fragmento de Secromicon",
-        "pt": "Quinto Frag. de Secromicon"
+        "pt": "Quinto Frag. de Secromicon",
+        "zh-CN": "希克拉碎片5"
       },
       "description": [
         {
@@ -4041,7 +4953,11 @@
           "color": "yellow"
         }
       ],
-      "groundLabels": [{"style": "questItem"}],
+      "groundLabels": [
+        {
+          "style": "questItem"
+        }
+      ],
       "width": 1,
       "height": 1,
       "repairable": false
@@ -4052,7 +4968,8 @@
         "en": "Sixth Secromicon Fragment",
         "de": "Sechstes Secromicon-Fragment",
         "es": "6to Fragmento de Secromicon",
-        "pt": "Sexto Frag. de Secromicon"
+        "pt": "Sexto Frag. de Secromicon",
+        "zh-CN": "希克拉碎片6"
       },
       "description": [
         {
@@ -4067,7 +4984,11 @@
           "color": "yellow"
         }
       ],
-      "groundLabels": [{"style": "questItem"}],
+      "groundLabels": [
+        {
+          "style": "questItem"
+        }
+      ],
       "width": 1,
       "height": 1,
       "repairable": false
@@ -4078,7 +4999,8 @@
         "en": "Complete Secromicon",
         "de": "Vollständiges Secromicon",
         "es": "Secromicon Completo",
-        "pt": "Secromicon completo"
+        "pt": "Secromicon completo",
+        "zh-CN": "完整的希克拉"
       },
       "description": [
         {
@@ -4093,7 +5015,8 @@
             "ru": "Неразрушимый металлический секромикон",
             "tl": "Hindi Masisirang Metal Secromicon",
             "uk": "Непорушний металевий секромікон",
-            "zh-TW": "堅不可摧的金屬 Secromicon"
+            "zh-TW": "堅不可摧的金屬 Secromicon",
+            "zh-CN": "坚不可摧的金属希克拉"
           }
         },
         {
@@ -4108,7 +5031,8 @@
             "ru": "Содержит информацию об исследованиях Великого Волшебника Этраму Леноса.",
             "tl": "Naglalaman ng impormasyon tungkol sa pananaliksik ni Grand Wizard Etramu Lenos.",
             "uk": "Містить інформацію про дослідження великого чарівника Етраму Леноса.",
-            "zh-TW": "包含大巫師埃特拉姆·萊諾斯研究的資訊。"
+            "zh-TW": "包含大巫師埃特拉姆·萊諾斯研究的資訊。",
+            "zh-CN": "包含有关大巫师艾特拉姆·莱诺斯的研究的信息。"
           }
         }
       ],
@@ -4120,7 +5044,11 @@
           "color": "yellow"
         }
       ],
-      "groundLabels": [{"style": "questItem"}],
+      "groundLabels": [
+        {
+          "style": "questItem"
+        }
+      ],
       "width": 1,
       "height": 1,
       "repairable": false
@@ -4131,7 +5059,8 @@
         "en": "Sign of Dimensions",
         "de": "Zeichen der Dimensionen",
         "es": "Signo de Dimensiones",
-        "pt": "Sinal das dimensões"
+        "pt": "Sinal das dimensões",
+        "zh-CN": "次元标识"
       },
       "width": 1,
       "height": 1,
@@ -4144,7 +5073,8 @@
         "en": "Mirror of Dimensions",
         "de": "Spiegel der Dimensionen",
         "es": "Espejo de Dimensiones",
-        "pt": "Espelho das dimensões"
+        "pt": "Espelho das dimensões",
+        "zh-CN": "次元魔镜"
       },
       "description": [
         {
@@ -4159,7 +5089,8 @@
             "ru": "Это единственное, что заставит Лугарда помочь вам.",
             "tl": "Iyan lang ang makakatutulong sa iyo ni Lugard",
             "uk": "Це єдине, що змусить Лугарда вам допомогти",
-            "zh-TW": "這是唯一能讓盧加德幫助你的事情"
+            "zh-TW": "這是唯一能讓盧加德幫助你的事情",
+            "zh-CN": "这是唯一能让卢加德帮助你的事情"
           },
           "color": "darkBlue"
         },
@@ -4175,7 +5106,8 @@
             "ru": "войдите в зону Доппельгангера.",
             "tl": "pumasok sa lugar ng Doppelganger.",
             "uk": "увійдіть у зону Doppelganger.",
-            "zh-TW": "進入分身區域。"
+            "zh-TW": "進入分身區域。",
+            "zh-CN": "进入分身区域。"
           },
           "color": "darkBlue"
         }
@@ -4188,7 +5120,11 @@
           "color": "yellow"
         }
       ],
-      "groundLabels": [{"style": "questItem"}],
+      "groundLabels": [
+        {
+          "style": "questItem"
+        }
+      ],
       "width": 1,
       "height": 1,
       "repairable": false
@@ -4199,9 +5135,13 @@
         "en": "Silver Key",
         "de": "Silberschlüssel",
         "es": "Llave de Plata",
-        "pt": "Chave prateada"
+        "pt": "Chave prateada",
+        "zh-CN": "银钥匙"
       },
-      "tags": ["cashShop", "valuable"],
+      "tags": [
+        "cashShop",
+        "valuable"
+      ],
       "description": [
         {
           "text": {
@@ -4215,11 +5155,16 @@
             "ru": "Вы можете создать комбинацию Гоблина с Запечатанной Серебряной Коробкой, чтобы создать Серебряную Коробку.",
             "tl": "Maaari kang gumawa ng kumbinasyon ng Goblin na may Sealed Silver Box para gumawa ng Silver Box.",
             "uk": "Ви можете поєднати Гобліна з Запечатаною Срібною Скринькою, щоб створити Срібну Скриньку.",
-            "zh-TW": "您可以將哥布林與密封銀盒進行組合來創建銀盒。"
+            "zh-TW": "您可以將哥布林與密封銀盒進行組合來創建銀盒。",
+            "zh-CN": "你可以用一个密封的银盒做妖精合成来创建一个银盒。"
           }
         }
       ],
-      "groundLabels": [{"style": "eventItem"}],
+      "groundLabels": [
+        {
+          "style": "eventItem"
+        }
+      ],
       "width": 1,
       "height": 1,
       "tradable": false,
@@ -4235,9 +5180,13 @@
         "en": "Gold Key",
         "de": "Goldschlüssel",
         "es": "Llave de Oro",
-        "pt": "Chave dourada"
+        "pt": "Chave dourada",
+        "zh-CN": "金钥匙"
       },
-      "tags": ["cashShop", "valuable"],
+      "tags": [
+        "cashShop",
+        "valuable"
+      ],
       "description": [
         {
           "text": {
@@ -4251,11 +5200,16 @@
             "ru": "Вы можете создать комбинацию Гоблина с Запечатанной Золотой Коробкой, чтобы создать Золотую Коробку.",
             "tl": "Maaari kang gumawa ng kumbinasyon ng Goblin na may Sealed Golden Box para gumawa ng Golden Box.",
             "uk": "Ви можете створити комбінацію гобліна із запечатаною золотою скринькою, щоб створити золоту скриньку.",
-            "zh-TW": "您可以將哥布林與密封金盒進行組合來創建金盒。"
+            "zh-TW": "您可以將哥布林與密封金盒進行組合來創建金盒。",
+            "zh-CN": "你可以用一个密封的金盒子做妖精合成来创建一个金盒子。"
           }
         }
       ],
-      "groundLabels": [{"style": "eventItem"}],
+      "groundLabels": [
+        {
+          "style": "eventItem"
+        }
+      ],
       "width": 1,
       "height": 1,
       "tradable": false,
@@ -4271,10 +5225,17 @@
         "en": "Master Skill Reset",
         "de": "Rücksetzung der Meisterfähigkeiten",
         "es": "Reinicio de Habilidad Maestra",
-        "pt": "Reinic. de Habilidade Mestre"
+        "pt": "Reinic. de Habilidade Mestre",
+        "zh-CN": "主机技能复位"
       },
-      "tags": ["cashShop"],
-      "groundLabels": [{"style": "cashShopService"}],
+      "tags": [
+        "cashShop"
+      ],
+      "groundLabels": [
+        {
+          "style": "cashShopService"
+        }
+      ],
       "width": 1,
       "height": 1,
       "tradable": false,
@@ -4289,10 +5250,17 @@
         "en": "Stat Adjustment",
         "de": "Anpassung der Werte",
         "es": "Ajuste de Estadísticas",
-        "pt": "Ajuste de atributos"
+        "pt": "Ajuste de atributos",
+        "zh-CN": "统计调整"
       },
-      "tags": ["cashShop"],
-      "groundLabels": [{"style": "cashShopService"}],
+      "tags": [
+        "cashShop"
+      ],
+      "groundLabels": [
+        {
+          "style": "cashShopService"
+        }
+      ],
       "width": 1,
       "height": 1,
       "tradable": false,
@@ -4307,10 +5275,17 @@
         "en": "Character Relocation Service",
         "de": "Charakter-Umzugsdienst",
         "es": "Cuarto Fragmento Secromicon",
-        "pt": "Serviço Nova Local. de Pers."
+        "pt": "Serviço Nova Local. de Pers.",
+        "zh-CN": "角色搬迁服务"
       },
-      "tags": ["cashShop"],
-      "groundLabels": [{"style": "cashShopService"}],
+      "tags": [
+        "cashShop"
+      ],
+      "groundLabels": [
+        {
+          "style": "cashShopService"
+        }
+      ],
       "width": 1,
       "height": 1,
       "tradable": false,
@@ -4325,10 +5300,17 @@
         "en": "Character Rename Service",
         "de": "Charakter-Umbenennungsdienst",
         "es": "Servicio Renombrar Personaje",
-        "pt": "Serviço Novo Nome do Pers."
+        "pt": "Serviço Novo Nome do Pers.",
+        "zh-CN": "角色重命名服务"
       },
-      "tags": ["cashShop"],
-      "groundLabels": [{"style": "cashShopService"}],
+      "tags": [
+        "cashShop"
+      ],
+      "groundLabels": [
+        {
+          "style": "cashShopService"
+        }
+      ],
       "width": 1,
       "height": 1,
       "tradable": false,
@@ -4343,10 +5325,17 @@
         "en": "Server Relocation Service",
         "de": "Server-Umzugsdienst",
         "es": "Servicio Reubicar Servidor",
-        "pt": "Serviço Nova Local. de Serv."
+        "pt": "Serviço Nova Local. de Serv.",
+        "zh-CN": "服务器搬迁服务"
       },
-      "tags": ["cashShop"],
-      "groundLabels": [{"style": "cashShopService"}],
+      "tags": [
+        "cashShop"
+      ],
+      "groundLabels": [
+        {
+          "style": "cashShopService"
+        }
+      ],
       "width": 1,
       "height": 1,
       "tradable": false,
@@ -4361,10 +5350,17 @@
         "en": "Premium Package",
         "de": "Premiumpaket",
         "es": "Paquete Premium",
-        "pt": "Pacote Premium"
+        "pt": "Pacote Premium",
+        "zh-CN": "高级套餐"
       },
-      "tags": ["cashShop"],
-      "groundLabels": [{"style": "cashShopService"}],
+      "tags": [
+        "cashShop"
+      ],
+      "groundLabels": [
+        {
+          "style": "cashShopService"
+        }
+      ],
       "width": 1,
       "height": 1,
       "tradable": false,
@@ -4379,9 +5375,12 @@
         "en": "Goblin Gold Coin",
         "de": "Goblin-Goldmünze",
         "es": "Moneda de Oro de Duendes",
-        "pt": "Moeda dourada do goblin"
+        "pt": "Moeda dourada do goblin",
+        "zh-CN": "哥布林金币"
       },
-      "tags": ["cashShop"],
+      "tags": [
+        "cashShop"
+      ],
       "description": [
         {
           "text": {
@@ -4395,11 +5394,16 @@
             "ru": "Вы можете получить очки гоблинов, используя хранилище магазина предметов MU.",
             "tl": "Maaari kang makakuha ng Goblin Points sa pamamagitan ng paggamit ng storage ng MU Item Shop.",
             "uk": "Ви можете отримати бали гоблінів, використовуючи сховище MU Item Shop.",
-            "zh-TW": "您可以使用 MU 物品商店的存儲來獲取哥布林點數。"
+            "zh-TW": "您可以使用 MU 物品商店的存儲來獲取哥布林點數。",
+            "zh-CN": "您可以使用奇迹物品商店的存储来获取哥布林点数。"
           }
         }
       ],
-      "groundLabels": [{"style": "eventItem"}],
+      "groundLabels": [
+        {
+          "style": "eventItem"
+        }
+      ],
       "width": 1,
       "height": 1,
       "tradable": false,
@@ -4414,9 +5418,12 @@
         "en": "Sealed Golden Box",
         "de": "Versiegelte goldene Box",
         "es": "Caja Dorada Sellada",
-        "pt": "Caixa dourada lacrada"
+        "pt": "Caixa dourada lacrada",
+        "zh-CN": "密封金盒"
       },
-      "tags": ["valuable"],
+      "tags": [
+        "valuable"
+      ],
       "description": [
         {
           "text": {
@@ -4430,11 +5437,16 @@
             "ru": "Вы можете создать комбинацию Гоблина с Золотым ключом, чтобы создать Золотую шкатулку.",
             "tl": "Maaari kang gumawa ng kumbinasyon ng Goblin gamit ang isang Gold Key upang lumikha ng isang Golden Box.",
             "uk": "Ви можете створити комбінацію гобліна із золотим ключем, щоб створити золоту скриньку.",
-            "zh-TW": "您可以將哥布林與金鑰匙組合來創建金盒子。"
+            "zh-TW": "您可以將哥布林與金鑰匙組合來創建金盒子。",
+            "zh-CN": "你可以用金钥匙做妖精合成来创建金盒子。"
           }
         }
       ],
-      "groundLabels": [{"style": "eventItem"}],
+      "groundLabels": [
+        {
+          "style": "eventItem"
+        }
+      ],
       "width": 1,
       "height": 1,
       "droppable": false,
@@ -4446,9 +5458,12 @@
         "en": "Sealed Silver Box",
         "de": "Versiegelte silberne Box",
         "es": "Caja Plateada Sellada",
-        "pt": "Caixa prateada lacrada"
+        "pt": "Caixa prateada lacrada",
+        "zh-CN": "密封银盒"
       },
-      "tags": ["valuable"],
+      "tags": [
+        "valuable"
+      ],
       "description": [
         {
           "text": {
@@ -4462,11 +5477,16 @@
             "ru": "Вы можете создать комбинацию гоблина с серебряным ключом, чтобы создать серебряную шкатулку.",
             "tl": "Maaari kang gumawa ng kumbinasyon ng Goblin na may Silver Key para gumawa ng Silver Box.",
             "uk": "Ви можете створити комбінацію гобліна зі срібним ключем, щоб створити срібну скриню.",
-            "zh-TW": "您可以將哥布林與銀鑰匙組合來創建銀盒子。"
+            "zh-TW": "您可以將哥布林與銀鑰匙組合來創建銀盒子。",
+            "zh-CN": "你可以用银钥匙做一个哥布林合成来创建一个银盒子。"
           }
         }
       ],
-      "groundLabels": [{"style": "eventItem"}],
+      "groundLabels": [
+        {
+          "style": "eventItem"
+        }
+      ],
       "width": 1,
       "height": 1,
       "droppable": false,
@@ -4478,15 +5498,22 @@
         "en": "Golden Box",
         "de": "Goldene Box",
         "es": "Caja Dorada",
-        "pt": "Caixa dourada"
+        "pt": "Caixa dourada",
+        "zh-CN": "金盒子"
       },
-      "tags": ["cashShop"],
+      "tags": [
+        "cashShop"
+      ],
       "description": [
         {
           "text": "@mayTurnIntoRareItem"
         }
       ],
-      "groundLabels": [{"style": "eventItem"}],
+      "groundLabels": [
+        {
+          "style": "eventItem"
+        }
+      ],
       "width": 1,
       "height": 1,
       "tradable": false,
@@ -4501,15 +5528,22 @@
         "en": "Silver Box",
         "de": "Silberne Box",
         "es": "Caja Plateada",
-        "pt": "Caixa prateada"
+        "pt": "Caixa prateada",
+        "zh-CN": "银盒"
       },
-      "tags": ["cashShop"],
+      "tags": [
+        "cashShop"
+      ],
       "description": [
         {
           "text": "@mayTurnIntoRareItem"
         }
       ],
-      "groundLabels": [{"style": "eventItem"}],
+      "groundLabels": [
+        {
+          "style": "eventItem"
+        }
+      ],
       "width": 1,
       "height": 1,
       "tradable": false,
@@ -4524,7 +5558,8 @@
         "en": "Package Box",
         "de": "Paketbox",
         "es": "Caja de Paquete",
-        "pt": "Caixa de pacote"
+        "pt": "Caixa de pacote",
+        "zh-CN": "包装盒"
       },
       "width": 1,
       "height": 1,
@@ -4536,10 +5571,17 @@
         "en": "30-Day Pass",
         "de": "30-Tage-Pass",
         "es": "Pase por 30 días",
-        "pt": "Passe de 30 dias"
+        "pt": "Passe de 30 dias",
+        "zh-CN": "30天通行证"
       },
-      "tags": ["cashShop"],
-      "groundLabels": [{"style": "cashShopService"}],
+      "tags": [
+        "cashShop"
+      ],
+      "groundLabels": [
+        {
+          "style": "cashShopService"
+        }
+      ],
       "width": 1,
       "height": 1,
       "tradable": false,
@@ -4554,10 +5596,17 @@
         "en": "90-Day Pass",
         "de": "90-Tage-Pass",
         "es": "Pase por 90 días",
-        "pt": "Passe de 90 dias"
+        "pt": "Passe de 90 dias",
+        "zh-CN": "90天通行证"
       },
-      "tags": ["cashShop"],
-      "groundLabels": [{"style": "cashShopService"}],
+      "tags": [
+        "cashShop"
+      ],
+      "groundLabels": [
+        {
+          "style": "cashShopService"
+        }
+      ],
       "width": 1,
       "height": 1,
       "tradable": false,
@@ -4572,10 +5621,17 @@
         "en": "30-Day Pass - Points",
         "de": "30-Tage-Pass - Punkte",
         "es": "Puntos - Pase por 30 días",
-        "pt": "Passe de 30 dias - Pontos"
+        "pt": "Passe de 30 dias - Pontos",
+        "zh-CN": "30天通行证 - 积分"
       },
-      "tags": ["cashShop"],
-      "groundLabels": [{"style": "cashShopService"}],
+      "tags": [
+        "cashShop"
+      ],
+      "groundLabels": [
+        {
+          "style": "cashShopService"
+        }
+      ],
       "width": 1,
       "height": 1,
       "tradable": false,
@@ -4590,10 +5646,17 @@
         "en": "90-Day Pass - Points",
         "de": "90-Tage-Pass - Punkte",
         "es": "Puntos - Pase por 90 días",
-        "pt": "Passe de 90 dias - Pontos"
+        "pt": "Passe de 90 dias - Pontos",
+        "zh-CN": "90天通行证 - 积分"
       },
-      "tags": ["cashShop"],
-      "groundLabels": [{"style": "cashShopService"}],
+      "tags": [
+        "cashShop"
+      ],
+      "groundLabels": [
+        {
+          "style": "cashShopService"
+        }
+      ],
       "width": 1,
       "height": 1,
       "tradable": false,
@@ -4608,10 +5671,17 @@
         "en": "3-Hour Pass",
         "de": "3-Stunden-Pass",
         "es": "Pase por 3 horas",
-        "pt": "Passe de 3 horas"
+        "pt": "Passe de 3 horas",
+        "zh-CN": "3小时通行证"
       },
-      "tags": ["cashShop"],
-      "groundLabels": [{"style": "cashShopService"}],
+      "tags": [
+        "cashShop"
+      ],
+      "groundLabels": [
+        {
+          "style": "cashShopService"
+        }
+      ],
       "width": 1,
       "height": 1,
       "tradable": false,
@@ -4626,10 +5696,17 @@
         "en": "5-Hour Pass",
         "de": "5-Stunden-Pass",
         "es": "Pase por 5 horas",
-        "pt": "Passe de 5 horas"
+        "pt": "Passe de 5 horas",
+        "zh-CN": "5小时通行证"
       },
-      "tags": ["cashShop"],
-      "groundLabels": [{"style": "cashShopService"}],
+      "tags": [
+        "cashShop"
+      ],
+      "groundLabels": [
+        {
+          "style": "cashShopService"
+        }
+      ],
       "width": 1,
       "height": 1,
       "tradable": false,
@@ -4644,10 +5721,17 @@
         "en": "10-Hour Pass",
         "de": "10-Stunden-Pass",
         "es": "Pase por 10 horas",
-        "pt": "Passe de 10 horas"
+        "pt": "Passe de 10 horas",
+        "zh-CN": "10小时通行证"
       },
-      "tags": ["cashShop"],
-      "groundLabels": [{"style": "cashShopService"}],
+      "tags": [
+        "cashShop"
+      ],
+      "groundLabels": [
+        {
+          "style": "cashShopService"
+        }
+      ],
       "width": 1,
       "height": 1,
       "tradable": false,
@@ -4662,9 +5746,12 @@
         "en": "Elite SD Potion",
         "de": "Elite-SD-Trank",
         "es": "Pócima de SD de Élite",
-        "pt": "Poção de SD de elite"
+        "pt": "Poção de SD de elite",
+        "zh-CN": "精华SD药水"
       },
-      "tags": ["cashShop"],
+      "tags": [
+        "cashShop"
+      ],
       "description": [
         {
           "text": "@numberOfItems",
@@ -4682,7 +5769,8 @@
             "ru": "Восстанавливает SD на 65% i сразу.",
             "tl": "Ibinabalik kaagad ang SD nang 65% i.",
             "uk": "Миттєво відновлює SD на 65% i.",
-            "zh-TW": "立即恢復 SD 65% i。"
+            "zh-TW": "立即恢復 SD 65% i。",
+            "zh-CN": "立即恢复 SD 65% i。"
           },
           "color": "blue"
         }
@@ -4702,15 +5790,22 @@
         "en": "Package Box A",
         "de": "Paketbox A",
         "es": "Caja de Paquete A",
-        "pt": "Caixa de pacote A"
+        "pt": "Caixa de pacote A",
+        "zh-CN": "包装盒A"
       },
-      "tags": ["cashShop"],
+      "tags": [
+        "cashShop"
+      ],
       "description": [
         {
           "text": "@boxOfVariousItems"
         }
       ],
-      "groundLabels": [{"style": "cashShopService"}],
+      "groundLabels": [
+        {
+          "style": "cashShopService"
+        }
+      ],
       "width": 1,
       "height": 1,
       "tradable": false,
@@ -4725,15 +5820,22 @@
         "en": "Package Box B",
         "de": "Paketbox B",
         "es": "Caja de Paquete B",
-        "pt": "Caixa de pacote B"
+        "pt": "Caixa de pacote B",
+        "zh-CN": "包装盒B"
       },
-      "tags": ["cashShop"],
+      "tags": [
+        "cashShop"
+      ],
       "description": [
         {
           "text": "@boxOfVariousItems"
         }
       ],
-      "groundLabels": [{"style": "cashShopService"}],
+      "groundLabels": [
+        {
+          "style": "cashShopService"
+        }
+      ],
       "width": 1,
       "height": 1,
       "tradable": false,
@@ -4748,15 +5850,22 @@
         "en": "Package Box C",
         "de": "Paketbox C",
         "es": "Caja de Paquete C",
-        "pt": "Caixa de pacote C"
+        "pt": "Caixa de pacote C",
+        "zh-CN": "包装盒C"
       },
-      "tags": ["cashShop"],
+      "tags": [
+        "cashShop"
+      ],
       "description": [
         {
           "text": "@boxOfVariousItems"
         }
       ],
-      "groundLabels": [{"style": "cashShopService"}],
+      "groundLabels": [
+        {
+          "style": "cashShopService"
+        }
+      ],
       "width": 1,
       "height": 1,
       "tradable": false,
@@ -4771,15 +5880,22 @@
         "en": "Package Box D",
         "de": "Paketbox D",
         "es": "Caja de Paquete D",
-        "pt": "Caixa de pacote D"
+        "pt": "Caixa de pacote D",
+        "zh-CN": "包装盒D"
       },
-      "tags": ["cashShop"],
+      "tags": [
+        "cashShop"
+      ],
       "description": [
         {
           "text": "@boxOfVariousItems"
         }
       ],
-      "groundLabels": [{"style": "cashShopService"}],
+      "groundLabels": [
+        {
+          "style": "cashShopService"
+        }
+      ],
       "width": 1,
       "height": 1,
       "tradable": false,
@@ -4794,15 +5910,22 @@
         "en": "Package Box E",
         "de": "Paketbox E",
         "es": "Caja de Paquete E",
-        "pt": "Caixa de pacote E"
+        "pt": "Caixa de pacote E",
+        "zh-CN": "包装盒E"
       },
-      "tags": ["cashShop"],
+      "tags": [
+        "cashShop"
+      ],
       "description": [
         {
           "text": "@boxOfVariousItems"
         }
       ],
-      "groundLabels": [{"style": "cashShopService"}],
+      "groundLabels": [
+        {
+          "style": "cashShopService"
+        }
+      ],
       "width": 1,
       "height": 1,
       "tradable": false,
@@ -4817,15 +5940,22 @@
         "en": "Package Box F",
         "de": "Paketbox F",
         "es": "Caja de Paquete F",
-        "pt": "Caixa de pacote F"
+        "pt": "Caixa de pacote F",
+        "zh-CN": "包装盒 F"
       },
-      "tags": ["cashShop"],
+      "tags": [
+        "cashShop"
+      ],
       "description": [
         {
           "text": "@boxOfVariousItems"
         }
       ],
-      "groundLabels": [{"style": "cashShopService"}],
+      "groundLabels": [
+        {
+          "style": "cashShopService"
+        }
+      ],
       "width": 1,
       "height": 1,
       "tradable": false,
@@ -4840,9 +5970,12 @@
         "en": "Scroll of Healing",
         "de": "Schriftrolle der Heilung",
         "es": "Rollo de Curación",
-        "pt": "Pergaminho da cura"
+        "pt": "Pergaminho da cura",
+        "zh-CN": "治疗卷轴"
       },
-      "tags": ["cashShop"],
+      "tags": [
+        "cashShop"
+      ],
       "description": [
         {
           "text": "@automaticHpRecovery3",
@@ -4860,7 +5993,8 @@
             "ru": "Макс. Увеличение HP +100",
             "tl": "Max. Tumaas ang HP +100",
             "uk": "Макс. HP збільшення +100",
-            "zh-TW": "最大限度。生命值增加+100"
+            "zh-TW": "最大限度。生命值增加+100",
+            "zh-CN": "最大限度。生命值增加+100"
           },
           "color": "blue"
         }
@@ -4879,7 +6013,8 @@
         "en": "Shining Jewelry Case",
         "de": "Glänzendes Schmuckkästchen",
         "es": "Joyero Brillante",
-        "pt": "Estojo de joias brilhante"
+        "pt": "Estojo de joias brilhante",
+        "zh-CN": "闪亮首饰盒"
       },
       "description": [
         {
@@ -4891,7 +6026,11 @@
           "color": "yellow"
         }
       ],
-      "groundLabels": [{"style": "jewelryCase"}],
+      "groundLabels": [
+        {
+          "style": "jewelryCase"
+        }
+      ],
       "width": 1,
       "height": 1,
       "repairable": false
@@ -4902,7 +6041,8 @@
         "en": "Elegant Jewelry Case",
         "de": "Elegantes Schmuckkästchen",
         "es": "Joyero Elegante",
-        "pt": "Estojo de joias elegante"
+        "pt": "Estojo de joias elegante",
+        "zh-CN": "优雅首饰盒"
       },
       "description": [
         {
@@ -4914,7 +6054,11 @@
           "color": "yellow"
         }
       ],
-      "groundLabels": [{"style": "jewelryCase"}],
+      "groundLabels": [
+        {
+          "style": "jewelryCase"
+        }
+      ],
       "width": 1,
       "height": 1,
       "repairable": false
@@ -4925,7 +6069,8 @@
         "en": "Steel Jewelry Case",
         "de": "Stählernes Schmuckkästchen",
         "es": "Joyero de Acero",
-        "pt": "Estojo de joias de aço"
+        "pt": "Estojo de joias de aço",
+        "zh-CN": "钢质首饰盒"
       },
       "description": [
         {
@@ -4937,7 +6082,11 @@
           "color": "yellow"
         }
       ],
-      "groundLabels": [{"style": "jewelryCase"}],
+      "groundLabels": [
+        {
+          "style": "jewelryCase"
+        }
+      ],
       "width": 1,
       "height": 1,
       "repairable": false
@@ -4948,7 +6097,8 @@
         "en": "Old Jewelry Case",
         "de": "Altes Schmuckkästchen",
         "es": "Joyero Antiguo",
-        "pt": "Estojo de joias antigo"
+        "pt": "Estojo de joias antigo",
+        "zh-CN": "旧首饰盒"
       },
       "description": [
         {
@@ -4960,7 +6110,11 @@
           "color": "yellow"
         }
       ],
-      "groundLabels": [{"style": "jewelryCase"}],
+      "groundLabels": [
+        {
+          "style": "jewelryCase"
+        }
+      ],
       "width": 1,
       "height": 1,
       "repairable": false
@@ -4971,16 +6125,23 @@
         "en": "Rare Item Ticket 7",
         "de": "Ticket für seltenen Gegenstand 7",
         "es": "Boleto de Ítem Raro 7",
-        "pt": "Bilhete de item raro7"
+        "pt": "Bilhete de item raro7",
+        "zh-CN": "稀有物品票7"
       },
-      "tags": ["cashShop"],
+      "tags": [
+        "cashShop"
+      ],
       "description": [
         {
           "text": "@contactCsTeam",
           "color": "blue"
         }
       ],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "tooltipLayout": "noClassLines",
       "width": 1,
       "height": 1,
@@ -4996,16 +6157,23 @@
         "en": "Rare Item Ticket 8",
         "de": "Ticket für seltenen Gegenstand 8",
         "es": "Boleto de Ítem Raro 8",
-        "pt": "Bilhete de item raro8"
+        "pt": "Bilhete de item raro8",
+        "zh-CN": "稀有物品门票8"
       },
-      "tags": ["cashShop"],
+      "tags": [
+        "cashShop"
+      ],
       "description": [
         {
           "text": "@contactCsTeam",
           "color": "blue"
         }
       ],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "tooltipLayout": "noClassLines",
       "width": 1,
       "height": 1,
@@ -5021,16 +6189,23 @@
         "en": "Rare Item Ticket 9",
         "de": "Ticket für seltenen Gegenstand 9",
         "es": "Boleto de Ítem Raro 9",
-        "pt": "Bilhete de item raro9"
+        "pt": "Bilhete de item raro9",
+        "zh-CN": "稀有物品票9"
       },
-      "tags": ["cashShop"],
+      "tags": [
+        "cashShop"
+      ],
       "description": [
         {
           "text": "@contactCsTeam",
           "color": "blue"
         }
       ],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "tooltipLayout": "noClassLines",
       "width": 1,
       "height": 1,
@@ -5046,16 +6221,23 @@
         "en": "Rare Item Ticket 10",
         "de": "Ticket für seltenen Gegenstand 10",
         "es": "Boleto de Ítem Raro 10",
-        "pt": "Bilhete de item raro10"
+        "pt": "Bilhete de item raro10",
+        "zh-CN": "稀有物品门票10"
       },
-      "tags": ["cashShop"],
+      "tags": [
+        "cashShop"
+      ],
       "description": [
         {
           "text": "@contactCsTeam",
           "color": "blue"
         }
       ],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "tooltipLayout": "noClassLines",
       "width": 1,
       "height": 1,
@@ -5071,16 +6253,23 @@
         "en": "Rare Item Ticket 11",
         "de": "Ticket für seltenen Gegenstand 11",
         "es": "Boleto de Ítem Raro 11",
-        "pt": "Bilhete de item raro11"
+        "pt": "Bilhete de item raro11",
+        "zh-CN": "稀有物品门票11"
       },
-      "tags": ["cashShop"],
+      "tags": [
+        "cashShop"
+      ],
       "description": [
         {
           "text": "@contactCsTeam",
           "color": "blue"
         }
       ],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "tooltipLayout": "noClassLines",
       "width": 1,
       "height": 1,
@@ -5096,16 +6285,23 @@
         "en": "Rare Item Ticket 12",
         "de": "Ticket für seltenen Gegenstand 12",
         "es": "Boleto de Ítem Raro 12",
-        "pt": "Bilhete de item raro12"
+        "pt": "Bilhete de item raro12",
+        "zh-CN": "稀有物品门票12"
       },
-      "tags": ["cashShop"],
+      "tags": [
+        "cashShop"
+      ],
       "description": [
         {
           "text": "@contactCsTeam",
           "color": "blue"
         }
       ],
-      "groundLabels": [{"style": "cashShopItem"}],
+      "groundLabels": [
+        {
+          "style": "cashShopItem"
+        }
+      ],
       "tooltipLayout": "noClassLines",
       "width": 1,
       "height": 1,
@@ -5121,7 +6317,8 @@
         "en": "Lv. 1 Letter of Request",
         "de": "Auftragsschreiben Lv. 1",
         "es": "Nivel 1 Carta de Petición",
-        "pt": "Nvl. 1Carta de Requisição"
+        "pt": "Nvl. 1Carta de Requisição",
+        "zh-CN": "等级1份请求信"
       },
       "width": 1,
       "height": 2,
@@ -5133,7 +6330,8 @@
         "en": "Lv. 1 Completion Certificate",
         "de": "Abschlusszertifikat Lv. 1",
         "es": "Nivel 1 Certificado",
-        "pt": "Nvl. 1 Completada"
+        "pt": "Nvl. 1 Completada",
+        "zh-CN": "等级1份结业证书"
       },
       "width": 1,
       "height": 2,
@@ -5145,12 +6343,15 @@
         "en": "Stardust",
         "de": "Sternenstaub",
         "es": "Polvo estelar",
-        "pt": "Poeira estelar"
+        "pt": "Poeira estelar",
+        "zh-CN": "星尘"
       },
       "description": [
         {
           "text": "@numberOfItems",
-          "when": ["durability"]
+          "when": [
+            "durability"
+          ]
         }
       ],
       "width": 1,
@@ -5164,12 +6365,15 @@
         "en": "Kalt Stone",
         "de": "Kalt-Stein",
         "es": "Piedra Kalt",
-        "pt": "Pedra Kalt"
+        "pt": "Pedra Kalt",
+        "zh-CN": "卡尔特石"
       },
       "description": [
         {
           "text": "@numberOfItems",
-          "when": ["durability"]
+          "when": [
+            "durability"
+          ]
         }
       ],
       "width": 1,
@@ -5183,12 +6387,15 @@
         "en": "Tantalos's Armor",
         "de": "Tantalos' Rüstung",
         "es": "Armadura de Tantalos",
-        "pt": "Armadura de Tântalos"
+        "pt": "Armadura de Tântalos",
+        "zh-CN": "坦塔洛斯的铠甲"
       },
       "description": [
         {
           "text": "@numberOfItems",
-          "when": ["durability"]
+          "when": [
+            "durability"
+          ]
         }
       ],
       "width": 2,
@@ -5202,12 +6409,15 @@
         "en": "Burnt Murderer's Club",
         "de": "Verbrannte Keule des Mörders",
         "es": "Garrote de Asesinos Calcinados",
-        "pt": "Porrete de Assassino Queimado"
+        "pt": "Porrete de Assassino Queimado",
+        "zh-CN": "烧毁的杀人犯俱乐部"
       },
       "description": [
         {
           "text": "@numberOfItems",
-          "when": ["durability"]
+          "when": [
+            "durability"
+          ]
         }
       ],
       "width": 1,
@@ -5221,7 +6431,8 @@
         "en": "Green Box",
         "de": "Grüne Box",
         "es": "Caja verde",
-        "pt": "Caixa verde"
+        "pt": "Caixa verde",
+        "zh-CN": "绿盒子"
       },
       "width": 1,
       "height": 1,
@@ -5234,7 +6445,8 @@
         "en": "Red Box",
         "de": "Rote Box",
         "es": "Caja roja",
-        "pt": "Caixa vermelha"
+        "pt": "Caixa vermelha",
+        "zh-CN": "红盒"
       },
       "width": 1,
       "height": 1,
@@ -5247,7 +6459,8 @@
         "en": "Purple Box",
         "de": "Lila Box",
         "es": "Caja púrpura",
-        "pt": "Caixa roxa"
+        "pt": "Caixa roxa",
+        "zh-CN": "紫色盒子"
       },
       "width": 1,
       "height": 1,
@@ -5260,7 +6473,8 @@
         "en": "Jewel of Extension",
         "de": "Juwel der Erweiterung",
         "es": "Joya de Extensión",
-        "pt": "Jóia de Extensão"
+        "pt": "Jóia de Extensão",
+        "zh-CN": "延长宝石"
       },
       "description": [
         {
@@ -5298,7 +6512,8 @@
         "en": "Jewel of Elevation",
         "de": "Juwel der Erhebung",
         "es": "Joya de Elevación",
-        "pt": "Jóia de Elevação"
+        "pt": "Jóia de Elevação",
+        "zh-CN": "提升宝石"
       },
       "description": [
         {
@@ -5323,7 +6538,8 @@
         "en": "Magic Backpack",
         "de": "Magischer Rucksack",
         "es": "Morral Mágico",
-        "pt": "Mochila Mágica"
+        "pt": "Mochila Mágica",
+        "zh-CN": "魔法背包"
       },
       "width": 1,
       "height": 1,
@@ -5335,7 +6551,8 @@
         "en": "Vault Expansion Certificate",
         "de": "Tresorerweiterungs-Zertifikat",
         "es": "Certificado de Expansión de Bóveda",
-        "pt": "Certificado de Expansão de Cofre"
+        "pt": "Certificado de Expansão de Cofre",
+        "zh-CN": "仓库扩展证书"
       },
       "width": 1,
       "height": 1,
@@ -5347,7 +6564,8 @@
         "en": "RageFighter Character Card",
         "de": "Charakterkarte: Wutkämpfer",
         "es": "Tarjeta - Peleador Feroz",
-        "pt": "Carta de Person-RageFighter"
+        "pt": "Carta de Person-RageFighter",
+        "zh-CN": "愤怒战士角色卡"
       },
       "width": 1,
       "height": 1,

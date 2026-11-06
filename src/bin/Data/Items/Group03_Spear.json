@@ -8,7 +8,8 @@
         "en": "Light Spear",
         "de": "Leichter Speer",
         "es": "Jabalina de Luz",
-        "pt": "Lança de luz"
+        "pt": "Lança de luz",
+        "zh-CN": "黑武士"
       },
       "width": 2,
       "height": 4,
@@ -39,7 +40,8 @@
         "en": "Spear",
         "de": "Speer",
         "es": "Jabalina",
-        "pt": "Lança"
+        "pt": "Lança",
+        "zh-CN": "鹤嘴矛"
       },
       "width": 2,
       "height": 4,
@@ -69,7 +71,8 @@
         "en": "Dragon Lance",
         "de": "Drachenlanze",
         "es": "Lanza Dragón",
-        "pt": "Lança do dragão"
+        "pt": "Lança do dragão",
+        "zh-CN": "战矛"
       },
       "width": 2,
       "height": 4,
@@ -99,7 +102,8 @@
         "en": "Giant Trident",
         "de": "Riesendreizack",
         "es": "Tridente Gigante",
-        "pt": "Tridente gigante"
+        "pt": "Tridente gigante",
+        "zh-CN": "双鹤矛"
       },
       "width": 2,
       "height": 4,
@@ -129,7 +133,8 @@
         "en": "Serpent Spear",
         "de": "Schlangenspeer",
         "es": "Jabalina Serpiente",
-        "pt": "Lança da serpente"
+        "pt": "Lança da serpente",
+        "zh-CN": "巨蛇镰刀"
       },
       "width": 2,
       "height": 4,
@@ -160,7 +165,8 @@
         "en": "Double Poleaxe",
         "de": "Doppelstangenaxt",
         "es": "Hacha Doble de Mástil",
-        "pt": "Gadanha dupla"
+        "pt": "Gadanha dupla",
+        "zh-CN": "双刃矛"
       },
       "width": 2,
       "height": 4,
@@ -190,7 +196,8 @@
         "en": "Halberd",
         "de": "Hellebarde",
         "es": "Alabarda",
-        "pt": "Alabarda"
+        "pt": "Alabarda",
+        "zh-CN": "斧刃矛"
       },
       "width": 2,
       "height": 4,
@@ -220,7 +227,8 @@
         "en": "Berdysh",
         "de": "Berdysch",
         "es": "Berdiche",
-        "pt": "Berdysh"
+        "pt": "Berdysh",
+        "zh-CN": "巴迪之矛"
       },
       "width": 2,
       "height": 4,
@@ -251,7 +259,8 @@
         "en": "Great Scythe",
         "de": "Großartige Sense",
         "es": "Gran Guadaña",
-        "pt": "Grande foice"
+        "pt": "Grande foice",
+        "zh-CN": "帝王镰刀"
       },
       "width": 2,
       "height": 4,
@@ -282,7 +291,8 @@
         "en": "Bill of Balrog",
         "de": "Hippe des Balrog",
         "es": "Pico de Balrog",
-        "pt": "Gancho de Balrog"
+        "pt": "Gancho de Balrog",
+        "zh-CN": "死神镰刀"
       },
       "width": 2,
       "height": 4,
@@ -313,7 +323,8 @@
         "en": "Dragon Spear",
         "de": "Drachenspeer",
         "es": "Jabalina Dragón",
-        "pt": "Lança do dragão"
+        "pt": "Lança do dragão",
+        "zh-CN": "青龙刀"
       },
       "width": 2,
       "height": 4,
@@ -342,7 +353,8 @@
         "en": "Brova",
         "de": "Brova",
         "es": "Brova",
-        "pt": "Brova"
+        "pt": "Brova",
+        "zh-CN": "布罗瓦"
       },
       "width": 2,
       "height": 4,

@@ -8,7 +8,8 @@
         "en": "Bronze Pants",
         "de": "Bronzehose",
         "es": "Pantalones de Bronce",
-        "pt": "Calças de bronze"
+        "pt": "Calças de bronze",
+        "zh-CN": "青铜护腿"
       },
       "width": 2,
       "height": 2,
@@ -34,7 +35,8 @@
         "en": "Dragon Pants",
         "de": "Drachenhose",
         "es": "Pantalones Dragón",
-        "pt": "Calças do dragão"
+        "pt": "Calças do dragão",
+        "zh-CN": "龙王护腿"
       },
       "width": 2,
       "height": 2,
@@ -59,7 +61,8 @@
         "en": "Pad Pants",
         "de": "Polsterhose",
         "es": "Pantalones Rellenos",
-        "pt": "Calças acolchoadas"
+        "pt": "Calças acolchoadas",
+        "zh-CN": "革护腿"
       },
       "width": 2,
       "height": 2,
@@ -83,7 +86,8 @@
         "en": "Legendary Pants",
         "de": "Legendäre Hose",
         "es": "Pantalones Legendarios",
-        "pt": "Calças lendárias"
+        "pt": "Calças lendárias",
+        "zh-CN": "传说护腿"
       },
       "width": 2,
       "height": 2,
@@ -107,7 +111,8 @@
         "en": "Bone Pants",
         "de": "Knochenhose",
         "es": "Pantalones de Hueso",
-        "pt": "Calças de osso"
+        "pt": "Calças de osso",
+        "zh-CN": "骷髅护腿"
       },
       "width": 2,
       "height": 2,
@@ -131,7 +136,8 @@
         "en": "Leather Pants",
         "de": "Lederhose",
         "es": "Pantalones de Cuero",
-        "pt": "Calças de couro"
+        "pt": "Calças de couro",
+        "zh-CN": "皮护腿"
       },
       "width": 2,
       "height": 2,
@@ -157,7 +163,8 @@
         "en": "Scale Pants",
         "de": "Schuppenhose",
         "es": "Pantalones de Escamas",
-        "pt": "Calças de escamas"
+        "pt": "Calças de escamas",
+        "zh-CN": "翡翠护腿"
       },
       "width": 2,
       "height": 2,
@@ -183,7 +190,8 @@
         "en": "Sphinx Pants",
         "de": "Sphinxhose",
         "es": "Pantalones Esfinge",
-        "pt": "Calças da esfinge"
+        "pt": "Calças da esfinge",
+        "zh-CN": "魔王护腿"
       },
       "width": 2,
       "height": 2,
@@ -207,7 +215,8 @@
         "en": "Brass Pants",
         "de": "Messinghose",
         "es": "Pantalones de Metal",
-        "pt": "Calças de latão"
+        "pt": "Calças de latão",
+        "zh-CN": "黄金护腿"
       },
       "width": 2,
       "height": 2,
@@ -233,7 +242,8 @@
         "en": "Plate Pants",
         "de": "Plattenhose",
         "es": "Pantalones de Plata",
-        "pt": "Calças de placa"
+        "pt": "Calças de placa",
+        "zh-CN": "白金护腿"
       },
       "width": 2,
       "height": 2,
@@ -258,7 +268,8 @@
         "en": "Vine Pants",
         "de": "Rankenhose",
         "es": "Pantalones Vid",
-        "pt": "Calças da vinha"
+        "pt": "Calças da vinha",
+        "zh-CN": "藤护腿"
       },
       "width": 2,
       "height": 2,
@@ -282,7 +293,8 @@
         "en": "Silk Pants",
         "de": "Seidenhose",
         "es": "Pantalones de Seda",
-        "pt": "Calças de seda"
+        "pt": "Calças de seda",
+        "zh-CN": "天蚕护腿"
       },
       "width": 2,
       "height": 2,
@@ -306,7 +318,8 @@
         "en": "Wind Pants",
         "de": "Windhose",
         "es": "Pantalones Viento",
-        "pt": "Calças do vento"
+        "pt": "Calças do vento",
+        "zh-CN": "风之护腿"
       },
       "width": 2,
       "height": 2,
@@ -330,7 +343,8 @@
         "en": "Spirit Pants",
         "de": "Geisterhose",
         "es": "Pantalones Espíritu",
-        "pt": "Calças do espírito"
+        "pt": "Calças do espírito",
+        "zh-CN": "精灵之护腿"
       },
       "width": 2,
       "height": 2,
@@ -354,7 +368,8 @@
         "en": "Guardian Pants",
         "de": "Wächterhose",
         "es": "Pantalones Guardián",
-        "pt": "Calças do guardião"
+        "pt": "Calças do guardião",
+        "zh-CN": "女神护腿"
       },
       "width": 2,
       "height": 2,
@@ -378,7 +393,8 @@
         "en": "Storm Crow Pants",
         "de": "Sturmkrähenhose",
         "es": "Pantalones Cuervo de Tormenta",
-        "pt": "Calças do corvo da tempestade"
+        "pt": "Calças do corvo da tempestade",
+        "zh-CN": "亚特兰蒂斯之护腿"
       },
       "width": 2,
       "height": 2,
@@ -402,7 +418,8 @@
         "en": "Black Dragon Pants",
         "de": "Schwarzdrachenhose",
         "es": "Pantalones Dragón Negro",
-        "pt": "Calças do dragão negro"
+        "pt": "Calças do dragão negro",
+        "zh-CN": "黑龙王护腿"
       },
       "width": 2,
       "height": 2,
@@ -426,7 +443,8 @@
         "en": "Dark Phoenix Pants",
         "de": "Dunkelphönixhose",
         "es": "Pantalones Fénix Oscuro",
-        "pt": "Calças da fênix negra"
+        "pt": "Calças da fênix negra",
+        "zh-CN": "黑凤凰护腿"
       },
       "width": 2,
       "height": 2,
@@ -450,7 +468,8 @@
         "en": "Grand Soul Pants",
         "de": "Großseelenhose",
         "es": "Pantalones Gran Alma",
-        "pt": "Calças da grande alma"
+        "pt": "Calças da grande alma",
+        "zh-CN": "火麒麟护腿"
       },
       "width": 2,
       "height": 2,
@@ -474,7 +493,8 @@
         "en": "Divine Pants",
         "de": "Göttliche Hose",
         "es": "Pantalones Divinos",
-        "pt": "Calças divinas"
+        "pt": "Calças divinas",
+        "zh-CN": "圣灵护腿"
       },
       "width": 2,
       "height": 2,
@@ -498,7 +518,8 @@
         "en": "Thunder Hawk Pants",
         "de": "Donnerfalkenhose",
         "es": "Pantalones Halcón de Trueno",
-        "pt": "Calças de Thunder Hawk"
+        "pt": "Calças de Thunder Hawk",
+        "zh-CN": "奔雷护腿"
       },
       "width": 2,
       "height": 2,
@@ -522,7 +543,8 @@
         "en": "Great Dragon Pants",
         "de": "Großartige Drachenhose",
         "es": "Pantalones Gran Dragón",
-        "pt": "Calças do grande dragão"
+        "pt": "Calças do grande dragão",
+        "zh-CN": "龙炎护腿"
       },
       "width": 2,
       "height": 2,
@@ -546,7 +568,8 @@
         "en": "Dark Soul Pants",
         "de": "Dunkelseelenhose",
         "es": "Pantalones Alma Oscura",
-        "pt": "Calças da alma negra"
+        "pt": "Calças da alma negra",
+        "zh-CN": "黑炎护腿"
       },
       "width": 2,
       "height": 2,
@@ -570,7 +593,8 @@
         "en": "Hurricane Pants",
         "de": "Orkanhose",
         "es": "Pantalones Huracán",
-        "pt": "Calças do furacão"
+        "pt": "Calças do furacão",
+        "zh-CN": "魔神护腿"
       },
       "width": 2,
       "height": 2,
@@ -594,7 +618,8 @@
         "en": "Red Spirit Pants",
         "de": "Rotgeisterhose",
         "es": "Pantalones Espíritu Rojo",
-        "pt": "Calças do espírito vermelho"
+        "pt": "Calças do espírito vermelho",
+        "zh-CN": "红羽护腿"
       },
       "width": 2,
       "height": 2,
@@ -618,7 +643,8 @@
         "en": "Light Plate Pants",
         "de": "Leichtplattenhose",
         "es": "Pantalones Plata de Luz",
-        "pt": "Calças de placa Leve"
+        "pt": "Calças de placa Leve",
+        "zh-CN": "圣元护腿"
       },
       "width": 2,
       "height": 2,
@@ -642,7 +668,8 @@
         "en": "Adamantine Pants",
         "de": "Adamanthose",
         "es": "Pantalones Adamantinos",
-        "pt": "Calças de adamantina"
+        "pt": "Calças de adamantina",
+        "zh-CN": "圣魂护腿"
       },
       "width": 2,
       "height": 2,
@@ -666,7 +693,8 @@
         "en": "Dark Steel Pants",
         "de": "Dunkelstahlhose",
         "es": "Pantalones Acero Oscuro",
-        "pt": "Calças de aço negro"
+        "pt": "Calças de aço negro",
+        "zh-CN": "神圣护腿"
       },
       "width": 2,
       "height": 2,
@@ -690,7 +718,8 @@
         "en": "Dark Master Pants",
         "de": "Dunkelmeisterhose",
         "es": "Pantalones Amo Oscuro",
-        "pt": "Calças do Mestre negro"
+        "pt": "Calças do Mestre negro",
+        "zh-CN": "至尊护腿"
       },
       "width": 2,
       "height": 2,
@@ -714,7 +743,8 @@
         "en": "Dragon Knight Pants",
         "de": "Drachenritterhose",
         "es": "Pantalones Caballero Dragón",
-        "pt": "Calças do cavaleiro dragão"
+        "pt": "Calças do cavaleiro dragão",
+        "zh-CN": "暗黑斗神护腿"
       },
       "width": 2,
       "height": 2,
@@ -739,7 +769,8 @@
         "en": "Venom Mist Pants",
         "de": "Giftnebelhose",
         "es": "Pantalones Bruma de Veneno",
-        "pt": "Calças da névoa de veneno"
+        "pt": "Calças da névoa de veneno",
+        "zh-CN": "法魂玄灵护腿"
       },
       "width": 2,
       "height": 2,
@@ -764,7 +795,8 @@
         "en": "Sylphid Ray Pants",
         "de": "Sylphenstrahlhose",
         "es": "Pantalones Rayo de Sílfide",
-        "pt": "Calças do raio silfídico"
+        "pt": "Calças do raio silfídico",
+        "zh-CN": "紫灵护腿"
       },
       "width": 2,
       "height": 2,
@@ -789,7 +821,8 @@
         "en": "Volcano Pants",
         "de": "Vulkanhose",
         "es": "Pantalones Volcán",
-        "pt": "Calças do vulcão"
+        "pt": "Calças do vulcão",
+        "zh-CN": "天魔斗神护腿"
       },
       "width": 2,
       "height": 2,
@@ -814,7 +847,8 @@
         "en": "Sunlight Pants",
         "de": "Sonnenlichthose",
         "es": "Pantalones Luz Solar",
-        "pt": "Calças da luz do sol"
+        "pt": "Calças da luz do sol",
+        "zh-CN": "宙斯护腿"
       },
       "width": 2,
       "height": 2,
@@ -839,7 +873,8 @@
         "en": "Ashcrow Pants",
         "de": "Aschkrähenhose",
         "es": "Pantalones Cuervo Ceniza",
-        "pt": "Calças de Ashcrow"
+        "pt": "Calças de Ashcrow",
+        "zh-CN": "暴风护腿"
       },
       "width": 2,
       "height": 2,
@@ -862,7 +897,8 @@
         "en": "Eclipse Pants",
         "de": "Finsternishose",
         "es": "Pantalones Eclipse",
-        "pt": "Calças do eclipse"
+        "pt": "Calças do eclipse",
+        "zh-CN": "幻月护腿"
       },
       "width": 2,
       "height": 2,
@@ -885,7 +921,8 @@
         "en": "Iris Pants",
         "de": "Iris-Hose",
         "es": "Pantalones Iris",
-        "pt": "Calças de Iris"
+        "pt": "Calças de Iris",
+        "zh-CN": "碧影护腿"
       },
       "width": 2,
       "height": 2,
@@ -908,7 +945,8 @@
         "en": "Valiant Pants",
         "de": "Kühne Hose",
         "es": "Pantalones Valientes",
-        "pt": "Calças do valor"
+        "pt": "Calças do valor",
+        "zh-CN": "烈火护腿"
       },
       "width": 2,
       "height": 2,
@@ -931,7 +969,8 @@
         "en": "Glorious Pants",
         "de": "Glorreiche Hose",
         "es": "Pantalones Gloriosos",
-        "pt": "Calças gloriosas"
+        "pt": "Calças gloriosas",
+        "zh-CN": "圣光护腿"
       },
       "width": 2,
       "height": 2,
@@ -954,7 +993,8 @@
         "en": "Violent Wind Pants",
         "de": "Sturmwindhose",
         "es": "Pantalones Viento Violento",
-        "pt": "Calças do vento violento"
+        "pt": "Calças do vento violento",
+        "zh-CN": "飓风之护腿"
       },
       "width": 2,
       "height": 2,
@@ -977,7 +1017,8 @@
         "en": "Red Wing Pants",
         "de": "Rotschwingenhose",
         "es": "Pantalones Ala Roja",
-        "pt": "Calças da asa vermelha"
+        "pt": "Calças da asa vermelha",
+        "zh-CN": "红翼之护腿"
       },
       "width": 2,
       "height": 2,
@@ -1001,7 +1042,8 @@
         "en": "Ancient Pants",
         "de": "Uralte Hose",
         "es": "Pantalones Antiguo",
-        "pt": "Calças antigas"
+        "pt": "Calças antigas",
+        "zh-CN": "远古之护腿"
       },
       "width": 2,
       "height": 2,
@@ -1025,7 +1067,8 @@
         "en": "Demonic Pants",
         "de": "Dämonische Hose",
         "es": "Pantalones Demoníacos",
-        "pt": "Calças demoníacas"
+        "pt": "Calças demoníacas",
+        "zh-CN": "恶魔裤"
       },
       "width": 2,
       "height": 2,
@@ -1048,7 +1091,8 @@
         "en": "Storm Blitz Pants",
         "de": "Sturmblitzhose",
         "es": "Pantalones Ráfaga Tormentosa",
-        "pt": "Calças Relâmpago de Tempest."
+        "pt": "Calças Relâmpago de Tempest.",
+        "zh-CN": "风暴闪电战裤"
       },
       "width": 2,
       "height": 2,
@@ -1073,7 +1117,8 @@
         "en": "Eternal Wing Pants",
         "de": "Ewigschwingenhose",
         "es": "Pantalones Ala Eterna",
-        "pt": "Calças da asa eterna"
+        "pt": "Calças da asa eterna",
+        "zh-CN": "永恒之翼裤"
       },
       "width": 2,
       "height": 2,
@@ -1098,7 +1143,8 @@
         "en": "Titan  Pants",
         "de": "Titanenhose",
         "es": "Pantalones Titán",
-        "pt": "Calças do titã"
+        "pt": "Calças do titã",
+        "zh-CN": "泰坦之护腿"
       },
       "width": 2,
       "height": 2,
@@ -1122,7 +1168,8 @@
         "en": "Brave Pants",
         "de": "Tapfere Hose",
         "es": "Pantalones Valerosos",
-        "pt": "Calças da coragem"
+        "pt": "Calças da coragem",
+        "zh-CN": "勇气之护腿"
       },
       "width": 2,
       "height": 2,
@@ -1146,7 +1193,8 @@
         "en": "Phantom  Pants",
         "de": "Phantom-Hose",
         "es": "Pantalones Fantasma",
-        "pt": "Calças do fantasma"
+        "pt": "Calças do fantasma",
+        "zh-CN": "破灭之护腿"
       },
       "width": 2,
       "height": 2,
@@ -1170,7 +1218,8 @@
         "en": "Destroy Pants",
         "de": "Zerstörerhose",
         "es": "Pantalones Destructores",
-        "pt": "Calças da destruição"
+        "pt": "Calças da destruição",
+        "zh-CN": "毁掉裤子"
       },
       "width": 2,
       "height": 2,
@@ -1195,7 +1244,8 @@
         "en": "Seraphim Pants",
         "de": "Seraphim-Hose",
         "es": "Pantalones Serafín",
-        "pt": "Calças do serafim"
+        "pt": "Calças do serafim",
+        "zh-CN": "恐惧之护腿"
       },
       "width": 2,
       "height": 2,
@@ -1219,7 +1269,8 @@
         "en": "Faith Pants",
         "de": "Glaubenshose",
         "es": "Pantalones de Fe",
-        "pt": "Calças da fé"
+        "pt": "Calças da fé",
+        "zh-CN": "信仰护腿"
       },
       "width": 2,
       "height": 2,
@@ -1244,7 +1295,8 @@
         "en": "Royal Pants",
         "de": "Königliche Hose",
         "es": "Pantalones Reales",
-        "pt": "Calças reais"
+        "pt": "Calças reais",
+        "zh-CN": "皇家裤"
       },
       "width": 2,
       "height": 2,
@@ -1268,7 +1320,8 @@
         "en": "Hades Pants",
         "de": "Hades-Hose",
         "es": "Pantalones Hades",
-        "pt": "Calças de Hades"
+        "pt": "Calças de Hades",
+        "zh-CN": "冥王之护腿"
       },
       "width": 2,
       "height": 2,
@@ -1296,7 +1349,8 @@
         "en": "Sacred Fire Pants",
         "de": "Heiligfeuerhose",
         "es": "Pantalones de Fuego Sagrado",
-        "pt": "Calças de Fogo Sagrado"
+        "pt": "Calças de Fogo Sagrado",
+        "zh-CN": "圣火裤"
       },
       "width": 2,
       "height": 2,
@@ -1320,7 +1374,8 @@
         "en": "Storm Jahad Pants",
         "de": "Sturm-Jahad-Hose",
         "es": "Pantalones de Tormenta Zahard",
-        "pt": "Calças de  Tempestade Zahard"
+        "pt": "Calças de  Tempestade Zahard",
+        "zh-CN": "暴风扎哈德之护腿"
       },
       "width": 2,
       "height": 2,
@@ -1343,7 +1398,8 @@
         "en": "Piercing Groove Pants",
         "de": "Durchbohrerhose",
         "es": "Pantalones de Tallo Perforador",
-        "pt": "Calças de Entalhe Perfurante"
+        "pt": "Calças de Entalhe Perfurante",
+        "zh-CN": "穿孔裤"
       },
       "width": 2,
       "height": 2,
@@ -1366,9 +1422,12 @@
         "en": "Scale Pants",
         "de": "Schuppenhose",
         "es": "Pantalones de Escamas",
-        "pt": "Calças de escamas"
+        "pt": "Calças de escamas",
+        "zh-CN": "翡翠护腿"
       },
-      "tags": ["luckyItem"],
+      "tags": [
+        "luckyItem"
+      ],
       "width": 2,
       "height": 2,
       "slot": "pants",
@@ -1399,9 +1458,12 @@
         "en": "Silk Pants",
         "de": "Seidenhose",
         "es": "Pantalones de Seda",
-        "pt": "Calças de seda"
+        "pt": "Calças de seda",
+        "zh-CN": "天蚕护腿"
       },
-      "tags": ["luckyItem"],
+      "tags": [
+        "luckyItem"
+      ],
       "width": 2,
       "height": 2,
       "slot": "pants",
@@ -1429,9 +1491,12 @@
         "en": "Sphinx Pants",
         "de": "Sphinxhose",
         "es": "Pantalones Esfinge",
-        "pt": "Calças de Esfinge"
+        "pt": "Calças de Esfinge",
+        "zh-CN": "魔王护腿"
       },
-      "tags": ["luckyItem"],
+      "tags": [
+        "luckyItem"
+      ],
       "width": 2,
       "height": 2,
       "slot": "pants",
@@ -1460,9 +1525,12 @@
         "en": "Violent Wind Pants",
         "de": "Sturmwindhose",
         "es": "Pantalones Viento Violento",
-        "pt": "Calças do vento violento"
+        "pt": "Calças do vento violento",
+        "zh-CN": "飓风之护腿"
       },
-      "tags": ["luckyItem"],
+      "tags": [
+        "luckyItem"
+      ],
       "width": 2,
       "height": 2,
       "slot": "pants",
@@ -1490,9 +1558,12 @@
         "en": "Adamantine Pants",
         "de": "Adamanthose",
         "es": "Pantalones Adamantinos",
-        "pt": "Calças de adamantina"
+        "pt": "Calças de adamantina",
+        "zh-CN": "圣魂护腿"
       },
-      "tags": ["luckyItem"],
+      "tags": [
+        "luckyItem"
+      ],
       "width": 2,
       "height": 2,
       "slot": "pants",
@@ -1520,9 +1591,12 @@
         "en": "Dragon Pants",
         "de": "Drachenhose",
         "es": "Pantalones Dragón",
-        "pt": "Calças de Dragão"
+        "pt": "Calças de Dragão",
+        "zh-CN": "龙王护腿"
       },
-      "tags": ["luckyItem"],
+      "tags": [
+        "luckyItem"
+      ],
       "width": 2,
       "height": 2,
       "slot": "pants",
@@ -1551,9 +1625,12 @@
         "en": "Guardian Pants",
         "de": "Wächterhose",
         "es": "Pantalones Guardián",
-        "pt": "Calças de Guardião"
+        "pt": "Calças de Guardião",
+        "zh-CN": "女神护腿"
       },
-      "tags": ["luckyItem"],
+      "tags": [
+        "luckyItem"
+      ],
       "width": 2,
       "height": 2,
       "slot": "pants",
@@ -1581,9 +1658,12 @@
         "en": "Legendary Pants",
         "de": "Legendäre Hose",
         "es": "Pantalones Legendarios",
-        "pt": "Calças Lendárias"
+        "pt": "Calças Lendárias",
+        "zh-CN": "传说护腿"
       },
-      "tags": ["luckyItem"],
+      "tags": [
+        "luckyItem"
+      ],
       "width": 2,
       "height": 2,
       "slot": "pants",
@@ -1612,9 +1692,12 @@
         "en": "Red Wing Pants",
         "de": "Rotschwingenhose",
         "es": "Pantalones Ala Roja",
-        "pt": "Calças da asa vermelha"
+        "pt": "Calças da asa vermelha",
+        "zh-CN": "红翼之护腿"
       },
-      "tags": ["luckyItem"],
+      "tags": [
+        "luckyItem"
+      ],
       "width": 2,
       "height": 2,
       "slot": "pants",
@@ -1642,9 +1725,12 @@
         "en": "Atlans Pants",
         "de": "Atlans-Hose",
         "es": "Pantalones Cuervo de Tormenta",
-        "pt": "Calças do corvo da tempestade"
+        "pt": "Calças do corvo da tempestade",
+        "zh-CN": "亚特兰蒂斯之护腿"
       },
-      "tags": ["luckyItem"],
+      "tags": [
+        "luckyItem"
+      ],
       "width": 2,
       "height": 2,
       "slot": "pants",
@@ -1672,9 +1758,12 @@
         "en": "Storm Jahad Pants",
         "de": "Sturm-Jahad-Hose",
         "es": "Pantalones de Tormenta Zahard",
-        "pt": "Calças de  Tempestade Zahard"
+        "pt": "Calças de  Tempestade Zahard",
+        "zh-CN": "暴风扎哈德之护腿"
       },
-      "tags": ["luckyItem"],
+      "tags": [
+        "luckyItem"
+      ],
       "width": 2,
       "height": 2,
       "slot": "pants",
@@ -1702,7 +1791,8 @@
         "en": "Phoenix Soul Pants",
         "de": "Phönixseelenhose",
         "es": "Pantalones de Alma de Fénix",
-        "pt": "Calças de Alma de Fogo"
+        "pt": "Calças de Alma de Fogo",
+        "zh-CN": "凤魂护腿"
       },
       "width": 2,
       "height": 2,

@@ -8,7 +8,8 @@
         "en": "Skull Staff",
         "de": "Schädelstab",
         "es": "Báculo Calavera",
-        "pt": "Bastão da caveira"
+        "pt": "Bastão da caveira",
+        "zh-CN": "骷髅杖"
       },
       "width": 1,
       "height": 3,
@@ -37,7 +38,8 @@
         "en": "Angelic Staff",
         "de": "Engelsstab",
         "es": "Báculo Angelical",
-        "pt": "Bastão angelical"
+        "pt": "Bastão angelical",
+        "zh-CN": "天使杖"
       },
       "width": 2,
       "height": 3,
@@ -66,7 +68,8 @@
         "en": "Serpent Staff",
         "de": "Schlangenstab",
         "es": "Báculo Serpiente",
-        "pt": "Bastão da serpente"
+        "pt": "Bastão da serpente",
+        "zh-CN": "毒蛇杖"
       },
       "width": 2,
       "height": 3,
@@ -95,7 +98,8 @@
         "en": "Thunder Staff",
         "de": "Donnerstab",
         "es": "Báculo Trueno",
-        "pt": "Bastão do trovão"
+        "pt": "Bastão do trovão",
+        "zh-CN": "闪电杖"
       },
       "width": 2,
       "height": 4,
@@ -125,7 +129,8 @@
         "en": "Gorgon Staff",
         "de": "Gorgonenstab",
         "es": "Báculo Gorgon",
-        "pt": "Bastão da górgone"
+        "pt": "Bastão da górgone",
+        "zh-CN": "戈登之杖"
       },
       "width": 2,
       "height": 4,
@@ -154,7 +159,8 @@
         "en": "Legendary Staff",
         "de": "Legendärer Stab",
         "es": "Báculo Legendario",
-        "pt": "Bastão lendário"
+        "pt": "Bastão lendário",
+        "zh-CN": "传说之杖"
       },
       "width": 1,
       "height": 4,
@@ -182,7 +188,8 @@
         "en": "Staff of Resurrection",
         "de": "Stab der Auferstehung",
         "es": "Báculo de la Resurrección",
-        "pt": "Bastão da ressurreição"
+        "pt": "Bastão da ressurreição",
+        "zh-CN": "复活之杖"
       },
       "width": 1,
       "height": 4,
@@ -211,7 +218,8 @@
         "en": "Chaos Lighting Staff",
         "de": "Chaos-Blitzstab",
         "es": "Báculo Relámpago de Caos",
-        "pt": "Bastão do relâmpago do caos"
+        "pt": "Bastão do relâmpago do caos",
+        "zh-CN": "混沌照明法杖"
       },
       "width": 2,
       "height": 4,
@@ -241,7 +249,8 @@
         "en": "Staff of Destruction",
         "de": "Stab der Zerstörung",
         "es": "Báculo de la Destrucción",
-        "pt": "Bastão da destruição"
+        "pt": "Bastão da destruição",
+        "zh-CN": "毁灭之杖"
       },
       "width": 2,
       "height": 4,
@@ -271,7 +280,8 @@
         "en": "Dragon Soul Staff",
         "de": "Drachenseelenstab",
         "es": "Báculo Alma de Dragón",
-        "pt": "Bastão da alma do dragão"
+        "pt": "Bastão da alma do dragão",
+        "zh-CN": "麒麟之杖"
       },
       "width": 1,
       "height": 4,
@@ -299,16 +309,23 @@
         "en": "Divine Staff of Archangel",
         "de": "Göttlicher Stab des Erzengels",
         "es": "Báculo Divino de Arcángel",
-        "pt": "Bastão divino do arcanjo"
+        "pt": "Bastão divino do arcanjo",
+        "zh-CN": "大天使之杖"
       },
-      "tags": ["divineArchangelWeapon", "valuable"],
+      "tags": [
+        "divineArchangelWeapon",
+        "valuable"
+      ],
       "nameLines": [
         {
           "text": {
             "en": "{name}"
           },
           "color": "purple",
-          "levels": [0, 0]
+          "levels": [
+            0,
+            0
+          ]
         },
         {
           "text": {
@@ -343,7 +360,8 @@
         "en": "Staff of Kundun",
         "de": "Stab von Kundun",
         "es": "Báculo de Kundun",
-        "pt": "Bastão de Kundun"
+        "pt": "Bastão de Kundun",
+        "zh-CN": "昆顿之杖"
       },
       "width": 1,
       "height": 4,
@@ -371,7 +389,8 @@
         "en": "Grand Viper Staff",
         "de": "Großvipernstab",
         "es": "Gran Báculo Víbora",
-        "pt": "Grande bastão da víbora"
+        "pt": "Grande bastão da víbora",
+        "zh-CN": "死神之杖"
       },
       "width": 1,
       "height": 4,
@@ -400,7 +419,8 @@
         "en": "Platina Staff",
         "de": "Platinstab",
         "es": "Báculo Platina",
-        "pt": "Bastão de platina"
+        "pt": "Bastão de platina",
+        "zh-CN": "幻月雷杖"
       },
       "width": 1,
       "height": 4,
@@ -427,7 +447,8 @@
         "en": "Mystery Stick",
         "de": "Mysterienstock",
         "es": "Vara del Misterio",
-        "pt": "Cajado misterioso"
+        "pt": "Cajado misterioso",
+        "zh-CN": "神秘棒"
       },
       "width": 1,
       "height": 4,
@@ -454,7 +475,8 @@
         "en": "Violent Wind Stick",
         "de": "Sturmwindstock",
         "es": "Vara Viento Violento",
-        "pt": "Cajado do vento violento"
+        "pt": "Cajado do vento violento",
+        "zh-CN": "飓风之杖"
       },
       "width": 1,
       "height": 4,
@@ -481,7 +503,8 @@
         "en": "Red Wing Stick",
         "de": "Rotschwingenstock",
         "es": "Vara Ala Roja",
-        "pt": "Cajado da asa vermelha"
+        "pt": "Cajado da asa vermelha",
+        "zh-CN": "红翼之杖"
       },
       "width": 1,
       "height": 4,
@@ -508,7 +531,8 @@
         "en": "Ancient Stick",
         "de": "Uralter Stock",
         "es": "Vara Antigua",
-        "pt": "Cajado ancestral"
+        "pt": "Cajado ancestral",
+        "zh-CN": "远古之杖"
       },
       "width": 1,
       "height": 4,
@@ -535,7 +559,8 @@
         "en": "Demonic Stick",
         "de": "Dämonischer Stock",
         "es": "Vara Demoníaca",
-        "pt": "Cajado demoníaco"
+        "pt": "Cajado demoníaco",
+        "zh-CN": "魔灵之杖"
       },
       "width": 1,
       "height": 4,
@@ -562,7 +587,8 @@
         "en": "Storm Blitz Stick",
         "de": "Sturmblitzstock",
         "es": "Vara Ráfaga Tormentosa",
-        "pt": "Caj. Relâmpago de Tempestade"
+        "pt": "Caj. Relâmpago de Tempestade",
+        "zh-CN": "风影之杖"
       },
       "width": 1,
       "height": 4,
@@ -591,7 +617,8 @@
         "en": "Eternal Wing Stick",
         "de": "Ewigschwingenstock",
         "es": "Vara Ala Eterna",
-        "pt": "Cajado da asa eterna"
+        "pt": "Cajado da asa eterna",
+        "zh-CN": "恒翼之杖"
       },
       "width": 1,
       "height": 4,
@@ -619,9 +646,12 @@
         "en": "Book of Samut",
         "de": "Buch von Samut",
         "es": "Libro de Samut",
-        "pt": "Livro de Samut"
+        "pt": "Livro de Samut",
+        "zh-CN": "撒姆特之书"
       },
-      "tags": ["summonerBook"],
+      "tags": [
+        "summonerBook"
+      ],
       "width": 1,
       "height": 2,
       "slot": "offHand",
@@ -646,9 +676,12 @@
         "en": "Book of Neil",
         "de": "Buch von Neil",
         "es": "Libro de Neil",
-        "pt": "Livro de Neil"
+        "pt": "Livro de Neil",
+        "zh-CN": "异灵之书"
       },
-      "tags": ["summonerBook"],
+      "tags": [
+        "summonerBook"
+      ],
       "width": 1,
       "height": 2,
       "slot": "offHand",
@@ -673,9 +706,12 @@
         "en": "Book of Lagle",
         "de": "Buch von Lagle",
         "es": "Libro de Lagle",
-        "pt": "Livro de Lagle"
+        "pt": "Livro de Lagle",
+        "zh-CN": "污灵之书"
       },
-      "tags": ["summonerBook"],
+      "tags": [
+        "summonerBook"
+      ],
       "width": 1,
       "height": 2,
       "slot": "offHand",
@@ -700,7 +736,8 @@
         "en": "Deadly Staff",
         "de": "Todesstab",
         "es": "Báculo Mortal",
-        "pt": "Bastão letal"
+        "pt": "Bastão letal",
+        "zh-CN": "致命魔杖"
       },
       "width": 1,
       "height": 4,
@@ -729,7 +766,8 @@
         "en": "Inberial Staff",
         "de": "Kaiserlicher Stab",
         "es": "Báculo Inberial",
-        "pt": "Bastão inberial"
+        "pt": "Bastão inberial",
+        "zh-CN": "惯性法杖"
       },
       "width": 1,
       "height": 4,
@@ -760,7 +798,8 @@
         "en": "Chromatic Staff",
         "de": "Chromatischer Stab",
         "es": "Báculo Cromático",
-        "pt": "Bastão cromático"
+        "pt": "Bastão cromático",
+        "zh-CN": "多彩魔杖"
       },
       "width": 1,
       "height": 4,
@@ -788,7 +827,8 @@
         "en": "Raven Stick",
         "de": "Rabenstock",
         "es": "Vara Cuervo",
-        "pt": "Cajado do corvo"
+        "pt": "Cajado do corvo",
+        "zh-CN": "乌鸦之杖"
       },
       "width": 1,
       "height": 4,
@@ -815,16 +855,23 @@
         "en": "Divine Stick of the Archangel",
         "de": "Göttlicher Stock des Erzengels",
         "es": "Bastón Divino de Arcángel",
-        "pt": "Bastão Divino do Arcanjo"
+        "pt": "Bastão Divino do Arcanjo",
+        "zh-CN": "大天使的神杖"
       },
-      "tags": ["divineArchangelWeapon", "valuable"],
+      "tags": [
+        "divineArchangelWeapon",
+        "valuable"
+      ],
       "nameLines": [
         {
           "text": {
             "en": "{name}"
           },
           "color": "purple",
-          "levels": [0, 0]
+          "levels": [
+            0,
+            0
+          ]
         },
         {
           "text": {

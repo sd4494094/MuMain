@@ -8,7 +8,8 @@
         "en": "Short Bow",
         "de": "Kurzbogen",
         "es": "Arco Corto",
-        "pt": "Arco curto"
+        "pt": "Arco curto",
+        "zh-CN": "短弓"
       },
       "width": 2,
       "height": 3,
@@ -37,7 +38,8 @@
         "en": "Bow",
         "de": "Bogen",
         "es": "Arco",
-        "pt": "Arco"
+        "pt": "Arco",
+        "zh-CN": "长弓"
       },
       "width": 2,
       "height": 3,
@@ -66,7 +68,8 @@
         "en": "Elven Bow",
         "de": "Elfenbogen",
         "es": "Arco de los Elfos",
-        "pt": "Arco élfico"
+        "pt": "Arco élfico",
+        "zh-CN": "精灵之弓"
       },
       "width": 2,
       "height": 3,
@@ -95,7 +98,8 @@
         "en": "Battle Bow",
         "de": "Kampfbogen",
         "es": "Arco de Batalla",
-        "pt": "Arco de batalha"
+        "pt": "Arco de batalha",
+        "zh-CN": "巴特之弓"
       },
       "width": 2,
       "height": 3,
@@ -124,7 +128,8 @@
         "en": "Tiger Bow",
         "de": "Tigerbogen",
         "es": "Arco Tigre",
-        "pt": "Arco do tigre"
+        "pt": "Arco do tigre",
+        "zh-CN": "黄金之虎"
       },
       "width": 2,
       "height": 4,
@@ -153,7 +158,8 @@
         "en": "Silver Bow",
         "de": "Silberbogen",
         "es": "Arco Plateado",
-        "pt": "Arco de prata"
+        "pt": "Arco de prata",
+        "zh-CN": "银翼之弓"
       },
       "width": 2,
       "height": 4,
@@ -182,7 +188,8 @@
         "en": "Chaos Nature Bow",
         "de": "Chaos-Naturbogen",
         "es": "Arco Naturaleza del Caos",
-        "pt": "Arco da natureza do caos"
+        "pt": "Arco da natureza do caos",
+        "zh-CN": "玛雅神弓"
       },
       "width": 2,
       "height": 4,
@@ -211,23 +218,34 @@
         "en": "Bolt",
         "de": "Bolzen",
         "es": "Rayo",
-        "pt": "Dardo"
+        "pt": "Dardo",
+        "zh-CN": "弩箭"
       },
-      "tags": ["ammunition"],
+      "tags": [
+        "ammunition"
+      ],
       "description": [
         {
           "text": "@numberOfItems"
         },
         {
           "text": "@damageIncrease",
-          "values": {"percent": "table:ammunitionDamageIncrease"},
+          "values": {
+            "percent": "table:ammunitionDamageIncrease"
+          },
           "color": "blue",
-          "levels": [1, 15]
+          "levels": [
+            1,
+            15
+          ]
         },
         {
           "text": "@additionalDamagePlusOne",
           "color": "blue",
-          "levels": [1, 15]
+          "levels": [
+            1,
+            15
+          ]
         }
       ],
       "tooltipLayout": "noDurabilityLine",
@@ -246,7 +264,8 @@
         "en": "Crossbow",
         "de": "Armbrust",
         "es": "Ballesta",
-        "pt": "Besta"
+        "pt": "Besta",
+        "zh-CN": "石弩"
       },
       "width": 2,
       "height": 2,
@@ -275,7 +294,8 @@
         "en": "Golden Crossbow",
         "de": "Goldene Armbrust",
         "es": "Ballesta Dorada",
-        "pt": "Besta dourada"
+        "pt": "Besta dourada",
+        "zh-CN": "黄金石弩"
       },
       "width": 2,
       "height": 2,
@@ -304,7 +324,8 @@
         "en": "Arquebus",
         "de": "Arkebuse",
         "es": "Arcabuz",
-        "pt": "Arquebus"
+        "pt": "Arquebus",
+        "zh-CN": "火神弩"
       },
       "width": 2,
       "height": 2,
@@ -333,7 +354,8 @@
         "en": "Light Crossbow",
         "de": "Leichte Armbrust",
         "es": "Ballesta de Luz",
-        "pt": "Besta leve"
+        "pt": "Besta leve",
+        "zh-CN": "巨人弩"
       },
       "width": 2,
       "height": 3,
@@ -362,7 +384,8 @@
         "en": "Serpent Crossbow",
         "de": "Schlangenarmbrust",
         "es": "Ballesta Serpiente",
-        "pt": "Besta da serpente"
+        "pt": "Besta da serpente",
+        "zh-CN": "诱惑之弩"
       },
       "width": 2,
       "height": 3,
@@ -391,7 +414,8 @@
         "en": "Bluewing Crossbow",
         "de": "Blauschwingen-Armbrust",
         "es": "Ballesta Ala Azul",
-        "pt": "Besta Bluewing"
+        "pt": "Besta Bluewing",
+        "zh-CN": "蓝翎弩"
       },
       "width": 2,
       "height": 3,
@@ -420,7 +444,8 @@
         "en": "Aquagold Crossbow",
         "de": "Aquagold-Armbrust",
         "es": "Ballesta Acuadorada",
-        "pt": "Besta Aquagold"
+        "pt": "Besta Aquagold",
+        "zh-CN": "温蒂妮"
       },
       "width": 2,
       "height": 3,
@@ -449,23 +474,34 @@
         "en": "Arrow",
         "de": "Pfeil",
         "es": "Flecha",
-        "pt": "Flecha"
+        "pt": "Flecha",
+        "zh-CN": "箭头"
       },
-      "tags": ["ammunition"],
+      "tags": [
+        "ammunition"
+      ],
       "description": [
         {
           "text": "@numberOfItems"
         },
         {
           "text": "@damageIncrease",
-          "values": {"percent": "table:ammunitionDamageIncrease"},
+          "values": {
+            "percent": "table:ammunitionDamageIncrease"
+          },
           "color": "blue",
-          "levels": [1, 15]
+          "levels": [
+            1,
+            15
+          ]
         },
         {
           "text": "@additionalDamagePlusOne",
           "color": "blue",
-          "levels": [1, 15]
+          "levels": [
+            1,
+            15
+          ]
         }
       ],
       "tooltipLayout": "noDurabilityLine",
@@ -484,7 +520,8 @@
         "en": "Saint Crossbow",
         "de": "Heilige Armbrust",
         "es": "Ballesta de Santo",
-        "pt": "Besta do santo"
+        "pt": "Besta do santo",
+        "zh-CN": "圣者之弩"
       },
       "width": 2,
       "height": 4,
@@ -513,7 +550,8 @@
         "en": "Celestial Bow",
         "de": "Himmlischer Bogen",
         "es": "Arco Celestial",
-        "pt": "Arco celestial"
+        "pt": "Arco celestial",
+        "zh-CN": "圣灵之弓"
       },
       "width": 2,
       "height": 4,
@@ -542,16 +580,23 @@
         "en": "Divine Crossbow of Archangel",
         "de": "Göttliche Armbrust des Erzengels",
         "es": "Ballesta Divina de Arcángel",
-        "pt": "Besta divina do arcanjo"
+        "pt": "Besta divina do arcanjo",
+        "zh-CN": "大天使之弓"
       },
-      "tags": ["divineArchangelWeapon", "valuable"],
+      "tags": [
+        "divineArchangelWeapon",
+        "valuable"
+      ],
       "nameLines": [
         {
           "text": {
             "en": "{name}"
           },
           "color": "purple",
-          "levels": [0, 0]
+          "levels": [
+            0,
+            0
+          ]
         },
         {
           "text": {
@@ -586,7 +631,8 @@
         "en": "Great Reign Crossbow",
         "de": "Großartige Herrschaftsarmbrust",
         "es": "Ballesta del Gran Reino",
-        "pt": "Grande besta do Império"
+        "pt": "Grande besta do Império",
+        "zh-CN": "追月神弩"
       },
       "width": 2,
       "height": 3,
@@ -615,7 +661,8 @@
         "en": "Arrow Viper Bow",
         "de": "Pfeilvipernbogen",
         "es": "Arco Flecha Víbora",
-        "pt": "Arco víbora de flecha"
+        "pt": "Arco víbora de flecha",
+        "zh-CN": "红羽神弓"
       },
       "width": 2,
       "height": 4,
@@ -644,7 +691,8 @@
         "en": "Sylph Wind Bow",
         "de": "Sylphenwindbogen",
         "es": "Arco Viento Sílfide",
-        "pt": "Arco vento da silfe"
+        "pt": "Arco vento da silfe",
+        "zh-CN": "紫焰之弓"
       },
       "width": 2,
       "height": 4,
@@ -674,7 +722,8 @@
         "en": "Albatross Bow",
         "de": "Albatrosbogen",
         "es": "Arco Albatros",
-        "pt": "Arco do albatroz"
+        "pt": "Arco do albatroz",
+        "zh-CN": "神羽之弓"
       },
       "width": 2,
       "height": 4,
@@ -702,7 +751,8 @@
         "en": "Dark Stinger",
         "de": "Dunkler Stachel",
         "es": "Punzón Oscuro",
-        "pt": "Golpeador negro"
+        "pt": "Golpeador negro",
+        "zh-CN": "黑暗毒刺"
       },
       "width": 2,
       "height": 4,
@@ -732,7 +782,8 @@
         "en": "Aileen Bowr",
         "de": "Aileen-Bogen",
         "es": "Arco Aileen",
-        "pt": "Arco do Aileen"
+        "pt": "Arco do Aileen",
+        "zh-CN": "艾琳·鲍尔"
       },
       "width": 2,
       "height": 4,

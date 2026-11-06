@@ -8,7 +8,8 @@
         "en": "Kris",
         "de": "Kris",
         "es": "Kris",
-        "pt": "Cris"
+        "pt": "Cris",
+        "zh-CN": "波刃剑"
       },
       "width": 1,
       "height": 2,
@@ -41,7 +42,8 @@
         "en": "Short Sword",
         "de": "Kurzschwert",
         "es": "Espada Corta",
-        "pt": "Espada curta"
+        "pt": "Espada curta",
+        "zh-CN": "短剑"
       },
       "width": 1,
       "height": 3,
@@ -73,7 +75,8 @@
         "en": "Rapier",
         "de": "Rapier",
         "es": "Estoque",
-        "pt": "Rapieira"
+        "pt": "Rapieira",
+        "zh-CN": "西洋剑"
       },
       "width": 1,
       "height": 3,
@@ -104,7 +107,8 @@
         "en": "Katana",
         "de": "Katana",
         "es": "Katana",
-        "pt": "Cataná"
+        "pt": "Cataná",
+        "zh-CN": "武士刀"
       },
       "width": 1,
       "height": 3,
@@ -134,7 +138,8 @@
         "en": "Sword of Assassin",
         "de": "Schwert des Assassinen",
         "es": "Espada de Asesino",
-        "pt": "Espada do assassino"
+        "pt": "Espada do assassino",
+        "zh-CN": "暗杀者"
       },
       "width": 1,
       "height": 3,
@@ -164,7 +169,8 @@
         "en": "Blade",
         "de": "Klinge",
         "es": "Espada",
-        "pt": "Lâmina"
+        "pt": "Lâmina",
+        "zh-CN": "极光刀"
       },
       "width": 1,
       "height": 3,
@@ -196,7 +202,8 @@
         "en": "Gladius",
         "de": "Gladius",
         "es": "Gladius",
-        "pt": "Gládio"
+        "pt": "Gládio",
+        "zh-CN": "拉丁剑"
       },
       "width": 1,
       "height": 3,
@@ -226,7 +233,8 @@
         "en": "Falchion",
         "de": "Falchion",
         "es": "Cimitarra",
-        "pt": "Cimitarra"
+        "pt": "Cimitarra",
+        "zh-CN": "偃月刀"
       },
       "width": 1,
       "height": 3,
@@ -255,7 +263,8 @@
         "en": "Serpent Sword",
         "de": "Schlangenschwert",
         "es": "Espada Serpiente",
-        "pt": "Espada da serpente"
+        "pt": "Espada da serpente",
+        "zh-CN": "巨蛇魔剑"
       },
       "width": 1,
       "height": 3,
@@ -284,7 +293,8 @@
         "en": "Sword of Salamander",
         "de": "Salamanderschwert",
         "es": "Espada de Salamandra",
-        "pt": "Espada da salamandra"
+        "pt": "Espada da salamandra",
+        "zh-CN": "背叛者"
       },
       "width": 2,
       "height": 3,
@@ -313,7 +323,8 @@
         "en": "Light Saber",
         "de": "Lichtschwert",
         "es": "Sable de Luz",
-        "pt": "Sabre de luz"
+        "pt": "Sabre de luz",
+        "zh-CN": "天行者"
       },
       "width": 2,
       "height": 4,
@@ -344,7 +355,8 @@
         "en": "Legendary Sword",
         "de": "Legendäres Schwert",
         "es": "Espada Legendaria",
-        "pt": "Espada lendária"
+        "pt": "Espada lendária",
+        "zh-CN": "传说之剑"
       },
       "width": 2,
       "height": 3,
@@ -373,7 +385,8 @@
         "en": "Heliacal Sword",
         "de": "Sonnenschwert",
         "es": "Espada Helíaca",
-        "pt": "Espada helíaca"
+        "pt": "Espada helíaca",
+        "zh-CN": "太阳之剑"
       },
       "width": 2,
       "height": 3,
@@ -402,7 +415,8 @@
         "en": "Double Blade",
         "de": "Doppelklinge",
         "es": "Doble Hoja",
-        "pt": "Lâmina dupla"
+        "pt": "Lâmina dupla",
+        "zh-CN": "真红之剑"
       },
       "width": 1,
       "height": 3,
@@ -432,7 +446,8 @@
         "en": "Lighting Sword",
         "de": "Blitzschwert",
         "es": "Espada Lumínica",
-        "pt": "Espada de luz"
+        "pt": "Espada de luz",
+        "zh-CN": "雷神之剑"
       },
       "width": 1,
       "height": 3,
@@ -462,7 +477,8 @@
         "en": "Giant Sword",
         "de": "Riesenschwert",
         "es": "Espada Gigante",
-        "pt": "Espada gigante"
+        "pt": "Espada gigante",
+        "zh-CN": "帝王之剑"
       },
       "width": 2,
       "height": 3,
@@ -491,7 +507,8 @@
         "en": "Sword of Destruction",
         "de": "Schwert der Zerstörung",
         "es": "Espada de Destrucción",
-        "pt": "Espada da destruição"
+        "pt": "Espada da destruição",
+        "zh-CN": "破坏之剑"
       },
       "width": 1,
       "height": 4,
@@ -520,7 +537,8 @@
         "en": "Dark Breaker",
         "de": "Dunkler Brecher",
         "es": "Quebrantador Oscuro",
-        "pt": "Destruidora Negra"
+        "pt": "Destruidora Negra",
+        "zh-CN": "屠龙刀"
       },
       "width": 2,
       "height": 4,
@@ -549,7 +567,8 @@
         "en": "Thunder Blade",
         "de": "Donnerklinge",
         "es": "Espada del Trueno",
-        "pt": "Lâmina do trovão"
+        "pt": "Lâmina do trovão",
+        "zh-CN": "奔雷剑"
       },
       "width": 2,
       "height": 3,
@@ -578,16 +597,23 @@
         "en": "Divine Sword of Archangel",
         "de": "Göttliches Schwert des Erzengels",
         "es": "Espada Divina de Arcángel",
-        "pt": "Espada divina do arcanjo"
+        "pt": "Espada divina do arcanjo",
+        "zh-CN": "大天使之剑"
       },
-      "tags": ["divineArchangelWeapon", "valuable"],
+      "tags": [
+        "divineArchangelWeapon",
+        "valuable"
+      ],
       "nameLines": [
         {
           "text": {
             "en": "{name}"
           },
           "color": "purple",
-          "levels": [0, 0]
+          "levels": [
+            0,
+            0
+          ]
         },
         {
           "text": {
@@ -623,7 +649,8 @@
         "en": "Knight Blade",
         "de": "Ritterklinge",
         "es": "Espada de Caballero",
-        "pt": "Lâmina do cavaleiro"
+        "pt": "Lâmina do cavaleiro",
+        "zh-CN": "断月之光"
       },
       "width": 1,
       "height": 4,
@@ -651,9 +678,12 @@
         "en": "Dark Reign Blade",
         "de": "Klinge der Dunklen Herrschaft",
         "es": "Espada del Reino Oscuro",
-        "pt": "Lâmina do Império negro"
+        "pt": "Lâmina do Império negro",
+        "zh-CN": "魔神剑"
       },
-      "tags": ["magicSword"],
+      "tags": [
+        "magicSword"
+      ],
       "width": 2,
       "height": 4,
       "slot": "mainHand",
@@ -683,7 +713,8 @@
         "en": "Bone Blade",
         "de": "Knochenklinge",
         "es": "Espada de Hueso",
-        "pt": "Lâmina de osso"
+        "pt": "Lâmina de osso",
+        "zh-CN": "龙骨巨晶剑"
       },
       "width": 1,
       "height": 4,
@@ -712,9 +743,12 @@
         "en": "Explosion Blade",
         "de": "Explosionsklinge",
         "es": "Espada Explosiva",
-        "pt": "Lâmina da explosão"
+        "pt": "Lâmina da explosão",
+        "zh-CN": "傲天魔剑"
       },
-      "tags": ["magicSword"],
+      "tags": [
+        "magicSword"
+      ],
       "width": 2,
       "height": 4,
       "slot": "mainHand",
@@ -745,7 +779,8 @@
         "en": "Daybreak",
         "de": "Tagesanbruch",
         "es": "Albor",
-        "pt": "Aurora"
+        "pt": "Aurora",
+        "zh-CN": "暴风锯齿"
       },
       "width": 2,
       "height": 4,
@@ -773,9 +808,12 @@
         "en": "Sword Dancer",
         "de": "Schwerttänzer",
         "es": "Oscilador de Espadas",
-        "pt": "Dançarino da espada"
+        "pt": "Dançarino da espada",
+        "zh-CN": "烈火巨刃"
       },
-      "tags": ["magicSword"],
+      "tags": [
+        "magicSword"
+      ],
       "width": 2,
       "height": 4,
       "slot": "mainHand",
@@ -804,7 +842,8 @@
         "en": "Flameberge",
         "de": "Flamberge",
         "es": "Flameberge",
-        "pt": "Flameberge"
+        "pt": "Flameberge",
+        "zh-CN": "弗拉姆伯格"
       },
       "width": 1,
       "height": 4,
@@ -832,7 +871,8 @@
         "en": "Sword Breaker",
         "de": "Schwertbrecher",
         "es": "Quebrantador de Espadas",
-        "pt": "Destruidora de Espadas"
+        "pt": "Destruidora de Espadas",
+        "zh-CN": "杀戮之剑"
       },
       "width": 1,
       "height": 4,
@@ -860,9 +900,12 @@
         "en": "Rune Bastard Sword",
         "de": "Runen-Bastardschwert",
         "es": "Espada Runa Bastarda",
-        "pt": "Espada bastarda das runas"
+        "pt": "Espada bastarda das runas",
+        "zh-CN": "符文混蛋剑"
       },
-      "tags": ["magicSword"],
+      "tags": [
+        "magicSword"
+      ],
       "width": 1,
       "height": 4,
       "slot": "mainHand",
@@ -891,9 +934,12 @@
         "en": "Rune Blade",
         "de": "Runenklinge",
         "es": "Espada Runa",
-        "pt": "Lâmina das runas"
+        "pt": "Lâmina das runas",
+        "zh-CN": "天雷剑"
       },
-      "tags": ["magicSword"],
+      "tags": [
+        "magicSword"
+      ],
       "width": 2,
       "height": 4,
       "slot": "mainHand",
@@ -923,7 +969,8 @@
         "en": "Sacred Glove",
         "de": "Heiliger Handschuh",
         "es": "Guantes Sagrados",
-        "pt": "Luvas Sagradas"
+        "pt": "Luvas Sagradas",
+        "zh-CN": "神圣火焰拳刃"
       },
       "width": 1,
       "height": 2,
@@ -951,7 +998,8 @@
         "en": "Holy Storm Claw",
         "de": "Heilige Sturmklaue",
         "es": "Garra de Tormenta Sagrada",
-        "pt": "Garra de Tempestade Sagrada"
+        "pt": "Garra de Tempestade Sagrada",
+        "zh-CN": "神圣风暴爪"
       },
       "width": 1,
       "height": 2,
@@ -978,7 +1026,8 @@
         "en": "Piercing Blade Glove",
         "de": "Durchbohrerklingen-Handschuh",
         "es": "Guantes de Cuchillas Perforadoras",
-        "pt": "Luvas de Lâmina Perfurante"
+        "pt": "Luvas de Lâmina Perfurante",
+        "zh-CN": "刀锋拳刃"
       },
       "width": 1,
       "height": 2,
@@ -1005,7 +1054,8 @@
         "en": "Phoenix Soul Star",
         "de": "Phönixseelenstern",
         "es": "Estrella de Alma de Fénix",
-        "pt": "Estrela de Alma de Fênix"
+        "pt": "Estrela de Alma de Fênix",
+        "zh-CN": "凤魂之星"
       },
       "width": 1,
       "height": 2,

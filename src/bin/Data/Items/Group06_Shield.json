@@ -8,7 +8,8 @@
         "en": "Small Shield",
         "de": "Kleiner Schild",
         "es": "Escudo Pequeño",
-        "pt": "Escudo pequeno"
+        "pt": "Escudo pequeno",
+        "zh-CN": "圆盾"
       },
       "width": 2,
       "height": 2,
@@ -37,7 +38,8 @@
         "en": "Horn Shield",
         "de": "Hornschild",
         "es": "Escudo Cuerno",
-        "pt": "Escudo de chifre"
+        "pt": "Escudo de chifre",
+        "zh-CN": "战士之盾"
       },
       "width": 2,
       "height": 2,
@@ -64,7 +66,8 @@
         "en": "Kite Shield",
         "de": "Normannenschild",
         "es": "Escudo Cometa",
-        "pt": "Escudo ogival"
+        "pt": "Escudo ogival",
+        "zh-CN": "风之盾"
       },
       "width": 2,
       "height": 2,
@@ -91,7 +94,8 @@
         "en": "Elven Shield",
         "de": "Elfenschild",
         "es": "Escudo de los Elfos",
-        "pt": "Escudo élfico"
+        "pt": "Escudo élfico",
+        "zh-CN": "魔法之盾"
       },
       "width": 2,
       "height": 2,
@@ -117,7 +121,8 @@
         "en": "Buckler",
         "de": "Faustschild",
         "es": "Broquel",
-        "pt": "Broquel"
+        "pt": "Broquel",
+        "zh-CN": "钢铁之盾"
       },
       "width": 2,
       "height": 2,
@@ -147,7 +152,8 @@
         "en": "Dragon Slayer Shield",
         "de": "Drachentöterschild",
         "es": "Escudo Mata Dragones",
-        "pt": "Escudo do matador de dragões"
+        "pt": "Escudo do matador de dragões",
+        "zh-CN": "龙之盾"
       },
       "width": 2,
       "height": 2,
@@ -176,7 +182,8 @@
         "en": "Skull Shield",
         "de": "Schädelschild",
         "es": "Escudo Calavera",
-        "pt": "Escudo da caveira"
+        "pt": "Escudo da caveira",
+        "zh-CN": "骷髅之盾"
       },
       "width": 2,
       "height": 2,
@@ -206,7 +213,8 @@
         "en": "Spiked Shield",
         "de": "Stachelschild",
         "es": "Escudo con Púas",
-        "pt": "Escudo com espinhos"
+        "pt": "Escudo com espinhos",
+        "zh-CN": "尖刺之盾"
       },
       "width": 2,
       "height": 2,
@@ -234,7 +242,8 @@
         "en": "Tower Shield",
         "de": "Turmschild",
         "es": "Escudo Torre",
-        "pt": "Escudo de torre"
+        "pt": "Escudo de torre",
+        "zh-CN": "失落之盾"
       },
       "width": 2,
       "height": 2,
@@ -263,7 +272,8 @@
         "en": "Plate Shield",
         "de": "Plattenschild",
         "es": "Escudo de Plata",
-        "pt": "Escudo de placa"
+        "pt": "Escudo de placa",
+        "zh-CN": "远古之盾"
       },
       "width": 2,
       "height": 2,
@@ -291,7 +301,8 @@
         "en": "Large Round Shield",
         "de": "Großer Rundschild",
         "es": "Escudo Redondo Grande",
-        "pt": "Grande escudo redondo"
+        "pt": "Grande escudo redondo",
+        "zh-CN": "大圆盾"
       },
       "width": 2,
       "height": 2,
@@ -319,7 +330,8 @@
         "en": "Serpent Shield",
         "de": "Schlangenschild",
         "es": "Escudo Serpiente",
-        "pt": "Escudo da serpente"
+        "pt": "Escudo da serpente",
+        "zh-CN": "毒蛇之盾"
       },
       "width": 2,
       "height": 2,
@@ -348,7 +360,8 @@
         "en": "Bronze Shield",
         "de": "Bronzeschild",
         "es": "Escudo de Bronce",
-        "pt": "Escudo de bronze"
+        "pt": "Escudo de bronze",
+        "zh-CN": "布朗司"
       },
       "width": 2,
       "height": 2,
@@ -375,7 +388,8 @@
         "en": "Dragon Shield",
         "de": "Drachenschild",
         "es": "Escudo Dragón",
-        "pt": "Escudo do dragão"
+        "pt": "Escudo do dragão",
+        "zh-CN": "火龙之盾"
       },
       "width": 2,
       "height": 2,
@@ -403,7 +417,8 @@
         "en": "Legendary Shield",
         "de": "Legendärer Schild",
         "es": "Escudo Legendario",
-        "pt": "Escudo lendário"
+        "pt": "Escudo lendário",
+        "zh-CN": "传说之盾"
       },
       "width": 2,
       "height": 3,
@@ -431,7 +446,8 @@
         "en": "Grand Soul Shield",
         "de": "Großseelenschild",
         "es": "Escudo Gran Alma",
-        "pt": "Grande escudo da alma"
+        "pt": "Grande escudo da alma",
+        "zh-CN": "麒麟之盾"
       },
       "width": 2,
       "height": 3,
@@ -457,7 +473,8 @@
         "en": "Elemental Shield",
         "de": "Elementarschild",
         "es": "Escudo Elemental",
-        "pt": "Escudo elemental"
+        "pt": "Escudo elemental",
+        "zh-CN": "精灵之盾"
       },
       "width": 2,
       "height": 2,
@@ -484,7 +501,8 @@
         "en": "Crimson Glory",
         "de": "Purpurruhm",
         "es": "Gloria Carmesí",
-        "pt": "Glória carmesim"
+        "pt": "Glória carmesim",
+        "zh-CN": "荣誉之盾"
       },
       "width": 2,
       "height": 2,
@@ -512,7 +530,8 @@
         "en": "Salamander Shield",
         "de": "Salamanderschild",
         "es": "Escudo Salamandra",
-        "pt": "Escudo da salamandra"
+        "pt": "Escudo da salamandra",
+        "zh-CN": "火蛇之盾"
       },
       "width": 2,
       "height": 2,
@@ -540,7 +559,8 @@
         "en": "Frost Barrier",
         "de": "Frostbarriere",
         "es": "Barrera Congelada",
-        "pt": "Barreira gelada"
+        "pt": "Barreira gelada",
+        "zh-CN": "寒冰之盾"
       },
       "width": 2,
       "height": 2,
@@ -568,7 +588,8 @@
         "en": "Guardian Shield",
         "de": "Wächterschild",
         "es": "Escudo Guardián",
-        "pt": "Escudo do guardião"
+        "pt": "Escudo do guardião",
+        "zh-CN": "亡魂之盾"
       },
       "width": 2,
       "height": 2,
@@ -596,7 +617,8 @@
         "en": "Cross Shield",
         "de": "Kreuzschild",
         "es": "Escudo Cruz",
-        "pt": "Escudo em cruz"
+        "pt": "Escudo em cruz",
+        "zh-CN": "十字架之盾"
       },
       "width": 2,
       "height": 2,

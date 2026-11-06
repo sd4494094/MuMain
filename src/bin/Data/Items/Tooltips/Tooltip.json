@@ -12,7 +12,8 @@
       "ru": "Прочность: [{durability}/{maxDurability}]",
       "tl": "Katatagan: [{durability}/{maxDurability}]",
       "uk": "Довговічність: [{durability}/{maxDurability}]",
-      "zh-TW": "耐久性：[{durability}/{maxDurability}]"
+      "zh-TW": "耐久性：[{durability}/{maxDurability}]",
+      "zh-CN": "耐久度：[{durability}/{maxDurability}]"
     },
     "numberOfItems": {
       "en": "Number of items: {durability}",
@@ -25,7 +26,8 @@
       "ru": "Количество предметов: {durability}",
       "tl": "Bilang ng mga item: {durability}",
       "uk": "Кількість позицій: {durability}",
-      "zh-TW": "商品數量：{durability}"
+      "zh-TW": "商品數量：{durability}",
+      "zh-CN": "商品数量：{durability}"
     },
     "life": {
       "en": "Life: {durability}",
@@ -38,7 +40,8 @@
       "ru": "Жизнь: {durability}",
       "tl": "Buhay: {durability}",
       "uk": "Життя: {durability}",
-      "zh-TW": "壽命：{durability}"
+      "zh-TW": "壽命：{durability}",
+      "zh-CN": "寿命：{durability}"
     },
     "usableTimes": {
       "en": "usable {durability} times",
@@ -51,7 +54,8 @@
       "ru": "можно использовать {durability} раз",
       "tl": "magagamit nang {durability} beses",
       "uk": "можна використовувати {durability} разів",
-      "zh-TW": "可使用{durability}次"
+      "zh-TW": "可使用{durability}次",
+      "zh-CN": "可使用{durability}次"
     },
     "oneHandedDamage": {
       "en": "One-Handed Damage: {damageMin} ~ {damageMax}",
@@ -64,7 +68,8 @@
       "ru": "Урон одной рукой: {damageMin} ~ {damageMax}",
       "tl": "Pinsala ng Isang Kamay: {damageMin} ~ {damageMax}",
       "uk": "Пошкодження однією рукою: {damageMin} ~ {damageMax}",
-      "zh-TW": "單手傷害: {damageMin} ~ {damageMax}"
+      "zh-TW": "單手傷害: {damageMin} ~ {damageMax}",
+      "zh-CN": "单手伤害: {damageMin} ~ {damageMax}"
     },
     "twoHandedDamage": {
       "en": "Two-Handed Damage: {damageMin} ~ {damageMax}",
@@ -77,7 +82,8 @@
       "ru": "Двуручный урон: {damageMin} ~ {damageMax}",
       "tl": "Pinsala ng Dalawang Kamay: {damageMin} ~ {damageMax}",
       "uk": "Пошкодження двома руками: {damageMin} ~ {damageMax}",
-      "zh-TW": "雙手傷害: {damageMin} ~ {damageMax}"
+      "zh-TW": "雙手傷害: {damageMin} ~ {damageMax}",
+      "zh-CN": "双手伤害: {damageMin} ~ {damageMax}"
     },
     "wizardryDamage": {
       "en": "Wizardry Damage: {damageMin} ~ {damageMax}",
@@ -90,7 +96,8 @@
       "ru": "Волшебный урон: {damageMin} ~ {damageMax}",
       "tl": "Pinsala ng Wizardry: {damageMin} ~ {damageMax}",
       "uk": "Пошкодження магії: {damageMin} ~ {damageMax}",
-      "zh-TW": "魔法傷害: {damageMin} ~ {damageMax}"
+      "zh-TW": "魔法傷害: {damageMin} ~ {damageMax}",
+      "zh-CN": "魔法伤害: {damageMin} ~ {damageMax}"
     },
     "defense": {
       "en": "Defense: {defense}",
@@ -103,7 +110,8 @@
       "ru": "Защита: {defense}",
       "tl": "Depensa: {defense}",
       "uk": "Захист: {defense}",
-      "zh-TW": "防禦：{defense}"
+      "zh-TW": "防禦：{defense}",
+      "zh-CN": "防御：{defense}"
     },
     "magicDefense": {
       "en": "Spell resistance: {magicDefense}",
@@ -116,7 +124,8 @@
       "ru": "Сопротивление заклинаниям: {magicDefense}",
       "tl": "Paglaban sa spell: {magicDefense}",
       "uk": "Стійкість до заклинань: {magicDefense}",
-      "zh-TW": "法術抗力：{magicDefense}"
+      "zh-TW": "法術抗力：{magicDefense}",
+      "zh-CN": "法术抗力：{magicDefense}"
     },
     "blockRate": {
       "en": "Defense rate: {blockRate}",
@@ -129,7 +138,8 @@
       "ru": "Уровень защиты: {blockRate}",
       "tl": "Rate ng depensa: {blockRate}",
       "uk": "Швидкість захисту: {blockRate}",
-      "zh-TW": "防禦率：{blockRate}"
+      "zh-TW": "防禦率：{blockRate}",
+      "zh-CN": "防御率：{blockRate}"
     },
     "attackSpeed": {
       "en": "Attack speed: {attackSpeed}",
@@ -142,7 +152,8 @@
       "ru": "Скорость атаки: {attackSpeed}",
       "tl": "Bilis ng pag-atake: {attackSpeed}",
       "uk": "Швидкість атаки: {attackSpeed}",
-      "zh-TW": "攻擊速度：{attackSpeed}"
+      "zh-TW": "攻擊速度：{attackSpeed}",
+      "zh-CN": "攻击速度：{attackSpeed}"
     },
     "walkSpeed": {
       "en": "Moving speed: {walkSpeed}",
@@ -155,7 +166,8 @@
       "ru": "Скорость движения: {walkSpeed}",
       "tl": "Bilis ng paggalaw: {walkSpeed}",
       "uk": "Швидкість руху: {walkSpeed}",
-      "zh-TW": "移動速度：{walkSpeed}"
+      "zh-TW": "移動速度：{walkSpeed}",
+      "zh-CN": "移动速度：{walkSpeed}"
     },
     "iceResistance": {
       "en": "Ice Resistance: {iceResistance}",
@@ -168,7 +180,8 @@
       "ru": "Лед Сопротивление: {iceResistance}",
       "tl": "yelo Paglaban: {iceResistance}",
       "uk": "лід Опір: {iceResistance}",
-      "zh-TW": "冰 電阻：{iceResistance}"
+      "zh-TW": "冰 電阻：{iceResistance}",
+      "zh-CN": "冰 电阻：{iceResistance}"
     },
     "poisonResistance": {
       "en": "Poison Resistance: {poisonResistance}",
@@ -181,7 +194,8 @@
       "ru": "Яд Сопротивление: {poisonResistance}",
       "tl": "lason Paglaban: {poisonResistance}",
       "uk": "Отрута Опір: {poisonResistance}",
-      "zh-TW": "毒 電阻：{poisonResistance}"
+      "zh-TW": "毒 電阻：{poisonResistance}",
+      "zh-CN": "毒 电阻：{poisonResistance}"
     },
     "lightningResistance": {
       "en": "Lightning Resistance: {lightningResistance}",
@@ -194,7 +208,8 @@
       "ru": "Молния Сопротивление: {lightningResistance}",
       "tl": "Kidlat Paglaban: {lightningResistance}",
       "uk": "Блискавка Опір: {lightningResistance}",
-      "zh-TW": "閃電 電阻：{lightningResistance}"
+      "zh-TW": "閃電 電阻：{lightningResistance}",
+      "zh-CN": "闪电 电阻：{lightningResistance}"
     },
     "fireResistance": {
       "en": "Fire Resistance: {fireResistance}",
@@ -207,7 +222,8 @@
       "ru": "Огонь Сопротивление: {fireResistance}",
       "tl": "Sunog Paglaban: {fireResistance}",
       "uk": "Вогонь Опір: {fireResistance}",
-      "zh-TW": "火 電阻：{fireResistance}"
+      "zh-TW": "火 電阻：{fireResistance}",
+      "zh-CN": "火 电阻：{fireResistance}"
     },
     "earthResistance": {
       "en": "Earth Resistance: {earthResistance}",
@@ -220,7 +236,8 @@
       "ru": "Земля Сопротивление: {earthResistance}",
       "tl": "Lupa Paglaban: {earthResistance}",
       "uk": "земля Опір: {earthResistance}",
-      "zh-TW": "地球 電阻：{earthResistance}"
+      "zh-TW": "地球 電阻：{earthResistance}",
+      "zh-CN": "地球 电阻：{earthResistance}"
     },
     "windResistance": {
       "en": "Wind Resistance: {windResistance}",
@@ -233,7 +250,8 @@
       "ru": "Ветер Сопротивление: {windResistance}",
       "tl": "Hangin Paglaban: {windResistance}",
       "uk": "Вітер Опір: {windResistance}",
-      "zh-TW": "風 電阻：{windResistance}"
+      "zh-TW": "風 電阻：{windResistance}",
+      "zh-CN": "风 电阻：{windResistance}"
     },
     "waterResistance": {
       "en": "Water Resistance: {waterResistance}",
@@ -246,7 +264,8 @@
       "ru": "Вода Сопротивление: {waterResistance}",
       "tl": "Tubig Paglaban: {waterResistance}",
       "uk": "вода Опір: {waterResistance}",
-      "zh-TW": "水 電阻：{waterResistance}"
+      "zh-TW": "水 電阻：{waterResistance}",
+      "zh-CN": "水 电阻：{waterResistance}"
     },
     "requiredLevel": {
       "en": "Minimum Level Requirement: {requiredLevel}",
@@ -259,7 +278,8 @@
       "ru": "Минимальный уровень: {requiredLevel}.",
       "tl": "Pinakamababang Antas na Kinakailangan: {requiredLevel}",
       "uk": "Вимоги до мінімального рівня: {requiredLevel}",
-      "zh-TW": "最低等級要求：{requiredLevel}"
+      "zh-TW": "最低等級要求：{requiredLevel}",
+      "zh-CN": "最低等级要求：{requiredLevel}"
     },
     "requiredStrength": {
       "en": "Strength Requirement: {requiredStrength}",
@@ -272,7 +292,8 @@
       "ru": "Требование к прочности: {requiredStrength}",
       "tl": "Kinakailangan ng Lakas: {requiredStrength}",
       "uk": "Вимоги до міцності: {requiredStrength}",
-      "zh-TW": "強度要求：{requiredStrength}"
+      "zh-TW": "強度要求：{requiredStrength}",
+      "zh-CN": "强度要求：{requiredStrength}"
     },
     "requiredDexterity": {
       "en": "Agility Requirement: {requiredDexterity}",
@@ -285,7 +306,8 @@
       "ru": "Требование к ловкости: {requiredDexterity}",
       "tl": "Kinakailangan sa Liksi: {requiredDexterity}",
       "uk": "Вимоги до спритності: {requiredDexterity}",
-      "zh-TW": "敏捷性需求：{requiredDexterity}"
+      "zh-TW": "敏捷性需求：{requiredDexterity}",
+      "zh-CN": "敏捷性需求：{requiredDexterity}"
     },
     "requiredVitality": {
       "en": "Stamina Requirement: {requiredVitality}",
@@ -298,7 +320,8 @@
       "ru": "Требование к выносливости: {requiredVitality}",
       "tl": "Kinakailangan ng Stamina: {requiredVitality}",
       "uk": "Вимоги до витривалості: {requiredVitality}",
-      "zh-TW": "體力需求：{requiredVitality}"
+      "zh-TW": "體力需求：{requiredVitality}",
+      "zh-CN": "体力需求：{requiredVitality}"
     },
     "requiredEnergy": {
       "en": "Energy Requirement: {requiredEnergy}",
@@ -311,7 +334,8 @@
       "ru": "Требование к энергии: {requiredEnergy}",
       "tl": "Kinakailangan ng Enerhiya: {requiredEnergy}",
       "uk": "Потреба в енергії: {requiredEnergy}",
-      "zh-TW": "能量需求：{requiredEnergy}"
+      "zh-TW": "能量需求：{requiredEnergy}",
+      "zh-CN": "能量需求：{requiredEnergy}"
     },
     "requiredLeadership": {
       "en": "Charisma Requirement: {requiredLeadership}",
@@ -324,7 +348,8 @@
       "ru": "Требование к харизме: {requiredLeadership}",
       "tl": "Kinakailangan ng Charisma: {requiredLeadership}",
       "uk": "Вимоги до харизми: {requiredLeadership}",
-      "zh-TW": "魅力要求：{requiredLeadership}"
+      "zh-TW": "魅力要求：{requiredLeadership}",
+      "zh-CN": "魅力要求：{requiredLeadership}"
     },
     "lacking": {
       "en": "(lacking {missing})",
@@ -337,7 +362,8 @@
       "ru": "(отсутствует {missing})",
       "tl": "(kulang {missing})",
       "uk": "(без {missing})",
-      "zh-TW": "（缺 {missing}）"
+      "zh-TW": "（缺 {missing}）",
+      "zh-CN": "（缺 {missing}）"
     },
     "wizardryDamageIncrease": {
       "en": "Wizardry Dmg {magicPower}% rise",
@@ -350,7 +376,8 @@
       "ru": "Волшебный урон {magicPower}% увеличивается",
       "tl": "Wizardry Dmg {magicPower}% tumaas",
       "uk": "Wizardry Dmg {magicPower}% зростання",
-      "zh-TW": "魔法傷害 {magicPower}% 上漲"
+      "zh-TW": "魔法傷害 {magicPower}% 上漲",
+      "zh-CN": "魔法伤害 {magicPower}% 上涨"
     },
     "curseDamageIncrease": {
       "en": "Curse Spell increment {magicPower}%",
@@ -363,7 +390,8 @@
       "ru": "Приращение заклинания проклятия {magicPower}%",
       "tl": "Pagtaas ng Curse Spell {magicPower}%",
       "uk": "Приріст заклинань прокляття {magicPower}%",
-      "zh-TW": "詛咒法術增量 {magicPower}%"
+      "zh-TW": "詛咒法術增量 {magicPower}%",
+      "zh-CN": "诅咒法术增量 {magicPower}%"
     },
     "petAttackIncrease": {
       "en": "Increase pet attack as {magicPower}%",
@@ -376,7 +404,8 @@
       "ru": "Увеличение атаки питомца на {magicPower}%",
       "tl": "Dagdagan ang pag-atake ng alagang hayop bilang {magicPower}%",
       "uk": "Збільшити атаку домашніх тварин як {magicPower}%",
-      "zh-TW": "寵物攻擊力增加為 {magicPower}%"
+      "zh-TW": "寵物攻擊力增加為 {magicPower}%",
+      "zh-CN": "宠物攻击力增加为 {magicPower}%"
     },
     "damageIncrease": {
       "en": "Increase {percent}% of Damage",
@@ -389,7 +418,8 @@
       "ru": "Увеличение урона на {percent}%",
       "tl": "Dagdagan ang Pinsala nang {percent}%",
       "uk": "Збільшення шкоди на {percent}%",
-      "zh-TW": "增加 {percent}% 傷害"
+      "zh-TW": "增加 {percent}% 傷害",
+      "zh-CN": "伤害提高{percent}%"
     },
     "damageAbsorb": {
       "en": "Absorb {percent}% of Damage",
@@ -402,7 +432,8 @@
       "ru": "Поглощение {percent}% урона",
       "tl": "Isipsip ang {percent}% ng Pinsala",
       "uk": "Поглинання {percent}% шкоди",
-      "zh-TW": "吸收{percent}%傷害"
+      "zh-TW": "吸收{percent}%傷害",
+      "zh-CN": "吸收{percent}%的伤害"
     },
     "increaseSpeed": {
       "en": "Increase speed",
@@ -415,7 +446,8 @@
       "ru": "Увеличить скорость",
       "tl": "Dagdagan ang bilis",
       "uk": "Збільште швидкість",
-      "zh-TW": "提高速度"
+      "zh-TW": "提高速度",
+      "zh-CN": "提高速度"
     },
     "invisibilityCloakIngredient": {
       "en": "Used when creating a Cloak of Invisibility",
@@ -428,7 +460,8 @@
       "ru": "Используется при создании плаща-невидимки.",
       "tl": "Ginagamit kapag gumagawa ng Cloak of Invisibility",
       "uk": "Використовується при створенні Плаща-Невидимки",
-      "zh-TW": "建立隱形斗篷時使用"
+      "zh-TW": "建立隱形斗篷時使用",
+      "zh-CN": "用于合成透明披风"
     },
     "remainingTimeShown": {
       "en": "The remaining time is shown",
@@ -441,7 +474,8 @@
       "ru": "Оставшееся время показано",
       "tl": "Ang natitirang oras ay ipinapakita",
       "uk": "Показано час, що залишився",
-      "zh-TW": "顯示剩餘時間"
+      "zh-TW": "顯示剩餘時間",
+      "zh-CN": "显示剩余时间"
     },
     "whenYouRightClick": {
       "en": "when you right click on your mouse.",
@@ -454,7 +488,8 @@
       "ru": "когда вы щелкаете правой кнопкой мыши.",
       "tl": "kapag nag-right click ka sa iyong mouse.",
       "uk": "коли ви клацаєте правою кнопкою миші.",
-      "zh-TW": "當您右鍵單擊滑鼠時。"
+      "zh-TW": "當您右鍵單擊滑鼠時。",
+      "zh-CN": "当您右键单击鼠标时。"
     },
     "piecesOfTwenty": {
       "en": "{durability} / 20",
@@ -471,7 +506,8 @@
       "ru": "Невозможно восстановить",
       "tl": "Hindi Maaayos",
       "uk": "Неможливо відремонтувати",
-      "zh-TW": "無法修復"
+      "zh-TW": "無法修復",
+      "zh-CN": "无法修复"
     },
     "increasesExperience": {
       "en": "Increases experience gained.",
@@ -484,7 +520,8 @@
       "ru": "Увеличивает получаемый опыт.",
       "tl": "Nagpapataas ng karanasang natamo.",
       "uk": "Збільшує отриманий досвід.",
-      "zh-TW": "增加獲得的經驗。"
+      "zh-TW": "增加獲得的經驗。",
+      "zh-CN": "增加获得的经验。"
     },
     "warpCommandWindow": {
       "en": "Warp Command Window available.",
@@ -497,7 +534,8 @@
       "ru": "Доступно окно управления варпом.",
       "tl": "Available ang Warp Command Window.",
       "uk": "Доступне вікно команд Warp.",
-      "zh-TW": "扭曲命令視窗可用。"
+      "zh-TW": "扭曲命令視窗可用。",
+      "zh-CN": "可使用地图传送。"
     },
     "notApplicableTo": {
       "en": "Not applicable to",
@@ -510,7 +548,8 @@
       "ru": "Не применимо к",
       "tl": "Hindi naaangkop sa",
       "uk": "Не застосовується до",
-      "zh-TW": "不適用於"
+      "zh-TW": "不適用於",
+      "zh-CN": "不适用于"
     },
     "masterLevelCharacters": {
       "en": "Master Level Characters.",
@@ -523,7 +562,8 @@
       "ru": "Персонажи уровня Мастер.",
       "tl": "Mga Master Level na Character.",
       "uk": "Персонажі майстерного рівня.",
-      "zh-TW": "大師級人物。"
+      "zh-TW": "大師級人物。",
+      "zh-CN": "大师级别角色。"
     },
     "increasesExperienceAndDrops": {
       "en": "Increases experience gained and item drop rate.",
@@ -536,7 +576,8 @@
       "ru": "Увеличивает получаемый опыт и шанс выпадения предметов.",
       "tl": "Pinapataas ang karanasang natamo at rate ng pagbaba ng item.",
       "uk": "Збільшує отриманий досвід і швидкість випадання предметів.",
-      "zh-TW": "增加獲得的經驗值和物品掉落率。"
+      "zh-TW": "增加獲得的經驗值和物品掉落率。",
+      "zh-CN": "增加获得的经验值和物品掉落率。"
     },
     "thirdWingIngredient": {
       "en": "Ingredients for the 3rd wing assembly.",
@@ -549,7 +590,8 @@
       "ru": "Ингредиенты для сборки третьего крыла.",
       "tl": "Mga sangkap para sa 3rd wing assembly.",
       "uk": "Інгредієнти для складання 3-го крила.",
-      "zh-TW": "第三機翼組件的材料。"
+      "zh-TW": "第三機翼組件的材料。",
+      "zh-CN": "三代翅膀合成材料。"
     },
     "increasesAttackSpeed10": {
       "en": "Increases Attack Speed by 10",
@@ -562,7 +604,8 @@
       "ru": "Увеличивает скорость атаки на 10.",
       "tl": "Pinapataas ng 10 ang Bilis ng Pag-atake",
       "uk": "Збільшує швидкість атаки на 10",
-      "zh-TW": "攻擊速度提高 10"
+      "zh-TW": "攻擊速度提高 10",
+      "zh-CN": "攻击速度提高10"
     },
     "collectsSurroundingZen": {
       "en": "Surrounding Zens are automatically collected.",
@@ -575,7 +618,8 @@
       "ru": "Окружающие дзены собираются автоматически.",
       "tl": "Ang mga nakapalibot na Zen ay awtomatikong kinokolekta.",
       "uk": "Навколишні дзени збираються автоматично.",
-      "zh-TW": "周圍的禪宗會自動收集。"
+      "zh-TW": "周圍的禪宗會自動收集。",
+      "zh-CN": "周围的禅宗会自动收集。"
     },
     "autoCollectsZen": {
       "en": "Auto-collects zen around you.",
@@ -588,7 +632,8 @@
       "ru": "Автоматически собирает дзен вокруг себя.",
       "tl": "Auto-collect ng zen sa paligid mo.",
       "uk": "Автоматично збирає дзен навколо вас.",
-      "zh-TW": "自動收集你周圍的禪宗。"
+      "zh-TW": "自動收集你周圍的禪宗。",
+      "zh-CN": "自动收集你周围的金币。"
     },
     "increaseDefensiveSkill50": {
       "en": "Increase Defensive Skill +50",
@@ -601,7 +646,8 @@
       "ru": "Увеличение навыка защиты +50",
       "tl": "Dagdagan ang Defensive Skill +50",
       "uk": "Підвищення навичок захисту +50",
-      "zh-TW": "防禦技能增加+50"
+      "zh-TW": "防禦技能增加+50",
+      "zh-CN": "防御力增加技能 +50"
     },
     "automaticHpRecovery3": {
       "en": "Automatic HP recovery 3%",
@@ -614,7 +660,8 @@
       "ru": "Автоматическое восстановление HP 3%",
       "tl": "Awtomatikong pagbawi ng HP 3%",
       "uk": "Автоматичне відновлення HP 3%",
-      "zh-TW": "HP自動恢復 3%"
+      "zh-TW": "HP自動恢復 3%",
+      "zh-CN": "HP自动恢复 3%"
     },
     "specialItemsWithCombinations": {
       "en": "You can achieve special items with combinations.",
@@ -627,7 +674,8 @@
       "ru": "Вы можете получить особые предметы с помощью комбинаций.",
       "tl": "Makakamit mo ang mga espesyal na item na may mga kumbinasyon.",
       "uk": "Ви можете отримати спеціальні предмети за допомогою комбінацій.",
-      "zh-TW": "您可以透過組合獲得特殊物品。"
+      "zh-TW": "您可以透過組合獲得特殊物品。",
+      "zh-CN": "您可以通过组合实现特殊的物品。"
     },
     "devilSquareInvitationIngredient": {
       "en": "It is used to combine items for a Devil Square Invitation",
@@ -682,7 +730,8 @@
       "ru": "Поздравляю. Пожалуйста, свяжитесь с командой CS и измените его на элемент.",
       "tl": "Binabati kita. Mangyaring makipag-ugnayan sa CS team at palitan ito ng item.",
       "uk": "Вітаю. Будь ласка, зв’яжіться з командою CS і змініть його на елемент.",
-      "zh-TW": "恭喜。請聯絡CS團隊並將其變更為專案。"
+      "zh-TW": "恭喜。請聯絡CS團隊並將其變更為專案。",
+      "zh-CN": "恭喜。请联系客服团队并将其更改为物品。"
     },
     "mayTurnIntoRareItem": {
       "en": "You can drop it with a fixed probability of it turning into a rare item.",
@@ -695,7 +744,8 @@
       "ru": "Вы можете выбросить его с фиксированной вероятностью, что он превратится в редкий предмет.",
       "tl": "Maaari mong i-drop ito nang may nakapirming posibilidad na maging isang bihirang item.",
       "uk": "Ви можете скинути його з фіксованою ймовірністю того, що він перетвориться на рідкісний предмет.",
-      "zh-TW": "你可以以固定的機率掉落它，使其變成稀有物品。"
+      "zh-TW": "你可以以固定的機率掉落它，使其變成稀有物品。",
+      "zh-CN": "你可以以固定的概率将其丢弃，使其变成稀有的物品。"
     },
     "boxOfVariousItems": {
       "en": "It's a box containing various items.",
@@ -708,7 +758,8 @@
       "ru": "Это коробка, содержащая различные предметы.",
       "tl": "Ito ay isang kahon na naglalaman ng iba't ibang mga item.",
       "uk": "Це коробка з різними предметами.",
-      "zh-TW": "這是一個裝有各種物品的盒子。"
+      "zh-TW": "這是一個裝有各種物品的盒子。",
+      "zh-CN": "这是一个包含各种物品的盒子。"
     },
     "throwForZenOrItems": {
       "en": "Throw it and you may receive some Zen or items",
@@ -721,7 +772,8 @@
       "ru": "Бросайте его, и вы можете получить немного Дзена или предметы.",
       "tl": "Itapon ito at maaari kang makatanggap ng ilang Zen o mga item",
       "uk": "Киньте його, і ви можете отримати дзен або предмети",
-      "zh-TW": "丟掉它，你可能會收到一些禪宗或物品"
+      "zh-TW": "丟掉它，你可能會收到一些禪宗或物品",
+      "zh-CN": "扔掉它，你可能会收到一些金币或物品"
     },
     "cannotStoreInVault": {
       "en": "Cannot store in vault.",
@@ -734,7 +786,8 @@
       "ru": "Невозможно сохранить в хранилище.",
       "tl": "Hindi maiimbak sa vault.",
       "uk": "Не можна зберігати в сховищі.",
-      "zh-TW": "無法儲存在保管庫中。"
+      "zh-TW": "無法儲存在保管庫中。",
+      "zh-CN": "无法存储在仓库中。"
     },
     "cannotBeTraded": {
       "en": "Cannot be traded.",
@@ -747,7 +800,8 @@
       "ru": "Нельзя торговать.",
       "tl": "Hindi maaaring ipagpalit.",
       "uk": "Не можна торгувати.",
-      "zh-TW": "無法交易。"
+      "zh-TW": "無法交易。",
+      "zh-CN": "无法交易。"
     },
     "masterLevelEXPCannotBeAchievedDuringTheItemUsage": {
       "en": "Master Level EXP cannot be achieved during the item usage.",
@@ -760,7 +814,8 @@
       "ru": "Опыт мастер-уровня не может быть достигнут во время использования предмета.",
       "tl": "Ang Master Level EXP ay hindi makakamit sa panahon ng paggamit ng item.",
       "uk": "Майстер-рівень EXP не може бути досягнутий під час використання предмета.",
-      "zh-TW": "使用物品期間無法獲得大師級經驗值。"
+      "zh-TW": "使用物品期間無法獲得大師級經驗值。",
+      "zh-CN": "使用物品期间无法达到大师等级经验。"
     },
     "youWillBeAssignedToAStageAccordingToYourLevel": {
       "en": "You will be assigned to a stage according to your level.",
@@ -773,7 +828,8 @@
       "ru": "Вам будет назначен этап в соответствии с вашим уровнем.",
       "tl": "Itatalaga ka sa isang yugto ayon sa iyong antas.",
       "uk": "Ви будете розподілені на етап відповідно до вашого рівня.",
-      "zh-TW": "您將根據您的等級被分配到一個階段。"
+      "zh-TW": "您將根據您的等級被分配到一個階段。",
+      "zh-CN": "您将根据您的等级被分配到一个阶段。"
     },
     "itemSkillLuckOptionWillBeRandomlyAdded": {
       "en": "item/skill/luck/option will be randomly added.",
@@ -786,7 +842,8 @@
       "ru": "предмет/навык/удача/опция будут добавлены случайным образом.",
       "tl": "item/kasanayan/swerte/opsyon ay random na idadagdag.",
       "uk": "предмет/уміння/удача/опція буде додано випадковим чином.",
-      "zh-TW": "物品/技能/運氣/選項將隨機添加。"
+      "zh-TW": "物品/技能/運氣/選項將隨機添加。",
+      "zh-CN": "随机增加物品、技能、幸运或追加属性。"
     },
     "increasesYourLuckToCreateWingOfYourWish": {
       "en": "Increases your luck to create wing of your wish.",
@@ -799,7 +856,8 @@
       "ru": "Увеличивает вашу удачу в создании крыла вашего желания.",
       "tl": "Pinapataas ang iyong kapalaran upang lumikha ng pakpak ng iyong nais.",
       "uk": "Збільшує вашу удачу, щоб створити крило за вашим бажанням.",
-      "zh-TW": "增加你的運氣來創造你想要的翅膀。"
+      "zh-TW": "增加你的運氣來創造你想要的翅膀。",
+      "zh-CN": "增加你创造你愿望之翼的运气。"
     },
     "talismanOfWingsOfSatan": {
       "en": "Talisman of Wings of Satan",
@@ -812,7 +870,8 @@
       "ru": "Талисман Крыльев Сатаны",
       "tl": "Talisman of Wings of Satanas",
       "uk": "Талісман крил сатани",
-      "zh-TW": "撒旦之翼護身符"
+      "zh-TW": "撒旦之翼護身符",
+      "zh-CN": "恶魔翅膀的护身符"
     },
     "talismanOfWingsOfHeaven": {
       "en": "Talisman of Wings of Heaven",
@@ -825,7 +884,8 @@
       "ru": "Талисман Крыльев Небес",
       "tl": "Talisman of Wings of Heaven",
       "uk": "Талісман Крила Неба",
-      "zh-TW": "天之翼護符"
+      "zh-TW": "天之翼護符",
+      "zh-CN": "天使翅膀的护身符"
     },
     "talismanOfWingsOfElf": {
       "en": "Talisman of Wings of Elf",
@@ -838,7 +898,8 @@
       "ru": "Талисман Крыльев эльфа",
       "tl": "Talisman ng Wings of Elf",
       "uk": "Талісман Крила Ельфа",
-      "zh-TW": "精靈之翼護身符"
+      "zh-TW": "精靈之翼護身符",
+      "zh-CN": "精灵翅膀的护身符"
     },
     "talismanOfWingOfCurse": {
       "en": "Talisman of Wing of Curse",
@@ -851,7 +912,8 @@
       "ru": "Талисман Крыла Проклятия",
       "tl": "Talisman ng Wing of Curse",
       "uk": "Талісман Крила Прокляття",
-      "zh-TW": "詛咒之翼護符"
+      "zh-TW": "詛咒之翼護符",
+      "zh-CN": "诅咒之翼护符"
     },
     "talismanOfCapeOfEmperor": {
       "en": "Talisman of Cape of Emperor",
@@ -864,7 +926,8 @@
       "ru": "Талисман Мыса Императора",
       "tl": "Talisman ng Cape of Emperor",
       "uk": "Талісман накидки імператора",
-      "zh-TW": "帝披風護身符"
+      "zh-TW": "帝披風護身符",
+      "zh-CN": "帝王披风的护身符"
     },
     "talismanOfWingsOfDragon": {
       "en": "Talisman of Wings of Dragon",
@@ -877,7 +940,8 @@
       "ru": "Талисман Крыльев Дракона",
       "tl": "Talisman ng Wings of Dragon",
       "uk": "Талісман Крила Дракона",
-      "zh-TW": "龍翼護符"
+      "zh-TW": "龍翼護符",
+      "zh-CN": "飞龙之翼的护身符"
     },
     "talismanOfWingsOfSoul": {
       "en": "Talisman of Wings of Soul",
@@ -890,7 +954,8 @@
       "ru": "Талисман Крыльев Души",
       "tl": "Talisman ng Wings of Soul",
       "uk": "Талісман Крила Душі",
-      "zh-TW": "靈魂之翼護符"
+      "zh-TW": "靈魂之翼護符",
+      "zh-CN": "魔魂之翼的护身符"
     },
     "talismanOfWingsOfSpirits": {
       "en": "Talisman of Wings of Spirits",
@@ -903,7 +968,8 @@
       "ru": "Талисман Крыльев Духов",
       "tl": "Talisman of Wings of Spirits",
       "uk": "Талісман Крила Духів",
-      "zh-TW": "靈魂之翼護符"
+      "zh-TW": "靈魂之翼護符",
+      "zh-CN": "圣灵之翼的护身符"
     },
     "talismanOfWingOfDespair": {
       "en": "Talisman of Wing of Despair",
@@ -916,7 +982,8 @@
       "ru": "Талисман Крыла Отчаяния",
       "tl": "Talisman of Wing of Despair",
       "uk": "Талісман Крила Відчаю",
-      "zh-TW": "絕望之翼護符"
+      "zh-TW": "絕望之翼護符",
+      "zh-CN": "绝望之翼护符"
     },
     "talismanOfWingsOfDarkness": {
       "en": "Talisman of Wings of Darkness",
@@ -929,7 +996,8 @@
       "ru": "Талисман Крыльев Тьмы",
       "tl": "Talisman of Wings of Darkness",
       "uk": "Талісман крил темряви",
-      "zh-TW": "黑暗之翼護身符"
+      "zh-TW": "黑暗之翼護身符",
+      "zh-CN": "暗黑之翼的护身符"
     },
     "attackRateAndDefenseRateIncrease": {
       "en": "Attack rate and defense rate increase.",
@@ -942,7 +1010,8 @@
       "ru": "Увеличивается скорость атаки и защита.",
       "tl": "Attack rate at defense rate increase.",
       "uk": "Збільшення швидкості атаки та захисту.",
-      "zh-TW": "攻擊率和防禦率增加。"
+      "zh-TW": "攻擊率和防禦率增加。",
+      "zh-CN": "攻击率和防御率增加。"
     },
     "questItem": {
       "en": "Quest Item",
@@ -955,7 +1024,8 @@
       "ru": "Квестовый предмет",
       "tl": "Quest Item",
       "uk": "Предмет квесту",
-      "zh-TW": "任務物品"
+      "zh-TW": "任務物品",
+      "zh-CN": "任务物品"
     },
     "youMayContinueToUseTheStrengthenerPower": {
       "en": "You may continue to use the strengthener power.",
@@ -968,7 +1038,8 @@
       "ru": "Вы можете продолжать использовать силу усилителя.",
       "tl": "Maaari mong patuloy na gamitin ang lakas ng pampalakas.",
       "uk": "Ви можете продовжувати використовувати силу підсилювача.",
-      "zh-TW": "您可以繼續使用強化力量。"
+      "zh-TW": "您可以繼續使用強化力量。",
+      "zh-CN": "你可以继续使用强化力量。"
     },
     "statusForTheSetPeriod": {
       "en": "Status for the set period",
@@ -981,7 +1052,8 @@
       "ru": "Статус за установленный период",
       "tl": "Katayuan para sa itinakdang panahon",
       "uk": "Статус за встановлений період",
-      "zh-TW": "設定期間的狀態"
+      "zh-TW": "設定期間的狀態",
+      "zh-CN": "设定期间的状态"
     },
     "thereSAnIncreaseEffectToIt": {
       "en": "There's an increase effect to it.",
@@ -994,7 +1066,8 @@
       "ru": "Есть эффект увеличения.",
       "tl": "Mayroong pagtaas ng epekto dito.",
       "uk": "Є ефект збільшення.",
-      "zh-TW": "對它有一個增加的效果。"
+      "zh-TW": "對它有一個增加的效果。",
+      "zh-CN": "有增加效果。"
     },
     "available": {
       "en": "Available",
@@ -1007,7 +1080,8 @@
       "ru": "Доступный",
       "tl": "Available",
       "uk": "в наявності",
-      "zh-TW": "可用的"
+      "zh-TW": "可用的",
+      "zh-CN": "可用"
     },
     "collectCherryBlossomsAndTakeItToTheSpiritForItemCompensation": {
       "en": "Collect Cherry Blossoms and take it to the spirit for item compensation.",
@@ -1020,7 +1094,8 @@
       "ru": "Соберите цветы вишни и отнесите их духу для получения награды.",
       "tl": "Kolektahin ang Cherry Blossoms at dalhin ito sa espiritu para sa kabayaran sa item.",
       "uk": "Зберіть вишневий цвіт і віднесіть його духові за предмет компенсації.",
-      "zh-TW": "收集櫻花並將其帶到精神處以獲得物品補償。"
+      "zh-TW": "收集櫻花並將其帶到精神處以獲得物品補償。",
+      "zh-CN": "收集樱花并将其带到灵魂处以获得物品补偿。"
     },
     "itSPartOfACompleteSecromicon": {
       "en": "It's part of a Complete Secromicon.",
@@ -1033,7 +1108,8 @@
       "ru": "Это часть полного Секромикона.",
       "tl": "Ito ay bahagi ng isang Kumpletong Secromicon.",
       "uk": "Це частина повного Secromicon.",
-      "zh-TW": "它是 Complete Secromicon 的一部分。"
+      "zh-TW": "它是 Complete Secromicon 的一部分。",
+      "zh-CN": "它是完整的希克拉。的一部分"
     },
     "unableToEquipWithADifferentTransformationRing": {
       "en": "Unable to Equip with a Different Transformation Ring",
@@ -1046,7 +1122,8 @@
       "ru": "Невозможно использовать другое кольцо трансформации.",
       "tl": "Hindi Ma-equip ng Iba't Ibang Transformation Ring",
       "uk": "Неможливо спорядити інше кільце трансформації",
-      "zh-TW": "無法裝備不同的變身戒指"
+      "zh-TW": "無法裝備不同的變身戒指",
+      "zh-CN": "无法装备不同的变身指环"
     },
     "increaseDamageLevel20": {
       "en": "Increase Damage +level/20",
@@ -1059,7 +1136,8 @@
       "ru": "Увеличение урона +уровень/20",
       "tl": "Taasan ang Damage +level/20",
       "uk": "Збільшення шкоди + рівень/20",
-      "zh-TW": "傷害增加+level/20"
+      "zh-TW": "傷害增加+level/20",
+      "zh-CN": "伤害增加+等级/20"
     },
     "increasesAcquisitionRateOfManaAfterHuntingMonstersMana8": {
       "en": "Increases acquisition rate of Mana after hunting monsters +Mana/8",
@@ -1072,7 +1150,8 @@
       "ru": "Увеличивает скорость получения маны после охоты на монстров +Мана/8.",
       "tl": "Pinapataas ang rate ng pagkuha ng Mana pagkatapos manghuli ng mga halimaw +Mana/8",
       "uk": "Збільшує швидкість отримання мани після полювання на монстрів +Мана/8",
-      "zh-TW": "狩獵怪物後魔力獲取率增加+魔力/8"
+      "zh-TW": "狩獵怪物後魔力獲取率增加+魔力/8",
+      "zh-CN": "狩猎怪物后增加魔法值的获得率+ 魔法值 /8"
     },
     "brokenHornCanBeMadeUsingTheClawOfBeastAndFragmentOfHorn": {
       "en": "Broken horn can be made using the claw of beast and fragment of horn.",
@@ -1085,7 +1164,8 @@
       "ru": "Сломанный рог можно сделать из когтя зверя и фрагмента рога.",
       "tl": "Ang sirang sungay ay maaaring gawin gamit ang kuko ng hayop at fragment ng sungay.",
       "uk": "Зламаний ріг можна зробити за допомогою пазурі звіра і фрагмента рогу.",
-      "zh-TW": "破碎的角可以用野獸的爪子和角的碎片來製作。"
+      "zh-TW": "破碎的角可以用野獸的爪子和角的碎片來製作。",
+      "zh-CN": "折断的角可以使用猛兽的脚甲和碎角片来制作。"
     },
     "fireworksWillAppearOnceThrownInTheField": {
       "en": "Fireworks will appear once thrown in the field.",
@@ -1098,7 +1178,8 @@
       "ru": "Фейерверк появится после того, как его бросят в поле.",
       "tl": "Lilitaw ang mga paputok sa sandaling ihagis sa field.",
       "uk": "Феєрверк з'явиться, коли його кинуть у поле.",
-      "zh-TW": "一旦丟到田野裡就會出現煙火。"
+      "zh-TW": "一旦丟到田野裡就會出現煙火。",
+      "zh-CN": "一旦扔进场地就会出现烟花。"
     },
     "dropItToReceiveTheGift": {
       "en": "Drop it to receive the gift.",
@@ -1111,7 +1192,8 @@
       "ru": "Брось его, чтобы получить подарок.",
       "tl": "I-drop ito upang matanggap ang regalo.",
       "uk": "Киньте його, щоб отримати подарунок.",
-      "zh-TW": "放下它即可收到禮物。"
+      "zh-TW": "放下它即可收到禮物。",
+      "zh-CN": "放下它即可收到礼物。"
     },
     "archer": {
       "en": "Archer",
@@ -1124,7 +1206,8 @@
       "ru": "Лучник",
       "tl": "mamamana",
       "uk": "лучник",
-      "zh-TW": "射手"
+      "zh-TW": "射手",
+      "zh-CN": "弓箭手"
     },
     "spearman": {
       "en": "Spearman",
@@ -1137,7 +1220,8 @@
       "ru": "Копейщик",
       "tl": "Spearman",
       "uk": "Списоносець",
-      "zh-TW": "斯皮爾曼"
+      "zh-TW": "斯皮爾曼",
+      "zh-CN": "斯皮尔曼"
     },
     "scrollOfGuardian": {
       "en": "Scroll of Guardian",
@@ -1150,7 +1234,8 @@
       "ru": "Свиток Стража",
       "tl": "Scroll ng Tagapangalaga",
       "uk": "Сувій Охоронця",
-      "zh-TW": "守護者捲軸"
+      "zh-TW": "守護者捲軸",
+      "zh-CN": "守护者卷轴"
     },
     "placeLifeStone": {
       "en": "Place Life Stone",
@@ -1163,7 +1248,8 @@
       "ru": "Поместите Камень Жизни",
       "tl": "Place Life Stone",
       "uk": "Помістіть камінь життя",
-      "zh-TW": "放置生命石"
+      "zh-TW": "放置生命石",
+      "zh-CN": "地点生命之石"
     },
     "oliveOfLove": {
       "en": "Olive of love",
@@ -1176,7 +1262,8 @@
       "ru": "Оливка любви",
       "tl": "Olibo ng pag-ibig",
       "uk": "Оливка кохання",
-      "zh-TW": "愛的橄欖"
+      "zh-TW": "愛的橄欖",
+      "zh-CN": "爱的橄榄"
     },
     "cannotBeSold": {
       "en": "Cannot be sold.",
@@ -1189,7 +1276,8 @@
       "ru": "Не подлежит продаже.",
       "tl": "Hindi maaaring ibenta.",
       "uk": "Не можна продати.",
-      "zh-TW": "不能出售。"
+      "zh-TW": "不能出售。",
+      "zh-CN": "无法出售。"
     },
     "canBeUsedAfterDismantling": {
       "en": "Can be used after dismantling",
@@ -1202,7 +1290,8 @@
       "ru": "Можно использовать после демонтажа.",
       "tl": "Maaaring gamitin pagkatapos i-dismantling",
       "uk": "Можна використовувати після демонтажу",
-      "zh-TW": "拆卸後即可使用"
+      "zh-TW": "拆卸後即可使用",
+      "zh-CN": "拆解后即可使用"
     },
     "additionalDamagePlusOne": {
       "en": "Additional Dmg +1",
@@ -1215,7 +1304,8 @@
       "ru": "Дополнительный урон +1",
       "tl": "Karagdagang Dmg +1",
       "uk": "Додатковий Dmg +1",
-      "zh-TW": "附加傷害+1"
+      "zh-TW": "附加傷害+1",
+      "zh-CN": "附加伤害+1"
     },
     "canBeEquippedBy": {
       "en": "Can be equipped by {className}",
@@ -1228,7 +1318,8 @@
       "ru": "Может быть оснащен {className}.",
       "tl": "Maaaring gamitan ng {className}",
       "uk": "Може бути оснащений {className}",
-      "zh-TW": "可由{className}配備"
+      "zh-TW": "可由{className}配備",
+      "zh-CN": "适用职业：{className}"
     },
     "increasesMovingSpeed": {
       "en": "Increases moving speed",
@@ -1241,7 +1332,8 @@
       "ru": "Увеличивает скорость передвижения",
       "tl": "Pinapataas ang bilis ng paggalaw",
       "uk": "Збільшує швидкість пересування",
-      "zh-TW": "增加移動速度"
+      "zh-TW": "增加移動速度",
+      "zh-CN": "提高移动速度"
     },
     "swimmingSpeedIncrease": {
       "en": "Swimming speed increase",
@@ -1254,7 +1346,8 @@
       "ru": "Увеличение скорости плавания",
       "tl": "Tumaas ang bilis ng paglangoy",
       "uk": "Збільшення швидкості плавання",
-      "zh-TW": "游泳速度增加"
+      "zh-TW": "游泳速度增加",
+      "zh-CN": "提高游泳速度"
     },
     "expiredItem": {
       "en": "Expired Item",
@@ -1267,7 +1360,8 @@
       "ru": "Товар с истекшим сроком годности",
       "tl": "Nag-expire na Item",
       "uk": "Термін дії минув",
-      "zh-TW": "過期商品"
+      "zh-TW": "過期商品",
+      "zh-CN": "已过期物品"
     },
     "expirationDay": {
       "en": "Expiration Day",
@@ -1280,81 +1374,531 @@
       "ru": "Срок годности",
       "tl": "Araw ng Pag-expire",
       "uk": "День придатності",
-      "zh-TW": "到期日"
+      "zh-TW": "到期日",
+      "zh-CN": "到期日"
     }
   },
   "layouts": [
     {
       "name": "default",
       "lines": [
-        {"id": "firstRow", "text": ""},
-        {"section": "name"},
-        {"id": "blankAfterName", "text": ""},
-        {"section": "itemCases"},
-        {"text": "@oneHandedDamage", "when": ["hasDamage", "!skillBook", "!twoHanded"], "colors": [{"when": ["damageHarmonyBonus"], "color": "yellow"}, {"when": ["excellent"], "color": "blue"}]},
-        {"text": "@twoHandedDamage", "when": ["hasDamage", "!skillBook", "twoHanded"], "colors": [{"when": ["damageHarmonyBonus"], "color": "yellow"}, {"when": ["excellent"], "color": "blue"}]},
-        {"text": "@wizardryDamage", "when": ["hasDamage", "skillBook"], "colors": [{"when": ["damageHarmonyBonus"], "color": "yellow"}, {"when": ["excellent"], "color": "blue"}]},
-        {"text": "@defense", "when": ["defense"], "colors": [{"when": ["defenseHarmonyBonus"], "color": "yellow"}, {"when": ["armour", "excellent"], "color": "blue"}]},
-        {"text": "@magicDefense", "when": ["magicDefense"]},
-        {"text": "@blockRate", "when": ["blockRate"], "colors": [{"when": ["excellent"], "color": "blue"}]},
-        {"text": "@attackSpeed", "when": ["attackSpeed"]},
-        {"text": "@walkSpeed", "when": ["walkSpeed"]},
-        {"section": "description"},
-        {"id": "durability", "text": "@durability", "when": ["hasDurability", "!timed"]},
-        {"text": "@iceResistance", "when": ["iceResistance"]},
-        {"text": "@poisonResistance", "when": ["poisonResistance"]},
-        {"text": "@lightningResistance", "when": ["lightningResistance"]},
-        {"text": "@fireResistance", "when": ["fireResistance"]},
-        {"text": "@earthResistance", "when": ["earthResistance"]},
-        {"text": "@windResistance", "when": ["windResistance"]},
-        {"text": "@waterResistance", "when": ["waterResistance"]},
-        {"id": "requiredLevel", "text": "@requiredLevel", "when": ["requiredLevel"], "colors": [{"when": ["missingLevel"], "color": "red"}]},
-        {"id": "lackingLevel", "text": "@lacking", "values": {"missing": "missingLevel"}, "when": ["requiredLevel", "missingLevel"], "color": "red"},
-        {"text": "@requiredStrength", "when": ["strengthRequired", "!tag:luckyItem"], "colors": [{"when": ["missingStrength"], "color": "red"}, {"when": ["strengthReduced"], "color": "yellow"}]},
-        {"text": "@lacking", "values": {"missing": "missingStrength"}, "when": ["requiredStrength", "!tag:luckyItem", "missingStrength"], "color": "red"},
-        {"text": "@requiredDexterity", "when": ["dexterityRequired", "!tag:luckyItem"], "colors": [{"when": ["missingDexterity"], "color": "red"}, {"when": ["dexterityReduced"], "color": "yellow"}]},
-        {"text": "@lacking", "values": {"missing": "missingDexterity"}, "when": ["requiredDexterity", "!tag:luckyItem", "missingDexterity"], "color": "red"},
-        {"text": "@requiredVitality", "when": ["requiredVitality", "!tag:luckyItem"], "colors": [{"when": ["missingVitality"], "color": "red"}]},
-        {"text": "@lacking", "values": {"missing": "missingVitality"}, "when": ["requiredVitality", "!tag:luckyItem", "missingVitality"], "color": "red"},
-        {"text": "@requiredEnergy", "when": ["requiredEnergy", "!tag:luckyItem"], "colors": [{"when": ["missingEnergy"], "color": "red"}]},
-        {"text": "@lacking", "values": {"missing": "missingEnergy"}, "when": ["requiredEnergy", "!tag:luckyItem", "missingEnergy"], "color": "red"},
-        {"text": "@requiredLeadership", "when": ["requiredLeadership", "!tag:luckyItem"], "colors": [{"when": ["missingLeadership"], "color": "red"}]},
-        {"text": "@lacking", "values": {"missing": "missingLeadership"}, "when": ["requiredLeadership", "!tag:luckyItem", "missingLeadership"], "color": "red"},
-        {"section": "classes"},
-        {"id": "classLinesBlank", "text": ""},
-        {"id": "classLines", "text": "@canBeEquippedBy", "forEachClass": true, "when": ["!allClasses"], "colors": [{"when": ["!classUsable"], "color": "darkRed"}]},
-        {"text": "", "when": ["boots", "level>=5"]},
-        {"text": "@increasesMovingSpeed", "when": ["boots", "level>=5"], "color": "blue", "bold": true},
-        {"text": "", "when": ["gloves", "level>=5"]},
-        {"text": "@swimmingSpeedIncrease", "when": ["gloves", "level>=5"], "color": "blue", "bold": true},
-        {"text": "", "when": ["wizardryWeapon"]},
-        {"text": "@wizardryDamageIncrease", "when": ["wizardryWeapon", "!tag:summonerBook"], "color": "blue", "bold": true},
-        {"text": "@curseDamageIncrease", "when": ["wizardryWeapon", "tag:summonerBook"], "color": "blue", "bold": true},
-        {"text": "", "when": ["tag:sceptre"]},
-        {"text": "@petAttackIncrease", "when": ["tag:sceptre"], "color": "blue", "bold": true},
-        {"id": "blankBeforeOptions", "text": "", "when": ["hasOptions", "!tag:gemJewelry"]},
-        {"section": "options"},
-        {"id": "blankAfterOptions", "text": ""},
-        {"section": "afterOptions"},
-        {"text": "@expiredItem", "when": ["timed", "expired"], "color": "red"},
-        {"text": "@expirationDay", "when": ["timed", "!expired"], "color": "orange"},
-        {"text": "{expireDate}", "when": ["timed", "!expired"], "color": "blue"}
+        {
+          "id": "firstRow",
+          "text": ""
+        },
+        {
+          "section": "name"
+        },
+        {
+          "id": "blankAfterName",
+          "text": ""
+        },
+        {
+          "section": "itemCases"
+        },
+        {
+          "text": "@oneHandedDamage",
+          "when": [
+            "hasDamage",
+            "!skillBook",
+            "!twoHanded"
+          ],
+          "colors": [
+            {
+              "when": [
+                "damageHarmonyBonus"
+              ],
+              "color": "yellow"
+            },
+            {
+              "when": [
+                "excellent"
+              ],
+              "color": "blue"
+            }
+          ]
+        },
+        {
+          "text": "@twoHandedDamage",
+          "when": [
+            "hasDamage",
+            "!skillBook",
+            "twoHanded"
+          ],
+          "colors": [
+            {
+              "when": [
+                "damageHarmonyBonus"
+              ],
+              "color": "yellow"
+            },
+            {
+              "when": [
+                "excellent"
+              ],
+              "color": "blue"
+            }
+          ]
+        },
+        {
+          "text": "@wizardryDamage",
+          "when": [
+            "hasDamage",
+            "skillBook"
+          ],
+          "colors": [
+            {
+              "when": [
+                "damageHarmonyBonus"
+              ],
+              "color": "yellow"
+            },
+            {
+              "when": [
+                "excellent"
+              ],
+              "color": "blue"
+            }
+          ]
+        },
+        {
+          "text": "@defense",
+          "when": [
+            "defense"
+          ],
+          "colors": [
+            {
+              "when": [
+                "defenseHarmonyBonus"
+              ],
+              "color": "yellow"
+            },
+            {
+              "when": [
+                "armour",
+                "excellent"
+              ],
+              "color": "blue"
+            }
+          ]
+        },
+        {
+          "text": "@magicDefense",
+          "when": [
+            "magicDefense"
+          ]
+        },
+        {
+          "text": "@blockRate",
+          "when": [
+            "blockRate"
+          ],
+          "colors": [
+            {
+              "when": [
+                "excellent"
+              ],
+              "color": "blue"
+            }
+          ]
+        },
+        {
+          "text": "@attackSpeed",
+          "when": [
+            "attackSpeed"
+          ]
+        },
+        {
+          "text": "@walkSpeed",
+          "when": [
+            "walkSpeed"
+          ]
+        },
+        {
+          "section": "description"
+        },
+        {
+          "id": "durability",
+          "text": "@durability",
+          "when": [
+            "hasDurability",
+            "!timed"
+          ]
+        },
+        {
+          "text": "@iceResistance",
+          "when": [
+            "iceResistance"
+          ]
+        },
+        {
+          "text": "@poisonResistance",
+          "when": [
+            "poisonResistance"
+          ]
+        },
+        {
+          "text": "@lightningResistance",
+          "when": [
+            "lightningResistance"
+          ]
+        },
+        {
+          "text": "@fireResistance",
+          "when": [
+            "fireResistance"
+          ]
+        },
+        {
+          "text": "@earthResistance",
+          "when": [
+            "earthResistance"
+          ]
+        },
+        {
+          "text": "@windResistance",
+          "when": [
+            "windResistance"
+          ]
+        },
+        {
+          "text": "@waterResistance",
+          "when": [
+            "waterResistance"
+          ]
+        },
+        {
+          "id": "requiredLevel",
+          "text": "@requiredLevel",
+          "when": [
+            "requiredLevel"
+          ],
+          "colors": [
+            {
+              "when": [
+                "missingLevel"
+              ],
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "id": "lackingLevel",
+          "text": "@lacking",
+          "values": {
+            "missing": "missingLevel"
+          },
+          "when": [
+            "requiredLevel",
+            "missingLevel"
+          ],
+          "color": "red"
+        },
+        {
+          "text": "@requiredStrength",
+          "when": [
+            "strengthRequired",
+            "!tag:luckyItem"
+          ],
+          "colors": [
+            {
+              "when": [
+                "missingStrength"
+              ],
+              "color": "red"
+            },
+            {
+              "when": [
+                "strengthReduced"
+              ],
+              "color": "yellow"
+            }
+          ]
+        },
+        {
+          "text": "@lacking",
+          "values": {
+            "missing": "missingStrength"
+          },
+          "when": [
+            "requiredStrength",
+            "!tag:luckyItem",
+            "missingStrength"
+          ],
+          "color": "red"
+        },
+        {
+          "text": "@requiredDexterity",
+          "when": [
+            "dexterityRequired",
+            "!tag:luckyItem"
+          ],
+          "colors": [
+            {
+              "when": [
+                "missingDexterity"
+              ],
+              "color": "red"
+            },
+            {
+              "when": [
+                "dexterityReduced"
+              ],
+              "color": "yellow"
+            }
+          ]
+        },
+        {
+          "text": "@lacking",
+          "values": {
+            "missing": "missingDexterity"
+          },
+          "when": [
+            "requiredDexterity",
+            "!tag:luckyItem",
+            "missingDexterity"
+          ],
+          "color": "red"
+        },
+        {
+          "text": "@requiredVitality",
+          "when": [
+            "requiredVitality",
+            "!tag:luckyItem"
+          ],
+          "colors": [
+            {
+              "when": [
+                "missingVitality"
+              ],
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "text": "@lacking",
+          "values": {
+            "missing": "missingVitality"
+          },
+          "when": [
+            "requiredVitality",
+            "!tag:luckyItem",
+            "missingVitality"
+          ],
+          "color": "red"
+        },
+        {
+          "text": "@requiredEnergy",
+          "when": [
+            "requiredEnergy",
+            "!tag:luckyItem"
+          ],
+          "colors": [
+            {
+              "when": [
+                "missingEnergy"
+              ],
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "text": "@lacking",
+          "values": {
+            "missing": "missingEnergy"
+          },
+          "when": [
+            "requiredEnergy",
+            "!tag:luckyItem",
+            "missingEnergy"
+          ],
+          "color": "red"
+        },
+        {
+          "text": "@requiredLeadership",
+          "when": [
+            "requiredLeadership",
+            "!tag:luckyItem"
+          ],
+          "colors": [
+            {
+              "when": [
+                "missingLeadership"
+              ],
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "text": "@lacking",
+          "values": {
+            "missing": "missingLeadership"
+          },
+          "when": [
+            "requiredLeadership",
+            "!tag:luckyItem",
+            "missingLeadership"
+          ],
+          "color": "red"
+        },
+        {
+          "section": "classes"
+        },
+        {
+          "id": "classLinesBlank",
+          "text": ""
+        },
+        {
+          "id": "classLines",
+          "text": "@canBeEquippedBy",
+          "forEachClass": true,
+          "when": [
+            "!allClasses"
+          ],
+          "colors": [
+            {
+              "when": [
+                "!classUsable"
+              ],
+              "color": "darkRed"
+            }
+          ]
+        },
+        {
+          "text": "",
+          "when": [
+            "boots",
+            "level>=5"
+          ]
+        },
+        {
+          "text": "@increasesMovingSpeed",
+          "when": [
+            "boots",
+            "level>=5"
+          ],
+          "color": "blue",
+          "bold": true
+        },
+        {
+          "text": "",
+          "when": [
+            "gloves",
+            "level>=5"
+          ]
+        },
+        {
+          "text": "@swimmingSpeedIncrease",
+          "when": [
+            "gloves",
+            "level>=5"
+          ],
+          "color": "blue",
+          "bold": true
+        },
+        {
+          "text": "",
+          "when": [
+            "wizardryWeapon"
+          ]
+        },
+        {
+          "text": "@wizardryDamageIncrease",
+          "when": [
+            "wizardryWeapon",
+            "!tag:summonerBook"
+          ],
+          "color": "blue",
+          "bold": true
+        },
+        {
+          "text": "@curseDamageIncrease",
+          "when": [
+            "wizardryWeapon",
+            "tag:summonerBook"
+          ],
+          "color": "blue",
+          "bold": true
+        },
+        {
+          "text": "",
+          "when": [
+            "tag:sceptre"
+          ]
+        },
+        {
+          "text": "@petAttackIncrease",
+          "when": [
+            "tag:sceptre"
+          ],
+          "color": "blue",
+          "bold": true
+        },
+        {
+          "id": "blankBeforeOptions",
+          "text": "",
+          "when": [
+            "hasOptions",
+            "!tag:gemJewelry"
+          ]
+        },
+        {
+          "section": "options"
+        },
+        {
+          "id": "blankAfterOptions",
+          "text": ""
+        },
+        {
+          "section": "afterOptions"
+        },
+        {
+          "text": "@expiredItem",
+          "when": [
+            "timed",
+            "expired"
+          ],
+          "color": "red"
+        },
+        {
+          "text": "@expirationDay",
+          "when": [
+            "timed",
+            "!expired"
+          ],
+          "color": "orange"
+        },
+        {
+          "text": "{expireDate}",
+          "when": [
+            "timed",
+            "!expired"
+          ],
+          "color": "blue"
+        }
       ]
     },
     {
       "name": "noClassLines",
       "base": "default",
-      "hide": ["classLinesBlank", "classLines"]
+      "hide": [
+        "classLinesBlank",
+        "classLines"
+      ]
     },
     {
       "name": "noDurabilityLine",
       "base": "default",
-      "hide": ["durability"]
+      "hide": [
+        "durability"
+      ]
     },
     {
       "name": "noClassOrDurabilityLines",
       "base": "noClassLines",
-      "hide": ["durability"]
+      "hide": [
+        "durability"
+      ]
     }
   ]
 }

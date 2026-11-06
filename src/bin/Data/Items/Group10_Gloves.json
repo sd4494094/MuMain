@@ -8,7 +8,8 @@
         "en": "Bronze Gloves",
         "de": "Bronzehandschuhe",
         "es": "Guantes de Bronce",
-        "pt": "Luvas de bronze"
+        "pt": "Luvas de bronze",
+        "zh-CN": "青铜护手"
       },
       "width": 2,
       "height": 2,
@@ -35,7 +36,8 @@
         "en": "Dragon Gloves",
         "de": "Drachenhandschuhe",
         "es": "Guantes Dragón",
-        "pt": "Luvas do dragão"
+        "pt": "Luvas do dragão",
+        "zh-CN": "龙王护手"
       },
       "width": 2,
       "height": 2,
@@ -61,7 +63,8 @@
         "en": "Pad Gloves",
         "de": "Polsterhandschuhe",
         "es": "Guantes Rellenos",
-        "pt": "Luvas acolchoadas"
+        "pt": "Luvas acolchoadas",
+        "zh-CN": "革护手"
       },
       "width": 2,
       "height": 2,
@@ -85,7 +88,8 @@
         "en": "Legendary Gloves",
         "de": "Legendäre Handschuhe",
         "es": "Guantes Legendarios",
-        "pt": "Luvas lendárias"
+        "pt": "Luvas lendárias",
+        "zh-CN": "传说护手"
       },
       "width": 2,
       "height": 2,
@@ -109,7 +113,8 @@
         "en": "Bone Gloves",
         "de": "Knochenhandschuhe",
         "es": "Guantes de Hueso",
-        "pt": "Luvas de osso"
+        "pt": "Luvas de osso",
+        "zh-CN": "骷髅护手"
       },
       "width": 2,
       "height": 2,
@@ -133,7 +138,8 @@
         "en": "Leather Gloves",
         "de": "Lederhandschuhe",
         "es": "Guantes de Cuero",
-        "pt": "Luvas de couro"
+        "pt": "Luvas de couro",
+        "zh-CN": "皮护手"
       },
       "width": 2,
       "height": 2,
@@ -159,7 +165,8 @@
         "en": "Scale Gloves",
         "de": "Schuppenhandschuhe",
         "es": "Guantes de Escamas",
-        "pt": "Luvas de escamas"
+        "pt": "Luvas de escamas",
+        "zh-CN": "翡翠护手"
       },
       "width": 2,
       "height": 2,
@@ -185,7 +192,8 @@
         "en": "Sphinx Gloves",
         "de": "Sphinxhandschuhe",
         "es": "Guantes Esfinge",
-        "pt": "Luvas da esfinge"
+        "pt": "Luvas da esfinge",
+        "zh-CN": "魔王护手"
       },
       "width": 2,
       "height": 2,
@@ -209,7 +217,8 @@
         "en": "Brass Gloves",
         "de": "Messinghandschuhe",
         "es": "Guantes de Metal",
-        "pt": "Luvas de latão"
+        "pt": "Luvas de latão",
+        "zh-CN": "黄金护手"
       },
       "width": 2,
       "height": 2,
@@ -235,7 +244,8 @@
         "en": "Plate Gloves",
         "de": "Plattenhandschuhe",
         "es": "Guantes de Plata",
-        "pt": "Luvas de placa"
+        "pt": "Luvas de placa",
+        "zh-CN": "白金护手"
       },
       "width": 2,
       "height": 2,
@@ -260,7 +270,8 @@
         "en": "Vine Gloves",
         "de": "Rankenhandschuhe",
         "es": "Guantes Vid",
-        "pt": "Luvas da vinha"
+        "pt": "Luvas da vinha",
+        "zh-CN": "藤护手"
       },
       "width": 2,
       "height": 2,
@@ -285,7 +296,8 @@
         "en": "Silk Gloves",
         "de": "Seidenhandschuhe",
         "es": "Guantes de Seda",
-        "pt": "Luvas de seda"
+        "pt": "Luvas de seda",
+        "zh-CN": "天蚕护手"
       },
       "width": 2,
       "height": 2,
@@ -310,7 +322,8 @@
         "en": "Wind Gloves",
         "de": "Windhandschuhe",
         "es": "Guantes Viento",
-        "pt": "Luvas do vento"
+        "pt": "Luvas do vento",
+        "zh-CN": "风之护手"
       },
       "width": 2,
       "height": 2,
@@ -335,7 +348,8 @@
         "en": "Spirit Gloves",
         "de": "Geisterhandschuhe",
         "es": "Guantes Espíritu",
-        "pt": "Luvas do espírito"
+        "pt": "Luvas do espírito",
+        "zh-CN": "精灵之护手"
       },
       "width": 2,
       "height": 2,
@@ -360,7 +374,8 @@
         "en": "Guardian Gloves",
         "de": "Wächterhandschuhe",
         "es": "Guantes Guardián",
-        "pt": "Luvas do guardião"
+        "pt": "Luvas do guardião",
+        "zh-CN": "女神护手"
       },
       "width": 2,
       "height": 2,
@@ -385,7 +400,8 @@
         "en": "Storm Crow Gloves",
         "de": "Sturmkrähenhandschuhe",
         "es": "Guantes Cuervo de Tormenta",
-        "pt": "Luvas do corvo da tempestade"
+        "pt": "Luvas do corvo da tempestade",
+        "zh-CN": "亚特兰蒂斯之护手"
       },
       "width": 2,
       "height": 2,
@@ -410,7 +426,8 @@
         "en": "Black Dragon Gloves",
         "de": "Schwarzdrachenhandschuhe",
         "es": "Guantes Dragón Negro",
-        "pt": "Luvas do dragão negro"
+        "pt": "Luvas do dragão negro",
+        "zh-CN": "黑龙王护手"
       },
       "width": 2,
       "height": 2,
@@ -435,7 +452,8 @@
         "en": "Dark Phoenix Gloves",
         "de": "Dunkelphönixhandschuhe",
         "es": "Guantes Fénix Oscuro",
-        "pt": "Luvas da fênix negra"
+        "pt": "Luvas da fênix negra",
+        "zh-CN": "黑凤凰护手"
       },
       "width": 2,
       "height": 2,
@@ -460,7 +478,8 @@
         "en": "Grand Soul Gloves",
         "de": "Großseelenhandschuhe",
         "es": "Guantes Gran Alma",
-        "pt": "Luvas da grande alma"
+        "pt": "Luvas da grande alma",
+        "zh-CN": "火麒麟护手"
       },
       "width": 2,
       "height": 2,
@@ -485,7 +504,8 @@
         "en": "Divine Gloves",
         "de": "Göttliche Handschuhe",
         "es": "Guantes Divinos",
-        "pt": "Luvas divinas"
+        "pt": "Luvas divinas",
+        "zh-CN": "圣灵护手"
       },
       "width": 2,
       "height": 2,
@@ -510,7 +530,8 @@
         "en": "Thunder Hawk Gloves",
         "de": "Donnerfalkenhandschuhe",
         "es": "Guantes Halcón de Trueno",
-        "pt": "Luvas de Thunder Hawk"
+        "pt": "Luvas de Thunder Hawk",
+        "zh-CN": "奔雷护手"
       },
       "width": 2,
       "height": 2,
@@ -535,7 +556,8 @@
         "en": "Great Dragon Gloves",
         "de": "Großartige Drachenhandschuhe",
         "es": "Guantes Gran Dragón",
-        "pt": "Luvas do grande dragão"
+        "pt": "Luvas do grande dragão",
+        "zh-CN": "龙炎护手"
       },
       "width": 2,
       "height": 2,
@@ -560,7 +582,8 @@
         "en": "Dark Soul Gloves",
         "de": "Dunkelseelenhandschuhe",
         "es": "Guantes Alma Oscura",
-        "pt": "Luvas da alma negra"
+        "pt": "Luvas da alma negra",
+        "zh-CN": "黑炎护手"
       },
       "width": 2,
       "height": 2,
@@ -585,7 +608,8 @@
         "en": "Hurricane Gloves",
         "de": "Orkanhandschuhe",
         "es": "Guantes Huracán",
-        "pt": "Luvas do furacão"
+        "pt": "Luvas do furacão",
+        "zh-CN": "魔神护手"
       },
       "width": 2,
       "height": 2,
@@ -610,7 +634,8 @@
         "en": "Red Spirit Gloves",
         "de": "Rotgeisterhandschuhe",
         "es": "Guantes Espíritu Rojo",
-        "pt": "Luvas do espírito vermelho"
+        "pt": "Luvas do espírito vermelho",
+        "zh-CN": "红羽护手"
       },
       "width": 2,
       "height": 2,
@@ -635,7 +660,8 @@
         "en": "Light Plate Gloves",
         "de": "Leichtplattenhandschuhe",
         "es": "Guantes Plata de Luz",
-        "pt": "Luvas de placa leve"
+        "pt": "Luvas de placa leve",
+        "zh-CN": "圣元护手"
       },
       "width": 2,
       "height": 2,
@@ -660,7 +686,8 @@
         "en": "Adamantine Gloves",
         "de": "Adamanthandschuhe",
         "es": "Guantes Adamantinos",
-        "pt": "Luvas de adamantina"
+        "pt": "Luvas de adamantina",
+        "zh-CN": "圣魂护手"
       },
       "width": 2,
       "height": 2,
@@ -685,7 +712,8 @@
         "en": "Dark Steel Gloves",
         "de": "Dunkelstahlhandschuhe",
         "es": "Guantes Acero Oscuro",
-        "pt": "Luvas de aço negro"
+        "pt": "Luvas de aço negro",
+        "zh-CN": "神圣护手"
       },
       "width": 2,
       "height": 2,
@@ -710,7 +738,8 @@
         "en": "Dark Master Gloves",
         "de": "Dunkelmeisterhandschuhe",
         "es": "Guantes Amo Oscuro",
-        "pt": "Luvas do Mestre negro"
+        "pt": "Luvas do Mestre negro",
+        "zh-CN": "至尊护手"
       },
       "width": 2,
       "height": 2,
@@ -735,7 +764,8 @@
         "en": "Dragon Knight Gloves",
         "de": "Drachenritterhandschuhe",
         "es": "Guantes Caballero Dragón",
-        "pt": "Luvas do cavaleiro dragão"
+        "pt": "Luvas do cavaleiro dragão",
+        "zh-CN": "暗黑斗神护手"
       },
       "width": 2,
       "height": 2,
@@ -761,7 +791,8 @@
         "en": "Venom Mist Gloves",
         "de": "Giftnebelhandschuhe",
         "es": "Guantes Bruma de Veneno",
-        "pt": "Luvas da névoa de veneno"
+        "pt": "Luvas da névoa de veneno",
+        "zh-CN": "法魂玄灵护手"
       },
       "width": 2,
       "height": 2,
@@ -787,7 +818,8 @@
         "en": "Sylphid Ray Gloves",
         "de": "Sylphenstrahlhandschuhe",
         "es": "Guantes Rayo de Sílfide",
-        "pt": "Luvas do raio silfídico"
+        "pt": "Luvas do raio silfídico",
+        "zh-CN": "紫灵护手"
       },
       "width": 2,
       "height": 2,
@@ -813,7 +845,8 @@
         "en": "Volcano Gloves",
         "de": "Vulkanhandschuhe",
         "es": "Guantes Volcán",
-        "pt": "Luvas do vulcão"
+        "pt": "Luvas do vulcão",
+        "zh-CN": "天魔斗神护手"
       },
       "width": 2,
       "height": 2,
@@ -839,7 +872,8 @@
         "en": "Sunlight Gloves",
         "de": "Sonnenlichthandschuhe",
         "es": "Guantes Luz Solar",
-        "pt": "Luvas da luz do sol"
+        "pt": "Luvas da luz do sol",
+        "zh-CN": "宙斯护手"
       },
       "width": 2,
       "height": 2,
@@ -865,7 +899,8 @@
         "en": "Ashcrow Gloves",
         "de": "Aschkrähenhandschuhe",
         "es": "Guantes Cuervo Ceniza",
-        "pt": "Luvas de Ashcrow"
+        "pt": "Luvas de Ashcrow",
+        "zh-CN": "暴风护手"
       },
       "width": 2,
       "height": 2,
@@ -889,7 +924,8 @@
         "en": "Eclipse Gloves",
         "de": "Finsternishandschuhe",
         "es": "Guantes Eclipse",
-        "pt": "Luvas do eclipse"
+        "pt": "Luvas do eclipse",
+        "zh-CN": "幻月护手"
       },
       "width": 2,
       "height": 2,
@@ -913,7 +949,8 @@
         "en": "Iris Gloves",
         "de": "Iris-Handschuhe",
         "es": "Guantes Iris",
-        "pt": "Luvas de Iris"
+        "pt": "Luvas de Iris",
+        "zh-CN": "碧影护手"
       },
       "width": 2,
       "height": 2,
@@ -937,7 +974,8 @@
         "en": "Valiant Gloves",
         "de": "Kühne Handschuhe",
         "es": "Guantes Valientes",
-        "pt": "Luvas do valor"
+        "pt": "Luvas do valor",
+        "zh-CN": "烈火护手"
       },
       "width": 2,
       "height": 2,
@@ -961,7 +999,8 @@
         "en": "Glorious Gloves",
         "de": "Glorreiche Handschuhe",
         "es": "Guantes Gloriosos",
-        "pt": "Luvas gloriosas"
+        "pt": "Luvas gloriosas",
+        "zh-CN": "圣光护手"
       },
       "width": 2,
       "height": 2,
@@ -985,7 +1024,8 @@
         "en": "Violent Wind Gloves",
         "de": "Sturmwindhandschuhe",
         "es": "Guantes Viento Violento",
-        "pt": "Luvas do vento violento"
+        "pt": "Luvas do vento violento",
+        "zh-CN": "飓风之护手"
       },
       "width": 2,
       "height": 2,
@@ -1009,7 +1049,8 @@
         "en": "Red Wing Gloves",
         "de": "Rotschwingenhandschuhe",
         "es": "Guantes Ala Roja",
-        "pt": "Luvas da asa vermelha"
+        "pt": "Luvas da asa vermelha",
+        "zh-CN": "红翼之护手"
       },
       "width": 2,
       "height": 2,
@@ -1034,7 +1075,8 @@
         "en": "Ancient Gloves",
         "de": "Uralte Handschuhe",
         "es": "Guantes Antiguos",
-        "pt": "Luvas antigas"
+        "pt": "Luvas antigas",
+        "zh-CN": "远古之护手"
       },
       "width": 2,
       "height": 2,
@@ -1059,7 +1101,8 @@
         "en": "Demonic Gloves",
         "de": "Dämonische Handschuhe",
         "es": "Guantes Demoníacos",
-        "pt": "Luvas demoníacas"
+        "pt": "Luvas demoníacas",
+        "zh-CN": "恶魔手套"
       },
       "width": 2,
       "height": 2,
@@ -1083,7 +1126,8 @@
         "en": "Storm Blitz Gloves",
         "de": "Sturmblitzhandschuhe",
         "es": "Guantes Ráfaga Tormentosa",
-        "pt": "Luvas Relâmpago de Tempest."
+        "pt": "Luvas Relâmpago de Tempest.",
+        "zh-CN": "风暴闪电手套"
       },
       "width": 2,
       "height": 2,
@@ -1109,7 +1153,8 @@
         "en": "Eternal Wing Gloves",
         "de": "Ewigschwingenhandschuhe",
         "es": "Guantes Ala Eterna",
-        "pt": "Luvas da asa eterna"
+        "pt": "Luvas da asa eterna",
+        "zh-CN": "永恒之翼手套"
       },
       "width": 2,
       "height": 2,
@@ -1134,7 +1179,8 @@
         "en": "Titan  Gloves",
         "de": "Titanenhandschuhe",
         "es": "Guantes Titán",
-        "pt": "Luvas do titã"
+        "pt": "Luvas do titã",
+        "zh-CN": "泰坦之护手"
       },
       "width": 2,
       "height": 2,
@@ -1159,7 +1205,8 @@
         "en": "Brave Gloves",
         "de": "Tapfere Handschuhe",
         "es": "Guantes Valerosos",
-        "pt": "Luvas da coragem"
+        "pt": "Luvas da coragem",
+        "zh-CN": "勇气之护手"
       },
       "width": 2,
       "height": 2,
@@ -1184,7 +1231,8 @@
         "en": "Phantom  Gloves",
         "de": "Phantom-Handschuhe",
         "es": "Guantes Fantasma",
-        "pt": "Luvas do fantasma"
+        "pt": "Luvas do fantasma",
+        "zh-CN": "破灭之护手"
       },
       "width": 2,
       "height": 2,
@@ -1209,7 +1257,8 @@
         "en": "Destroy Gloves",
         "de": "Zerstörerhandschuhe",
         "es": "Guantes Destructores",
-        "pt": "Luvas da destruição"
+        "pt": "Luvas da destruição",
+        "zh-CN": "巨石之护手"
       },
       "width": 2,
       "height": 2,
@@ -1235,7 +1284,8 @@
         "en": "Seraphim Gloves",
         "de": "Seraphim-Handschuhe",
         "es": "Guantes Serafín",
-        "pt": "Luvas do serafim"
+        "pt": "Luvas do serafim",
+        "zh-CN": "恐惧之护手"
       },
       "width": 2,
       "height": 2,
@@ -1260,7 +1310,8 @@
         "en": "Faith Gloves",
         "de": "Glaubenshandschuhe",
         "es": "Guantes de Fe",
-        "pt": "Luvas da fé"
+        "pt": "Luvas da fé",
+        "zh-CN": "信仰护手"
       },
       "width": 2,
       "height": 2,
@@ -1286,7 +1337,8 @@
         "en": "Royal Gloves",
         "de": "Königliche Handschuhe",
         "es": "Guantes Reales",
-        "pt": "Luvas reais"
+        "pt": "Luvas reais",
+        "zh-CN": "皇家手套"
       },
       "width": 2,
       "height": 2,
@@ -1311,7 +1363,8 @@
         "en": "Hades Gloves",
         "de": "Hades-Handschuhe",
         "es": "Guantes Hades",
-        "pt": "Luvas de Hades"
+        "pt": "Luvas de Hades",
+        "zh-CN": "冥王之护手"
       },
       "width": 2,
       "height": 2,
@@ -1340,9 +1393,12 @@
         "en": "Scale Gloves",
         "de": "Schuppenhandschuhe",
         "es": "Guantes de Escamas",
-        "pt": "Luvas de escamas"
+        "pt": "Luvas de escamas",
+        "zh-CN": "翡翠护手"
       },
-      "tags": ["luckyItem"],
+      "tags": [
+        "luckyItem"
+      ],
       "width": 2,
       "height": 2,
       "slot": "gloves",
@@ -1374,9 +1430,12 @@
         "en": "Silk Gloves",
         "de": "Seidenhandschuhe",
         "es": "Guantes de Seda",
-        "pt": "Luvas de seda"
+        "pt": "Luvas de seda",
+        "zh-CN": "天蚕护手"
       },
-      "tags": ["luckyItem"],
+      "tags": [
+        "luckyItem"
+      ],
       "width": 2,
       "height": 2,
       "slot": "gloves",
@@ -1405,9 +1464,12 @@
         "en": "Sphinx Gloves",
         "de": "Sphinxhandschuhe",
         "es": "Guantes Esfinge",
-        "pt": "Luvas de Esfinge"
+        "pt": "Luvas de Esfinge",
+        "zh-CN": "魔王护手"
       },
-      "tags": ["luckyItem"],
+      "tags": [
+        "luckyItem"
+      ],
       "width": 2,
       "height": 2,
       "slot": "gloves",
@@ -1436,9 +1498,12 @@
         "en": "Violent Wind Gloves",
         "de": "Sturmwindhandschuhe",
         "es": "Guantes Viento Violento",
-        "pt": "Luvas do vento violento"
+        "pt": "Luvas do vento violento",
+        "zh-CN": "飓风之护手"
       },
-      "tags": ["luckyItem"],
+      "tags": [
+        "luckyItem"
+      ],
       "width": 2,
       "height": 2,
       "slot": "gloves",
@@ -1467,9 +1532,12 @@
         "en": "Adamantine Gloves",
         "de": "Adamanthandschuhe",
         "es": "Guantes Adamantinos",
-        "pt": "Luvas de adamantina"
+        "pt": "Luvas de adamantina",
+        "zh-CN": "圣魂护手"
       },
-      "tags": ["luckyItem"],
+      "tags": [
+        "luckyItem"
+      ],
       "width": 2,
       "height": 2,
       "slot": "gloves",
@@ -1498,9 +1566,12 @@
         "en": "Dragon Gloves",
         "de": "Drachenhandschuhe",
         "es": "Guantes Dragón",
-        "pt": "Luvas de Dragão"
+        "pt": "Luvas de Dragão",
+        "zh-CN": "龙王护手"
       },
-      "tags": ["luckyItem"],
+      "tags": [
+        "luckyItem"
+      ],
       "width": 2,
       "height": 2,
       "slot": "gloves",
@@ -1530,9 +1601,12 @@
         "en": "Guardian Gloves",
         "de": "Wächterhandschuhe",
         "es": "Guantes Guardián",
-        "pt": "Luvas de Guardião"
+        "pt": "Luvas de Guardião",
+        "zh-CN": "女神护手"
       },
-      "tags": ["luckyItem"],
+      "tags": [
+        "luckyItem"
+      ],
       "width": 2,
       "height": 2,
       "slot": "gloves",
@@ -1561,9 +1635,12 @@
         "en": "Legendary Gloves",
         "de": "Legendäre Handschuhe",
         "es": "Guantes Legendarios",
-        "pt": "Luvas Lendárias"
+        "pt": "Luvas Lendárias",
+        "zh-CN": "传说护手"
       },
-      "tags": ["luckyItem"],
+      "tags": [
+        "luckyItem"
+      ],
       "width": 2,
       "height": 2,
       "slot": "gloves",
@@ -1592,9 +1669,12 @@
         "en": "Red Wing Gloves",
         "de": "Rotschwingenhandschuhe",
         "es": "Guantes Ala Roja",
-        "pt": "Luvas da asa vermelha"
+        "pt": "Luvas da asa vermelha",
+        "zh-CN": "红翼之护手"
       },
-      "tags": ["luckyItem"],
+      "tags": [
+        "luckyItem"
+      ],
       "width": 2,
       "height": 2,
       "slot": "gloves",
@@ -1623,9 +1703,12 @@
         "en": "Atlans Gloves",
         "de": "Atlans-Handschuhe",
         "es": "Guantes Cuervo de Tormenta",
-        "pt": "Luvas do corvo da tempestade"
+        "pt": "Luvas do corvo da tempestade",
+        "zh-CN": "亚特兰蒂斯之护手"
       },
-      "tags": ["luckyItem"],
+      "tags": [
+        "luckyItem"
+      ],
       "width": 2,
       "height": 2,
       "slot": "gloves",

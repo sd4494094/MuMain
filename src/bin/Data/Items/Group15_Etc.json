@@ -8,7 +8,8 @@
         "en": "Scroll of Poison",
         "de": "Schriftrolle: Poison",
         "es": "Rollo de Veneno",
-        "pt": "Pergaminho de veneno"
+        "pt": "Pergaminho de veneno",
+        "zh-CN": "毒咒术"
       },
       "width": 1,
       "height": 2,
@@ -32,7 +33,8 @@
         "en": "Scroll of Meteorite",
         "de": "Schriftrolle: Meteorite",
         "es": "Rollo de Meteorito",
-        "pt": "Pergaminho de meteorito"
+        "pt": "Pergaminho de meteorito",
+        "zh-CN": "陨石术"
       },
       "width": 1,
       "height": 2,
@@ -57,7 +59,8 @@
         "en": "Scroll of Lighting",
         "de": "Schriftrolle: Lightning",
         "es": "Rollo de Relámpago",
-        "pt": "Pergaminho de relâmpago"
+        "pt": "Pergaminho de relâmpago",
+        "zh-CN": "掌心雷术"
       },
       "width": 1,
       "height": 2,
@@ -81,7 +84,8 @@
         "en": "Scroll of Fire Ball",
         "de": "Schriftrolle: Fire Ball",
         "es": "Rollo de Bola de Fuego",
-        "pt": "Pergaminho de bola de fogo"
+        "pt": "Pergaminho de bola de fogo",
+        "zh-CN": "火球术"
       },
       "width": 1,
       "height": 2,
@@ -106,7 +110,8 @@
         "en": "Scroll of Flame",
         "de": "Schriftrolle: Flame",
         "es": "Rollo de Llama",
-        "pt": "Pergaminho de chama"
+        "pt": "Pergaminho de chama",
+        "zh-CN": "火龙术"
       },
       "width": 1,
       "height": 2,
@@ -130,7 +135,8 @@
         "en": "Scroll of Teleport",
         "de": "Schriftrolle: Teleport",
         "es": "Rollo de Telepuerto",
-        "pt": "Pergaminho de teletransporte"
+        "pt": "Pergaminho de teletransporte",
+        "zh-CN": "瞬间移动术"
       },
       "width": 1,
       "height": 2,
@@ -153,7 +159,8 @@
         "en": "Scroll of Ice",
         "de": "Schriftrolle: Ice",
         "es": "Rollo de Hielo",
-        "pt": "Pergaminho de gelo"
+        "pt": "Pergaminho de gelo",
+        "zh-CN": "冰封术"
       },
       "width": 1,
       "height": 2,
@@ -178,7 +185,8 @@
         "en": "Scroll of Twister",
         "de": "Schriftrolle: Twister",
         "es": "Rollo de Tornado",
-        "pt": "Pergaminho de ciclone"
+        "pt": "Pergaminho de ciclone",
+        "zh-CN": "龙卷风术"
       },
       "width": 1,
       "height": 2,
@@ -202,7 +210,8 @@
         "en": "Scroll of Evil Spirit",
         "de": "Schriftrolle: Evil Spirit",
         "es": "Rollo de Espíritu Maligno",
-        "pt": "Pergaminho Espírito Diabólico"
+        "pt": "Pergaminho Espírito Diabólico",
+        "zh-CN": "黑龙波术"
       },
       "width": 1,
       "height": 2,
@@ -226,7 +235,8 @@
         "en": "Scroll of Hellfire",
         "de": "Schriftrolle: Hellfire",
         "es": "Rollo de Fuego Infernal",
-        "pt": "Pergaminho de fogo infernal"
+        "pt": "Pergaminho de fogo infernal",
+        "zh-CN": "地狱火术"
       },
       "width": 1,
       "height": 2,
@@ -250,7 +260,8 @@
         "en": "Scroll of Power Wave",
         "de": "Schriftrolle: Power Wave",
         "es": "Rollo de Onda de Poder",
-        "pt": "Pergaminho de onda poderosa"
+        "pt": "Pergaminho de onda poderosa",
+        "zh-CN": "真空波术"
       },
       "width": 1,
       "height": 2,
@@ -275,7 +286,8 @@
         "en": "Scroll of Aqua Beam",
         "de": "Schriftrolle: Aqua Beam",
         "es": "Rollo de Columna de Agua",
-        "pt": "Pergaminho de raio de água"
+        "pt": "Pergaminho de raio de água",
+        "zh-CN": "极光术"
       },
       "width": 1,
       "height": 2,
@@ -299,7 +311,8 @@
         "en": "Scroll of Cometfall",
         "de": "Schriftrolle: Cometfall",
         "es": "Rollo de Caída de Cometa",
-        "pt": "Pergaminho de queda de cometa"
+        "pt": "Pergaminho de queda de cometa",
+        "zh-CN": "爆炎术"
       },
       "width": 1,
       "height": 2,
@@ -323,7 +336,8 @@
         "en": "Scroll of Inferno",
         "de": "Schriftrolle: Inferno",
         "es": "Rollo del Infierno",
-        "pt": "Pergaminho de inferno"
+        "pt": "Pergaminho de inferno",
+        "zh-CN": "毁灭烈焰术"
       },
       "width": 1,
       "height": 2,
@@ -347,7 +361,8 @@
         "en": "Scroll of Teleport Ally",
         "de": "Schriftrolle: Teleport Ally",
         "es": "Rollo de Telepuerto Aliado",
-        "pt": "Pergaminho Teletr. De Aliado"
+        "pt": "Pergaminho Teletr. De Aliado",
+        "zh-CN": "小挪移术"
       },
       "width": 1,
       "height": 2,
@@ -370,7 +385,8 @@
         "en": "Scroll of Soul Barrier",
         "de": "Schriftrolle: Soul Barrier",
         "es": "Rollo de Barrera de Almas",
-        "pt": "Pergaminho Barr. da Alma"
+        "pt": "Pergaminho Barr. da Alma",
+        "zh-CN": "守护之魂术"
       },
       "width": 1,
       "height": 2,
@@ -393,7 +409,8 @@
         "en": "Scroll of Decay",
         "de": "Schriftrolle: Decay",
         "es": "Rollo de Decadencia",
-        "pt": "Pergaminho de apodrecimento"
+        "pt": "Pergaminho de apodrecimento",
+        "zh-CN": "单毒炎术"
       },
       "width": 1,
       "height": 2,
@@ -416,7 +433,8 @@
         "en": "Scroll of Ice Storm",
         "de": "Schriftrolle: Ice Storm",
         "es": "Rollo de Tormenta de Hielo",
-        "pt": "Pergaminho Tempestade de Gelo"
+        "pt": "Pergaminho Tempestade de Gelo",
+        "zh-CN": "暴风雪术"
       },
       "width": 1,
       "height": 2,
@@ -439,7 +457,8 @@
         "en": "Scroll of Nova",
         "de": "Schriftrolle: Nova",
         "es": "Rollo de Nova",
-        "pt": "Pergaminho de nova"
+        "pt": "Pergaminho de nova",
+        "zh-CN": "星辰一怒术"
       },
       "width": 1,
       "height": 2,
@@ -462,7 +481,8 @@
         "en": "Chain Lightning Parchment",
         "de": "Pergament: Chain Lightning",
         "es": "Pergamino Cadena Relámpagos",
-        "pt": "Pergaminho de raio em cadeia"
+        "pt": "Pergaminho de raio em cadeia",
+        "zh-CN": "链雷咒羊皮纸"
       },
       "width": 1,
       "height": 2,
@@ -485,7 +505,8 @@
         "en": "Drain Life Parchment",
         "de": "Pergament: Drain Life",
         "es": "Pergamino de Drenaje de Vida",
-        "pt": "Pergaminho de drenar vida"
+        "pt": "Pergaminho de drenar vida",
+        "zh-CN": "摄魂咒羊皮纸"
       },
       "width": 1,
       "height": 2,
@@ -508,7 +529,8 @@
         "en": "Lightning Shock Parchment",
         "de": "Pergament: Lightning Shock",
         "es": "Pergamino Descarga Relámpago",
-        "pt": "Pergaminho Choque Relâmpago"
+        "pt": "Pergaminho Choque Relâmpago",
+        "zh-CN": "烈光闪羊皮纸"
       },
       "width": 1,
       "height": 2,
@@ -531,7 +553,8 @@
         "en": "Damage Reflection Parchment",
         "de": "Pergament: Damage Reflection",
         "es": "Pergamino Reflejo de Daños",
-        "pt": "Pergaminho Reflexo de Dano"
+        "pt": "Pergaminho Reflexo de Dano",
+        "zh-CN": "伤害反射羊皮纸"
       },
       "width": 1,
       "height": 2,
@@ -554,7 +577,8 @@
         "en": "Berserker Parchment",
         "de": "Pergament: Berserker",
         "es": "Pergamino de Energúmeno",
-        "pt": "Pergaminho de berserker"
+        "pt": "Pergaminho de berserker",
+        "zh-CN": "狂暴术羊皮纸"
       },
       "width": 1,
       "height": 2,
@@ -577,7 +601,8 @@
         "en": "Sleep Parchment",
         "de": "Pergament: Sleep",
         "es": "Pergamino de Sueño",
-        "pt": "Pergaminho de dormir"
+        "pt": "Pergaminho de dormir",
+        "zh-CN": "昏睡术羊皮纸"
       },
       "width": 1,
       "height": 2,
@@ -603,7 +628,8 @@
         "en": "Weakness Parchment",
         "de": "Pergament: Weakness",
         "es": "Pergamino de Debilidad",
-        "pt": "Pergaminho de fraqueza"
+        "pt": "Pergaminho de fraqueza",
+        "zh-CN": "虚弱阵羊皮纸"
       },
       "width": 1,
       "height": 2,
@@ -626,7 +652,8 @@
         "en": "Innovation Parchment",
         "de": "Pergament: Innovation",
         "es": "Pergamino de Innovación",
-        "pt": "Pergaminho de inovação"
+        "pt": "Pergaminho de inovação",
+        "zh-CN": "破御阵羊皮纸"
       },
       "width": 1,
       "height": 2,
@@ -649,7 +676,8 @@
         "en": "Scroll of Wizardry Enhance",
         "de": "Schriftrolle: Wizardry Enhance",
         "es": "Rollo de Mejora de Magia",
-        "pt": "Perg. Aum. Poder de Magia"
+        "pt": "Perg. Aum. Poder de Magia",
+        "zh-CN": "法神附体术"
       },
       "width": 1,
       "height": 2,
@@ -673,7 +701,8 @@
         "en": "Scroll of Gigantic Storm",
         "de": "Schriftrolle: Gigantic Storm",
         "es": "Rollo de Tormenta Gigantesca",
-        "pt": "Perg. Tempestade Gigante"
+        "pt": "Perg. Tempestade Gigante",
+        "zh-CN": "闪电轰顶术"
       },
       "width": 1,
       "height": 2,
@@ -697,7 +726,8 @@
         "en": "Chain Drive Parchment",
         "de": "Pergament: Chain Drive",
         "es": "Pergamino Acción por Cadena",
-        "pt": "Pergaminho de Correia"
+        "pt": "Pergaminho de Correia",
+        "zh-CN": "回旋踢羊皮纸"
       },
       "width": 1,
       "height": 2,
@@ -720,7 +750,8 @@
         "en": "Dark Side Parchment",
         "de": "Pergament: Dark Side",
         "es": "Pergamino Lado Oscuro",
-        "pt": "Pergaminho do Lado Negro"
+        "pt": "Pergaminho do Lado Negro",
+        "zh-CN": "幽冥光速拳羊皮纸"
       },
       "width": 1,
       "height": 2,
@@ -743,7 +774,8 @@
         "en": "Dragon Roar Parchment",
         "de": "Pergament: Dragon Roar",
         "es": "Pergamino Rugido de Dragón",
-        "pt": "Pergaminho do Rugido do Dragão"
+        "pt": "Pergaminho do Rugido do Dragão",
+        "zh-CN": "炎龙拳羊皮纸"
       },
       "width": 1,
       "height": 2,
@@ -766,7 +798,8 @@
         "en": "Dragon Slasher Parchment",
         "de": "Pergament: Dragon Slasher",
         "es": "Pergamino Aniquilador de Dragón",
-        "pt": "Pergaminho Retalhador de Dragões"
+        "pt": "Pergaminho Retalhador de Dragões",
+        "zh-CN": "嗜血之龙羊皮纸"
       },
       "width": 1,
       "height": 2,
@@ -789,7 +822,8 @@
         "en": "Ignore Defense Parchment",
         "de": "Pergament: Ignore Defense",
         "es": "Pergamino ignorar Defensa",
-        "pt": "Pergaminho de Ignorar Defesa"
+        "pt": "Pergaminho de Ignorar Defesa",
+        "zh-CN": "斗神-破羊皮纸"
       },
       "width": 1,
       "height": 2,
@@ -813,7 +847,8 @@
         "en": "Increase Health Parchment",
         "de": "Pergament: Increase Health",
         "es": "Pergamino aumento de Salud",
-        "pt": "Pergaminho de Aumento de Vida"
+        "pt": "Pergaminho de Aumento de Vida",
+        "zh-CN": "斗神-命羊皮纸"
       },
       "width": 1,
       "height": 2,
@@ -837,7 +872,8 @@
         "en": "Increase Block Parchment",
         "de": "Pergament: Increase Block",
         "es": "Pergamino aumento de Bloqueo",
-        "pt": "Pergaminho de Aumento de Bloqueio"
+        "pt": "Pergaminho de Aumento de Bloqueio",
+        "zh-CN": "斗神-御羊皮纸"
       },
       "width": 1,
       "height": 2,

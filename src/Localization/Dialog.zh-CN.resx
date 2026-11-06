@@ -1,0 +1,714 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Text_0" xml:space="preserve">
+    <value>你好！有什么需要的吗？</value>
+  </data>
+  <data name="Text_1" xml:space="preserve">
+    <value>您好！我是魔导师帕希。哈哈哈！嗯……星辰的运动似乎不太对劲。你的未来…… 嗯……我也看不到你的未来 ……为什么……？</value>
+  </data>
+  <data name="Text_2" xml:space="preserve">
+    <value>您好！我叫巴兹，是仓库的守护者。无论你去哪里我都可以为你提供帮助。不要犹豫，把你的东西交给我吧。</value>
+  </data>
+  <data name="Text_3" xml:space="preserve">
+    <value>许多冒险家告诉我，竖琴的声音可以舒缓并消除他们的疲劳。你需要我的帮助吗？</value>
+  </data>
+  <data name="Text_4" xml:space="preserve">
+    <value>您好！我叫巴兹，是仓库的守护者。无论你去哪里我都可以为你提供帮助。不要犹豫，把你的东西交给我吧。</value>
+  </data>
+  <data name="Text_5" xml:space="preserve">
+    <value>你带够钱了吗？没有它，我无法合并物品，因为我需要钱来继续我的研究。明白了吗？您想知道需要多少钱吗？</value>
+  </data>
+  <data name="Text_6" xml:space="preserve">
+    <value>欢迎来到奇迹！如果您在奇迹大陆旅行时需要任何帮助，请按 F1键。</value>
+  </data>
+  <data name="Text_7" xml:space="preserve">
+    <value>这是您第一次来洛伦西亚吗？前往喷泉前的东南出口，尝试猎杀巴吉龙或蜘蛛。西北的骷髅太危险了。</value>
+  </data>
+  <data name="Text_8" xml:space="preserve">
+    <value>欢迎来到仙踪林。初次到访的话，可以经过仓库守卫，前往南边出口，尝试猎杀蝎子、哥布林等低级怪物。</value>
+  </data>
+  <data name="Text_9" xml:space="preserve">
+    <value>如需奇迹大陆的详细指南，请访问http://muonline.webzen.net</value>
+  </data>
+  <data name="Text_50" xml:space="preserve">
+    <value>据说地下城、亚特兰蒂斯和失落之塔能找到帝王卷轴，里面记载着奇迹首位皇帝穆伦的事迹。</value>
+  </data>
+  <data name="Answer_50_Slot_0" xml:space="preserve">
+    <value>原来还有这样的事……</value>
+  </data>
+  <data name="Text_51" xml:space="preserve">
+    <value>你对上帝的奉献还不够。如果你捐献1,000,000金币，我会告诉你关于预言的事。</value>
+  </data>
+  <data name="Answer_51_Slot_0" xml:space="preserve">
+    <value>我会带100万金币回来。</value>
+  </data>
+  <data name="Text_52" xml:space="preserve">
+    <value>据说地下城、亚特兰蒂斯和失落之塔能找到帝王卷轴，里面记载着首位统一奇迹大陆的皇帝穆伦的事迹。</value>
+  </data>
+  <data name="Answer_52_Slot_0" xml:space="preserve">
+    <value>告诉我更多。</value>
+  </data>
+  <data name="Text_53" xml:space="preserve">
+    <value>帝王卷轴蕴含强大的力量，读过它的人都将得到这份力量的祝福。</value>
+  </data>
+  <data name="Answer_53_Slot_0" xml:space="preserve">
+    <value>请重复一遍这个故事。</value>
+  </data>
+  <data name="Answer_53_Slot_1" xml:space="preserve">
+    <value>我去找找。</value>
+  </data>
+  <data name="Answer_53_Slot_2" xml:space="preserve">
+    <value>我不在乎。</value>
+  </data>
+  <data name="Text_54" xml:space="preserve">
+    <value>去寻找帝王卷轴吧。读完它，你就能获得强大的力量。</value>
+  </data>
+  <data name="Answer_54_Slot_0" xml:space="preserve">
+    <value>我去找找。</value>
+  </data>
+  <data name="Text_55" xml:space="preserve">
+    <value>你找到了帝王卷轴！卷轴以魔法记载着穆伦皇帝统一奇迹帝国的事迹，持有它的人将获得强大的力量。</value>
+  </data>
+  <data name="Answer_55_Slot_0" xml:space="preserve">
+    <value>跟我说说这张唱片吧。</value>
+  </data>
+  <data name="Text_56" xml:space="preserve">
+    <value>第一位皇帝穆仁的历史记录包含通过穆仁战胜所有军阀来纪念和平，并通过这样做将大陆统一为帝国或奇迹。</value>
+  </data>
+  <data name="Answer_56_Slot_0" xml:space="preserve">
+    <value>请继续。</value>
+  </data>
+  <data name="Text_57" xml:space="preserve">
+    <value>穆伦是结束塞克尼乌姆入侵给人民带来混乱的三位英雄之一。</value>
+  </data>
+  <data name="Answer_57_Slot_0" xml:space="preserve">
+    <value>告诉我之前的故事。</value>
+  </data>
+  <data name="Answer_57_Slot_1" xml:space="preserve">
+    <value>请继续。</value>
+  </data>
+  <data name="Text_58" xml:space="preserve">
+    <value>可能会发现魔法文物，它们被称为“断剑”、“精灵之泪”和“巫师之魂”。“断剑”是黑暗骑士们献上的，作为他们勇敢、忠诚和繁荣愿望的象征。</value>
+  </data>
+  <data name="Answer_58_Slot_0" xml:space="preserve">
+    <value>告诉我之前的故事。</value>
+  </data>
+  <data name="Answer_58_Slot_1" xml:space="preserve">
+    <value>请继续。</value>
+  </data>
+  <data name="Text_59" xml:space="preserve">
+    <value>“巫师之魂”是黑巫师们献出的，作为他们誓言用自己的力量换取帝国和平与自由的象征。穆年10年，纪念和平记录节选……</value>
+  </data>
+  <data name="Answer_59_Slot_0" xml:space="preserve">
+    <value>告诉我之前的故事。</value>
+  </data>
+  <data name="Answer_59_Slot_1" xml:space="preserve">
+    <value>事情就是这样……</value>
+  </data>
+  <data name="Text_60" xml:space="preserve">
+    <value>如果你读过《帝王卷轴》，请找出古代黑暗骑士在纪念和平时使用的“断剑”。据我所知，一些黑暗骑士在亚特兰斯、失落之塔和塔坎找到了它。</value>
+  </data>
+  <data name="Answer_60_Slot_0" xml:space="preserve">
+    <value>我会找到的。</value>
+  </data>
+  <data name="Answer_60_Slot_1" xml:space="preserve">
+    <value>我放弃了。</value>
+  </data>
+  <data name="Text_61" xml:space="preserve">
+    <value>这些地方的每个角落都潜藏着危险，而“断剑”并不容易被发现。但如果你找到它，新的力量将被赋予你！找到‘断剑’后就回来找我。</value>
+  </data>
+  <data name="Answer_61_Slot_0" xml:space="preserve">
+    <value>我会找到它再回来。</value>
+  </data>
+  <data name="Text_62" xml:space="preserve">
+    <value>勇敢的暗黑骑士，你找到了‘断剑’！牧大陆统一后，开国皇帝牧人折断了自己的天启剑，象征着他不再爆发战争的愿望。</value>
+  </data>
+  <data name="Answer_62_Slot_0" xml:space="preserve">
+    <value>告诉我更多。</value>
+  </data>
+  <data name="Text_63" xml:space="preserve">
+    <value>战争结束后，希望成为刀锋骑士的黑暗骑士开始寻找古老的“断剑”，以证明自己的勇敢。</value>
+  </data>
+  <data name="Answer_63_Slot_0" xml:space="preserve">
+    <value>事情就是这样！</value>
+  </data>
+  <data name="Text_64" xml:space="preserve">
+    <value>你读过《帝王卷轴》吧。那你一定知道‘帝王卷轴’中记载的三件宝物。去找远古精灵用精神之力制造的水晶‘精灵之泪’。</value>
+  </data>
+  <data name="Answer_64_Slot_0" xml:space="preserve">
+    <value>请告诉我更多信息。</value>
+  </data>
+  <data name="Text_65" xml:space="preserve">
+    <value>那个地方是一个非常危险的地方，‘精灵之泪’极难找到。但如果你找到‘精灵之泪’，新的力量将会被赋予你。现在，去找‘精灵之泪’并返回给我。</value>
+  </data>
+  <data name="Answer_65_Slot_0" xml:space="preserve">
+    <value>我会去找'精灵之泪'！</value>
+  </data>
+  <data name="Text_66" xml:space="preserve">
+    <value>您已找到“精灵之泪”！战争结束后，精灵女王鲁内迪尔通过在灵石上施展魔法创造了泪石，以便精灵们能够召唤女神的力量并建立自己的力量。</value>
+  </data>
+  <data name="Answer_66_Slot_0" xml:space="preserve">
+    <value>请继续。</value>
+  </data>
+  <data name="Text_67" xml:space="preserve">
+    <value>你读过《帝王卷轴》吧。那么你一定知道其中记载的3件宝物。</value>
+  </data>
+  <data name="Answer_67_Slot_0" xml:space="preserve">
+    <value>请继续。</value>
+  </data>
+  <data name="Text_68" xml:space="preserve">
+    <value>以你的力量，我相信你一定能找到‘巫师之魂’。现在去找‘巫师之魂’，找到后就回来找我。</value>
+  </data>
+  <data name="Answer_68_Slot_0" xml:space="preserve">
+    <value>我去寻找巫师之魂。</value>
+  </data>
+  <data name="Text_69" xml:space="preserve">
+    <value>我就知道你会找到‘巫师之魂’！阿尔卡最伟大的巫师埃特拉姆担心虚弱的黑暗骑士会在昆顿的攻击下动摇，创造了一块保护灵魂的魔法石。</value>
+  </data>
+  <data name="Answer_69_Slot_0" xml:space="preserve">
+    <value>请告诉我更多信息。</value>
+  </data>
+  <data name="Text_70" xml:space="preserve">
+    <value>带有此魔法石的魔法师会变成魔导师。</value>
+  </data>
+  <data name="Answer_70_Slot_0" xml:space="preserve">
+    <value>我现在是魔导师！</value>
+  </data>
+  <data name="Text_71" xml:space="preserve">
+    <value>你对上帝的奉献还不够。如果你捐献2,000,000金币，我会告诉你关于预言的事。</value>
+  </data>
+  <data name="Answer_71_Slot_0" xml:space="preserve">
+    <value>我会带200万金币回来。</value>
+  </data>
+  <data name="Text_72" xml:space="preserve">
+    <value>由于你坚强的意志和力量，你被赋予了新的力量。愿卢格德的恩宠时刻与您同在。</value>
+  </data>
+  <data name="Answer_72_Slot_0" xml:space="preserve">
+    <value>愿神的恩典与你同在......</value>
+  </data>
+  <data name="Text_73" xml:space="preserve">
+    <value>你已经拥有了强大的力量。我没有给你神谕。</value>
+  </data>
+  <data name="Answer_73_Slot_0" xml:space="preserve">
+    <value>我稍后回来。</value>
+  </data>
+  <data name="Text_74" xml:space="preserve">
+    <value>变强后再回来。</value>
+  </data>
+  <data name="Answer_74_Slot_0" xml:space="preserve">
+    <value>等我更强了我就会回来。</value>
+  </data>
+  <data name="Text_75" xml:space="preserve">
+    <value>如果你已经发展成为一名强大的战士，你就能找到它。</value>
+  </data>
+  <data name="Answer_75_Slot_0" xml:space="preserve">
+    <value>请继续。</value>
+  </data>
+  <data name="Text_76" xml:space="preserve">
+    <value>从那时起，一种习俗诞生了，希望成为剑骑士的黑暗骑士会折断他们的剑，作为他们誓言永远不会不公正地挥舞剑的象征。</value>
+  </data>
+  <data name="Answer_76_Slot_0" xml:space="preserve">
+    <value>告诉我更多。</value>
+  </data>
+  <data name="Text_77" xml:space="preserve">
+    <value>一些喜欢冒险的精灵说他们曾在失落之塔、亚特兰斯和塔坎被看到。</value>
+  </data>
+  <data name="Answer_77_Slot_0" xml:space="preserve">
+    <value>‘我去找找！</value>
+  </data>
+  <data name="Answer_77_Slot_1" xml:space="preserve">
+    <value>我不想去这样的地方。</value>
+  </data>
+  <data name="Text_78" xml:space="preserve">
+    <value>这被称为“精灵之泪”，找到这块石头的精灵会成为圣射手，能够召唤精灵女神的力量。</value>
+  </data>
+  <data name="Answer_78_Slot_0" xml:space="preserve">
+    <value>我已经成为圣射手了！</value>
+  </data>
+  <data name="Text_79" xml:space="preserve">
+    <value>既然你已经找到了‘帝王卷轴’和‘断剑’，那么从现在开始你将被称为骑士。</value>
+  </data>
+  <data name="Answer_79_Slot_0" xml:space="preserve">
+    <value>我已经成为骑士了！</value>
+  </data>
+  <data name="Text_80" xml:space="preserve">
+    <value>帝国统一后，人们宣誓效忠皇帝。作为其忠诚象征而供奉的一些宝物如下。</value>
+  </data>
+  <data name="Answer_80_Slot_0" xml:space="preserve">
+    <value>告诉我之前的故事。</value>
+  </data>
+  <data name="Answer_80_Slot_1" xml:space="preserve">
+    <value>请继续。</value>
+  </data>
+  <data name="Text_81" xml:space="preserve">
+    <value>‘精灵之泪’是精灵们献上的，作为他们誓言加强精灵和人类力量的信物。</value>
+  </data>
+  <data name="Answer_81_Slot_0" xml:space="preserve">
+    <value>告诉我之前的故事。</value>
+  </data>
+  <data name="Answer_81_Slot_1" xml:space="preserve">
+    <value>请继续。</value>
+  </data>
+  <data name="Text_82" xml:space="preserve">
+    <value>去找‘巫师之魂’。根据古代黑巫师的说法，它最后一次出现是在失落之塔、阿特兰斯和塔坎附近。</value>
+  </data>
+  <data name="Answer_82_Slot_0" xml:space="preserve">
+    <value>我会去找它</value>
+  </data>
+  <data name="Answer_82_Slot_1" xml:space="preserve">
+    <value>我稍后回来。</value>
+  </data>
+  <data name="Text_90" xml:space="preserve">
+    <value>你已经读完了《天皇圣旨》 。但你知道穆伦和领袖召唤师塞梅登之间的保密契约吗？穆伦得到了一件事的承诺，而不是将易北河移入帝国之下。</value>
+  </data>
+  <data name="Answer_90_Slot_0" xml:space="preserve">
+    <value>继续听。</value>
+  </data>
+  <data name="Text_91" xml:space="preserve">
+    <value>奇迹大陆上有召唤师们监管的次元世界之门。而塞梅登则将深渊之眼作为承诺的信物。请去把深渊之眼带回来。</value>
+  </data>
+  <data name="Answer_91_Slot_0" xml:space="preserve">
+    <value>接受请求</value>
+  </data>
+  <data name="Answer_91_Slot_1" xml:space="preserve">
+    <value>拒绝请求</value>
+  </data>
+  <data name="Text_92" xml:space="preserve">
+    <value>我听说在阿特兰斯、失落之塔和塔坎周围发现了深渊之眼。找到深渊之眼后立即返回。</value>
+  </data>
+  <data name="Answer_92_Slot_0" xml:space="preserve">
+    <value>把故事讲完</value>
+  </data>
+  <data name="Text_93" xml:space="preserve">
+    <value>你已经找到了眼睛的深渊。这被认为是由现实世界中不存在的元素组成的物体。它是从现在之前的世界传染的，记忆也随之返回。</value>
+  </data>
+  <data name="Answer_93_Slot_0" xml:space="preserve">
+    <value>继续听。</value>
+  </data>
+  <data name="Text_94" xml:space="preserve">
+    <value>深渊之眼对我来说有着特殊的意义，因为我通过这个世界的维度进行监督和交流。如果你能带回深渊之眼，我就给你位面主管塞梅登的血之召唤师称号。</value>
+  </data>
+  <data name="Answer_94_Slot_0" xml:space="preserve">
+    <value>强加为血召唤者</value>
+  </data>
+  <data name="Text_100" xml:space="preserve">
+    <value>想要获得穆人的加持和力量，需要传说中的宝物“荣耀之戒”。它再次在我们的土地上展现了它的存在。但你还没有准备好。等到你更有经验了。</value>
+  </data>
+  <data name="Answer_100_Slot_0" xml:space="preserve">
+    <value>那我需要做什么？</value>
+  </data>
+  <data name="Text_101" xml:space="preserve">
+    <value>需要更多经验才能完成此任务。根据失落帝国的考验，当你达到220级后返回。</value>
+  </data>
+  <data name="Answer_101_Slot_0" xml:space="preserve">
+    <value>时机成熟我会回来。</value>
+  </data>
+  <data name="Text_102" xml:space="preserve">
+    <value>想要获得穆人的加持和力量，需要传说中的宝物“荣耀之戒”。它再次在我们的土地上展现了它的存在。</value>
+  </data>
+  <data name="Answer_102_Slot_0" xml:space="preserve">
+    <value>我希望听到更多。</value>
+  </data>
+  <data name="Text_103" xml:space="preserve">
+    <value>谁拥有‘荣耀之戒’，谁就获得穆人的祝福。据说是在大洋彼岸的沙漠中发现的。</value>
+  </data>
+  <data name="Answer_103_Slot_0" xml:space="preserve">
+    <value>这是为什么？</value>
+  </data>
+  <data name="Text_104" xml:space="preserve">
+    <value>那里的怪物相当强大。他们拥有戒指。</value>
+  </data>
+  <data name="Answer_104_Slot_0" xml:space="preserve">
+    <value>请重复一遍这个故事。</value>
+  </data>
+  <data name="Answer_104_Slot_1" xml:space="preserve">
+    <value>我会尝试。</value>
+  </data>
+  <data name="Answer_104_Slot_2" xml:space="preserve">
+    <value>我还没准备好。</value>
+  </data>
+  <data name="Text_105" xml:space="preserve">
+    <value>‘荣耀之环’可能比你想象的更近。当你得到它之后，你一定会感受到自己力量的变化。但这并不是一件容易的事。</value>
+  </data>
+  <data name="Answer_105_Slot_0" xml:space="preserve">
+    <value>我会带着它回来。</value>
+  </data>
+  <data name="Text_108" xml:space="preserve">
+    <value>这确实是‘荣耀之戒’。它散发着神秘的气息，比我想象的还要神秘。这枚戒指有着你无法理解的传说。这是你手中真正的祝福。</value>
+  </data>
+  <data name="Answer_108_Slot_0" xml:space="preserve">
+    <value>我明白了。</value>
+  </data>
+  <data name="Text_109" xml:space="preserve">
+    <value>据说这枚戒指可以复活生命并赋予永恒的青春。但它只对拥有能力运用其力量的英雄有效。</value>
+  </data>
+  <data name="Answer_109_Slot_0" xml:space="preserve">
+    <value>这是为什么？</value>
+  </data>
+  <data name="Text_110" xml:space="preserve">
+    <value>这是因为阿尔卡巫师埃特拉姆施展了一个咒语，以防止邪恶利用它。但戒指表明你适合它。</value>
+  </data>
+  <data name="Answer_110_Slot_0" xml:space="preserve">
+    <value>是这样吗？</value>
+  </data>
+  <data name="Text_111" xml:space="preserve">
+    <value>当预言希克拉用不朽金属创造时，就创造出了“荣耀之戒”。这两处一直被认为是神圣的，但在副司令盖恩叛乱期间被夺走后，下落不明。</value>
+  </data>
+  <data name="Answer_111_Slot_0" xml:space="preserve">
+    <value>是这样吗？！</value>
+  </data>
+  <data name="Text_112" xml:space="preserve">
+    <value>既然已经找到了“荣耀之戒”，你将能够作为一名战士获得更大的成长。</value>
+  </data>
+  <data name="Answer_112_Slot_0" xml:space="preserve">
+    <value>我的力量增强了！</value>
+  </data>
+  <data name="Text_113" xml:space="preserve">
+    <value>你将成长为一个比以前更伟大的存在。请使用你的力量来维护我们帝国的和平。</value>
+  </data>
+  <data name="Answer_113_Slot_0" xml:space="preserve">
+    <value>我会的。</value>
+  </data>
+  <data name="Text_114" xml:space="preserve">
+    <value>你已经拥有了神圣的力量。</value>
+  </data>
+  <data name="Answer_114_Slot_0" xml:space="preserve">
+    <value>我稍后回来。</value>
+  </data>
+  <data name="Text_115" xml:space="preserve">
+    <value>在穆大陆上发现了据说可以赋予战士新力量的“黑暗之石”。然而，你还没有准备好使用这种力量。等到你准备好了。</value>
+  </data>
+  <data name="Answer_115_Slot_0" xml:space="preserve">
+    <value>准备好后我就会回来。</value>
+  </data>
+  <data name="Text_116" xml:space="preserve">
+    <value>想要获得全部力量，就去冰风谷找赛维娜，寻找记载穆伦皇帝事迹的帝王卷轴。</value>
+  </data>
+  <data name="Answer_116_Slot_0" xml:space="preserve">
+    <value>准备好后我就会回来。</value>
+  </data>
+  <data name="Text_117" xml:space="preserve">
+    <value>您未能成为骑士。通过“荣耀之环”获得新的力量后返回。</value>
+  </data>
+  <data name="Answer_117_Slot_0" xml:space="preserve">
+    <value>准备好后我就会回来。</value>
+  </data>
+  <data name="Text_118" xml:space="preserve">
+    <value>你必须向众神献上3,000,000金币来圣化这个任务。你的金币还不够</value>
+  </data>
+  <data name="Answer_118_Slot_0" xml:space="preserve">
+    <value>我会带300万金币回来。</value>
+  </data>
+  <data name="Text_119" xml:space="preserve">
+    <value>你对上帝的奉献还不够。如果你捐献2,000,000金币，我会告诉你关于预言的事。</value>
+  </data>
+  <data name="Answer_119_Slot_0" xml:space="preserve">
+    <value>我会带着2,000,000金币回来</value>
+  </data>
+  <data name="Text_130" xml:space="preserve">
+    <value>确实是‘荣耀之戒’。看看它闪闪发光的样子。这枚戒指蕴藏着你无法理解的时间和传说。您找到它真是一件幸事！</value>
+  </data>
+  <data name="Answer_130_Slot_0" xml:space="preserve">
+    <value>听到这个我很惊讶！</value>
+  </data>
+  <data name="Text_131" xml:space="preserve">
+    <value>是的，据说这枚戒指具有起死回生、永葆青春的力量。只有当它掌握在能够掌控戒指力量的真正英雄手中时，它才会发挥出最佳效果。</value>
+  </data>
+  <data name="Answer_131_Slot_0" xml:space="preserve">
+    <value>为什么会这样呢？</value>
+  </data>
+  <data name="Text_132" xml:space="preserve">
+    <value>这是因为阿尔卡巫师艾特拉姆对它施了咒语，这样它就不会落入错误的人手中。但看来你是对的人！</value>
+  </data>
+  <data name="Answer_132_Slot_0" xml:space="preserve">
+    <value>是这样吗！</value>
+  </data>
+  <data name="Text_133" xml:space="preserve">
+    <value>当预言希克拉用不朽金属创造时，就创造出了“荣耀之戒”。这两处一直被认为是神圣的，但在副司令盖恩叛乱期间被夺走后，下落不明。</value>
+  </data>
+  <data name="Answer_133_Slot_0" xml:space="preserve">
+    <value>是这样吗！</value>
+  </data>
+  <data name="Text_134" xml:space="preserve">
+    <value>既然已经找到了“荣耀之戒”，你将能够作为一名战士获得更大的成长。</value>
+  </data>
+  <data name="Answer_134_Slot_0" xml:space="preserve">
+    <value>我的力量增强了！</value>
+  </data>
+  <data name="Text_135" xml:space="preserve">
+    <value>如果你想获得新的力量，请仔细听我说。在穆大陆上发现了据说可以赋予战士新力量的“黑暗之石”。</value>
+  </data>
+  <data name="Answer_135_Slot_0" xml:space="preserve">
+    <value>我想听更多。</value>
+  </data>
+  <data name="Text_136" xml:space="preserve">
+    <value>有了‘黑暗之石’，你可以掌握新的能力。这不是一件容易的事，但既然你能够获得“荣耀之戒”，这对你来说也许是可能的。</value>
+  </data>
+  <data name="Answer_136_Slot_0" xml:space="preserve">
+    <value>我需要做什么？</value>
+  </data>
+  <data name="Text_137" xml:space="preserve">
+    <value>有传言说你可以在塔坎和伊卡洛斯找到这块石头。小心怪物。那些拥有石头的怪物只会对那些拥有特殊能力的怪物做出反应。</value>
+  </data>
+  <data name="Answer_137_Slot_0" xml:space="preserve">
+    <value>请再重复一遍这个故事。</value>
+  </data>
+  <data name="Answer_137_Slot_1" xml:space="preserve">
+    <value>那我就试试吧！</value>
+  </data>
+  <data name="Answer_137_Slot_2" xml:space="preserve">
+    <value>我还没有信心。</value>
+  </data>
+  <data name="Text_138" xml:space="preserve">
+    <value>“黑暗之石”现在正在召唤你。有了它，你一定会获得从未感受过的力量，但许多其他战士也在拼命寻找这块石头。</value>
+  </data>
+  <data name="Answer_138_Slot_0" xml:space="preserve">
+    <value>我会带黑暗之石回来。</value>
+  </data>
+  <data name="Text_139" xml:space="preserve">
+    <value>所以你已经找到了“黑暗之石”。据记载，这块石头是诸神与撒旦之战中的英雄“贝涅洛普”的干血。</value>
+  </data>
+  <data name="Answer_139_Slot_0" xml:space="preserve">
+    <value>告诉我更多。</value>
+  </data>
+  <data name="Text_140" xml:space="preserve">
+    <value>贝内洛普有骑士血统。在战争中失败后，他接受了新魔法的训练并与技能战斗。这些技能已经默默地被灌输给拥有骑士血液的战士，以对抗昆顿的强大力量。</value>
+  </data>
+  <data name="Answer_140_Slot_0" xml:space="preserve">
+    <value>所以...</value>
+  </data>
+  <data name="Text_141" xml:space="preserve">
+    <value>是的，你身上流淌着战士的血液。因此，贝内洛普的力量将通过黑暗之石授予你。</value>
+  </data>
+  <data name="Answer_141_Slot_0" xml:space="preserve">
+    <value>我被赋予了新的力量！</value>
+  </data>
+  <data name="Text_142" xml:space="preserve">
+    <value>你通过“荣耀之戒”获得了新的力量。但有一些事情你不知道。</value>
+  </data>
+  <data name="Answer_142_Slot_0" xml:space="preserve">
+    <value>那是什么？</value>
+  </data>
+  <data name="Text_143" xml:space="preserve">
+    <value>你有可能获得新的力量。与“荣耀之戒”一起被视为神圣的传奇宝藏“黑暗之石”正在向你召唤。</value>
+  </data>
+  <data name="Answer_143_Slot_0" xml:space="preserve">
+    <value>这很难相信！</value>
+  </data>
+  <data name="Text_144" xml:space="preserve">
+    <value>光明之神卢加德请求你帮忙。然而，你还没有资格。我建议你等你变得更强了再回来。</value>
+  </data>
+  <data name="Answer_144_Slot_0" xml:space="preserve">
+    <value>变强以后我会回来。</value>
+  </data>
+  <data name="Text_145" xml:space="preserve">
+    <value>光明之神卢加德请求你帮忙。然而，你还没有资格。完成上一个任务后请回来。</value>
+  </data>
+  <data name="Answer_145_Slot_0" xml:space="preserve">
+    <value>完成后我会回来的。</value>
+  </data>
+  <data name="Text_146" xml:space="preserve">
+    <value>您没有足够的金币。您可以通过向卢加德提供5,000,000金币来申请此任务。</value>
+  </data>
+  <data name="Answer_146_Slot_0" xml:space="preserve">
+    <value>准备好后我会回来。</value>
+  </data>
+  <data name="Text_147" xml:space="preserve">
+    <value>光明之神卢加德请求你帮忙。</value>
+  </data>
+  <data name="Answer_147_Slot_0" xml:space="preserve">
+    <value>这是什么？</value>
+  </data>
+  <data name="Text_148" xml:space="preserve">
+    <value>卢加德要求你寻找英雄来对抗巴尔加斯对奇迹的新威胁。</value>
+  </data>
+  <data name="Answer_148_Slot_0" xml:space="preserve">
+    <value>继续听。</value>
+  </data>
+  <data name="Text_149" xml:space="preserve">
+    <value>我们了解到巴尔加斯的军队正通过狼嚎要塞进攻奇迹大陆，但整个故事还没有确切的解释。</value>
+  </data>
+  <data name="Answer_149_Slot_0" xml:space="preserve">
+    <value>继续听。</value>
+  </data>
+  <data name="Text_150" xml:space="preserve">
+    <value>我们正在努力理解卢格对我们的信任的意义，但由于我们的能力不足，我们仍然很难理解。</value>
+  </data>
+  <data name="Answer_150_Slot_0" xml:space="preserve">
+    <value>继续听。</value>
+  </data>
+  <data name="Text_151" xml:space="preserve">
+    <value>我相信你们就是向我们提供帮助的人。您有兴趣与我们合作吗？</value>
+  </data>
+  <data name="Answer_151_Slot_0" xml:space="preserve">
+    <value>再听一遍。</value>
+  </data>
+  <data name="Answer_151_Slot_1" xml:space="preserve">
+    <value>接受请求</value>
+  </data>
+  <data name="Answer_151_Slot_2" xml:space="preserve">
+    <value>拒绝请求</value>
+  </data>
+  <data name="Text_152" xml:space="preserve">
+    <value>为了帮助我们，你必须对抗巴尔加斯的军队。在你开始之前，我需要检查你是否有足够的能力来完成任务。</value>
+  </data>
+  <data name="Answer_152_Slot_0" xml:space="preserve">
+    <value>继续听。</value>
+  </data>
+  <data name="Text_153" xml:space="preserve">
+    <value>消灭统治塔坎、阿伊达和伊卡洛斯的死亡光束、地狱门和天魔菲尼斯怪物，并带回 3件相应的证据。</value>
+  </data>
+  <data name="Answer_153_Slot_0" xml:space="preserve">
+    <value>把故事讲完</value>
+  </data>
+  <data name="Text_154" xml:space="preserve">
+    <value>恭喜你，你已经完成了任务。这是为您的辛勤工作而做的一件小事。</value>
+  </data>
+  <data name="Answer_154_Slot_0" xml:space="preserve">
+    <value>继续听。</value>
+  </data>
+  <data name="Text_155" xml:space="preserve">
+    <value>巴尔加斯是一个巨大的威胁，因为他与魔法女王埃雷西亚合作，给这个世界带来了如此危险</value>
+  </data>
+  <data name="Answer_155_Slot_0" xml:space="preserve">
+    <value>继续听。</value>
+  </data>
+  <data name="Text_156" xml:space="preserve">
+    <value>我们预测巴尔加斯正试图用他的邪恶魔法军队对奇迹大陆构成新的威胁。</value>
+  </data>
+  <data name="Answer_156_Slot_0" xml:space="preserve">
+    <value>把故事讲完</value>
+  </data>
+  <data name="Text_157" xml:space="preserve">
+    <value>您没有足够的资金。请向卢加德提供7,000,000金币来申请此任务。</value>
+  </data>
+  <data name="Answer_157_Slot_0" xml:space="preserve">
+    <value>准备好后我会回来。</value>
+  </data>
+  <data name="Text_158" xml:space="preserve">
+    <value>欢迎，您现在已经真正准备好帮助我们了。</value>
+  </data>
+  <data name="Answer_158_Slot_0" xml:space="preserve">
+    <value>您需要什么帮助？</value>
+  </data>
+  <data name="Text_159" xml:space="preserve">
+    <value>嗯，根据我们的信息，巴尔加斯已经形成了一个叫做兵营的地点。卢加德十二使徒认为，这是来自巴尔加斯的新威胁。</value>
+  </data>
+  <data name="Answer_159_Slot_0" xml:space="preserve">
+    <value>继续听。</value>
+  </data>
+  <data name="Text_160" xml:space="preserve">
+    <value>关于“兵营”的确切信息驱使人们进入兵营区域，以减少巴尔加斯军队进一步发展的威胁。</value>
+  </data>
+  <data name="Answer_160_Slot_0" xml:space="preserve">
+    <value>继续听。</value>
+  </data>
+  <data name="Text_161" xml:space="preserve">
+    <value>幸运的是，卢格的监护可以帮助找到进入巴尔加斯军营的方法。输入区域，消灭士兵并获取准确信息。您会相应地带回正确的数据吗？</value>
+  </data>
+  <data name="Answer_161_Slot_0" xml:space="preserve">
+    <value>再听一遍。</value>
+  </data>
+  <data name="Answer_161_Slot_1" xml:space="preserve">
+    <value>接受请求</value>
+  </data>
+  <data name="Answer_161_Slot_2" xml:space="preserve">
+    <value>拒绝请求</value>
+  </data>
+  <data name="Text_162" xml:space="preserve">
+    <value>前往狼嚎区域的北部墓地，找到巴尔加斯兵营的士兵避难所。卢格的祝福让人拥有智慧。他自称狼人卫士。</value>
+  </data>
+  <data name="Answer_162_Slot_0" xml:space="preserve">
+    <value>继续听。</value>
+  </data>
+  <data name="Text_163" xml:space="preserve">
+    <value>他会带你去巴尔加斯的兵营。输入区域并消灭兵营中至少10只怪物。</value>
+  </data>
+  <data name="Answer_163_Slot_0" xml:space="preserve">
+    <value>把故事讲完</value>
+  </data>
+  <data name="Text_164" xml:space="preserve">
+    <value>你安全地完成了任务，我感谢你的辛勤工作和坚强的意志。</value>
+  </data>
+  <data name="Answer_164_Slot_0" xml:space="preserve">
+    <value>继续说。</value>
+  </data>
+  <data name="Text_165" xml:space="preserve">
+    <value>你用情报和消灭的所有怪物为奇迹大陆和狼嚎带来了巨大的和平建设帮助。</value>
+  </data>
+  <data name="Answer_165_Slot_0" xml:space="preserve">
+    <value>把故事讲完</value>
+  </data>
+  <data name="Text_166" xml:space="preserve">
+    <value>你还没有资格。拜访保安马伦，当你完全有资格执行任务时再回来。</value>
+  </data>
+  <data name="Answer_166_Slot_0" xml:space="preserve">
+    <value>讲完故事。</value>
+  </data>
+  <data name="Text_167" xml:space="preserve">
+    <value>您没有足够的资金。请向卢加德提供10,000,000金币来申请此任务。</value>
+  </data>
+  <data name="Answer_167_Slot_0" xml:space="preserve">
+    <value>准备好后我会回来。</value>
+  </data>
+  <data name="Text_168" xml:space="preserve">
+    <value>你们的主动勇气给我们大家带来了巨大的希望。</value>
+  </data>
+  <data name="Answer_168_Slot_0" xml:space="preserve">
+    <value>继续听。</value>
+  </data>
+  <data name="Text_169" xml:space="preserve">
+    <value>巴尔加斯将自己隐藏在一个单独的地方，以让自己从疲惫的身体中恢复过来。</value>
+  </data>
+  <data name="Answer_169_Slot_0" xml:space="preserve">
+    <value>继续听。</value>
+  </data>
+  <data name="Text_170" xml:space="preserve">
+    <value>为了执行卢格所托付的任务，必须找到巴尔加斯的确切位置，并消灭正在训练的军队。</value>
+  </data>
+  <data name="Answer_170_Slot_0" xml:space="preserve">
+    <value>继续听。</value>
+  </data>
+  <data name="Text_171" xml:space="preserve">
+    <value>卢格的任务之后的最后一个任务包括一个巨大而困难的测试。你还有兴趣吗？</value>
+  </data>
+  <data name="Answer_171_Slot_0" xml:space="preserve">
+    <value>再听一遍。</value>
+  </data>
+  <data name="Answer_171_Slot_1" xml:space="preserve">
+    <value>接受请求</value>
+  </data>
+  <data name="Answer_171_Slot_2" xml:space="preserve">
+    <value>拒绝请求</value>
+  </data>
+  <data name="Text_172" xml:space="preserve">
+    <value>输入从巴尔加斯兵营北边的门进去;我们会提前准备好场地。</value>
+  </data>
+  <data name="Answer_172_Slot_0" xml:space="preserve">
+    <value>把故事讲完</value>
+  </data>
+  <data name="Text_173" xml:space="preserve">
+    <value>恭喜你，你已经通过了卢格的最终测试。现在，无论你走到哪里，他的祝福都会伴随着你。</value>
+  </data>
+  <data name="Answer_173_Slot_0" xml:space="preserve">
+    <value>继续听。</value>
+  </data>
+  <data name="Text_174" xml:space="preserve">
+    <value>你的努力得到了回报，维护了奇迹大陆的和平，并抵御了巴尔加斯的新威胁。我非常感谢你的帮助。</value>
+  </data>
+  <data name="Answer_174_Slot_0" xml:space="preserve">
+    <value>把故事讲完</value>
+  </data>
+</root>
