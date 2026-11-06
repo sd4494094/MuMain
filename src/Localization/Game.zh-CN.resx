@@ -5259,7 +5259,7 @@
     <value>丢失的卡利马</value>
   </data>
   <data name="Elveland" xml:space="preserve">
-    <value>精灵乐园</value>
+    <value>幻术园</value>
   </data>
   <data name="Swamp of Peace" xml:space="preserve">
     <value>安宁池</value>
@@ -9159,7 +9159,7 @@
     <value>（一般物品和现金物品不可收回）</value>
   </data>
   <data name="You cannot use this while the same buff and seals last for 6 hours or more." xml:space="preserve">
-    <value>当相同的增益效果和密封持续6小时或更长时间时，您无法使用此功能。</value>
+    <value>同类增益效果或印记的剩余时间达到6小时及以上时，无法使用此物品。</value>
   </data>
   <data name="Client file has been corrupted. Please reinstall the client again." xml:space="preserve">
     <value>客户端文件已损坏。请重新安装客户端。</value>
