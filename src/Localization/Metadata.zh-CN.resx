@@ -70,7 +70,7 @@
     <value>所需敏捷</value>
   </data>
   <data name="Req Energy" xml:space="preserve">
-    <value>所需精神</value>
+    <value>所需智力</value>
   </data>
   <data name="Req Vitality" xml:space="preserve">
     <value>所需体力</value>

@@ -181,7 +181,7 @@
       "tl": "yelo Paglaban: {iceResistance}",
       "uk": "лід Опір: {iceResistance}",
       "zh-TW": "冰 電阻：{iceResistance}",
-      "zh-CN": "冰 电阻：{iceResistance}"
+      "zh-CN": "冰 抗性：{iceResistance}"
     },
     "poisonResistance": {
       "en": "Poison Resistance: {poisonResistance}",
@@ -195,7 +195,7 @@
       "tl": "lason Paglaban: {poisonResistance}",
       "uk": "Отрута Опір: {poisonResistance}",
       "zh-TW": "毒 電阻：{poisonResistance}",
-      "zh-CN": "毒 电阻：{poisonResistance}"
+      "zh-CN": "毒 抗性：{poisonResistance}"
     },
     "lightningResistance": {
       "en": "Lightning Resistance: {lightningResistance}",
@@ -209,7 +209,7 @@
       "tl": "Kidlat Paglaban: {lightningResistance}",
       "uk": "Блискавка Опір: {lightningResistance}",
       "zh-TW": "閃電 電阻：{lightningResistance}",
-      "zh-CN": "闪电 电阻：{lightningResistance}"
+      "zh-CN": "闪电 抗性：{lightningResistance}"
     },
     "fireResistance": {
       "en": "Fire Resistance: {fireResistance}",
@@ -223,7 +223,7 @@
       "tl": "Sunog Paglaban: {fireResistance}",
       "uk": "Вогонь Опір: {fireResistance}",
       "zh-TW": "火 電阻：{fireResistance}",
-      "zh-CN": "火 电阻：{fireResistance}"
+      "zh-CN": "火 抗性：{fireResistance}"
     },
     "earthResistance": {
       "en": "Earth Resistance: {earthResistance}",
@@ -237,7 +237,7 @@
       "tl": "Lupa Paglaban: {earthResistance}",
       "uk": "земля Опір: {earthResistance}",
       "zh-TW": "地球 電阻：{earthResistance}",
-      "zh-CN": "地球 电阻：{earthResistance}"
+      "zh-CN": "大地 抗性：{earthResistance}"
     },
     "windResistance": {
       "en": "Wind Resistance: {windResistance}",
@@ -251,7 +251,7 @@
       "tl": "Hangin Paglaban: {windResistance}",
       "uk": "Вітер Опір: {windResistance}",
       "zh-TW": "風 電阻：{windResistance}",
-      "zh-CN": "风 电阻：{windResistance}"
+      "zh-CN": "风 抗性：{windResistance}"
     },
     "waterResistance": {
       "en": "Water Resistance: {waterResistance}",
@@ -265,7 +265,7 @@
       "tl": "Tubig Paglaban: {waterResistance}",
       "uk": "вода Опір: {waterResistance}",
       "zh-TW": "水 電阻：{waterResistance}",
-      "zh-CN": "水 电阻：{waterResistance}"
+      "zh-CN": "水 抗性：{waterResistance}"
     },
     "requiredLevel": {
       "en": "Minimum Level Requirement: {requiredLevel}",
@@ -293,7 +293,7 @@
       "tl": "Kinakailangan ng Lakas: {requiredStrength}",
       "uk": "Вимоги до міцності: {requiredStrength}",
       "zh-TW": "強度要求：{requiredStrength}",
-      "zh-CN": "强度要求：{requiredStrength}"
+      "zh-CN": "力量要求：{requiredStrength}"
     },
     "requiredDexterity": {
       "en": "Agility Requirement: {requiredDexterity}",
@@ -335,7 +335,7 @@
       "tl": "Kinakailangan ng Enerhiya: {requiredEnergy}",
       "uk": "Потреба в енергії: {requiredEnergy}",
       "zh-TW": "能量需求：{requiredEnergy}",
-      "zh-CN": "能量需求：{requiredEnergy}"
+      "zh-CN": "智力需求：{requiredEnergy}"
     },
     "requiredLeadership": {
       "en": "Charisma Requirement: {requiredLeadership}",
@@ -349,7 +349,7 @@
       "tl": "Kinakailangan ng Charisma: {requiredLeadership}",
       "uk": "Вимоги до харизми: {requiredLeadership}",
       "zh-TW": "魅力要求：{requiredLeadership}",
-      "zh-CN": "魅力要求：{requiredLeadership}"
+      "zh-CN": "统率要求：{requiredLeadership}"
     },
     "lacking": {
       "en": "(lacking {missing})",
@@ -405,7 +405,7 @@
       "tl": "Dagdagan ang pag-atake ng alagang hayop bilang {magicPower}%",
       "uk": "Збільшити атаку домашніх тварин як {magicPower}%",
       "zh-TW": "寵物攻擊力增加為 {magicPower}%",
-      "zh-CN": "宠物攻击力增加为 {magicPower}%"
+      "zh-CN": "宠物攻击力提高{magicPower}%"
     },
     "damageIncrease": {
       "en": "Increase {percent}% of Damage",
@@ -619,7 +619,7 @@
       "tl": "Ang mga nakapalibot na Zen ay awtomatikong kinokolekta.",
       "uk": "Навколишні дзени збираються автоматично.",
       "zh-TW": "周圍的禪宗會自動收集。",
-      "zh-CN": "周围的禅宗会自动收集。"
+      "zh-CN": "周围的金币会自动收集。"
     },
     "autoCollectsZen": {
       "en": "Auto-collects zen around you.",
@@ -647,7 +647,7 @@
       "tl": "Dagdagan ang Defensive Skill +50",
       "uk": "Підвищення навичок захисту +50",
       "zh-TW": "防禦技能增加+50",
-      "zh-CN": "防御力增加技能 +50"
+      "zh-CN": "防御成功率+50"
     },
     "automaticHpRecovery3": {
       "en": "Automatic HP recovery 3%",
@@ -815,7 +815,7 @@
       "tl": "Ang Master Level EXP ay hindi makakamit sa panahon ng paggamit ng item.",
       "uk": "Майстер-рівень EXP не може бути досягнутий під час використання предмета.",
       "zh-TW": "使用物品期間無法獲得大師級經驗值。",
-      "zh-CN": "使用物品期间无法达到大师等级经验。"
+      "zh-CN": "使用期间无法获得大师等级经验。"
     },
     "youWillBeAssignedToAStageAccordingToYourLevel": {
       "en": "You will be assigned to a stage according to your level.",
@@ -1109,7 +1109,7 @@
       "tl": "Ito ay bahagi ng isang Kumpletong Secromicon.",
       "uk": "Це частина повного Secromicon.",
       "zh-TW": "它是 Complete Secromicon 的一部分。",
-      "zh-CN": "它是完整的希克拉。的一部分"
+      "zh-CN": "这是完整希克拉的一部分。"
     },
     "unableToEquipWithADifferentTransformationRing": {
       "en": "Unable to Equip with a Different Transformation Ring",
@@ -1221,7 +1221,7 @@
       "tl": "Spearman",
       "uk": "Списоносець",
       "zh-TW": "斯皮爾曼",
-      "zh-CN": "斯皮尔曼"
+      "zh-CN": "长枪兵"
     },
     "scrollOfGuardian": {
       "en": "Scroll of Guardian",
@@ -1249,7 +1249,7 @@
       "tl": "Place Life Stone",
       "uk": "Помістіть камінь життя",
       "zh-TW": "放置生命石",
-      "zh-CN": "地点生命之石"
+      "zh-CN": "放置生命之石"
     },
     "oliveOfLove": {
       "en": "Olive of love",

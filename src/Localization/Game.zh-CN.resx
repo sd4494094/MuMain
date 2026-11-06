@@ -220,7 +220,7 @@
     <value>需要等级：%d</value>
   </data>
   <data name="Energy Requirement: %d" xml:space="preserve">
-    <value>能量需求：%d</value>
+    <value>智力需求：%d</value>
   </data>
   <data name="Defend skill (Mana:%d)" xml:space="preserve">
     <value>防御技能（魔法值：%d）</value>
@@ -442,7 +442,7 @@
     <value>向下移动光标-&gt;调整聊天窗口</value>
   </data>
   <data name="%s Warp scroll" xml:space="preserve">
-    <value>%s 扭曲卷轴</value>
+    <value>%ls 传送卷轴</value>
   </data>
   <data name="Item option info" xml:space="preserve">
     <value>物品选项信息</value>
@@ -517,10 +517,10 @@
     <value>姓名</value>
   </data>
   <data name="After selecting a color with" xml:space="preserve">
-    <value>选择颜色后</value>
+    <value>请先用鼠标选择颜色，</value>
   </data>
   <data name="the mouse, please draw." xml:space="preserve">
-    <value>鼠标，请画画。</value>
+    <value>再进行绘制。</value>
   </data>
   <data name="Type /guild in front of" xml:space="preserve">
     <value>站在目标前方输入/guild</value>
@@ -565,7 +565,7 @@
     <value>成本</value>
   </data>
   <data name="Spare Points: %d / %d" xml:space="preserve">
-    <value>备用点：%d / %d</value>
+    <value>剩余属性点：%d / %d</value>
   </data>
   <data name="Level: %d" xml:space="preserve">
     <value>等级：%d</value>
@@ -574,7 +574,7 @@
     <value>经验：%u / %u</value>
   </data>
   <data name="Strength : %d" xml:space="preserve">
-    <value>强度：%d</value>
+    <value>力量：%d</value>
   </data>
   <data name="Dmg(rate): %d~%d (%d)" xml:space="preserve">
     <value>攻击力（成功率）：%d~%d（%d）</value>
@@ -583,7 +583,7 @@
     <value>伤害：%d ~ %d</value>
   </data>
   <data name="Agility: %d" xml:space="preserve">
-    <value>敏捷性：%d</value>
+    <value>敏捷：%d</value>
   </data>
   <data name="Defense (rate):%d (%d +%d)" xml:space="preserve">
     <value>防御力（成功率）：%d（%d +%d）</value>
@@ -595,13 +595,13 @@
     <value>防御力（成功率）：%d（%d）</value>
   </data>
   <data name="Vitality: %d" xml:space="preserve">
-    <value>活力：%d</value>
+    <value>体力：%d</value>
   </data>
   <data name="HP: %d / %d" xml:space="preserve">
     <value>生命值：%d / %d</value>
   </data>
   <data name="Energy: %d" xml:space="preserve">
-    <value>能源：%d</value>
+    <value>智力：%d</value>
   </data>
   <data name="Mana: %d / %d" xml:space="preserve">
     <value>魔法值 : %d / %d</value>
@@ -640,10 +640,10 @@
     <value>关闭 (I,V)</value>
   </data>
   <data name="Trade" xml:space="preserve">
-    <value>贸易</value>
+    <value>交易</value>
   </data>
   <data name="Zen Trade" xml:space="preserve">
-    <value>金币贸易</value>
+    <value>金币交易</value>
   </data>
   <data name="OK" xml:space="preserve">
     <value>确定</value>
@@ -664,13 +664,13 @@
     <value>修复(L)</value>
   </data>
   <data name="Storage" xml:space="preserve">
-    <value>存储</value>
+    <value>仓库</value>
   </data>
   <data name="Deposit" xml:space="preserve">
     <value>存款</value>
   </data>
   <data name="Withdraw" xml:space="preserve">
-    <value>退出</value>
+    <value>取款</value>
   </data>
   <data name="Repair all (A)" xml:space="preserve">
     <value>修复全部(A)</value>
@@ -706,58 +706,58 @@
     <value>幸运数字</value>
   </data>
   <data name="/Battle" xml:space="preserve">
-    <value>/战斗</value>
+    <value>/Battle</value>
   </data>
   <data name="/Battle Soccer" xml:space="preserve">
-    <value>/对战足球</value>
+    <value>/Battle Soccer</value>
   </data>
   <data name="Arrows reloaded" xml:space="preserve">
     <value>箭已装弹</value>
   </data>
   <data name="No more arrows" xml:space="preserve">
-    <value>不再有箭头</value>
+    <value>箭矢不足</value>
   </data>
   <data name="Storage must be closed to warp" xml:space="preserve">
-    <value>存储必须关闭以扭曲</value>
+    <value>存储必须关闭以传送</value>
   </data>
   <data name="Your level must be over %d to warp" xml:space="preserve">
-    <value>你的等级必须超过%d 才能扭曲</value>
+    <value>你的等级必须超过%d 才能传送</value>
   </data>
   <data name="Guild254" xml:space="preserve">
-    <value>/公会</value>
+    <value>/guild</value>
   </data>
   <data name="You are already in a guild" xml:space="preserve">
     <value>您已经在战盟中</value>
   </data>
   <data name="Party256" xml:space="preserve">
-    <value>/派对</value>
+    <value>/party</value>
   </data>
   <data name="You are already in a party" xml:space="preserve">
     <value>您已经在队伍中</value>
   </data>
   <data name="/exchange" xml:space="preserve">
-    <value>/交换</value>
+    <value>/exchange</value>
   </data>
   <data name="Trade259" xml:space="preserve">
-    <value>/贸易</value>
+    <value>/trade</value>
   </data>
   <data name="/warp" xml:space="preserve">
-    <value>/经</value>
+    <value>/warp</value>
   </data>
   <data name="You cannot go to Atlans while riding a Unicorn" xml:space="preserve">
-    <value>骑独角兽时无法前往亚特兰斯</value>
+    <value>骑独角兽时无法前往亚特兰蒂斯</value>
   </data>
   <data name="You can enter Altans only after joining a party." xml:space="preserve">
     <value>加入队伍后才能进入亚特兰蒂斯。</value>
   </data>
   <data name="You can enter Icarus only with wings, dinorant, fenrirr" xml:space="preserve">
-    <value>只有翅膀、迪诺兰特、芬里尔才能进入伊卡洛斯</value>
+    <value>只有翅膀、迪诺兰特、芬里尔才能进入天空之城</value>
   </data>
   <data name="/whisper off" xml:space="preserve">
-    <value>/低声说</value>
+    <value>/whisper off</value>
   </data>
   <data name="/whisper on" xml:space="preserve">
-    <value>/窃窃私语</value>
+    <value>/whisper on</value>
   </data>
   <data name="Storage fee" xml:space="preserve">
     <value>仓储费</value>
@@ -907,7 +907,7 @@
     <value>环顾四周</value>
   </data>
   <data name="/mu" xml:space="preserve">
-    <value>/亩</value>
+    <value>/mu</value>
   </data>
   <data name="Only characters over level %d can enter." xml:space="preserve">
     <value>只有%d级以上的角色可以进入。</value>
@@ -916,7 +916,7 @@
     <value>箭头： %d ( %d )</value>
   </data>
   <data name="Bolts: %d (%d)" xml:space="preserve">
-    <value>螺栓： %d ( %d )</value>
+    <value>弩箭：%d（%d）</value>
   </data>
   <data name="Guardian Angel" xml:space="preserve">
     <value>守护天使</value>
@@ -994,10 +994,10 @@
     <value>（%s）已获得%d点属性点。</value>
   </data>
   <data name="stat creation failed from fruit combination." xml:space="preserve">
-    <value>水果合成统计数据创建失败。</value>
+    <value>果实合成失败，未能改变属性点。</value>
   </data>
   <data name="(%s fruit) stat %d points have been %s." xml:space="preserve">
-    <value>( %s 水果) 统计%d 点已%s 。</value>
+    <value>（%ls果实）属性点%d点已%ls。</value>
   </data>
   <data name="You will exit game in %d seconds." xml:space="preserve">
     <value>将在 %d 秒后退出游戏。</value>
@@ -1495,7 +1495,7 @@
     <value>如果你想锁定背包，</value>
   </data>
   <data name="No more stats would be increased on your level." xml:space="preserve">
-    <value>你的等级不会再增加任何统计数据。</value>
+    <value>当前等级无法继续增加属性点。</value>
   </data>
   <data name="Agree with the above agreement" xml:space="preserve">
     <value>同意以上协议</value>
@@ -1504,7 +1504,7 @@
     <value>您想将您的帐户移至分割服务器吗？</value>
   </data>
   <data name="Dissolve or leave your guild" xml:space="preserve">
-    <value>解散或留下你的战盟</value>
+    <value>解散或退出战盟</value>
   </data>
   <data name="Account" xml:space="preserve">
     <value>账号</value>
@@ -1713,7 +1713,7 @@
     <value>战盟名称已存在</value>
   </data>
   <data name="Guild name must be at least 4 characters" xml:space="preserve">
-    <value>战盟名称必须至少为4角色</value>
+    <value>战盟名称至少需要4个字符</value>
   </data>
   <data name="YouAreAlreadyInAGuild518" xml:space="preserve">
     <value>你已经在战盟中。</value>
@@ -1731,7 +1731,7 @@
     <value>你现在不能宣战战盟战争。</value>
   </data>
   <data name="Only guild masters can declare a Guild War." xml:space="preserve">
-    <value>只有战盟大师才能宣战战盟战争。</value>
+    <value>只有盟主可以发起战盟战争。</value>
   </data>
   <data name="Your request for a Guild War is refused." xml:space="preserve">
     <value>你的战盟战争请求被拒绝。</value>
@@ -1857,7 +1857,7 @@
     <value>战盟会员已被撤销。</value>
   </data>
   <data name="You cannot warp while riding on a unicorn" xml:space="preserve">
-    <value>骑在独角兽上时不能扭曲</value>
+    <value>骑在独角兽上时不能传送</value>
   </data>
   <data name="Pwned by the Filter!" xml:space="preserve">
     <value>被过滤器打败了！</value>
@@ -2010,7 +2010,7 @@
     <value>狩猎怪物后金币的获得率增加+30 %%</value>
   </data>
   <data name="Excellent Damage rate +10%%" xml:space="preserve">
-    <value>卓越损坏率 +10 %%</value>
+    <value>卓越一击概率+10%%</value>
   </data>
   <data name="Increase Damage +level/20" xml:space="preserve">
     <value>伤害增加+等级/20</value>
@@ -2034,7 +2034,7 @@
     <value>狩猎怪物后增加魔法值的获得率+ 魔法值 /8</value>
   </data>
   <data name="You will enter Devil Square (%d seconds from now)" xml:space="preserve">
-    <value>您将输入恶魔广场 （从现在起%d 秒）</value>
+    <value>您将进入恶魔广场 （从现在起%d 秒）</value>
   </data>
   <data name="The gate of Devil Square will close down in %d seconds" xml:space="preserve">
     <value>恶魔广场的大门将在%d 秒后关闭</value>
@@ -2064,19 +2064,19 @@
     <value>必须达到10级以上才能合并对恶魔广场的邀请。</value>
   </data>
   <data name="RumorHasItThatRecentlyMonsters" xml:space="preserve">
-    <value>有传言说最近怪物在诺里亚周围游荡。我以为这些生物只是传说中的一部分……我想知道是什么将它们带到了这里。</value>
+    <value>有传言说最近怪物在仙踪林周围游荡。我以为这些生物只是传说中的一部分……我想知道是什么将它们带到了这里。</value>
   </data>
   <data name="If you want to find out about the Devil Square, go meet Charon in Noria" xml:space="preserve">
-    <value>如果你想了解恶魔广场，请去诺里亚与卡戎会面</value>
+    <value>如果你想了解恶魔广场，请去仙踪林与卡戎会面</value>
   </data>
   <data name="TheDevilSquareIsAPlace" xml:space="preserve">
-    <value>恶魔广场是战士们证明勇气的地方。符合条件的战士将会收到恶魔邀请函。带着恶魔之眼、恶魔钥匙、玛雅之石和足够的金币前往诺里亚的玛雅哥布林。</value>
+    <value>恶魔广场是战士们证明勇气的地方。符合条件的战士将会收到恶魔邀请函。带着恶魔之眼、恶魔钥匙、玛雅之石和足够的金币前往仙踪林的玛雅哥布林。</value>
   </data>
   <data name="YouHaveComeTooSoonYou" xml:space="preserve">
     <value>你来得太早了。如果您等待时间并稍后再访问，您也许可以进入恶魔广场。</value>
   </data>
   <data name="SomeSayThatTheDevilEyes" xml:space="preserve">
-    <value>有人说奇迹大陆的一些怪物身上发现了恶魔之眼。尝试猎杀尽可能多的怪物以获得恶魔之眼。如果你找到了，就去诺里亚与卡戎会面。</value>
+    <value>有人说奇迹大陆的一些怪物身上发现了恶魔之眼。尝试猎杀尽可能多的怪物以获得恶魔之眼。如果你找到了，就去仙踪林与卡戎会面。</value>
   </data>
   <data name="ManyAdventurersAndWarriorsAreCrowding" xml:space="preserve">
     <value>许多冒险家和战士涌入恶魔广场以证明他们的勇气。战士，你正在前往恶魔广场的路上吗？</value>
@@ -2085,7 +2085,7 @@
     <value>你难道不想证明你是最勇敢的人吗？机会就在你面前。如果你得到了恶魔之眼和钥匙，你就离这个机会更近了一步。</value>
   </data>
   <data name="ThousandsOfYearsAgoTheDevil" xml:space="preserve">
-    <value>数千年前，魔眼和钥匙曾经存在于奇迹大陆，后来消失了。但现在整个大陆都可以看到它们的身影。去找他们，把他们带到诺里亚的玛雅哥布林</value>
+    <value>数千年前，魔眼和钥匙曾经存在于奇迹大陆，后来消失了。但现在整个大陆都可以看到它们的身影。去找他们，把他们带到仙踪林的玛雅哥布林</value>
   </data>
   <data name="AreYouLookingForTheDevil" xml:space="preserve">
     <value>你也在寻找恶魔之眼吗？奇迹大陆的大部分怪物身上都带有恶魔之眼。如果神与你同在，你就能找到你所寻求的。</value>
@@ -2175,7 +2175,7 @@
     <value>如果你想活命，请选择另一个方格。</value>
   </data>
   <data name="Firecracker688" xml:space="preserve">
-    <value>/鞭炮</value>
+    <value>/Firecracker</value>
   </data>
   <data name="Must be over level 15 to combine a Cloak of Invisibility." xml:space="preserve">
     <value>必须达到15级以上才能组合隐形斗篷。</value>
@@ -2244,10 +2244,10 @@
     <value>祝福的季节到来，收集蕾娜的黄金弓箭手出现在奇迹大陆上。如果你带10宝石到站在勇者大陆面前的黄金弓箭手，他会告诉你一个关于他自己的故事。</value>
   </data>
   <data name="RenaIsATypeOfGold" xml:space="preserve">
-    <value>‘雷纳’是一种在奇迹大陆之前就已经存在的天堂世界中使用的金币。如果你把蕾娜带到洛伦西亚面前的黄金弓箭手，他会给你一些天界之神卢加德的号码。</value>
+    <value>‘雷纳’是一种在奇迹大陆之前就已经存在的天堂世界中使用的金币。如果你把蕾娜带到勇者大陆面前的黄金弓箭手，他会给你一些天界之神卢加德的号码。</value>
   </data>
   <data name="AfterTheRessurectionOfKundunSome" xml:space="preserve">
-    <value>昆顿复活后，一些怪物占据了所谓的天堂之盒。如果你在盒子里找到蕾娜，把它带到洛伦西亚前面的黄金弓箭手。据说他会给那些带着10个瑞纳斯的人讲一个故事。</value>
+    <value>昆顿复活后，一些怪物占据了所谓的天堂之盒。如果你在盒子里找到蕾娜，把它带到勇者大陆前面的黄金弓箭手。据说他会给那些带着10个瑞纳斯的人讲一个故事。</value>
   </data>
   <data name="YouVeBrought10RenaAs" xml:space="preserve">
     <value>你带来了10个瑞娜。为了表达我的谢意，我会告诉你一些关于瑞娜的事情。蕾娜是由奇迹中不存在的一种金色金属制成的。学者们通过研究发现，蕾娜来自天界。</value>
@@ -2283,16 +2283,16 @@
     <value>您可以将注册的宝石兑换为金币</value>
   </data>
   <data name="TheGoldenArcherWillStayAt" xml:space="preserve">
-    <value>黄金弓箭手将在洛伦西亚停留至7月8日，以将宝石交换至金币</value>
+    <value>黄金弓箭手将在勇者大陆停留至7月8日，以将宝石交换至金币</value>
   </data>
   <data name="AreYouThrowingRenaOnThe" xml:space="preserve">
     <value>你把蕾娜扔在地上吗？蕾娜在这个世界上可能用处不大，但可以通过黄金弓箭手兑换成金币。</value>
   </data>
   <data name="RyanTheMaidOfTheBar" xml:space="preserve">
-    <value>洛伦西亚的酒吧女服务员瑞恩说，瑞娜可以兑换成金币。如果你有宝石，就去看看黄金弓箭手。</value>
+    <value>勇者大陆的酒吧女服务员瑞恩说，瑞娜可以兑换成金币。如果你有宝石，就去看看黄金弓箭手。</value>
   </data>
   <data name="RenaIsATypeOfCoin" xml:space="preserve">
-    <value>“宝石”是一种在亿万年前曾在天堂世界中使用的硬币。这个世界不能使用，但是如果你去洛伦西亚的‘黄金弓箭手’，他就会把它兑换成金币。</value>
+    <value>“宝石”是一种在亿万年前曾在天堂世界中使用的硬币。这个世界不能使用，但是如果你去勇者大陆的‘黄金弓箭手’，他就会把它兑换成金币。</value>
   </data>
   <data name="Loren (New)" xml:space="preserve">
     <value>洛伦（新）</value>
@@ -2364,7 +2364,7 @@
     <value>透明度调整</value>
   </data>
   <data name="/filter" xml:space="preserve">
-    <value>/筛选</value>
+    <value>/filter</value>
   </data>
   <data name="filter word" xml:space="preserve">
     <value>过滤词</value>
@@ -2421,13 +2421,13 @@
     <value>储备 : MFGS</value>
   </data>
   <data name="/Scissor" xml:space="preserve">
-    <value>/剪刀</value>
+    <value>/Scissor</value>
   </data>
   <data name="/Rock" xml:space="preserve">
-    <value>/岩石</value>
+    <value>/Rock</value>
   </data>
   <data name="/Paper" xml:space="preserve">
-    <value>/纸</value>
+    <value>/Paper</value>
   </data>
   <data name="Hustle" xml:space="preserve">
     <value>喧嚣</value>
@@ -2517,7 +2517,7 @@
     <value>%s 活动结束（在%d 秒内）</value>
   </data>
   <data name="%s Penetration (in %d seconds)" xml:space="preserve">
-    <value>%s 穿透力（以%d 秒为单位）</value>
+    <value>%ls 突入倒计时：%d秒</value>
   </data>
   <data name="You may enter only %d times per day." xml:space="preserve">
     <value>您每天只能进入%d 次。</value>
@@ -2529,7 +2529,7 @@
     <value>你的勇气令人钦佩，但你需要隐形斗篷才能进入血色城堡。你需要的不仅仅是勇气，战士。</value>
   </data>
   <data name="YourWillToHelpTheArchangel" xml:space="preserve">
-    <value>感谢您帮助大天使的意愿。但要小心，血色城堡的年轻战士是一个危险的地方。愿上帝与你同在。</value>
+    <value>感谢你愿意帮助大天使。但请小心，年轻的勇士，血色城堡十分危险。愿神与你同在。</value>
   </data>
   <data name="AhGreatWarriorThanksToYour" xml:space="preserve">
     <value>啊！伟大的战士。感谢您的帮助，我们才能够保护这片土地免受昆顿士兵的侵害。为了表达我们的谢意，我将与您分享我的经验。</value>
@@ -2544,13 +2544,13 @@
     <value>你是来购买隐形斗篷的吗？获取 ' 血灵之书 ' 和 ' 血灵之骷 ' 并访问玛雅哥布林。你可以在那里得到一个。</value>
   </data>
   <data name="HaveYouComeToRepairSomething" xml:space="preserve">
-    <value>你是来修理东西的吗？我不知道血色城堡在哪里。你为什么不去问问德维亚斯的大天使使者呢？</value>
+    <value>你是来修理东西的吗？我不知道血色城堡在哪里。你为什么不去问问冰风谷的大天使使者呢？</value>
   </data>
   <data name="BloodCastleIsAnExtremelyDangerous" xml:space="preserve">
     <value>血色城堡是一个极其危险的地方。如果你想帮助大天使，你可能想和像你一样勇敢的人一起去。</value>
   </data>
   <data name="Are you going to the Blood Castle? Please help out the Archangel. Please!" xml:space="preserve">
-    <value>你要去血色城堡吗？请大天使帮忙。请！</value>
+    <value>你要前往血色城堡吗？请务必帮助大天使！拜托了！</value>
   </data>
   <data name="YouLlFindTheScrollOf" xml:space="preserve">
     <value>通过在穆大陆狩猎怪物，你会找到‘血灵之书’和‘血灵之骷’。</value>
@@ -2583,10 +2583,10 @@
     <value>大天使</value>
   </data>
   <data name="You can enter %s now." xml:space="preserve">
-    <value>您现在可以输入%s。</value>
+    <value>您现在可以进入%ls。</value>
   </data>
   <data name="After %d minutes you may enter %s." xml:space="preserve">
-    <value>%d 分钟后，您可以输入%s 。</value>
+    <value>%d 分钟后，您可以进入%ls 。</value>
   </data>
   <data name="The time to enter %s has passed." xml:space="preserve">
     <value>进入%s 的时间已过。</value>
@@ -2742,13 +2742,13 @@
     <value>荣誉之戒</value>
   </data>
   <data name="Dark Stone" xml:space="preserve">
-    <value>暗石</value>
+    <value>暗黑之石</value>
   </data>
   <data name="/DuelChallenge" xml:space="preserve">
-    <value>/决斗挑战</value>
+    <value>/DuelChallenge</value>
   </data>
   <data name="/DuelCancel" xml:space="preserve">
-    <value>/决斗取消</value>
+    <value>/DuelCancel</value>
   </data>
   <data name="You are challenged to a duel." xml:space="preserve">
     <value>你面临决斗挑战。</value>
@@ -2844,7 +2844,7 @@
     <value>添加好友</value>
   </data>
   <data name="Follow" xml:space="preserve">
-    <value>关注</value>
+    <value>跟随</value>
   </data>
   <data name="Duel" xml:space="preserve">
     <value>决斗</value>
@@ -2856,13 +2856,13 @@
     <value>增加敏捷性 + %d</value>
   </data>
   <data name="Increase energy +%d" xml:space="preserve">
-    <value>增加能量 + %d</value>
+    <value>增加智力 + %d</value>
   </data>
   <data name="Increase stamina +%d" xml:space="preserve">
     <value>增加体力 + %d</value>
   </data>
   <data name="Increase command +%d" xml:space="preserve">
-    <value>增加命令 + %d</value>
+    <value>统率增加+%d</value>
   </data>
   <data name="Increase min. damage +%d" xml:space="preserve">
     <value>增加最小值。伤害+%d</value>
@@ -2973,13 +2973,13 @@
     <value>右键单击：默认</value>
   </data>
   <data name="Receiver:" xml:space="preserve">
-    <value>接收器：</value>
+    <value>收件人：</value>
   </data>
   <data name="Send" xml:space="preserve">
     <value>发送</value>
   </data>
   <data name="Prev. Action" xml:space="preserve">
-    <value>上一页。行动</value>
+    <value>上一个动作</value>
   </data>
   <data name="Next Action" xml:space="preserve">
     <value>下一步行动</value>
@@ -3060,7 +3060,7 @@
     <value>标题</value>
   </data>
   <data name="Select the letter you'd like to delete" xml:space="preserve">
-    <value>选择您要删除的字母</value>
+    <value>选择要删除的信件</value>
   </data>
   <data name="Friends List" xml:space="preserve">
     <value>好友列表</value>
@@ -3081,7 +3081,7 @@
     <value>是的</value>
   </data>
   <data name="No" xml:space="preserve">
-    <value>没有</value>
+    <value>否</value>
   </data>
   <data name="Offline1039" xml:space="preserve">
     <value>离线</value>
@@ -3192,7 +3192,7 @@
     <value>您已达到可列出的好友数量上限。</value>
   </data>
   <data name="TheFriendSStatusWillBe" xml:space="preserve">
-    <value>好友状态将显示为[离线]，直到两个队伍都注册为好友</value>
+    <value>双方互相添加好友后才会显示在线状态，否则显示为[离线]。</value>
   </data>
   <data name="ThisGameMayBeInappropriateFor" xml:space="preserve">
     <value>本游戏可能不适合12岁以下的用户，因此需要监护人的指导和监督。</value>
@@ -3219,7 +3219,7 @@
     <value>火属性</value>
   </data>
   <data name="Earth attribute" xml:space="preserve">
-    <value>地球属性</value>
+    <value>大地属性</value>
   </data>
   <data name="Wind attribute" xml:space="preserve">
     <value>风属性</value>
@@ -3276,7 +3276,7 @@
     <value>输入商店名称</value>
   </data>
   <data name="Apply" xml:space="preserve">
-    <value>申请</value>
+    <value>应用</value>
   </data>
   <data name="Open1107" xml:space="preserve">
     <value>打开</value>
@@ -3309,10 +3309,10 @@
     <value>无法退款。</value>
   </data>
   <data name="PersonalStore1117" xml:space="preserve">
-    <value>/个人店铺</value>
+    <value>/Personal store</value>
   </data>
   <data name="/Buy" xml:space="preserve">
-    <value>/买</value>
+    <value>/Buy</value>
   </data>
   <data name="There's no store name or item price." xml:space="preserve">
     <value>没有商店名称或物品价格。</value>
@@ -3366,10 +3366,10 @@
     <value>只能使用金币来完成。</value>
   </data>
   <data name="/View store on" xml:space="preserve">
-    <value>/查看商店</value>
+    <value>/View store on</value>
   </data>
   <data name="/View store off" xml:space="preserve">
-    <value>/查看商店关闭</value>
+    <value>/View store off</value>
   </data>
   <data name="Can view personal store window." xml:space="preserve">
     <value>可以查看个人商店窗口。</value>
@@ -3405,7 +3405,7 @@
     <value>下次再试</value>
   </data>
   <data name="In %s, Currently [%d/%d] entered." xml:space="preserve">
-    <value>在%s 中，当前输入了 [ %d / %d ]。</value>
+    <value>在%ls 中，当前进入了 [ %d / %d ]。</value>
   </data>
   <data name="Right click to enter." xml:space="preserve">
     <value>右键进入。</value>
@@ -3447,7 +3447,7 @@
     <value>没有宠物</value>
   </data>
   <data name="CommandD1170" xml:space="preserve">
-    <value>命令：%d</value>
+    <value>统率：%d</value>
   </data>
   <data name="Only level %d above can do cloak combination." xml:space="preserve">
     <value>只有%d以上的级别才能做斗篷合成。</value>
@@ -3564,7 +3564,7 @@
     <value>长矛技能 ( 魔法值 : %d )</value>
   </data>
   <data name="Drop the item and exit." xml:space="preserve">
-    <value>删除物品并退出。</value>
+    <value>丢弃物品并退出。</value>
   </data>
   <data name="Resurrection" xml:space="preserve">
     <value>复活</value>
@@ -3618,7 +3618,7 @@
     <value>生命已恢复</value>
   </data>
   <data name="%s zen is lacking to recover life." xml:space="preserve">
-    <value>%s 金币缺乏恢复生命的能力。</value>
+    <value>恢复生命值还缺少%ls金币。</value>
   </data>
   <data name="%s zen is required to recover life." xml:space="preserve">
     <value>需要%s 金币来恢复生命。</value>
@@ -3636,7 +3636,7 @@
     <value>攻击</value>
   </data>
   <data name="The account has been teleported general character %d, Magic Gladiator %d" xml:space="preserve">
-    <value>该账号已被传送将军角色%d , 魔剑士%d</value>
+    <value>账号可转移普通角色%d个、魔剑士%d个</value>
   </data>
   <data name="Teleport character" xml:space="preserve">
     <value>传送角色</value>
@@ -3738,7 +3738,7 @@
     <value>收到注册请求</value>
   </data>
   <data name="Received a withdrawal request" xml:space="preserve">
-    <value>收到提款请求</value>
+    <value>收到退出申请</value>
   </data>
   <data name="Approve?" xml:space="preserve">
     <value>批准？</value>
@@ -3765,16 +3765,16 @@
     <value>联盟</value>
   </data>
   <data name="Alliance master" xml:space="preserve">
-    <value>联盟大师</value>
+    <value>联盟盟主</value>
   </data>
   <data name="Oppose" xml:space="preserve">
     <value>反对</value>
   </data>
   <data name="Opposing master" xml:space="preserve">
-    <value>对立的主人</value>
+    <value>敌对盟主</value>
   </data>
   <data name="Opposing alliance master" xml:space="preserve">
-    <value>敌对联盟大师</value>
+    <value>敌对联盟盟主</value>
   </data>
   <data name="Master" xml:space="preserve">
     <value>盟主</value>
@@ -3798,10 +3798,10 @@
     <value>位置</value>
   </data>
   <data name="Dissolve" xml:space="preserve">
-    <value>溶解</value>
+    <value>解散</value>
   </data>
   <data name="Release" xml:space="preserve">
-    <value>发布</value>
+    <value>解除</value>
   </data>
   <data name="Guild member: %d" xml:space="preserve">
     <value>战盟成员：%d</value>
@@ -3819,7 +3819,7 @@
     <value>“%s”作为%s</value>
   </data>
   <data name="Do you want to appoint?" xml:space="preserve">
-    <value>您想预约吗？</value>
+    <value>确定任命吗？</value>
   </data>
   <data name="Guild vault" xml:space="preserve">
     <value>战盟仓库</value>
@@ -3855,7 +3855,7 @@
     <value>不能再被任命</value>
   </data>
   <data name="Wrong appointment" xml:space="preserve">
-    <value>预约错误</value>
+    <value>任命无效</value>
   </data>
   <data name="Failed" xml:space="preserve">
     <value>失败</value>
@@ -3873,7 +3873,7 @@
     <value>战盟创建日期</value>
   </data>
   <data name="Not a master of guild alliance" xml:space="preserve">
-    <value>不是战盟联盟的高手</value>
+    <value>你不是联盟盟主</value>
   </data>
   <data name="Select the vault to be managed" xml:space="preserve">
     <value>选择要管理的仓库</value>
@@ -3933,16 +3933,16 @@
     <value>不适合战盟联盟。</value>
   </data>
   <data name="Alliance1354" xml:space="preserve">
-    <value>/联盟</value>
+    <value>/Alliance</value>
   </data>
   <data name="Do not belong to the guild." xml:space="preserve">
     <value>不属于战盟。</value>
   </data>
   <data name="/Hostilities" xml:space="preserve">
-    <value>/敌对行动</value>
+    <value>/Hostilities</value>
   </data>
   <data name="SuspendHostilities1357" xml:space="preserve">
-    <value>/暂停敌对行动</value>
+    <value>/Suspend hostilities</value>
   </data>
   <data name="Request to %s to join the guild alliance." xml:space="preserve">
     <value>请求%s加入战盟联盟。</value>
@@ -3978,7 +3978,7 @@
     <value>您想取消排名吗？</value>
   </data>
   <data name="Would you like to release?" xml:space="preserve">
-    <value>你想发布吗？</value>
+    <value>确定解除吗？</value>
   </data>
   <data name="To change the guild mark" xml:space="preserve">
     <value>更改战盟标记</value>
@@ -4011,7 +4011,7 @@
     <value>敌对战盟请求未获批准。</value>
   </data>
   <data name="Hostile guild withdrawal request was not approved." xml:space="preserve">
-    <value>敌对战盟提款请求未获批准。</value>
+    <value>退出敌对战盟关系的申请未获批准。</value>
   </data>
   <data name="Guild alliance registration is successful." xml:space="preserve">
     <value>战盟联盟注册成功。</value>
@@ -4095,7 +4095,7 @@
     <value>选择按钮并按</value>
   </data>
   <data name="To shoot." xml:space="preserve">
-    <value>拍摄。</value>
+    <value>发射。</value>
   </data>
   <data name="Create" xml:space="preserve">
     <value>创建</value>
@@ -4125,10 +4125,10 @@
     <value>罗兰城战已宣布。</value>
   </data>
   <data name="You have no ability" xml:space="preserve">
-    <value>你没有能力</value>
+    <value>你没有资格</value>
   </data>
   <data name="To attack the castle." xml:space="preserve">
-    <value>攻击城堡。</value>
+    <value>参与攻城。</value>
   </data>
   <data name="Announcement qualification" xml:space="preserve">
     <value>公告资质</value>
@@ -4146,10 +4146,10 @@
     <value>注册获取的标志。</value>
   </data>
   <data name="Acquired no. of sign: %u" xml:space="preserve">
-    <value>取得编号符号：%u</value>
+    <value>已获得的标识数量：%u</value>
   </data>
   <data name="Registered no. of sign: %u" xml:space="preserve">
-    <value>注册号符号：%u</value>
+    <value>已登记的标识数量：%u</value>
   </data>
   <data name="Register" xml:space="preserve">
     <value>注册</value>
@@ -4461,7 +4461,7 @@
     <value>修复选定的城门</value>
   </data>
   <data name="%d Guardian jewel and %d zen are required." xml:space="preserve">
-    <value>%d 监护人宝石和%d 金币是必需的。</value>
+    <value>需要%d颗守护宝石和%d金币。</value>
   </data>
   <data name="Would you like to repair?" xml:space="preserve">
     <value>您想修理吗？</value>
@@ -4503,7 +4503,7 @@
     <value>各种 NPC 税率%d %%</value>
   </data>
   <data name="Apply1568" xml:space="preserve">
-    <value>申请？</value>
+    <value>应用设置？</value>
   </data>
   <data name="Enter the deposit amount." xml:space="preserve">
     <value>输入存款金额。</value>
@@ -4674,13 +4674,13 @@
     <value>不允许进入</value>
   </data>
   <data name="Insufficient zen for entering" xml:space="preserve">
-    <value>金币不足以输入</value>
+    <value>金币不足以进入</value>
   </data>
   <data name="Approval from the lord of a castle is required" xml:space="preserve">
     <value>需要城堡领主的批准</value>
   </data>
   <data name="for entering" xml:space="preserve">
-    <value>用于输入</value>
+    <value>用于进入</value>
   </data>
   <data name="Please go back" xml:space="preserve">
     <value>请返回</value>
@@ -4752,7 +4752,7 @@
     <value>'你知道我吗？我既受到卢加德的祝福，又受到卢加德的诅咒。如果您有适当的资格，您可能会得到帮助。</value>
   </data>
   <data name="IfYouHavePassedThroughThe" xml:space="preserve">
-    <value>如果你通过了使徒德文的测试，狼人守卫将把你和你的队伍成员送到巴尔加斯的军营。</value>
+    <value>如果你通过了使徒德文的测试，狼人守卫将把你和你的队伍成员送到巴尔盖斯的军营。</value>
   </data>
   <data name="InOrderToReceiveHelpFrom" xml:space="preserve">
     <value>为了得到狼人守卫的帮助；你必须付给他3,000,000金币。</value>
@@ -4761,10 +4761,10 @@
     <value>守门人</value>
   </data>
   <data name="'Hmm, who are you? I'm confused. Are you even approved of Balgass?" xml:space="preserve">
-    <value>‘嗯，你是谁？我很困惑。您是否认可巴尔加斯？</value>
+    <value>‘嗯，你是谁？我很困惑。您是否认可巴尔盖斯？</value>
   </data>
   <data name="LugadrS12ApostlesAreHelping" xml:space="preserve">
-    <value>卢加德尔的12名使徒正在帮忙，他们致盲了通往巴尔加斯安息之地的道路旁的看门人。</value>
+    <value>卢加德尔的12名使徒正在帮忙，他们致盲了通往巴尔盖斯安息之地的道路旁的看门人。</value>
   </data>
   <data name="Condor's feather" xml:space="preserve">
     <value>秃鹰的羽毛</value>
@@ -4788,37 +4788,37 @@
     <value>祭祀</value>
   </data>
   <data name="Return's the enemy's attack power in %d%%" xml:space="preserve">
-    <value>返回敌人的攻击力，单位为%d %%</value>
+    <value>反弹所受伤害的%d%%</value>
   </data>
   <data name="Complete recovery of life in %d%% rate" xml:space="preserve">
-    <value>以%d %%速度完全恢复生命</value>
+    <value>以%d%%概率完全恢复生命值</value>
   </data>
   <data name="Complete recover of Mana in %d%% rate" xml:space="preserve">
-    <value>以%d %%速率完全恢复魔法值</value>
+    <value>以%d%%概率完全恢复魔法值</value>
   </data>
   <data name="YouMustBeLocatedCloselyTogether" xml:space="preserve">
-    <value>你们必须靠得很近才能立即进入巴尔加斯的军营。</value>
+    <value>你们必须靠得很近才能立即进入巴尔盖斯的军营。</value>
   </data>
   <data name="ApostleDevinSThirdMissionRequest" xml:space="preserve">
     <value>使徒德文的第三个任务请求可以进入安息之地。</value>
   </data>
   <data name="Balgass' Barrack" xml:space="preserve">
-    <value>巴尔加斯的兵营</value>
+    <value>巴尔盖斯的兵营</value>
   </data>
   <data name="Balgass' Resting Place" xml:space="preserve">
-    <value>巴尔加斯的安息之地</value>
+    <value>巴尔盖斯的安息之地</value>
   </data>
   <data name="Fenrir's Horn, Scroll of Blood, Condor's Feather" xml:space="preserve">
-    <value>芬里尔的角、血的卷纸、神鹰的羽毛</value>
+    <value>芬里尔的角、血色入场券、神鹰的羽毛</value>
   </data>
   <data name="Regular chat" xml:space="preserve">
-    <value>定期聊天</value>
+    <value>普通聊天</value>
   </data>
   <data name="Party chat" xml:space="preserve">
     <value>队伍聊天</value>
   </data>
   <data name="Guilt chat" xml:space="preserve">
-    <value>内疚聊天</value>
+    <value>战盟聊天</value>
   </data>
   <data name="Whisper block: On/Off" xml:space="preserve">
     <value>开启/关闭私聊屏蔽</value>
@@ -4827,7 +4827,7 @@
     <value>系统消息弹出</value>
   </data>
   <data name="Chat window background On/Off (F5)" xml:space="preserve">
-    <value>聊天窗口背景 /Off ( F5 )</value>
+    <value>聊天窗口背景开关（F5）</value>
   </data>
   <data name="Summoner" xml:space="preserve">
     <value>召唤术师</value>
@@ -4926,10 +4926,10 @@
     <value>它起源于穆伦圣人拉克斯米隆，意思是“被爱的人”。</value>
   </data>
   <data name="ItWasOriginatedFromTheGreatest" xml:space="preserve">
-    <value>起源于最伟大的魔剑士只园，他支持无仁，但后来只园背叛了无仁。</value>
+    <value>它源于最伟大的魔剑士吉昂。吉昂原本支持穆伦，后来却背叛了他。</value>
   </data>
   <data name="RuneIsOneOfTheHeroes" xml:space="preserve">
-    <value>符文是封印了Secrarium的英雄之一，她是精灵的领袖，也是诺里亚的女王。</value>
+    <value>露恩是封印塞克拉里姆的英雄之一，也是精灵族的领袖，曾担任仙踪林女王。</value>
   </data>
   <data name="SirenIsBeingCalledAsA" xml:space="preserve">
     <value>海妖被称为“引导星”，它是唯一一颗不改变其位置并成为方向索引的恒星。</value>
@@ -4947,10 +4947,10 @@
     <value>它起源于乌瑟拉，迦楼罗氏族的法王。乌塞拉帮助鲁内迪尔让基利安继承了王位。</value>
   </data>
   <data name="ItWasOriginatedFromTarkanThe" xml:space="preserve">
-    <value>它起源于死亡沙漠塔坎。 Tar在古语中的意思是“沙漠沙子”。</value>
+    <value>它起源于死亡沙漠死亡沙漠。 Tar在古语中的意思是“沙漠沙子”。</value>
   </data>
   <data name="AtlansIsAnUnderwaterCityCreated" xml:space="preserve">
-    <value>亚特兰斯是坎图尔人建造的水下城市，它拥有比故乡坎图尔更辉煌的文明。</value>
+    <value>亚特兰蒂斯是坎图尔人建造的水下城市，它拥有比故乡坎图尔更辉煌的文明。</value>
   </data>
   <data name="ItSAnAcronymOfAncient" xml:space="preserve">
     <value>“这是古语言‘Taruta De Rasa’的缩写，意思是‘天空下最聪明的人’，用来称呼最伟大的巫师阿里卡拉。</value>
@@ -4962,7 +4962,7 @@
     <value>它起源于最伟大的巫师Eturamu，他为了保护封印石而献出了自己的生命。</value>
   </data>
   <data name="KaraIsTheFirstQueenOf" xml:space="preserve">
-    <value>卡拉是诺里亚的第一位女王，诺里亚在古代语言中的意思是“最伟大的精灵”。</value>
+    <value>卡拉是仙踪林的第一位女王，她的名字在古语中意为“最伟大的精灵”。</value>
   </data>
   <data name="StarOfDestinyThisStarShares" xml:space="preserve">
     <value>‘命运之星’。这颗星辰与奇迹大陆有缘，警醒着奇迹大陆的邪灵。</value>
@@ -4971,7 +4971,7 @@
     <value>来自奇迹大陆的古代文明。这个文明的存在与否一直是历史学家们争论的焦点。</value>
   </data>
   <data name="EnormousMagicStoneAtTheCenter" xml:space="preserve">
-    <value>地下城坎图​​尔中心的巨大魔法石。坎图尔人称这种神奇的石头为玛雅。</value>
+    <value>坎特鲁地下都市的中央有一块巨大的魔法石。坎特鲁人称它为玛雅。</value>
   </data>
   <data name="This is a test server." xml:space="preserve">
     <value>这是一个测试服务器。</value>
@@ -5115,7 +5115,7 @@
     <value>效果：%d %%恢复增量</value>
   </data>
   <data name="Effects increment of 2%% each strengthener level" xml:space="preserve">
-    <value>每个强化剂等级效果增量2 %%</value>
+    <value>每级强化使效果提高2%%</value>
   </data>
   <data name="effect increase by reinforcement process" xml:space="preserve">
     <value>通过强化过程增加效果</value>
@@ -5142,7 +5142,7 @@
     <value>选择要组合的宝石</value>
   </data>
   <data name="and press the button for no. of jewels" xml:space="preserve">
-    <value>，然后按编号按钮。宝石的</value>
+    <value>然后点击所需宝石数量的按钮</value>
   </data>
   <data name="Jewel of Bless" xml:space="preserve">
     <value>祝福宝石</value>
@@ -5166,10 +5166,10 @@
     <value>对应的物品不合适。</value>
   </data>
   <data name="Are you sure to disband %s %d?" xml:space="preserve">
-    <value>你确定要解散%s %d吗？</value>
+    <value>确定拆分%ls%d吗？</value>
   </data>
   <data name="Dissolving cost: %d zen" xml:space="preserve">
-    <value>溶解成本：%d 金币</value>
+    <value>拆分费用：%d金币</value>
   </data>
   <data name="Inventory space is insufficient." xml:space="preserve">
     <value>背包空间不足。</value>
@@ -5184,7 +5184,7 @@
     <value>无法拆卸。</value>
   </data>
   <data name="Current no. of possible dismantling: %d" xml:space="preserve">
-    <value>当前编号可能拆除的数量：%d</value>
+    <value>当前可拆分数量：%d</value>
   </data>
   <data name="After selecting press the 'Dismantle' button." xml:space="preserve">
     <value>选择后按“拆除”按钮。</value>
@@ -5262,10 +5262,10 @@
     <value>精灵乐园</value>
   </data>
   <data name="Swamp of Peace" xml:space="preserve">
-    <value>和平沼泽</value>
+    <value>安宁池</value>
   </data>
   <data name="La Cleon" xml:space="preserve">
-    <value>拉克里昂</value>
+    <value>冰霜之城</value>
   </data>
   <data name="Hatchery" xml:space="preserve">
     <value>孵化场</value>
@@ -5277,7 +5277,7 @@
     <value>吸收最终伤害%d %%</value>
   </data>
   <data name="Requires class change to be worn." xml:space="preserve">
-    <value>需要更换职业才能佩戴。</value>
+    <value>需要转职后才能装备。</value>
   </data>
   <data name="+Destroy" xml:space="preserve">
     <value>+摧毁</value>
@@ -5337,16 +5337,16 @@
     <value>测试服务器供企业内部使用。</value>
   </data>
   <data name="The applied equipments cannot be reset." xml:space="preserve">
-    <value>申请的设备无法重置。</value>
+    <value>已生效的装备属性无法重置。</value>
   </data>
   <data name="Stat re-initialization" xml:space="preserve">
-    <value>统计数据重新初始化</value>
+    <value>属性点重置</value>
   </data>
   <data name="Re-Initialization Helper" xml:space="preserve">
-    <value>重新初始化助手</value>
+    <value>属性重置助手</value>
   </data>
   <data name="Click on the button to reinitialize all stat points." xml:space="preserve">
-    <value>单击按钮重新初始化所有统计点。</value>
+    <value>点击按钮重置全部属性点。</value>
   </data>
   <data name="Exchange has been made." xml:space="preserve">
     <value>已进行交换。</value>
@@ -5367,13 +5367,13 @@
     <value>X %d 硬币</value>
   </data>
   <data name="Exchange 10 Coins" xml:space="preserve">
-    <value>兑换10个金币</value>
+    <value>兑换10枚幸运币</value>
   </data>
   <data name="Exchange 20 Coins" xml:space="preserve">
-    <value>兑换20枚金币</value>
+    <value>兑换20枚幸运币</value>
   </data>
   <data name="Exchange 30 Coins" xml:space="preserve">
-    <value>兑换30枚金币</value>
+    <value>兑换30枚幸运币</value>
   </data>
   <data name="There are not enough items for the exchange." xml:space="preserve">
     <value>没有足够的物品用于交换。</value>
@@ -5388,7 +5388,7 @@
     <value>减少</value>
   </data>
   <data name="This stat cannot be %s anymore." xml:space="preserve">
-    <value>该统计数据不能再是%s 了。</value>
+    <value>此属性无法继续%ls。</value>
   </data>
   <data name="Only Darklord can use it." xml:space="preserve">
     <value>只有黑暗领主才能使用它。</value>
@@ -5409,7 +5409,7 @@
     <value>不可能，因为可用的水果点数已达到最大。</value>
   </data>
   <data name="Cannot be decreased under the default stat value." xml:space="preserve">
-    <value>在默认统计值下无法减少。</value>
+    <value>属性不能降低至初始值以下。</value>
   </data>
   <data name="This item cannot be dropped." xml:space="preserve">
     <value>这个物品不能被删除。</value>
@@ -5484,7 +5484,7 @@
     <value>巴尔盖斯</value>
   </data>
   <data name="Are you willing to be a guardian" xml:space="preserve">
-    <value>你愿意当监护人吗</value>
+    <value>你愿意成为守护者吗</value>
   </data>
   <data name="to protect the wolf?" xml:space="preserve">
     <value>保护狼？</value>
@@ -5496,10 +5496,10 @@
     <value>你已被注册成为保护狼的守护者。</value>
   </data>
   <data name="Your role as a guardian will be cancelled when you warp." xml:space="preserve">
-    <value>当你扭曲时，你作为监护人的角色将被取消。</value>
+    <value>传送后将失去守护者资格。</value>
   </data>
   <data name="You have been disqualified to be a guardian." xml:space="preserve">
-    <value>您已被取消监护人资格。</value>
+    <value>你已失去守护者资格。</value>
   </data>
   <data name="Contract can't be made when you are on a mount." xml:space="preserve">
     <value>当你在坐骑上时无法签订合同。</value>
@@ -5517,25 +5517,25 @@
     <value>签订契约时，你必须保护精灵！</value>
   </data>
   <data name="&lt; Mission Point : 2. Defeat Balgass &gt;" xml:space="preserve">
-    <value>&lt;任务点：2.击败巴尔加斯&gt;</value>
+    <value>&lt;任务点：2.击败巴尔盖斯&gt;</value>
   </data>
   <data name="Fortress of Crywolf will not be safe unless Balgass is defeated!" xml:space="preserve">
-    <value>除非击败巴尔加斯，否则冷狼要塞将不安全！</value>
+    <value>除非击败巴尔盖斯，否则狼魂要塞将不安全！</value>
   </data>
   <data name="Balgass can only show up for 5 minutes around the Fortress of Crywolf!" xml:space="preserve">
-    <value>巴尔加斯在冷狼要塞周围只能出现5分钟！</value>
+    <value>巴尔盖斯在狼魂要塞周围只能出现5分钟！</value>
   </data>
   <data name="Defeat Balgass within the given time!" xml:space="preserve">
-    <value>在规定时间内击败巴尔加斯！</value>
+    <value>在规定时间内击败巴尔盖斯！</value>
   </data>
   <data name="&lt;Success reparation &gt;" xml:space="preserve">
-    <value>&lt;成功修复&gt;</value>
+    <value>&lt;胜利奖励&gt;</value>
   </data>
   <data name="10%% monster strength decrease (maintain during the event)" xml:space="preserve">
     <value>10 %%怪物强度减少（活动期间维持）</value>
   </data>
   <data name="5%% decrease in castle and arena invitation combine rate" xml:space="preserve">
-    <value>5 %%城堡和竞技场邀请组合率减少</value>
+    <value>城堡及广场入场券合成成功率提高5%%</value>
   </data>
   <data name="Above reparation is valid till the next Crywolf battle." xml:space="preserve">
     <value>以上赔偿有效期至下次狼魂要塞战斗为止。</value>
@@ -5553,7 +5553,7 @@
     <value>职业</value>
   </data>
   <data name="Feel the unusual forces around the Fortress of Crywolf." xml:space="preserve">
-    <value>感受冷狼要塞周围不寻常的力量。</value>
+    <value>感受狼魂要塞周围不寻常的力量。</value>
   </data>
   <data name="ThePowerOfTheWolfStatue" xml:space="preserve">
     <value>狼雕像的力量正在减弱。感觉邪气越来越强。</value>
@@ -5580,7 +5580,7 @@
     <value>5 %%城堡和竞技场邀请组合率增加。</value>
   </data>
   <data name="Contract is ongoing therefore dual compact is not possible." xml:space="preserve">
-    <value>合同正在进行中，因此双重紧凑是不可能的。</value>
+    <value>契约进行中，无法同时缔结其他契约。</value>
   </data>
   <data name="Further contract can't be done since the altar has been destroyed." xml:space="preserve">
     <value>由于祭坛已被摧毁，进一步的合同无法完成。</value>
@@ -5592,10 +5592,10 @@
     <value>只有350级以上才可以签订契约。</value>
   </data>
   <data name="Contract can be made for %d times." xml:space="preserve">
-    <value>合同可签订%d 次。</value>
+    <value>可以缔结%d次契约。</value>
   </data>
   <data name="Would you like to proceed with the contract?" xml:space="preserve">
-    <value>您想继续履行合同吗？</value>
+    <value>确定缔结契约吗？</value>
   </data>
   <data name="Please try again in a while." xml:space="preserve">
     <value>请稍后重试。</value>
@@ -5658,7 +5658,7 @@
     <value>仅在城堡围攻中</value>
   </data>
   <data name="Can be used during Castle Siege with required Kill Count" xml:space="preserve">
-    <value>可以在罗兰城战期间使用，且需要杀死计数</value>
+    <value>仅可在攻城战中使用，且须达到要求的击杀数</value>
   </data>
   <data name="Can be used from the mount item" xml:space="preserve">
     <value>可以从坐骑物品使用</value>
@@ -5739,7 +5739,7 @@
     <value>%s 成功%s : %d %%</value>
   </data>
   <data name="Jewel stone" xml:space="preserve">
-    <value>宝石石头</value>
+    <value>再生原石</value>
   </data>
   <data name="Weapons or shields" xml:space="preserve">
     <value>武器或盾牌</value>
@@ -5754,7 +5754,7 @@
     <value>只有再生宝石可以被精炼。</value>
   </data>
   <data name="For pendants, rings and mount items" xml:space="preserve">
-    <value>适用于吊坠、戒指和底座物品</value>
+    <value>适用于项链、戒指和坐骑</value>
   </data>
   <data name="Lacks %d zen" xml:space="preserve">
     <value>缺少%d 金币</value>
@@ -5847,10 +5847,10 @@
     <value>通往精炼塔的道路将在%d 小时内关闭。</value>
   </data>
   <data name="Battle with Maya is ongoing." xml:space="preserve">
-    <value>与玛雅人的战斗正在进行中。</value>
+    <value>与玛雅的战斗正在进行中。</value>
   </data>
   <data name="DPlayersAreTryingToOpen" xml:space="preserve">
-    <value>%d 玩家正在尝试打开通往精炼塔的道路。你无法进​​入炼油塔，自动防御系统已启动。</value>
+    <value>%d名玩家正在打通通往提炼之塔的道路。自动防御系统已经启动，暂时无法进入。</value>
   </data>
   <data name="Currently %d players are in battle with Maya's lefe hand." xml:space="preserve">
     <value>目前%d 玩家正在与玛雅的左手战斗。</value>
@@ -5871,10 +5871,10 @@
     <value>梦魇之力已经入侵了塔楼。塔楼不稳定，因此塔楼入口将被限制%d 分钟。</value>
   </data>
   <data name="DefeatTheNightmareThatControllingThe" xml:space="preserve">
-    <value>击败控制玛雅人进入精炼塔的梦魇。</value>
+    <value>击败控制玛雅的梦魇，才能进入提炼之塔。</value>
   </data>
   <data name="EntranceIsRestrictedToEnsureThe" xml:space="preserve">
-    <value>为了确保玛雅人的安全，限制进入。 “悬石”是必需的。</value>
+    <value>为确保玛雅的安全，入口受到限制。进入需要佩戴“月光宝石项链”。</value>
   </data>
   <data name="You will be able to approach Maya shortly." xml:space="preserve">
     <value>您很快就能接触玛雅。</value>
@@ -5916,16 +5916,16 @@
     <value>你无法传送到精炼塔。</value>
   </data>
   <data name="You can't warp wearing the Ring of Transformation." xml:space="preserve">
-    <value>佩戴变身戒指后你无法进行扭曲。</value>
+    <value>佩戴变身戒指后你无法进行传送。</value>
   </data>
   <data name="YouCanOnlyWarpRidingA" xml:space="preserve">
-    <value>你只能骑乘彩云兽、黑王马、炎狼兽或穿着翅膀、斗篷进行扭曲。</value>
+    <value>你只能骑乘彩云兽、黑王马、炎狼兽或穿着翅膀、斗篷进行传送。</value>
   </data>
   <data name="Kanturu" xml:space="preserve">
-    <value>坎图鲁</value>
+    <value>坎特鲁</value>
   </data>
   <data name="Kanturu3" xml:space="preserve">
-    <value>坎图鲁遗迹</value>
+    <value>坎特鲁遗迹</value>
   </data>
   <data name="Refinery Tower" xml:space="preserve">
     <value>炼油塔</value>
@@ -5988,10 +5988,10 @@
     <value>使用精炼后的再生宝石的力量可以将新的力量授予物品。</value>
   </data>
   <data name="CodeNameSTX813ElpisI" xml:space="preserve">
-    <value>代号 ST-X813艾尔菲丝。我是来自坎图尔实验室的生物。您想知道什么？</value>
+    <value>我是代号ST-X813的艾尔菲丝，诞生于坎特鲁实验室。你想了解什么？</value>
   </data>
   <data name="About refinery" xml:space="preserve">
-    <value>关于炼油厂</value>
+    <value>关于提炼</value>
   </data>
   <data name="Jewel of Harmony" xml:space="preserve">
     <value>再生宝石</value>
@@ -6006,7 +6006,7 @@
     <value>随报告一起发送屏幕截图。</value>
   </data>
   <data name="Elpis" xml:space="preserve">
-    <value>埃尔皮斯</value>
+    <value>艾尔菲丝</value>
   </data>
   <data name="Reinforced item can't be sold." xml:space="preserve">
     <value>强化物品无法出售。</value>
@@ -6045,10 +6045,10 @@
     <value>！！警告！！</value>
   </data>
   <data name="RefineryHasStartedRefineryIsA" xml:space="preserve">
-    <value>炼油厂已启动。精炼是将物品转变为精炼石进行强化的过程的一部分。精炼后的物品将会消失，请务必检查物品。</value>
+    <value>提炼已开始。提炼可将物品转化为用于强化的提炼石。原物品将会消失，请先确认放入的物品。</value>
   </data>
   <data name="This item is not allowed to use the private store." xml:space="preserve">
-    <value>该物品不允许使用私人存储。</value>
+    <value>此物品不能在个人商店出售。</value>
   </data>
   <data name="You haven't paid the subscription." xml:space="preserve">
     <value>您尚未支付订阅费用。</value>
@@ -6078,7 +6078,7 @@
     <value>你想知道什么？</value>
   </data>
   <data name="Before my parents died, they taught me how to make the portion." xml:space="preserve">
-    <value>在我父母去世之前，他们教我如何制作这部分。</value>
+    <value>父母去世前，曾教过我如何制作药水。</value>
   </data>
   <data name="Queen Ariel will bless you." xml:space="preserve">
     <value>爱丽儿女王会祝福你。</value>
@@ -6150,7 +6150,7 @@
     <value>您可以通过单击物品将其保存到愿望清单。已保存的物品可以通过再次单击来删除。</value>
   </data>
   <data name="Move to Top up page." xml:space="preserve">
-    <value>移至首页。</value>
+    <value>前往充值页面。</value>
   </data>
   <data name="MU Item Shop(X)" xml:space="preserve">
     <value>奇迹物品商店(X)</value>
@@ -6186,7 +6186,7 @@
     <value>从购物车中删除？</value>
   </data>
   <data name="Website connection only available in windows mode." xml:space="preserve">
-    <value>网站连接仅在 Windows 模式下可用。</value>
+    <value>仅在窗口模式下可以打开网页。</value>
   </data>
   <data name="W Coin" xml:space="preserve">
     <value>商城积分</value>
@@ -6270,7 +6270,7 @@
     <value>网吧积分商店只能购买物品。</value>
   </data>
   <data name="Seals applicable immediately after the purchase." xml:space="preserve">
-    <value>购买后立即使用密封件。</value>
+    <value>购买后印记立即生效。</value>
   </data>
   <data name="Items cannot be sold here." xml:space="preserve">
     <value>物品不能在这里出售。</value>
@@ -6288,13 +6288,13 @@
     <value>检查购买条件。</value>
   </data>
   <data name="Assembly prediction: %s" xml:space="preserve">
-    <value>装配预测：%s</value>
+    <value>合成预览：%ls</value>
   </data>
   <data name="380 Level item" xml:space="preserve">
     <value>380级物品</value>
   </data>
   <data name="Equipment item" xml:space="preserve">
-    <value>设备物品</value>
+    <value>装备物品</value>
   </data>
   <data name="Weapon item" xml:space="preserve">
     <value>武器物品</value>
@@ -6318,13 +6318,13 @@
     <value>最大</value>
   </data>
   <data name="Rate increase" xml:space="preserve">
-    <value>利率增加</value>
+    <value>成功率提升</value>
   </data>
   <data name="Quantity" xml:space="preserve">
     <value>数量</value>
   </data>
   <data name="Please upload the assembly items." xml:space="preserve">
-    <value>请上传程序集物品。</value>
+    <value>请放入合成材料。</value>
   </data>
   <data name="from above the level %d, %s enabled and on." xml:space="preserve">
     <value>从%d 级别以上，启用%s 并打开。</value>
@@ -6333,13 +6333,13 @@
     <value>二代翅膀</value>
   </data>
   <data name="Do you wish to go to the Illusion Temple?" xml:space="preserve">
-    <value>你想去幻殿吗？</value>
+    <value>你想去幻影寺院吗？</value>
   </data>
   <data name="WeHaveEnteredTheHeartOf" xml:space="preserve">
-    <value>我们已经进入了幻殿的中心。这座寺庙神圣的物品是我们的最终目标。将尽可能多的神圣物品移至我们的仓库。勇敢的人一定会得到补偿</value>
+    <value>我们已经进入了幻影寺院的中心。这座寺庙神圣的物品是我们的最终目标。将尽可能多的神圣物品移至我们的仓库。勇敢的人一定会得到补偿</value>
   </data>
   <data name="The allies are advancing on. We are not far from the victory! Charge on!" xml:space="preserve">
-    <value>盟友正在前进。我们离胜利不远了！充电吧！</value>
+    <value>盟军正在推进，胜利就在前方！冲锋！</value>
   </data>
   <data name="AlthoughWeHaveLostThisBattle" xml:space="preserve">
     <value>虽然这场战斗我们输了，但我们会继续前进，直到盟友获胜！</value>
@@ -6354,7 +6354,7 @@
     <value>你不能失去圣殿。让我们为保卫这座圣殿的战斗做好准备吧。</value>
   </data>
   <data name="You need the Scroll of Blood to enter the %s zone." xml:space="preserve">
-    <value>您需要血的卷纸才能进入%s 区域。</value>
+    <value>进入%ls区域需要血色入场券。</value>
   </data>
   <data name="You must be of the minimum level 220 to enter the zone." xml:space="preserve">
     <value>您的最低等级必须达到220级才能进入该区域。</value>
@@ -6366,10 +6366,10 @@
     <value>您无法进入成员数量超过限制的区域。</value>
   </data>
   <data name="Illusion Temple" xml:space="preserve">
-    <value>幻殿</value>
+    <value>幻影寺院</value>
   </data>
   <data name="The %d Illusion Temple" xml:space="preserve">
-    <value>%d 幻象神殿</value>
+    <value>%d 幻影寺院</value>
   </data>
   <data name="Level %d-%d" xml:space="preserve">
     <value>级别%d - %d</value>
@@ -6387,7 +6387,7 @@
     <value>最大成员数：%d</value>
   </data>
   <data name="Scroll of Blood +%d" xml:space="preserve">
-    <value>血的卷纸 + %d</value>
+    <value>血色入场券+%d</value>
   </data>
   <data name="Achieved Kill Point" xml:space="preserve">
     <value>达到击杀点</value>
@@ -6429,7 +6429,7 @@
     <value>成功神圣物品存储：获得%d积分</value>
   </data>
   <data name="%s has achieved the sacred item." xml:space="preserve">
-    <value>%s 已经实现了神圣的物品。</value>
+    <value>%ls取得了圣物。</value>
   </data>
   <data name="Kill Point %d achieved." xml:space="preserve">
     <value>杀死点%d 已实现。</value>
@@ -6441,13 +6441,13 @@
     <value>战斗结束。</value>
   </data>
   <data name="Talk with the chief commander of alliance and you'll be compensated." xml:space="preserve">
-    <value>与联盟总司令交谈，你将获得补偿。</value>
+    <value>与联盟总指挥交谈，领取奖励。</value>
   </data>
   <data name="TalkWithTheChiefCommanderOf" xml:space="preserve">
-    <value>与幻术总指挥对话，你将获得补偿。</value>
+    <value>与幻术总指挥交谈，领取奖励。</value>
   </data>
   <data name="Scroll of Blood" xml:space="preserve">
-    <value>血的卷纸</value>
+    <value>血色入场券</value>
   </data>
   <data name="&lt;STEP 1: Battle Begins&gt;" xml:space="preserve">
     <value>&lt;第一步：战斗开始&gt;</value>
@@ -6456,7 +6456,7 @@
     <value>石像从两个位置之一随机出现。</value>
   </data>
   <data name="The sacred item may be achieved by clicking on the stone statue." xml:space="preserve">
-    <value>神圣的物品可以通过点击石像来实现。</value>
+    <value>点击石像即可取得圣物。</value>
   </data>
   <data name="BeCautiousOfTheFactThat" xml:space="preserve">
     <value>请注意，携带神圣的物品时移动速度会减慢。</value>
@@ -6504,7 +6504,7 @@
     <value>您当前正在存储神圣的物品。</value>
   </data>
   <data name="This is the origin of strength that protects the Illusion Temple." xml:space="preserve">
-    <value>这就是守护幻殿的力量本源。</value>
+    <value>这就是守护幻影寺院的力量本源。</value>
   </data>
   <data name="&lt;AM&gt; &lt;PM&gt;" xml:space="preserve">
     <value>&lt;上午&gt; &lt;下午&gt;</value>
@@ -6609,7 +6609,7 @@
     <value>7大师大师7大师大师</value>
   </data>
   <data name=" &lt;&lt; Blood Castle &gt;&gt; &lt;&lt; Illusion Temple &gt;&gt;" xml:space="preserve">
-    <value>&lt;&lt; 血色城堡 &gt;&gt; &lt;&lt; 幻象神殿 &gt;&gt;</value>
+    <value>&lt;&lt; 血色城堡 &gt;&gt; &lt;&lt; 幻影寺院 &gt;&gt;</value>
   </data>
   <data name=" 1 15-80 10-60 1 220-270" xml:space="preserve">
     <value>1 15-80 10-60 1 220-270</value>
@@ -6636,7 +6636,7 @@
     <value>8大师大师</value>
   </data>
   <data name="Resets the status." xml:space="preserve">
-    <value>重置状态。</value>
+    <value>重置属性点。</value>
   </data>
   <data name="Reset point: %d" xml:space="preserve">
     <value>重置点：%d</value>
@@ -6645,13 +6645,13 @@
     <value>减少点：%d</value>
   </data>
   <data name="There isn't enough status to reset." xml:space="preserve">
-    <value>没有足够的状态来重置。</value>
+    <value>可重置的属性点不足。</value>
   </data>
   <data name="There isn't a usable controllability status." xml:space="preserve">
-    <value>没有可用的可控性状态。</value>
+    <value>没有可重置的统率属性点。</value>
   </data>
   <data name="%s Status has been reset at %d." xml:space="preserve">
-    <value>%s 状态已在%d 重置。</value>
+    <value>%ls属性已重置%d点。</value>
   </data>
   <data name="This is more than the value of your resettable points." xml:space="preserve">
     <value>这超过了你的可重置点的值。</value>
@@ -6687,7 +6687,7 @@
     <value>您没有正确数量的樱花树枝。</value>
   </data>
   <data name="Only the same type of Cherry Blossoms branches can be uploaded." xml:space="preserve">
-    <value>只能上传相同类型的樱花树枝。</value>
+    <value>只能放入相同种类的樱花树枝。</value>
   </data>
   <data name="Exchange the Cherry Blossoms branches." xml:space="preserve">
     <value>交换樱花树枝。</value>
@@ -6732,7 +6732,7 @@
     <value>欢迎来到圣诞老人村。请前来领取您的礼物。</value>
   </data>
   <data name="Would you like to return to Devias?" xml:space="preserve">
-    <value>你想回到德维亚斯吗？</value>
+    <value>你想回到冰风谷吗？</value>
   </data>
   <data name="You can click only once." xml:space="preserve">
     <value>您只能单击一次。</value>
@@ -6798,13 +6798,13 @@
     <value>只有15级或以上的角色可以进入圣诞老人村。</value>
   </data>
   <data name="CharacterNamesMustStartWithA" xml:space="preserve">
-    <value>角色名称必须以大写字母开头。最大长度为10角色。</value>
+    <value>角色名须以大写字母开头，最多10个字符。</value>
   </data>
   <data name="/Party battle request" xml:space="preserve">
-    <value>/组队战斗请求</value>
+    <value>/Party battle request</value>
   </data>
   <data name="/Party battle cancellation" xml:space="preserve">
-    <value>/队伍战斗取消</value>
+    <value>/Party battle cancellation</value>
   </data>
   <data name="%s has accepted your request for party battle." xml:space="preserve">
     <value>%s 已接受您的队伍战斗请求。</value>
@@ -6828,7 +6828,7 @@
     <value>独特</value>
   </data>
   <data name="Socket" xml:space="preserve">
-    <value>插座</value>
+    <value>镶嵌孔</value>
   </data>
   <data name="Socket option" xml:space="preserve">
     <value>镶嵌属性</value>
@@ -6840,13 +6840,13 @@
     <value>元素：%s</value>
   </data>
   <data name="Socket %d: %s" xml:space="preserve">
-    <value>套接字%d : %s</value>
+    <value>镶嵌孔%d：%ls</value>
   </data>
   <data name="Bonus socket option" xml:space="preserve">
-    <value>奖励插座选项</value>
+    <value>额外镶嵌属性</value>
   </data>
   <data name="Socket package option" xml:space="preserve">
-    <value>套接字封装选项</value>
+    <value>镶嵌组合属性</value>
   </data>
   <data name="Extraction" xml:space="preserve">
     <value>提取</value>
@@ -6855,7 +6855,7 @@
     <value>组装</value>
   </data>
   <data name="Application" xml:space="preserve">
-    <value>申请</value>
+    <value>镶嵌</value>
   </data>
   <data name="Destruction" xml:space="preserve">
     <value>毁灭</value>
@@ -6891,19 +6891,19 @@
     <value>或相应地破坏种子球。</value>
   </data>
   <data name="Select applicable socket" xml:space="preserve">
-    <value>选择适用的插座</value>
+    <value>选择要镶嵌的孔位</value>
   </data>
   <data name="Select destructible socket" xml:space="preserve">
-    <value>选择可破坏的套接字</value>
+    <value>选择要移除的镶嵌属性</value>
   </data>
   <data name="You must select the socket." xml:space="preserve">
-    <value>您必须选择套接字。</value>
+    <value>请选择镶嵌孔。</value>
   </data>
   <data name="It's already applied on the character." xml:space="preserve">
     <value>它已经应用于角色。</value>
   </data>
   <data name="You must select the destructible socket." xml:space="preserve">
-    <value>您必须选择可破坏的套接字。</value>
+    <value>请选择要移除属性的孔位。</value>
   </data>
   <data name="There are no destructible seed spheres." xml:space="preserve">
     <value>没有可破坏的种子球。</value>
@@ -6984,7 +6984,7 @@
     <value>不可用</value>
   </data>
   <data name="Too many people in the colossum." xml:space="preserve">
-    <value>巨像里的人太多了。</value>
+    <value>竞技场人数已满。</value>
   </data>
   <data name="Only increases Master level exp." xml:space="preserve">
     <value>只增加大师等级经验。</value>
@@ -7074,7 +7074,7 @@
     <value>你无法进入帝国守护者要塞。</value>
   </data>
   <data name="Will you show me the order?" xml:space="preserve">
-    <value>你能给我看看订单吗？</value>
+    <value>能让我看看盖昂指令吗？</value>
   </data>
   <data name="EntryTime2798" xml:space="preserve">
     <value>入场时间：</value>
@@ -7119,7 +7119,7 @@
     <value>你放弃了任务。</value>
   </data>
   <data name="Open Character Stats (C) Window" xml:space="preserve">
-    <value>打开角色统计 (C) 窗口</value>
+    <value>打开角色属性窗口（C）</value>
   </data>
   <data name="Open Inventory (I/V) Window" xml:space="preserve">
     <value>打开背包 (I /V ) 窗口</value>
@@ -7167,7 +7167,7 @@
     <value>任务物品失踪</value>
   </data>
   <data name="Zone Cleared" xml:space="preserve">
-    <value>区域已清除</value>
+    <value>区域通关</value>
   </data>
   <data name="Capacity Exceeded" xml:space="preserve">
     <value>超出容量</value>
@@ -7227,16 +7227,16 @@
     <value>由于游戏时间过长，您受到了2级疲劳处罚。经验增益已降低至50%。物品掉落率已降至0%。</value>
   </data>
   <data name="The Minimum Vitality potion has negated the Fatigue Level penalty." xml:space="preserve">
-    <value>最低活力药水已经抵消了疲劳等级惩罚。</value>
+    <value>最低体力药水已经抵消了疲劳等级惩罚。</value>
   </data>
   <data name="The Low Vitality potion has negated the Fatigue Level penalty." xml:space="preserve">
-    <value>低活力药水取消了疲劳度惩罚。</value>
+    <value>低体力药水取消了疲劳度惩罚。</value>
   </data>
   <data name="The Medium Vitality potion has negated the Fatigue Level penalty." xml:space="preserve">
-    <value>中等活力药水取消了疲劳等级惩罚。</value>
+    <value>中等体力药水取消了疲劳等级惩罚。</value>
   </data>
   <data name="The High Vitality potion has negated the Fatigue Level penalty." xml:space="preserve">
-    <value>高活力药水取消了疲劳等级惩罚。</value>
+    <value>高体力药水取消了疲劳等级惩罚。</value>
   </data>
   <data name="Golden Box" xml:space="preserve">
     <value>金盒子</value>
@@ -7335,7 +7335,7 @@
     <value>&lt;给收件人的消息&gt;</value>
   </data>
   <data name="Gifted items cannot be returned. Deliver the gift(s)?" xml:space="preserve">
-    <value>天赋物品无法退回。送礼物吗？</value>
+    <value>赠送的物品无法退回，确定赠送吗？</value>
   </data>
   <data name="%d sent you a gift." xml:space="preserve">
     <value>%d 给你送了一份礼物。</value>
@@ -7410,7 +7410,7 @@
     <value>找不到物品。</value>
   </data>
   <data name="Item Name" xml:space="preserve">
-    <value>物品姓名</value>
+    <value>物品名称</value>
   </data>
   <data name="Duration" xml:space="preserve">
     <value>持续时间</value>
@@ -7479,10 +7479,10 @@
     <value>物品，可让您在使用存储后60天内享受奇迹10小时。 \n 只能从奇迹网站使用。</value>
   </data>
   <data name="ResetsTheEntireMasterSkillTree" xml:space="preserve">
-    <value>重置整个主技能树一次。 \n 只能从奇迹网站使用。</value>
+    <value>可重置整个大师技能树一次。\n仅可通过奇迹官网使用。</value>
   </data>
   <data name="LetsYouAdjustTheCharacterS" xml:space="preserve">
-    <value>让您将角色的统计数据调整500点。 \n 只能从奇迹网站使用。</value>
+    <value>可重新分配500点角色属性。\n仅可通过奇迹官网使用。</value>
   </data>
   <data name="LetsYouTransferACharacterTo" xml:space="preserve">
     <value>允许您将角色转移到同一服务器内的另一个帐户。 \n 只能从奇迹网站使用。</value>
@@ -7494,7 +7494,7 @@
     <value>允许您将角色转移到同一帐户内的另一台服务器。 \n 只能从奇迹网站使用。</value>
   </data>
   <data name="AllowsYouToRequestACharacter" xml:space="preserve">
-    <value>允许您请求一次角色转账和一次角色名称更改。 \n 只能从奇迹网站使用。</value>
+    <value>可申请一次角色转移和一次角色改名。\n仅可通过奇迹官网使用。</value>
   </data>
   <data name="Gain Contribution: %u" xml:space="preserve">
     <value>增益贡献：%u</value>
@@ -7524,7 +7524,7 @@
     <value>贡献：%lu</value>
   </data>
   <data name="The guild master is with a different gens." xml:space="preserve">
-    <value>盟主属于不同的世代。</value>
+    <value>盟主属于不同的家族。</value>
   </data>
   <data name="YouMustBelongToTheSame" xml:space="preserve">
     <value>您必须与盟主属于同一氏族才能加入战盟。</value>
@@ -7548,7 +7548,7 @@
     <value>劳尔</value>
   </data>
   <data name="If you go to the market in Lorencia," xml:space="preserve">
-    <value>如果你去洛伦西亚的市场，</value>
+    <value>如果你去勇者大陆的市场，</value>
   </data>
   <data name="you'll find many items you need" xml:space="preserve">
     <value>你会发现很多你需要的物品</value>
@@ -7581,13 +7581,13 @@
     <value>你想去城里吗？</value>
   </data>
   <data name="You cannot enter Chaos Castle" xml:space="preserve">
-    <value>您不能输入赤色要塞</value>
+    <value>您不能进入赤色要塞</value>
   </data>
   <data name="from the market in Lorencia." xml:space="preserve">
-    <value>来自洛伦西亚市场。</value>
+    <value>来自勇者大陆市场。</value>
   </data>
   <data name="Warp3016" xml:space="preserve">
-    <value>扭曲</value>
+    <value>传送</value>
   </data>
   <data name="Loren Market" xml:space="preserve">
     <value>罗伦市场</value>
@@ -7596,10 +7596,10 @@
     <value>卢尼迪尔</value>
   </data>
   <data name="TheElfQueenWhoBattledBy" xml:space="preserve">
-    <value>与牧人并肩作战的精灵女王。她长期以来一直保护诺里亚免受塞克拉瑞姆和昆顿的侵害。</value>
+    <value>与牧人并肩作战的精灵女王。她长期以来一直保护仙踪林免受塞克拉瑞姆和昆顿的侵害。</value>
   </data>
   <data name="TheHeadOfTheEvilArmy" xml:space="preserve">
-    <value>邪恶军团首领，与魔法女王达成协议，攻占冷狼要塞后，被昆顿召唤。</value>
+    <value>邪恶军团首领，与魔法女王达成协议，攻占狼魂要塞后，被昆顿召唤。</value>
   </data>
   <data name="Lemuria (New)" xml:space="preserve">
     <value>利穆里亚（新）</value>
@@ -7734,7 +7734,7 @@
     <value>恶魔广场等级。 %lu 已清除</value>
   </data>
   <data name="Illusion Temple Lv.%lu Cleared" xml:space="preserve">
-    <value>幻殿等级%lu 已清除</value>
+    <value>幻影寺院等级%lu 已清除</value>
   </data>
   <data name="Random Reward (%lu different kinds)" xml:space="preserve">
     <value>随机奖励（%lu不同种类）</value>
@@ -7752,7 +7752,7 @@
     <value>家族信息窗口</value>
   </data>
   <data name="Gens" xml:space="preserve">
-    <value>世代</value>
+    <value>家族</value>
   </data>
   <data name="Duprian" xml:space="preserve">
     <value>杜普里安</value>
@@ -7773,10 +7773,10 @@
     <value>晋级所需贡献金额为%d 。</value>
   </data>
   <data name="Gens Ranking" xml:space="preserve">
-    <value>世代排名</value>
+    <value>家族排名</value>
   </data>
   <data name="Gens Description" xml:space="preserve">
-    <value>世代描述</value>
+    <value>家族描述</value>
   </data>
   <data name="GensRankingRewardsAreGivenOut" xml:space="preserve">
     <value>家族排名奖励在每月第一周随补丁一起发放。</value>
@@ -7785,7 +7785,7 @@
     <value>家族排名奖励可以向家族管家NPC领取。## 家族奖励如果在一周内未领取，将自动消失。</value>
   </data>
   <data name="Gens Info (B)" xml:space="preserve">
-    <value>世代信息 (B)</value>
+    <value>家族信息 (B)</value>
   </data>
   <data name="GrandDukeDukeMarquisCountViscount" xml:space="preserve">
     <value>大公#公爵#侯爵#伯爵#子爵#男爵#骑士长#高级骑士#骑士#侍卫长#军官#中尉#中士#列兵</value>
@@ -7890,7 +7890,7 @@
     <value>我的商城积分 (P) : %s</value>
   </data>
   <data name="You need more %%s to purchase this item." xml:space="preserve">
-    <value>您需要更多%%才能购买这个物品。</value>
+    <value>购买此物品还需要更多%%s。</value>
   </data>
   <data name="Cannot apply in Battle Zone." xml:space="preserve">
     <value>无法在战区应用。</value>
@@ -7929,7 +7929,7 @@
     <value>凤凰射击 ( 魔法值 : %d )</value>
   </data>
   <data name="Finding a Client" xml:space="preserve">
-    <value>寻找客户</value>
+    <value>查找客户端</value>
   </data>
   <data name="%s unit(s)" xml:space="preserve">
     <value>%s 单位</value>
@@ -7959,7 +7959,7 @@
     <value>%s 秒</value>
   </data>
   <data name="%s Y/N" xml:space="preserve">
-    <value>%s 是 /N</value>
+    <value>%ls 是/否</value>
   </data>
   <data name="%s other(s)" xml:space="preserve">
     <value>%s 其他</value>
@@ -8019,10 +8019,10 @@
     <value>接受这个。</value>
   </data>
   <data name="The same type seal is already in use." xml:space="preserve">
-    <value>相同类型的密封件已在使用。</value>
+    <value>相同类型的印记已在使用。</value>
   </data>
   <data name="Karutan" xml:space="preserve">
-    <value>卡鲁坦</value>
+    <value>卡伦特</value>
   </data>
   <data name="YouCannotUseTheTalismanOf" xml:space="preserve">
     <value>不能同时使用混沌合成符咒和幸运符咒。</value>
@@ -8055,7 +8055,7 @@
     <value>如果您是魔法师，专属物品</value>
   </data>
   <data name="for Dark Wizard will be created." xml:space="preserve">
-    <value>将创建魔法师。</value>
+    <value>将合成魔法师专用装备。</value>
   </data>
   <data name="Will be exchanged with an item usable for" xml:space="preserve">
     <value>将与可用于的物品交换</value>
@@ -8097,7 +8097,7 @@
     <value>选择要组合的“数字”按钮。</value>
   </data>
   <data name="Select a jewel to dissolve." xml:space="preserve">
-    <value>选择要解散的宝石。</value>
+    <value>选择要拆分的宝石。</value>
   </data>
   <data name="Jewel of Life" xml:space="preserve">
     <value>生命宝石</value>
@@ -8118,7 +8118,7 @@
     <value>高等精炼石</value>
   </data>
   <data name="Are you sure you want to dissolve" xml:space="preserve">
-    <value>您确定要解散吗</value>
+    <value>确定要拆分</value>
   </data>
   <data name="%s +%d?" xml:space="preserve">
     <value>%s +%d？</value>
@@ -8154,7 +8154,7 @@
     <value>意志力：%d</value>
   </data>
   <data name="Destruction: %d" xml:space="preserve">
-    <value>销毁：%d</value>
+    <value>毁灭：%d</value>
   </data>
   <data name="Min &amp; Max Wizardry Increase" xml:space="preserve">
     <value>最小和最大魔法增加</value>
@@ -8289,7 +8289,7 @@
     <value>4.兑换战斗奖杯</value>
   </data>
   <data name="5. Enter the Arca War" xml:space="preserve">
-    <value>5. 输入阿卡战争</value>
+    <value>5. 进入阿卡战争</value>
   </data>
   <data name="TheArcaWarStartedInThe" xml:space="preserve">
     <value>阿卡战争在黄泉征服联盟中展开，以拯救因昆顿魔法而堕落的灵魂。然而，当杜普里安表现出想要杀死国王拉克斯·米隆大帝的邪恶意图时，阿卡的战斗已经升级为一场战斗。</value>
@@ -8361,7 +8361,7 @@
     <value>聊天</value>
   </data>
   <data name="AMPM3409" xml:space="preserve">
-    <value>上午 /PM</value>
+    <value>上午/下午</value>
   </data>
   <data name="Rating" xml:space="preserve">
     <value>评级</value>
@@ -8400,10 +8400,10 @@
     <value>C</value>
   </data>
   <data name="I" xml:space="preserve">
-    <value>我</value>
+    <value>I</value>
   </data>
   <data name="T" xml:space="preserve">
-    <value>时间</value>
+    <value>T</value>
   </data>
   <data name="Community" xml:space="preserve">
     <value>社区</value>
@@ -8415,7 +8415,7 @@
     <value>等</value>
   </data>
   <data name="Guild Mark" xml:space="preserve">
-    <value>战盟马克</value>
+    <value>战盟徽章</value>
   </data>
   <data name="Choose color" xml:space="preserve">
     <value>选择颜色</value>
@@ -8442,10 +8442,10 @@
     <value>F1</value>
   </data>
   <data name="M" xml:space="preserve">
-    <value>中号</value>
+    <value>M</value>
   </data>
   <data name="O" xml:space="preserve">
-    <value>氧</value>
+    <value>O</value>
   </data>
   <data name="U" xml:space="preserve">
     <value>U</value>
@@ -8457,13 +8457,13 @@
     <value>F</value>
   </data>
   <data name="P" xml:space="preserve">
-    <value>磷</value>
+    <value>P</value>
   </data>
   <data name="G" xml:space="preserve">
     <value>G</value>
   </data>
   <data name="B" xml:space="preserve">
-    <value>乙</value>
+    <value>B</value>
   </data>
   <data name="System Menu" xml:space="preserve">
     <value>系统菜单</value>
@@ -8487,7 +8487,7 @@
     <value>NPC 任务</value>
   </data>
   <data name="Register Guild" xml:space="preserve">
-    <value>寄存器战盟</value>
+    <value>登记战盟</value>
   </data>
   <data name="Trade Target" xml:space="preserve">
     <value>贸易目标</value>
@@ -8778,10 +8778,10 @@
     <value>使用精华魔力药水</value>
   </data>
   <data name="Unable to use if you have not spent points on your master skill tree." xml:space="preserve">
-    <value>如果您尚未在主技能树上花费积分，则无法使用。</value>
+    <value>如果您尚未在大师技能树上花费积分，则无法使用。</value>
   </data>
   <data name="The master skill point will reset." xml:space="preserve">
-    <value>主技能点将重置。</value>
+    <value>大师技能点将重置。</value>
   </data>
   <data name="Do you want to reset?" xml:space="preserve">
     <value>您想重置吗？</value>
@@ -8808,7 +8808,7 @@
     <value>&lt;愤怒、超越、风暴、荣誉、终极、征服、毁灭&gt;</value>
   </data>
   <data name="Reset all master skill trees" xml:space="preserve">
-    <value>重置所有主技能树</value>
+    <value>重置所有大师技能树</value>
   </data>
   <data name="Help is active" xml:space="preserve">
     <value>帮助已激活</value>
@@ -8853,7 +8853,7 @@
     <value>你不在战盟中。</value>
   </data>
   <data name="You can only participate in the Arca War if you're in a guild." xml:space="preserve">
-    <value>如果你在战盟中，你只能参加阿卡战争。</value>
+    <value>只有加入战盟后才能参加阿卡战争。</value>
   </data>
   <data name="Register to participate in the Arca War (Guild member)" xml:space="preserve">
     <value>注册参加阿卡战争（战盟成员）</value>
@@ -8904,7 +8904,7 @@
     <value>抱歉！请在下次尝试中征服方尖碑。</value>
   </data>
   <data name="Fire Tower" xml:space="preserve">
-    <value>消防塔</value>
+    <value>火之塔</value>
   </data>
   <data name="Water Tower" xml:space="preserve">
     <value>水塔</value>
@@ -8925,10 +8925,10 @@
     <value>奖励经验</value>
   </data>
   <data name="No conquered guild" xml:space="preserve">
-    <value>没有被征服战盟</value>
+    <value>暂无占领战盟</value>
   </data>
   <data name="%s guild conquered" xml:space="preserve">
-    <value>%s 战盟被征服</value>
+    <value>%ls战盟已占领</value>
   </data>
   <data name="%d points" xml:space="preserve">
     <value>%d 点</value>
@@ -8958,13 +8958,13 @@
     <value>元素符文列表不存在。 （数据库：%d）</value>
   </data>
   <data name="%s-%d Rank" xml:space="preserve">
-    <value>%s - %d 排名</value>
+    <value>%ls-第%d阶</value>
   </data>
   <data name="%d Rank Errtel" xml:space="preserve">
-    <value>%d 排名元素符文</value>
+    <value>第%d阶元素符文</value>
   </data>
   <data name="%d Rank Option +%d" xml:space="preserve">
-    <value>%d 排名选项 + %d</value>
+    <value>第%d阶属性+%d</value>
   </data>
   <data name="Option number (%d)" xml:space="preserve">
     <value>选项编号 ( %d )</value>
@@ -8985,7 +8985,7 @@
     <value>元素符文升级</value>
   </data>
   <data name="Errtel Rank up" xml:space="preserve">
-    <value>元素符文排名上升</value>
+    <value>元素符文升阶</value>
   </data>
   <data name="Pentagram Item %d" xml:space="preserve">
     <value>五角星物品%d</value>
@@ -8994,10 +8994,10 @@
     <value>%s %d</value>
   </data>
   <data name="Errtel Level Upgrade" xml:space="preserve">
-    <value>埃特尔等级升级</value>
+    <value>元素符文升级</value>
   </data>
   <data name="Errtel Rank Upgrade" xml:space="preserve">
-    <value>埃特尔等级升级</value>
+    <value>元素符文升阶</value>
   </data>
   <data name="Refinement/Combination" xml:space="preserve">
     <value>提炼/合成</value>
@@ -9087,7 +9087,7 @@
     <value>无效元素。 (%d)</value>
   </data>
   <data name="%d Rank" xml:space="preserve">
-    <value>%d 排名</value>
+    <value>第%d阶</value>
   </data>
   <data name="Do you want to equip the selected Errtel on the Pentagram?" xml:space="preserve">
     <value>您想在五角星上装备所选的元素符文吗？</value>
@@ -9102,7 +9102,7 @@
     <value>已经有一个装备好的元素符文。请拆开已配备的元素符文并重试。</value>
   </data>
   <data name="CannotEquipTheErrtelThatYou" xml:space="preserve">
-    <value>无法装备。想要装备的艾尔泰尔和五角星的要素不同。请配备正确的元素符文。</value>
+    <value>无法装备：元素符文与五角星的属性不同。请使用属性相符的元素符文。</value>
   </data>
   <data name="YouCanOnlyEquipOrTake" xml:space="preserve">
     <value>你只能在背包中装备或取出元素符文。请移动背包中的五角星并重试。</value>
@@ -9120,7 +9120,7 @@
     <value>元素符文已成功装备。</value>
   </data>
   <data name="Unequip has failed. The Errtel was destroyed." xml:space="preserve">
-    <value>解除装备失败。埃特尔号被摧毁。</value>
+    <value>卸下失败，元素符文已损毁。</value>
   </data>
   <data name="Errtel has been successfully unequipped." xml:space="preserve">
     <value>元素符文已成功卸下装备。</value>
@@ -9171,13 +9171,13 @@
     <value>怪物翅膀成分</value>
   </data>
   <data name="Socket items" xml:space="preserve">
-    <value>套接字物品</value>
+    <value>镶嵌装备</value>
   </data>
   <data name="Item Refinement" xml:space="preserve">
-    <value>物品细化</value>
+    <value>物品提炼</value>
   </data>
   <data name="Sub-materials %d" xml:space="preserve">
-    <value>子材质%d</value>
+    <value>辅助材料%d</value>
   </data>
   <data name="Parent-materials %d" xml:space="preserve">
     <value>母材%d</value>
@@ -9201,7 +9201,7 @@
     <value>每次最多可以登记225个城主标识。</value>
   </data>
   <data name="ESC" xml:space="preserve">
-    <value>电调</value>
+    <value>ESC</value>
   </data>
   <data name="20¾ïÁ¨ ÀÌ»ó Ãâ±Ý ºÒ°¡" xml:space="preserve">
     <value>无法提取20亿以上的金币</value>
@@ -9327,7 +9327,7 @@
     <value>%d~%d数量</value>
   </data>
   <data name="SummonedMonsterOwner" xml:space="preserve">
-    <value>%ls的%ls</value>
+    <value>%ls（主人：%ls）</value>
   </data>
   <data name="CancelSkillQuestion" xml:space="preserve">
     <value>%ls您想取消吗？</value>
@@ -9360,13 +9360,13 @@
     <value>（%ls果实）减少了%d点属性。</value>
   </data>
   <data name="FruitStatCannotIncrease" xml:space="preserve">
-    <value>该统计数据不能再是 创造。</value>
+    <value>此属性无法继续增加。</value>
   </data>
   <data name="FruitStatCannotDecrease" xml:space="preserve">
-    <value>该统计数据不能再是 减少。</value>
+    <value>此属性无法继续减少。</value>
   </data>
   <data name="StatPointsAdded" xml:space="preserve">
-    <value>创造</value>
+    <value>增加</value>
   </data>
   <data name="StatPointsRemoved" xml:space="preserve">
     <value>减少</value>
@@ -9375,10 +9375,10 @@
     <value>您已成功完成任务。</value>
   </data>
   <data name="QuestFailedUnfortunately" xml:space="preserve">
-    <value>追求不幸的是，你失败了</value>
+    <value>很遗憾，任务失败了。</value>
   </data>
   <data name="RequestHasFailed" xml:space="preserve">
-    <value>不幸的是，你失败了</value>
+    <value>请求失败。</value>
   </data>
   <data name="QuestRequirementMonster" xml:space="preserve">
     <value>怪物：%ls × %lu/%lu</value>
@@ -9423,7 +9423,7 @@
     <value>恭喜！您已成功完成血色城堡任务！</value>
   </data>
   <data name="BloodCastleQuestFailed" xml:space="preserve">
-    <value>不幸的是，你失败了完成血色城堡任务。</value>
+    <value>很遗憾，你未能完成血色城堡任务。</value>
   </data>
   <data name="MixLevel" xml:space="preserve">
     <value>+%d</value>

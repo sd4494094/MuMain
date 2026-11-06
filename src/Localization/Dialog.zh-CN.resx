@@ -34,7 +34,7 @@
     <value>欢迎来到奇迹！如果您在奇迹大陆旅行时需要任何帮助，请按 F1键。</value>
   </data>
   <data name="Text_7" xml:space="preserve">
-    <value>这是您第一次来洛伦西亚吗？前往喷泉前的东南出口，尝试猎杀巴吉龙或蜘蛛。西北的骷髅太危险了。</value>
+    <value>这是您第一次来勇者大陆吗？前往喷泉前的东南出口，尝试猎杀巴吉龙或蜘蛛。西北的骷髅太危险了。</value>
   </data>
   <data name="Text_8" xml:space="preserve">
     <value>欢迎来到仙踪林。初次到访的话，可以经过仓库守卫，前往南边出口，尝试猎杀蝎子、哥布林等低级怪物。</value>
@@ -82,10 +82,10 @@
     <value>你找到了帝王卷轴！卷轴以魔法记载着穆伦皇帝统一奇迹帝国的事迹，持有它的人将获得强大的力量。</value>
   </data>
   <data name="Answer_55_Slot_0" xml:space="preserve">
-    <value>跟我说说这张唱片吧。</value>
+    <value>告诉我卷轴中的记载吧。</value>
   </data>
   <data name="Text_56" xml:space="preserve">
-    <value>第一位皇帝穆仁的历史记录包含通过穆仁战胜所有军阀来纪念和平，并通过这样做将大陆统一为帝国或奇迹。</value>
+    <value>初代皇帝穆伦的史书记载：他战胜各地军阀，将奇迹大陆统一为帝国，带来了和平。</value>
   </data>
   <data name="Answer_56_Slot_0" xml:space="preserve">
     <value>请继续。</value>
@@ -118,7 +118,7 @@
     <value>事情就是这样……</value>
   </data>
   <data name="Text_60" xml:space="preserve">
-    <value>如果你读过《帝王卷轴》，请找出古代黑暗骑士在纪念和平时使用的“断剑”。据我所知，一些黑暗骑士在亚特兰斯、失落之塔和塔坎找到了它。</value>
+    <value>如果你读过《帝王卷轴》，请找出古代黑暗骑士在纪念和平时使用的“断剑”。据我所知，一些黑暗骑士在亚特兰蒂斯、失落之塔和死亡沙漠找到了它。</value>
   </data>
   <data name="Answer_60_Slot_0" xml:space="preserve">
     <value>我会找到的。</value>
@@ -133,13 +133,13 @@
     <value>我会找到它再回来。</value>
   </data>
   <data name="Text_62" xml:space="preserve">
-    <value>勇敢的暗黑骑士，你找到了‘断剑’！牧大陆统一后，开国皇帝牧人折断了自己的天启剑，象征着他不再爆发战争的愿望。</value>
+    <value>勇敢的剑士，你找到了“断魂之剑”！奇迹大陆统一后，初代皇帝穆伦折断了自己的天启之剑，寄托永不再起战乱的愿望。</value>
   </data>
   <data name="Answer_62_Slot_0" xml:space="preserve">
     <value>告诉我更多。</value>
   </data>
   <data name="Text_63" xml:space="preserve">
-    <value>战争结束后，希望成为刀锋骑士的黑暗骑士开始寻找古老的“断剑”，以证明自己的勇敢。</value>
+    <value>战争结束后，希望成为骑士的剑士开始寻找古老的“断魂之剑”，以此证明自己的勇气。</value>
   </data>
   <data name="Answer_63_Slot_0" xml:space="preserve">
     <value>事情就是这样！</value>
@@ -217,13 +217,13 @@
     <value>请继续。</value>
   </data>
   <data name="Text_76" xml:space="preserve">
-    <value>从那时起，一种习俗诞生了，希望成为剑骑士的黑暗骑士会折断他们的剑，作为他们誓言永远不会不公正地挥舞剑的象征。</value>
+    <value>从此，希望成为骑士的剑士会折断自己的剑，象征着他们绝不滥用武力的誓言。</value>
   </data>
   <data name="Answer_76_Slot_0" xml:space="preserve">
     <value>告诉我更多。</value>
   </data>
   <data name="Text_77" xml:space="preserve">
-    <value>一些喜欢冒险的精灵说他们曾在失落之塔、亚特兰斯和塔坎被看到。</value>
+    <value>一些喜欢冒险的精灵说他们曾在失落之塔、亚特兰蒂斯和死亡沙漠被看到。</value>
   </data>
   <data name="Answer_77_Slot_0" xml:space="preserve">
     <value>‘我去找找！</value>
@@ -262,7 +262,7 @@
     <value>请继续。</value>
   </data>
   <data name="Text_82" xml:space="preserve">
-    <value>去找‘巫师之魂’。根据古代黑巫师的说法，它最后一次出现是在失落之塔、阿特兰斯和塔坎附近。</value>
+    <value>去找‘巫师之魂’。根据古代黑巫师的说法，它最后一次出现是在失落之塔、亚特兰蒂斯和死亡沙漠附近。</value>
   </data>
   <data name="Answer_82_Slot_0" xml:space="preserve">
     <value>我会去找它</value>
@@ -271,7 +271,7 @@
     <value>我稍后回来。</value>
   </data>
   <data name="Text_90" xml:space="preserve">
-    <value>你已经读完了《天皇圣旨》 。但你知道穆伦和领袖召唤师塞梅登之间的保密契约吗？穆伦得到了一件事的承诺，而不是将易北河移入帝国之下。</value>
+    <value>你已读完“帝王之书”。但你知道穆伦与召唤术首领塞梅登的秘密契约吗？作为艾尔贝归入帝国的交换条件，穆伦曾得到一个承诺。</value>
   </data>
   <data name="Answer_90_Slot_0" xml:space="preserve">
     <value>继续听。</value>
@@ -286,25 +286,25 @@
     <value>拒绝请求</value>
   </data>
   <data name="Text_92" xml:space="preserve">
-    <value>我听说在阿特兰斯、失落之塔和塔坎周围发现了深渊之眼。找到深渊之眼后立即返回。</value>
+    <value>我听说在亚特兰蒂斯、失落之塔和死亡沙漠周围发现了深渊之眼。找到深渊之眼后立即返回。</value>
   </data>
   <data name="Answer_92_Slot_0" xml:space="preserve">
     <value>把故事讲完</value>
   </data>
   <data name="Text_93" xml:space="preserve">
-    <value>你已经找到了眼睛的深渊。这被认为是由现实世界中不存在的元素组成的物体。它是从现在之前的世界传染的，记忆也随之返回。</value>
+    <value>你找到了“深渊之眼”。据说它由现实世界不存在的元素构成，来自更古老的世界，并承载着那个世界的记忆。</value>
   </data>
   <data name="Answer_93_Slot_0" xml:space="preserve">
     <value>继续听。</value>
   </data>
   <data name="Text_94" xml:space="preserve">
-    <value>深渊之眼对我来说有着特殊的意义，因为我通过这个世界的维度进行监督和交流。如果你能带回深渊之眼，我就给你位面主管塞梅登的血之召唤师称号。</value>
+    <value>我负责监察并沟通各个位面，因此深渊之眼对我意义重大。带回它后，我将代表监察者塞梅登授予你“召唤导师”的称号。</value>
   </data>
   <data name="Answer_94_Slot_0" xml:space="preserve">
-    <value>强加为血召唤者</value>
+    <value>授予召唤导师称号</value>
   </data>
   <data name="Text_100" xml:space="preserve">
-    <value>想要获得穆人的加持和力量，需要传说中的宝物“荣耀之戒”。它再次在我们的土地上展现了它的存在。但你还没有准备好。等到你更有经验了。</value>
+    <value>想要获得穆伦的祝福与力量，需要传说中的宝物“荣誉戒指”。它已再次出现在这片大陆。但你还没有准备好，请积累更多经验再来。</value>
   </data>
   <data name="Answer_100_Slot_0" xml:space="preserve">
     <value>那我需要做什么？</value>
@@ -316,13 +316,13 @@
     <value>时机成熟我会回来。</value>
   </data>
   <data name="Text_102" xml:space="preserve">
-    <value>想要获得穆人的加持和力量，需要传说中的宝物“荣耀之戒”。它再次在我们的土地上展现了它的存在。</value>
+    <value>想要获得穆伦的祝福与力量，需要传说中的宝物“荣誉戒指”。它已再次出现在这片大陆。</value>
   </data>
   <data name="Answer_102_Slot_0" xml:space="preserve">
     <value>我希望听到更多。</value>
   </data>
   <data name="Text_103" xml:space="preserve">
-    <value>谁拥有‘荣耀之戒’，谁就获得穆人的祝福。据说是在大洋彼岸的沙漠中发现的。</value>
+    <value>拥有“荣誉戒指”者将得到穆伦的祝福。据说它藏在大海彼岸的死亡沙漠。</value>
   </data>
   <data name="Answer_103_Slot_0" xml:space="preserve">
     <value>这是为什么？</value>
@@ -460,7 +460,7 @@
     <value>我需要做什么？</value>
   </data>
   <data name="Text_137" xml:space="preserve">
-    <value>有传言说你可以在塔坎和伊卡洛斯找到这块石头。小心怪物。那些拥有石头的怪物只会对那些拥有特殊能力的怪物做出反应。</value>
+    <value>据说这块石头出现在死亡沙漠和天空之城。请小心，持有它的怪物只会回应具备特殊能力的勇士。</value>
   </data>
   <data name="Answer_137_Slot_0" xml:space="preserve">
     <value>请再重复一遍这个故事。</value>
@@ -484,7 +484,7 @@
     <value>告诉我更多。</value>
   </data>
   <data name="Text_140" xml:space="preserve">
-    <value>贝内洛普有骑士血统。在战争中失败后，他接受了新魔法的训练并与技能战斗。这些技能已经默默地被灌输给拥有骑士血液的战士，以对抗昆顿的强大力量。</value>
+    <value>贝内洛普出身骑士世家。战败后，他潜心修炼新的魔法与战斗技巧，并将这些秘技传授给拥有骑士血统的勇士，以对抗昆顿的强大力量。</value>
   </data>
   <data name="Answer_140_Slot_0" xml:space="preserve">
     <value>所以...</value>
@@ -532,13 +532,13 @@
     <value>这是什么？</value>
   </data>
   <data name="Text_148" xml:space="preserve">
-    <value>卢加德要求你寻找英雄来对抗巴尔加斯对奇迹的新威胁。</value>
+    <value>卢加德要求你寻找英雄来对抗巴尔盖斯对奇迹的新威胁。</value>
   </data>
   <data name="Answer_148_Slot_0" xml:space="preserve">
     <value>继续听。</value>
   </data>
   <data name="Text_149" xml:space="preserve">
-    <value>我们了解到巴尔加斯的军队正通过狼嚎要塞进攻奇迹大陆，但整个故事还没有确切的解释。</value>
+    <value>我们了解到巴尔盖斯的军队正通过狼魂要塞进攻奇迹大陆，但整个故事还没有确切的解释。</value>
   </data>
   <data name="Answer_149_Slot_0" xml:space="preserve">
     <value>继续听。</value>
@@ -562,13 +562,13 @@
     <value>拒绝请求</value>
   </data>
   <data name="Text_152" xml:space="preserve">
-    <value>为了帮助我们，你必须对抗巴尔加斯的军队。在你开始之前，我需要检查你是否有足够的能力来完成任务。</value>
+    <value>为了帮助我们，你必须对抗巴尔盖斯的军队。在你开始之前，我需要检查你是否有足够的能力来完成任务。</value>
   </data>
   <data name="Answer_152_Slot_0" xml:space="preserve">
     <value>继续听。</value>
   </data>
   <data name="Text_153" xml:space="preserve">
-    <value>消灭统治塔坎、阿伊达和伊卡洛斯的死亡光束、地狱门和天魔菲尼斯怪物，并带回 3件相应的证据。</value>
+    <value>击败死亡沙漠、幽暗森林和天空之城的炽炎魔、丛林召唤者及天魔菲尼斯，分别带回3份对应的证明。</value>
   </data>
   <data name="Answer_153_Slot_0" xml:space="preserve">
     <value>把故事讲完</value>
@@ -580,13 +580,13 @@
     <value>继续听。</value>
   </data>
   <data name="Text_155" xml:space="preserve">
-    <value>巴尔加斯是一个巨大的威胁，因为他与魔法女王埃雷西亚合作，给这个世界带来了如此危险</value>
+    <value>巴尔盖斯是一个巨大的威胁，因为他与魔法女王埃雷西亚合作，给这个世界带来了如此危险</value>
   </data>
   <data name="Answer_155_Slot_0" xml:space="preserve">
     <value>继续听。</value>
   </data>
   <data name="Text_156" xml:space="preserve">
-    <value>我们预测巴尔加斯正试图用他的邪恶魔法军队对奇迹大陆构成新的威胁。</value>
+    <value>我们预测巴尔盖斯正试图用他的邪恶魔法军队对奇迹大陆构成新的威胁。</value>
   </data>
   <data name="Answer_156_Slot_0" xml:space="preserve">
     <value>把故事讲完</value>
@@ -604,19 +604,19 @@
     <value>您需要什么帮助？</value>
   </data>
   <data name="Text_159" xml:space="preserve">
-    <value>嗯，根据我们的信息，巴尔加斯已经形成了一个叫做兵营的地点。卢加德十二使徒认为，这是来自巴尔加斯的新威胁。</value>
+    <value>嗯，根据我们的信息，巴尔盖斯已经形成了一个叫做兵营的地点。卢加德十二使徒认为，这是来自巴尔盖斯的新威胁。</value>
   </data>
   <data name="Answer_159_Slot_0" xml:space="preserve">
     <value>继续听。</value>
   </data>
   <data name="Text_160" xml:space="preserve">
-    <value>关于“兵营”的确切信息驱使人们进入兵营区域，以减少巴尔加斯军队进一步发展的威胁。</value>
+    <value>关于“兵营”的确切信息驱使人们进入兵营区域，以减少巴尔盖斯军队进一步发展的威胁。</value>
   </data>
   <data name="Answer_160_Slot_0" xml:space="preserve">
     <value>继续听。</value>
   </data>
   <data name="Text_161" xml:space="preserve">
-    <value>幸运的是，卢格的监护可以帮助找到进入巴尔加斯军营的方法。输入区域，消灭士兵并获取准确信息。您会相应地带回正确的数据吗？</value>
+    <value>幸运的是，卢格的监护可以帮助找到进入巴尔盖斯军营的方法。进入区域，消灭士兵并获取准确信息。您会相应地带回正确的数据吗？</value>
   </data>
   <data name="Answer_161_Slot_0" xml:space="preserve">
     <value>再听一遍。</value>
@@ -628,13 +628,13 @@
     <value>拒绝请求</value>
   </data>
   <data name="Text_162" xml:space="preserve">
-    <value>前往狼嚎区域的北部墓地，找到巴尔加斯兵营的士兵避难所。卢格的祝福让人拥有智慧。他自称狼人卫士。</value>
+    <value>前往狼魂要塞区域的北部墓地，找到巴尔盖斯兵营的士兵避难所。卢格的祝福让人拥有智慧。他自称狼人卫士。</value>
   </data>
   <data name="Answer_162_Slot_0" xml:space="preserve">
     <value>继续听。</value>
   </data>
   <data name="Text_163" xml:space="preserve">
-    <value>他会带你去巴尔加斯的兵营。输入区域并消灭兵营中至少10只怪物。</value>
+    <value>他会带你去巴尔盖斯的兵营。进入区域并消灭兵营中至少10只怪物。</value>
   </data>
   <data name="Answer_163_Slot_0" xml:space="preserve">
     <value>把故事讲完</value>
@@ -646,13 +646,13 @@
     <value>继续说。</value>
   </data>
   <data name="Text_165" xml:space="preserve">
-    <value>你用情报和消灭的所有怪物为奇迹大陆和狼嚎带来了巨大的和平建设帮助。</value>
+    <value>你用情报和消灭的所有怪物为奇迹大陆和狼魂要塞带来了巨大的和平建设帮助。</value>
   </data>
   <data name="Answer_165_Slot_0" xml:space="preserve">
     <value>把故事讲完</value>
   </data>
   <data name="Text_166" xml:space="preserve">
-    <value>你还没有资格。拜访保安马伦，当你完全有资格执行任务时再回来。</value>
+    <value>你还不具备资格。请先拜访警卫队长摩伦，满足任务条件后再来。</value>
   </data>
   <data name="Answer_166_Slot_0" xml:space="preserve">
     <value>讲完故事。</value>
@@ -670,13 +670,13 @@
     <value>继续听。</value>
   </data>
   <data name="Text_169" xml:space="preserve">
-    <value>巴尔加斯将自己隐藏在一个单独的地方，以让自己从疲惫的身体中恢复过来。</value>
+    <value>巴尔盖斯将自己隐藏在一个单独的地方，以让自己从疲惫的身体中恢复过来。</value>
   </data>
   <data name="Answer_169_Slot_0" xml:space="preserve">
     <value>继续听。</value>
   </data>
   <data name="Text_170" xml:space="preserve">
-    <value>为了执行卢格所托付的任务，必须找到巴尔加斯的确切位置，并消灭正在训练的军队。</value>
+    <value>为了执行卢格所托付的任务，必须找到巴尔盖斯的确切位置，并消灭正在训练的军队。</value>
   </data>
   <data name="Answer_170_Slot_0" xml:space="preserve">
     <value>继续听。</value>
@@ -694,7 +694,7 @@
     <value>拒绝请求</value>
   </data>
   <data name="Text_172" xml:space="preserve">
-    <value>输入从巴尔加斯兵营北边的门进去;我们会提前准备好场地。</value>
+    <value>从巴尔盖斯兵营北端的门进入;我们会提前做好准备。</value>
   </data>
   <data name="Answer_172_Slot_0" xml:space="preserve">
     <value>把故事讲完</value>
@@ -706,7 +706,7 @@
     <value>继续听。</value>
   </data>
   <data name="Text_174" xml:space="preserve">
-    <value>你的努力得到了回报，维护了奇迹大陆的和平，并抵御了巴尔加斯的新威胁。我非常感谢你的帮助。</value>
+    <value>你的努力得到了回报，维护了奇迹大陆的和平，并抵御了巴尔盖斯的新威胁。我非常感谢你的帮助。</value>
   </data>
   <data name="Answer_174_Slot_0" xml:space="preserve">
     <value>把故事讲完</value>

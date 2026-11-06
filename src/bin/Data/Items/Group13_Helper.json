@@ -1207,7 +1207,7 @@
         "de": "Umhang der Unsichtbarkeit",
         "es": "Manto de Invisibilidad",
         "pt": "Manto da invisibilidade",
-        "zh-CN": "透明披风"
+        "zh-CN": "隐形披风"
       },
       "description": [
         {
@@ -1223,7 +1223,7 @@
             "tl": "Ginagamit kapag pumapasok sa Blood Castle",
             "uk": "Використовується при вході в Кривавий замок",
             "zh-TW": "進入血色城堡時使用",
-            "zh-CN": "输入血色城堡时使用"
+            "zh-CN": "进入血色城堡时使用"
           }
         },
         {
@@ -1420,7 +1420,7 @@
             "tl": "Kinakailangan ng Lakas: 132",
             "uk": "Вимоги до міцності: 132",
             "zh-TW": "強度要求：132",
-            "zh-CN": "强度要求：132"
+            "zh-CN": "力量要求：132"
           },
           "levels": [
             0,
@@ -1440,7 +1440,7 @@
             "tl": "Kinakailangan ng Lakas: 381",
             "uk": "Вимоги до міцності: 381",
             "zh-TW": "強度要求：381",
-            "zh-CN": "强度要求：381"
+            "zh-CN": "力量要求：381"
           },
           "levels": [
             1,
@@ -1460,7 +1460,7 @@
             "tl": "Kinakailangan ng Lakas: 140",
             "uk": "Вимоги до міцності: 140",
             "zh-TW": "強度要求：140",
-            "zh-CN": "强度要求：140"
+            "zh-CN": "力量要求：140"
           },
           "levels": [
             2,
@@ -1747,7 +1747,7 @@
             "tl": "Napakahusay na Damage rate +10%",
             "uk": "Відмінний рівень шкоди +10%",
             "zh-TW": "優 破損率+10%",
-            "zh-CN": "优 破损率+10%"
+            "zh-CN": "卓越一击概率+10%"
           },
           "color": "blue"
         },
@@ -2486,7 +2486,7 @@
             "tl": "{name} (Maitim na kabayo)",
             "uk": "{name} (Темна конячка)",
             "zh-TW": "{name} (黑馬)",
-            "zh-CN": "{name} (黑马)"
+            "zh-CN": "{name}（黑王马）"
           },
           "levels": [
             0,
@@ -2506,7 +2506,7 @@
             "tl": "{name} (Dark Raven)",
             "uk": "{name} (Темний ворон)",
             "zh-TW": "{name} (暗鴉)",
-            "zh-CN": "{name} (暗鸦)"
+            "zh-CN": "{name}（天鹰）"
           },
           "levels": [
             1,
@@ -2961,7 +2961,7 @@
         "de": "Elite-Skelett-Verwandlungsring",
         "es": "Aro Esqueleto Traslado Élite",
         "pt": "Anel Esqueleto Transf. Acel.",
-        "zh-CN": "艾尔特传送骷髅戒指"
+        "zh-CN": "精英骷髅变身戒指"
       },
       "tags": [
         "transformationRing"
@@ -2998,7 +2998,7 @@
             "tl": "sigla +{heroLevel}",
             "uk": "життєва сила +{heroLevel}",
             "zh-TW": "活力+{heroLevel}",
-            "zh-CN": "活力+{heroLevel}"
+            "zh-CN": "体力+{heroLevel}"
           },
           "color": "blue",
           "after": "options"
@@ -3744,7 +3744,7 @@
             "tl": "Ipunin ang Scroll of Blood na may kontrata mula sa Illusion Sorcery.",
             "uk": "Зберіть Сувій крові за контрактом від Illusion Sorcery.",
             "zh-TW": "用幻象魔法的契約組裝血色捲軸。",
-            "zh-CN": "用幻象魔法的契约组装血的卷纸。"
+            "zh-CN": "用幻象魔法的契约组装血色入场券。"
           },
           "color": "blue"
         }
@@ -3790,7 +3790,7 @@
             "tl": "Ipunin ang Scroll of Blood gamit ang mga lumang scroll.",
             "uk": "Зберіть Сувій крові зі старих сувоїв.",
             "zh-TW": "將血液捲軸與舊捲軸組裝起來。",
-            "zh-CN": "用旧卷轴组装血的卷纸。"
+            "zh-CN": "用旧卷轴组装血色入场券。"
           },
           "color": "blue"
         }
@@ -3820,7 +3820,7 @@
         "de": "Schriftrolle des Blutes",
         "es": "Rollo de Sangre",
         "pt": "Pergaminho de sangue",
-        "zh-CN": "血的卷纸"
+        "zh-CN": "血色入场券"
       },
       "description": [
         {
@@ -3935,7 +3935,7 @@
         "de": "Rücksetzfrucht: Stärke",
         "es": "Reiniciar Fruto de Fuerza",
         "pt": "Reiniciar força da fruta",
-        "zh-CN": "重置水果强度"
+        "zh-CN": "力量重置果实"
       },
       "tags": [
         "cashShop"
@@ -4043,7 +4043,7 @@
         "de": "Rücksetzfrucht: Energie",
         "es": "Reiniciar Fruto de Energía",
         "pt": "Reiniciar energia da fruta",
-        "zh-CN": "重置水果能量"
+        "zh-CN": "智力重置果实"
       },
       "tags": [
         "cashShop"
@@ -4433,7 +4433,7 @@
             "tl": "Ang pagkamit ng item at ang awtomatikong pagbawi ng Mana ay tumataas.",
             "uk": "Досягнення предметів і автоматичне відновлення мани збільшуються.",
             "zh-TW": "物品成就和自動法力恢復量不斷增加。",
-            "zh-CN": "物品成就和自动魔法值恢复量向前增加。"
+            "zh-CN": "提高物品获得率和魔法值自动恢复量。"
           },
           "color": "blue"
         }
@@ -4829,7 +4829,7 @@
             "tl": "I-save ang lokasyon ng application.",
             "uk": "Збережіть розташування програми.",
             "zh-TW": "儲存應用程式位置。",
-            "zh-CN": "保存应用程序位置。"
+            "zh-CN": "保存使用时所在的位置。"
           },
           "color": "blue"
         },
@@ -4933,7 +4933,7 @@
         "de": "Stab",
         "es": "Báculo",
         "pt": "Bastão",
-        "zh-CN": "工作人员"
+        "zh-CN": "法杖"
       },
       "tags": [
         "gambleItem"
@@ -5104,7 +5104,7 @@
             "tl": "50% ang pagtaas ng Zen",
             "uk": "Дзен збільшення 50%",
             "zh-TW": "禪宗增加50%",
-            "zh-CN": "禅宗增加50%"
+            "zh-CN": "金币增加50%"
           },
           "color": "blue",
           "after": "options"
@@ -5199,7 +5199,7 @@
             "tl": "EXP rate 50% inadagdagan",
             "uk": "Швидкість досвіду збільшується на 50% in",
             "zh-TW": "EXP率50% i增加",
-            "zh-CN": "EXP率50% i增加"
+            "zh-CN": "经验获得率提高50%"
           },
           "color": "blue"
         },
@@ -5388,7 +5388,7 @@
             "tl": "Naaangkop sa mga naka-mount na item lamang bukod sa alagang hayop.",
             "uk": "Застосовується лише для встановлюваних елементів, крім домашніх тварин.",
             "zh-TW": "僅適用於寵物以外的可安裝物品。",
-            "zh-CN": "仅适用于除宠物之外的可安装物品。"
+            "zh-CN": "仅适用于坐骑，不适用于宠物。"
           },
           "color": "blue"
         }
@@ -6059,7 +6059,7 @@
         "de": "Schriftrolle der Party-Erfahrung",
         "es": "Rollo EXP de Participación",
         "pt": "Pergaminho de EXP de grupo",
-        "zh-CN": "队伍经验滚动"
+        "zh-CN": "组队经验卷轴"
       },
       "tags": [
         "cashShop"
@@ -6226,7 +6226,7 @@
             "tl": "50% ang pagtaas ng Zen",
             "uk": "Дзен збільшення 50%",
             "zh-TW": "禪宗增加50%",
-            "zh-CN": "禅宗增加50%"
+            "zh-CN": "金币增加50%"
           },
           "color": "blue"
         },
@@ -6467,7 +6467,7 @@
             "tl": "Pinapataas ang rate ng pagkuha ng Zen pagkatapos ng pangangaso ng mga halimaw +30%",
             "uk": "Збільшує швидкість отримання Дзен після полювання на монстрів +30%",
             "zh-TW": "狩獵怪物後禪的獲得率增加+30%",
-            "zh-CN": "狩猎怪物后禅的获得率增加+30%"
+            "zh-CN": "狩猎怪物后金币的获得率增加+30%"
           }
         }
       ],
@@ -6585,7 +6585,7 @@
             "tl": "Napakahusay na Damage rate +10%",
             "uk": "Відмінний рівень шкоди +10%",
             "zh-TW": "優 破損率+10%",
-            "zh-CN": "优 破损率+10%"
+            "zh-CN": "卓越一击概率+10%"
           }
         }
       ],
@@ -6779,7 +6779,7 @@
         "de": "Minimaler Vitalitätstrank",
         "es": "Pócima de Vitalidad Mínima",
         "pt": "Poção de vitalidade mínima",
-        "zh-CN": "最低活力药水"
+        "zh-CN": "最低体力药水"
       },
       "width": 1,
       "height": 1,
@@ -6800,7 +6800,7 @@
         "de": "Niedriger Vitalitätstrank",
         "es": "Pócima de Vitalidad Baja",
         "pt": "Poção de vitalidade baixa",
-        "zh-CN": "低活力药水"
+        "zh-CN": "低体力药水"
       },
       "width": 1,
       "height": 1,
@@ -6821,7 +6821,7 @@
         "de": "Mittlerer Vitalitätstrank",
         "es": "Pócima de Vitalidad Media",
         "pt": "Poção de vitalidade média",
-        "zh-CN": "中等活力药水"
+        "zh-CN": "中等体力药水"
       },
       "width": 1,
       "height": 1,
@@ -6842,7 +6842,7 @@
         "de": "Hoher Vitalitätstrank",
         "es": "Pócima de Vitalidad Alta",
         "pt": "Poção de vitalidade alta",
-        "zh-CN": "高活力药水"
+        "zh-CN": "高体力药水"
       },
       "width": 1,
       "height": 1,
@@ -6882,7 +6882,7 @@
             "tl": "Pinapagana ang pagpasok sa Chaos Castle.",
             "uk": "Дозволяє вхід у Замок Хаосу.",
             "zh-TW": "允許進入 混沌城堡。",
-            "zh-CN": "允许进入 混沌城堡。"
+            "zh-CN": "用于进入赤色要塞。"
           }
         },
         {
@@ -6996,7 +6996,7 @@
             "tl": "Equipping kasama ng Pet Skeleton",
             "uk": "Екіпірування разом зі скелетом домашньої тварини",
             "zh-TW": "與寵物骷髏一起裝備",
-            "zh-CN": "与幼龙骨架一起装备"
+            "zh-CN": "与小骷髅宠物同时装备时"
           },
           "color": "blue",
           "after": "options"
@@ -7067,7 +7067,7 @@
         "de": "Haustier Skelett",
         "es": "Mascota Esqueleto",
         "pt": "Mascote esqueleto",
-        "zh-CN": "幼龙骨架"
+        "zh-CN": "小骷髅宠物"
       },
       "tags": [
         "pandaOrSkeleton",
@@ -7538,7 +7538,7 @@
         "de": "Eichen-Glücksbringer",
         "es": "Amuleto de Roble",
         "pt": "Amuleto de carvalho",
-        "zh-CN": "橡木魅力"
+        "zh-CN": "橡木护符"
       },
       "groundLabels": [
         {
@@ -7566,7 +7566,7 @@
         "de": "Ahorn-Glücksbringer",
         "es": "Amuleto de Arce",
         "pt": "Amuleto de bordo",
-        "zh-CN": "枫木魅力"
+        "zh-CN": "枫木护符"
       },
       "groundLabels": [
         {

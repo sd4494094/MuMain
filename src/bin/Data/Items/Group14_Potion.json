@@ -468,7 +468,7 @@
             "tl": "Warp sa kaukulang lugar pagkatapos ng 3 segundo",
             "uk": "Деформація до відповідної області через 3 секунд",
             "zh-TW": "3秒後扭曲到對應區域",
-            "zh-CN": "3秒后扭曲到对应区域"
+            "zh-CN": "3秒后传送至对应区域"
           },
           "levels": [
             1,
@@ -525,7 +525,7 @@
             "tl": "[Rena/Zen/Jewel/Item]",
             "uk": "[Rena/Zen/Jewel/Item]",
             "zh-TW": "[蕾娜/禪/寶石/物品]",
-            "zh-CN": "[宝石/金币/宝石/物品]"
+            "zh-CN": "[蕾娜/金币/宝石/物品]"
           },
           "levels": [
             7,
@@ -1538,7 +1538,7 @@
         "de": "Schriftrolle des Imperators",
         "es": "Rollo del Emperador",
         "pt": "Pergaminho do Imperador",
-        "zh-CN": "帝皇卷轴"
+        "zh-CN": "帝王之书"
       },
       "tags": [
         "secondClassQuestItem"
@@ -1658,7 +1658,7 @@
             "tl": "Madilim na Bato",
             "uk": "Темний камінь",
             "zh-TW": "暗黑石",
-            "zh-CN": "暗石"
+            "zh-CN": "暗黑之石"
           },
           "color": "yellow",
           "levels": [
@@ -1735,7 +1735,7 @@
         "de": "Seelensplitter des Zauberers",
         "es": "Fragmento de Alma de Mago",
         "pt": "Fragmento da alma do Mago",
-        "zh-CN": "先知之魂"
+        "zh-CN": "魔法师灵魂碎片"
       },
       "tags": [
         "secondClassQuestItem"
@@ -2071,7 +2071,7 @@
             "tl": "Navy na kahon ng kendi",
             "uk": "Темно-синя цукерниця",
             "zh-TW": "海軍藍糖果盒",
-            "zh-CN": "海军糖果盒"
+            "zh-CN": "深蓝糖果盒"
           },
           "levels": [
             1,
@@ -2778,7 +2778,7 @@
             "tl": "Pinapataas ang rate ng kumbinasyon, ngunit hanggang sa maximum na rate lamang.",
             "uk": "Збільшує швидкість комбінації, але лише до максимальної швидкості.",
             "zh-TW": "增加組合速率，但僅達最大速率。",
-            "zh-CN": "增加合成速率，但仅达到最大速率。"
+            "zh-CN": "提高合成成功率，但不会超过成功率上限。"
           },
           "color": "blue"
         },
@@ -3089,7 +3089,7 @@
             "tl": "Ang bilis ng paggalaw ay bumababa kapag nakamit.",
             "uk": "Швидкість рухливості знижується після досягнення.",
             "zh-TW": "成就後移動速度會降低。",
-            "zh-CN": "成就后移动速度会降低。"
+            "zh-CN": "携带后移动速度降低。"
           },
           "color": "blue"
         }
@@ -3111,7 +3111,7 @@
         "de": "Flamme des Death Beam Knight",
         "es": "Llama Caballero Haz Mortal",
         "pt": "Chama do Cav. Raio da Morte",
-        "zh-CN": "死亡-黑炎魔火焰"
+        "zh-CN": "炽炎魔的火种"
       },
       "tags": [
         "thirdClassQuestItem"
@@ -3149,7 +3149,7 @@
         "de": "Horn des Hell Maine",
         "es": "Cuerno de Minero Infiernal",
         "pt": "Chifre do Mineiro do Inferno",
-        "zh-CN": "地狱矿工号角"
+        "zh-CN": "丛林召唤者的角"
       },
       "tags": [
         "thirdClassQuestItem"
@@ -3287,7 +3287,7 @@
             "tl": "Ibinabalik ang HP nang 100% i kaagad.",
             "uk": "Негайно відновлює HP на 100% i.",
             "zh-TW": "立即恢復HP 100% i。",
-            "zh-CN": "立即恢复HP 100% i。"
+            "zh-CN": "立即恢复100%生命值。"
           },
           "color": "blue"
         }
@@ -3337,7 +3337,7 @@
             "tl": "Ibinabalik ang Mana ng 100% i kaagad.",
             "uk": "Негайно відновлює ману на 100% i.",
             "zh-TW": "立即恢復 100% i 法力。",
-            "zh-CN": "立即恢复 100% i 法力。"
+            "zh-CN": "立即恢复100%魔法值。"
           },
           "color": "blue"
         }
@@ -3533,7 +3533,7 @@
             "tl": "Pinapataas ang Wizardry ng {addOptionValue1}",
             "uk": "Збільшує Wizardry на {addOptionValue1}",
             "zh-TW": "增加巫術 {addOptionValue1}",
-            "zh-CN": "增加巫术 {addOptionValue1}"
+            "zh-CN": "魔法攻击力增加{addOptionValue1}"
           },
           "color": "blue"
         },
@@ -3687,7 +3687,7 @@
             "tl": "Pagtaas ng lakas +{addOptionValue1}",
             "uk": "Приріст сили +{addOptionValue1}",
             "zh-TW": "強度增量+{addOptionValue1}",
-            "zh-CN": "强度增量+{addOptionValue1}"
+            "zh-CN": "力量增量+{addOptionValue1}"
           },
           "color": "blue"
         },
@@ -3888,7 +3888,7 @@
             "tl": "Pagtaas ng enerhiya +{addOptionValue1}",
             "uk": "Приріст енергії +{addOptionValue1}",
             "zh-TW": "能量增量+{addOptionValue1}",
-            "zh-CN": "能量增量+{addOptionValue1}"
+            "zh-CN": "智力增量+{addOptionValue1}"
           },
           "color": "blue"
         },
@@ -4388,7 +4388,7 @@
             "tl": "Ibinabalik ang HP nang 65% i kaagad.",
             "uk": "Відновлює HP на 65% iмразово.",
             "zh-TW": "立即恢復生命值65% i。",
-            "zh-CN": "立即恢复生命值65% i。"
+            "zh-CN": "立即恢复65%生命值。"
           },
           "color": "blue"
         }
@@ -4595,7 +4595,7 @@
             "tl": "Pinapataas ng 20% ang Napakahusay na Pinsala",
             "uk": "Збільшує чудову шкоду на 20%",
             "zh-TW": "優秀傷害增加20%",
-            "zh-CN": "优秀伤害增加20%"
+            "zh-CN": "卓越一击伤害提高20%"
           },
           "color": "blue"
         },
@@ -5156,7 +5156,7 @@
             "tl": "Maaari kang gumawa ng kumbinasyon ng Goblin na may Sealed Silver Box para gumawa ng Silver Box.",
             "uk": "Ви можете поєднати Гобліна з Запечатаною Срібною Скринькою, щоб створити Срібну Скриньку.",
             "zh-TW": "您可以將哥布林與密封銀盒進行組合來創建銀盒。",
-            "zh-CN": "你可以用一个密封的银盒做妖精合成来创建一个银盒。"
+            "zh-CN": "将封印银箱交给玛雅哥布林合成，可获得银箱。"
           }
         }
       ],
@@ -5201,7 +5201,7 @@
             "tl": "Maaari kang gumawa ng kumbinasyon ng Goblin na may Sealed Golden Box para gumawa ng Golden Box.",
             "uk": "Ви можете створити комбінацію гобліна із запечатаною золотою скринькою, щоб створити золоту скриньку.",
             "zh-TW": "您可以將哥布林與密封金盒進行組合來創建金盒。",
-            "zh-CN": "你可以用一个密封的金盒子做妖精合成来创建一个金盒子。"
+            "zh-CN": "将封印金箱交给玛雅哥布林合成，可获得金箱。"
           }
         }
       ],
@@ -5226,7 +5226,7 @@
         "de": "Rücksetzung der Meisterfähigkeiten",
         "es": "Reinicio de Habilidad Maestra",
         "pt": "Reinic. de Habilidade Mestre",
-        "zh-CN": "主机技能复位"
+        "zh-CN": "大师技能重置"
       },
       "tags": [
         "cashShop"
@@ -5419,7 +5419,7 @@
         "de": "Versiegelte goldene Box",
         "es": "Caja Dorada Sellada",
         "pt": "Caixa dourada lacrada",
-        "zh-CN": "密封金盒"
+        "zh-CN": "封印金箱"
       },
       "tags": [
         "valuable"
@@ -5459,7 +5459,7 @@
         "de": "Versiegelte silberne Box",
         "es": "Caja Plateada Sellada",
         "pt": "Caixa prateada lacrada",
-        "zh-CN": "密封银盒"
+        "zh-CN": "封印银箱"
       },
       "tags": [
         "valuable"
@@ -5770,7 +5770,7 @@
             "tl": "Ibinabalik kaagad ang SD nang 65% i.",
             "uk": "Миттєво відновлює SD на 65% i.",
             "zh-TW": "立即恢復 SD 65% i。",
-            "zh-CN": "立即恢复 SD 65% i。"
+            "zh-CN": "立即恢复65%防护值。"
           },
           "color": "blue"
         }
@@ -6410,7 +6410,7 @@
         "de": "Verbrannte Keule des Mörders",
         "es": "Garrote de Asesinos Calcinados",
         "pt": "Porrete de Assassino Queimado",
-        "zh-CN": "烧毁的杀人犯俱乐部"
+        "zh-CN": "燃烧杀人魔的棍棒"
       },
       "description": [
         {

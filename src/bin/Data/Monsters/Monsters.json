@@ -79,7 +79,7 @@
         "en": "LIch",
         "es": "Lich",
         "pt": "Liche",
-        "zh-CN": "利赫"
+        "zh-CN": "巫妖"
       },
       "kind": "monster",
       "model": "MONSTER_MODEL_LICH",
@@ -103,7 +103,7 @@
         "en": "Poison Bull Fighter",
         "es": "Toro Luchador Venenoso",
         "pt": "Toureiro Venenoso",
-        "zh-CN": "毒牛怪战斗机"
+        "zh-CN": "剧毒蛮牛怪"
       },
       "kind": "monster",
       "model": "MONSTER_MODEL_BULL_FIGHTER",
@@ -3415,7 +3415,7 @@
         "en": "Spearman",
         "es": "Lancero",
         "pt": "Lanceiro",
-        "zh-CN": "斯皮尔曼"
+        "zh-CN": "长枪兵"
       },
       "kind": "monster",
       "model": "MONSTER_MODEL_BATTLE_GUARD2",
@@ -4259,7 +4259,7 @@
         "en": "Elpis",
         "es": "Elpis",
         "pt": "Elpis",
-        "zh-CN": "埃尔皮斯"
+        "zh-CN": "艾尔菲丝"
       },
       "kind": "npc",
       "model": "MODEL_SMELTING_NPC"
@@ -4736,7 +4736,7 @@
         "en": "Werewolf Quarel",
         "es": "Hombre Lobo Quarel",
         "pt": "Lobisomem Quarel",
-        "zh-CN": "狼人争吵"
+        "zh-CN": "狼人夸雷尔"
       },
       "kind": "npc",
       "model": "MODEL_NPC_QUARREL"
@@ -5591,7 +5591,7 @@
         "en": "Vixen",
         "es": "Juguetón",
         "pt": "Raposa",
-        "zh-CN": "泼妇"
+        "zh-CN": "维克森"
       },
       "kind": "npc",
       "model": "MODEL_LITTLESANTA+6"
@@ -5602,7 +5602,7 @@
         "en": "Blitzen",
         "es": "Relámpago",
         "pt": "Relâmpado",
-        "zh-CN": "闪电战"
+        "zh-CN": "布利兹"
       },
       "kind": "npc",
       "model": "MODEL_LITTLESANTA+7"
@@ -5863,7 +5863,7 @@
         "en": "Golden Satyros",
         "es": "Sátiro Dorado",
         "pt": "Sátiro dourado",
-        "zh-CN": "黄金萨蒂罗斯"
+        "zh-CN": "黄金半兽人"
       },
       "kind": "monster",
       "model": "MONSTER_MODEL_SATYROS",
@@ -5911,7 +5911,7 @@
         "en": "Great Golden Dragon",
         "es": "Gran Dragón Dorado",
         "pt": "Grande Dragão dourado",
-        "zh-CN": "太棒了黄金火龙王"
+        "zh-CN": "巨型黄金火龙王"
       },
       "kind": "monster",
       "model": "MONSTER_MODEL_DRAGON",
@@ -6064,7 +6064,7 @@
         "en": "Vermont",
         "es": "Vermont",
         "pt": "Vermont",
-        "zh-CN": "佛蒙特州"
+        "zh-CN": "维蒙特"
       },
       "kind": "monster",
       "model": "MONSTER_MODEL_HAMMERIZE",
@@ -6542,7 +6542,7 @@
         "en": "Gens Duprian Steward",
         "es": "Mayordomo Gens Duprian",
         "pt": "Gens Duprian Steward",
-        "zh-CN": "多普瑞恩家族管家管家"
+        "zh-CN": "多普瑞恩家族管家"
       },
       "kind": "npc",
       "model": "MODAL_GENS_NPC_DUPRIAN"
@@ -6553,7 +6553,7 @@
         "en": "Gens Vanert Steward",
         "es": "Mayordomo Gens Vanert",
         "pt": "Gens Vanert Steward",
-        "zh-CN": "巴内尔特家族管家管家"
+        "zh-CN": "巴内尔特家族管家"
       },
       "kind": "npc",
       "model": "MODAL_GENS_NPC_BARNERT"

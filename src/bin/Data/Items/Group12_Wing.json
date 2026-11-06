@@ -503,7 +503,7 @@
         "de": "Kugel: Twisting Slash",
         "es": "Orbe de Azote Tornado",
         "pt": "Orbe de golpe torcido",
-        "zh-CN": "玄月斩之石"
+        "zh-CN": "霹雳回旋斩之石"
       },
       "width": 1,
       "height": 1,
@@ -797,7 +797,7 @@
         "de": "Kugel: Rageful Blow",
         "es": "Orbe de Golpe Furioso",
         "pt": "Orbe do golpe raivoso",
-        "zh-CN": "霹雳回旋斩之石"
+        "zh-CN": "雷霆裂闪之石"
       },
       "width": 1,
       "height": 1,
@@ -2900,7 +2900,7 @@
         "de": "Samensphäre (Erde)",
         "es": "Esfera Simiente (Tierra)",
         "pt": "Esfera de semente (Terra)",
-        "zh-CN": "种子球（地球）"
+        "zh-CN": "种子球（大地）"
       },
       "tags": [
         "socketSeedSphere"
@@ -3134,7 +3134,7 @@
         "de": "Samensphäre (Erde)",
         "es": "Esfera Simiente (Tierra)",
         "pt": "Esfera de semente (Terra)",
-        "zh-CN": "种子球（地球）"
+        "zh-CN": "种子球（大地）"
       },
       "tags": [
         "socketSeedSphere"
@@ -3368,7 +3368,7 @@
         "de": "Samensphäre (Erde)",
         "es": "Esfera Simiente (Tierra)",
         "pt": "Esfera de semente (Terra)",
-        "zh-CN": "种子球（地球）"
+        "zh-CN": "种子球（大地）"
       },
       "tags": [
         "socketSeedSphere"
@@ -3552,7 +3552,7 @@
         "de": "Samensphäre (Erde)",
         "es": "Esfera Simiente (Tierra)",
         "pt": "Esfera de semente (Terra)",
-        "zh-CN": "种子球（地球）"
+        "zh-CN": "种子球（大地）"
       },
       "tags": [
         "socketSeedSphere"
@@ -3726,7 +3726,7 @@
         "de": "Samensphäre (Erde)",
         "es": "Esfera Simiente (Tierra)",
         "pt": "Esfera de semente (Terra)",
-        "zh-CN": "种子球（地球）"
+        "zh-CN": "种子球（大地）"
       },
       "tags": [
         "socketSeedSphere"
@@ -4350,7 +4350,7 @@
             "tl": "{bundleCount} Jewel of Harmony ay pinagsama-sama",
             "uk": "{bundleCount} Перлина гармонії комбінований",
             "zh-TW": "{bundleCount} 和諧寶石 組合",
-            "zh-CN": "{bundleCount} 和谐宝石 组合"
+            "zh-CN": "{bundleCount}颗再生宝石组合"
           }
         },
         {
@@ -4409,7 +4409,7 @@
             "tl": "{bundleCount} Hiyas ng Chaos ay pinagsama-sama",
             "uk": "{bundleCount} Перлина Хаосу комбінований",
             "zh-TW": "{bundleCount} 混沌寶石 組合",
-            "zh-CN": "{bundleCount} 混沌宝石 组合"
+            "zh-CN": "{bundleCount}颗玛雅之石组合"
           }
         },
         {
