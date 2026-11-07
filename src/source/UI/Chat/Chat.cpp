@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Core/Text/TextLineWrap.h"
+#include "UI/Chat/ChatBubbleText.h"
 #include "UI/Chat/Chat.h"
 #include "Character/CharacterManager.h" // gCharacterManager
 #include "Camera/CameraProjection.h" // CameraProjection
@@ -52,7 +52,7 @@
 
 namespace UI::Chat
 {
-typedef struct
+struct CHAT : ChatBubbleText
 {
     wchar_t   ID[MAX_MONSTER_NAME + 1];
     wchar_t      Union[30];
@@ -61,15 +61,13 @@ typedef struct
     char      Color;
     char      GuildColor;
     float       IDLifeTime;
-    wchar_t   Text[2][256];
-    float       LifeTime[2];
     CHARACTER* Owner;
     int       x, y;
     int       Width;
     int       Height;
     int       LineHeight;
     vec3_t    Position;
-} CHAT;
+};
 
 #define MAX_CHAT 120
 
@@ -371,18 +369,8 @@ void AddChat(CHAT* c, const wchar_t* chat_text, int flag)
         break;
     }
 
-    if (Length >= 20)
-    {
-        CutText(chat_text, c->Text[1], c->Text[0], 256);
-        c->LifeTime[0] = Time;
-        c->LifeTime[1] = Time;
-    }
-    else
-    {
-        memset(c->Text[0], 0, sizeof(c->Text[0]));
-        wcscpy(c->Text[0], chat_text);
-        c->LifeTime[0] = Time;
-    }
+    const bool retainPrevious = c->Owner != nullptr && c->Owner->Object.Kind != KIND_NPC;
+    c->SetMessage(chat_text, Time, retainPrevious);
 }
 
 void AddGuildName(CHAT* c, CHARACTER* Owner)
@@ -476,11 +464,6 @@ void CreateChat(wchar_t* character_name, const wchar_t* chat_text, CHARACTER* Ow
             }
             else
             {
-                if (c->LifeTime[0] > 0)
-                {
-                    wcscpy(c->Text[1], c->Text[0]);
-                    c->LifeTime[1] = c->LifeTime[0];
-                }
                 c->Owner = Owner;
                 AddChat(c, chat_text, Flag);
             }

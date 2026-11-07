@@ -445,3 +445,12 @@ target_compile_definitions(leveling_warp_layout_tests PRIVATE
     MU_RMLUI_DIR="${CMAKE_SOURCE_DIR}/src/bin/Data/Interface/RmlUi"
     MU_FONT_DIR="${CMAKE_SOURCE_DIR}/src/bin/fonts"
 )
+
+mu_add_test(
+    NAME chat_bubble_text_tests
+    SOURCES
+        test_chat_bubble_text.cpp
+        ${CMAKE_SOURCE_DIR}/src/source/UI/Chat/ChatBubbleText.cpp
+        ${CMAKE_SOURCE_DIR}/src/source/Core/Text/TextLineWrap.cpp
+        ${CMAKE_SOURCE_DIR}/src/source/Core/Text/WideString.cpp
+)

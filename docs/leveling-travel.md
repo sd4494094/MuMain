@@ -37,3 +37,5 @@ and verify the markers against server spawns before publishing.
 The female stat-reset appearance belongs to server NPC number 464. Number 414 is a
 different helper and retains its original appearance. Client updates must be installed
 with the game closed; an archived update on the server does not update a running client.
+NPC speech bubbles show the current utterance without stacking repeated idle lines;
+player chat retains its previous-line behavior.
