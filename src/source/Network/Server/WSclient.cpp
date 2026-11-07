@@ -13,6 +13,8 @@
 #include "UI/Events/KanturuUpdates.h"
 #include "UI/Events/CursedTempleUpdates.h"
 #include "UI/NPCs/NpcDialogueUpdates.h"
+#include "UI/NPCs/ResetNpcDialogue.h"
+#include "Network/Server/ResetNpcDialogPacket.h"
 #include "UI/Quests/QuestUpdates.h"
 #include "UI/Options/OptionUpdates.h"
 #include "UI/MuHelper/MuHelperUpdates.h"
@@ -10679,6 +10681,16 @@ void ReceiveOtherPlayerGensInfluenceViewport(const BYTE* ReceiveBuffer)
     }
 }
 
+namespace
+{
+void ReceiveResetNpcDialog(std::span<const BYTE> bytes)
+{
+    if (const auto dialog = Network::ResetNpcDialogPacket::Parse(bytes))
+        UI::Npc::ShowResetDialogue(dialog->confirmationToken, dialog->title, dialog->text,
+                                   dialog->queryLabel, dialog->applyLabel, dialog->closeLabel);
+}
+}
+
 void ReceiveNPCDlgUIStart(const BYTE* ReceiveBuffer)
 {
     auto pData = (LPPMSG_ANS_NPC_CLICK)ReceiveBuffer;
@@ -13481,6 +13493,9 @@ static void ProcessPacket(const BYTE* ReceiveBuffer, int32_t Size)
         }
         break;
     }
+    case 0xF2:
+        ReceiveResetNpcDialog(received_span);
+        break;
     case 0xF3:
     {
         int subcode;

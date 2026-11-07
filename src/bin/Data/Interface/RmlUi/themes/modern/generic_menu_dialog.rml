@@ -15,7 +15,7 @@
      The in-game system menu (is_system_menu) fills the screen instead, like the options screen:
      its own heading and close action, the buttons as a list (generic_menu_dialog.rcss). -->
 <body template="window_shell" data-model="generic_menu_dialog" data-class-system-menu="is_system_menu"
-      data-attr-data-id="menu_id">
+      data-attr-data-id="menu_id" data-class-reset-npc="menu_id == 'reset-npc'">
 	<div class="gmd-sys-header" data-class-hidden="!is_system_menu">
 		<div class="gmd-sys-title">{{system_menu_label}}</div>
 		<div class="gmd-sys-close" data-event-click="gmd_cancel">
@@ -23,7 +23,9 @@
 			<div class="gmd-sys-close-bar gmd-sys-close-bar-b"></div>
 		</div>
 	</div>
+	<div class="gmd-lines">
 	<div class="gmd-line" data-for="line : lines" data-class-bold="line.bold">{{line.text}}</div>
+	</div>
 	<!-- See ../../generic_menu_dialog.rml's own comment for why there's no explicit column count
 	     -- .gmd-button-row's own flex-wrap derives it from content. -->
 	<div class="gmd-button-row">

@@ -17,6 +17,8 @@
 	color: token(text-primary);
 }
 
+.gmd-lines { display: block; width: 100%; }
+
 .gmd-line {
 	display: block;
 	width: 100%;
@@ -336,4 +338,50 @@
 	#panel.system-menu .gmd-button-cell { width: 260dp; margin-bottom: 4dp; }
 	#panel.system-menu .gmd-btn { height: 36dp; line-height: 36dp; font-size: 13dp; }
 	.gmd-sys-footer { height: 36dp; }
+}
+
+
+/* Reset conditions can span many lines. Keep the actions visible while the
+   requirements scroll, independently of the other generic menu consumers. */
+#panel.reset-npc {
+    width: 390dp;
+    max-width: 90%;
+    height: 420dp;
+    max-height: 90%;
+    left: 50%;
+    top: 50%;
+    margin: 0;
+    transform: translate(-50%, -50%);
+}
+#panel.reset-npc .window-shell-content {
+    position: absolute;
+    left: 16dp;
+    right: 16dp;
+    top: 52dp;
+    bottom: 22dp;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+#panel.reset-npc .gmd-lines {
+    flex: 1 1 0;
+    min-height: 0;
+    width: 100%;
+    overflow: hidden auto;
+    pointer-events: auto;
+}
+#panel.reset-npc .gmd-line {
+    text-align: left;
+    font-size: 12dp;
+    line-height: 19dp;
+    margin-bottom: 5dp;
+}
+#panel.reset-npc .gmd-button-row {
+    flex: 0 0 auto;
+    max-height: none;
+    margin-top: 10dp;
+    overflow: visible;
 }
