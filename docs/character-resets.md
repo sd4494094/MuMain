@@ -18,4 +18,6 @@ selection follow the server configuration.
 The menu supports both themes. Long requirements scroll while the action buttons
 stay visible. It requires a server with the MuMain reset-dialog extension; an
 ordinary Season 6 server does not send this menu. Stat resets remain a separate
-NPC feature.
+NPC feature. Its Close action (including a theme's close control) and Escape end the
+NPC conversation without spending anything. If equipment blocks a stat reset, the
+menu reports the problem and also ends the conversation; other NPCs remain available.

@@ -3,6 +3,7 @@
 #include "UI/Dialogs/CustomMessageBox.h"
 #include "UI/Dialogs/GenericConfirmDialog.h"
 #include "UI/Dialogs/GenericMenuDialog.h"
+#include "UI/NPCs/StatResetDialogue.h"
 #include "Audio/DSPlaySound.h"
 #include "UI/Social/SocialWindowBase.h"
 #include "Render/Models/ZzzBMD.h"
@@ -1643,35 +1644,7 @@ void mu::ui::window::ShowSeedInvestigatorMenuDialog()
 
 void mu::ui::window::ShowResetCharacterPointDialog()
 {
-    GenericMenuConfig cfg;
-    cfg.id = "reset-points";
-    cfg.kind = "reset-points";
-    cfg.title = I18N::Game::ReInitializationHelper;
-    cfg.lines.push_back({ I18N::Game::ClickOnTheButtonToReinitializeAllStatPoints, false });
-
-    GenericMenuConfig::MenuButton btnReset;
-    btnReset.label = I18N::Game::StatReInitialization; // "스탯 초기화"
-    btnReset.onClick = []
-    {
-        for (int i = 0; i < MAX_EQUIPMENT; i++)
-        {
-            if (CharacterMachine->Equipment[i].Type != -1)
-            {
-                g_pSystemLogBox->AddText(I18N::Game::TheAppliedEquipmentsCannotBeReset, mu::ui::window::TYPE_ERROR_MESSAGE);
-                return;
-            }
-        }
-        SocketClient->ToGameServer()->SendResetCharacterPointRequest();
-    };
-    cfg.buttons.push_back(std::move(btnReset));
-
-    GenericMenuConfig::MenuButton btnExit;
-    btnExit.label = I18N::Game::Close388;
-    btnExit.compact = true;
-    // No onClick -- native's own ExitBtnDown has no side effect beyond closing the box.
-    cfg.buttons.push_back(std::move(btnExit));
-
-    g_pGenericMenuDialog->Show(std::move(cfg));
+    UI::Npc::ShowStatResetDialogue();
 }
 
 mu::ui::window::CGuild_ToPerson_Position::CGuild_ToPerson_Position()

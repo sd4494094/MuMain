@@ -400,3 +400,14 @@ target_compile_definitions(rml_click_sound_tests PRIVATE
     MU_RMLUI_DIR="${CMAKE_SOURCE_DIR}/src/bin/Data/Interface/RmlUi"
     MU_FONT_DIR="${CMAKE_SOURCE_DIR}/src/bin/fonts"
 )
+
+# Exercise the production NPC callbacks with a headless dialog and network host.
+mu_add_test(
+    NAME stat_reset_dialogue_tests
+    SOURCES
+        test_stat_reset_dialogue.cpp
+        ${CMAKE_SOURCE_DIR}/src/source/UI/NPCs/StatResetDialogue.cpp
+)
+target_include_directories(stat_reset_dialogue_tests BEFORE PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/stat_reset_stubs
+)
