@@ -1325,6 +1325,7 @@ if (CMAKE_CXX_COMPILER MATCHES "mingw32" OR CMAKE_CXX_COMPILER MATCHES "w64-ming
   endif()
 
   target_link_libraries(MuClient PUBLIC
+    dbghelp
     imm32
     vfw32
     dxguid
