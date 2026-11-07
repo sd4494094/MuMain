@@ -15161,8 +15161,6 @@ CHARACTER* CreateMonster(EMonsterType Type, int PositionX, int PositionY, int Ke
         c = Engine::Object::ServiceNpcs::CreateLeo(Key, PositionX, PositionY);
         break;
     case MONSTER_HELPER_ELLEN:
-        c = Engine::Object::ServiceNpcs::Create(Key, MONSTER_MODEL_SERVICE_ERIN, PositionX, PositionY);
-        break;
     case MONSTER_LUKE_THE_HELPER:
         c = CreateCharacter(Key, MODEL_PLAYER, PositionX, PositionY);
         wcscpy(c->ID, L"HelperName");
@@ -15308,23 +15306,8 @@ CHARACTER* CreateMonster(EMonsterType Type, int PositionX, int PositionY, int Ke
         //Models[MODEL_SEED_INVESTIGATOR].Actions[1].PlaySpeed = 0.1f;
         break;
     case MONSTER_REINIT_HELPER:
-    {
-        c = CreateCharacter(Key, MODEL_PLAYER, PositionX, PositionY);
-        //c->Class = 2;
-        wcscpy(c->ID, L"초기화 도우미");
-
-        c->BodyPart[BODYPART_HELM].Type = MODEL_PLATE_HELM;
-        c->BodyPart[BODYPART_ARMOR].Type = MODEL_PLATE_ARMOR;
-        c->BodyPart[BODYPART_PANTS].Type = MODEL_PLATE_PANTS;
-        c->BodyPart[BODYPART_GLOVES].Type = MODEL_PLATE_GLOVES;
-        c->BodyPart[BODYPART_BOOTS].Type = MODEL_PLATE_BOOTS;
-
-        c->Object.m_fEdgeScale = 1.15f;
-        c->Weapon[0].Type = MODEL_LIGHT_CROSSBOW;
-        c->Weapon[1].Type = MODEL_BOLT;
-        SetCharacterScale(c);
-    }
-    break;
+        c = Engine::Object::ServiceNpcs::Create(Key, MONSTER_MODEL_SERVICE_ERIN, PositionX, PositionY);
+        break;
     case MONSTER_TRANSFORMED_SNOWMAN:
         OpenNpc(MODEL_XMAS2008_SNOWMAN);
         c = CreateCharacter(Key, MODEL_XMAS2008_SNOWMAN, PositionX, PositionY);

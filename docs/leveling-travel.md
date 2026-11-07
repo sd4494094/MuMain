@@ -33,3 +33,7 @@ passing separate `--input`, `--placements` and new `--output` paths. The placeme
 lists names and all their tile coordinates. The tool checks the checksum, UTF-8
 field lengths, duplicate placements and file capacity. Back up the installed file
 and verify the markers against server spawns before publishing.
+
+The female stat-reset appearance belongs to server NPC number 464. Number 414 is a
+different helper and retains its original appearance. Client updates must be installed
+with the game closed; an archived update on the server does not update a running client.

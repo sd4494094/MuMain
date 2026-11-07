@@ -5,6 +5,7 @@
 
 #include "Core/Globals/_enum.h"
 #include "Data/GameData/MonsterData/MonsterModelSlots.h"
+#include "Data/DataHandler/MonsterData/MonsterJsonStorage.h"
 #include "Engine/Object/ZzzOpenData.h"
 #include "Engine/Object/ZzzCharacter.h"
 #include "Engine/Object/ServiceNpcAppearance.h"
@@ -12,12 +13,15 @@
 #include "Render/Models/ZzzBMD.h"
 
 #include <doctest.h>
+#include <algorithm>
 #include <cstdlib>
 
 namespace
 {
 constexpr int NoahNumber = 710;
 constexpr int LeoNumber = 371;
+// The wire identity of the stat reset NPC, independent of similarly named helpers.
+constexpr int ErinNumber = 464;
 constexpr int NoahSlot = MODEL_MONSTER01 + static_cast<int>(MONSTER_MODEL_SERVICE_NOAH);
 constexpr int LeoSlot = MODEL_MONSTER01 + static_cast<int>(MONSTER_MODEL_SERVICE_LEO);
 
@@ -92,7 +96,7 @@ TEST_CASE("Service NPC appearances: creation keeps NPC kind bounds and unrelated
         CHECK(character->Weapon[1].Type == -1);
         CHECK(character->BodyPart[BODYPART_ARMOR].Type == -1);
     }
-    for (const int number : {static_cast<int>(MONSTER_LUKE_THE_HELPER)})
+    for (const int number : {414, static_cast<int>(MONSTER_LUKE_THE_HELPER)})
     {
         CHARACTER* character = scope.Create(number);
         REQUIRE(character != nullptr);
@@ -202,6 +206,8 @@ TEST_CASE("Service NPC appearances: Erin has an independent animated female mode
     if (!HasPrivateAssets())
         return;
     const int slot = MODEL_MONSTER01 + static_cast<int>(MONSTER_MODEL_SERVICE_ERIN);
+    CHECK(MONSTER_REINIT_HELPER == ErinNumber);
+    CHECK(MONSTER_HELPER_ELLEN == 414);
     CHECK(MONSTER_MODEL_SERVICE_ERIN == 219);
     CHECK(Data::Monsters::FindMonsterModelSlot("MONSTER_MODEL_SERVICE_ERIN") == slot);
     MonsterRecorder::LoadScope load(0);
@@ -225,13 +231,36 @@ TEST_CASE("Service NPC appearances: Erin has an independent animated female mode
     MonsterRecorder::CreationScope creation(0);
     for (int i = 0; i < 2; ++i)
     {
-        const CHARACTER* character = creation.Create(MONSTER_HELPER_ELLEN);
+        const CHARACTER* character = creation.Create(ErinNumber);
         REQUIRE(character != nullptr);
         CHECK(character->Object.Type == slot);
         CHECK(character->Object.Kind == KIND_NPC);
-        CHECK(character->MonsterIndex == MONSTER_HELPER_ELLEN);
+        CHECK(character->MonsterIndex == ErinNumber);
         CHECK(character->Object.CurrentAction < model.numActions);
         CHECK(character->Wing.Type == -1);
         CHECK_FALSE(Engine::Object::ServiceNpcs::HasTownHover(character));
+    }
+}
+
+TEST_CASE("Service NPC bindings: shipped numeric identities create the model declared in client data [service-npc]")
+{
+    if (!HasPrivateAssets())
+        return;
+    const auto data =
+        Data::Monsters::LoadMonstersFile(MonsterRecorder::ClientFolder() / "Data" / "Monsters" / "Monsters.json");
+    REQUIRE(data.monsters.size() > 500);
+    MonsterRecorder::CreationScope creation(0);
+    for (const int number : {414, 464, 710})
+    {
+        const auto entry = std::find_if(data.monsters.begin(), data.monsters.end(),
+                                        [number](const auto& monster) { return monster.number == number; });
+        REQUIRE(entry != data.monsters.end());
+        const auto expected = Data::Monsters::FindMonsterModelReference(entry->model);
+        REQUIRE(expected);
+        const CHARACTER* character = creation.Create(number);
+        REQUIRE(character != nullptr);
+        CHECK(character->MonsterIndex == number);
+        CHECK(character->Object.Type == *expected);
+        CHECK(character->Object.Kind == KIND_NPC);
     }
 }
