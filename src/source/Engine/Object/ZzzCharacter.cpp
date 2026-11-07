@@ -57,6 +57,7 @@
 #include "Data/GameData/MonsterData/MonsterDatabase.h"
 #include "Data/GameData/MonsterData/MonsterModelDatabase.h"
 #include "Engine/Object/MonsterModelBody.h"
+#include "Engine/Object/ServiceNpcAppearance.h"
 #include "GameLogic/Monsters/MonsterAttackPlay.h"
 #include "GameLogic/Monsters/MonsterSoundEvents.h"
 #include "GameLogic/Monsters/MonsterNames.h"
@@ -15154,8 +15155,12 @@ CHARACTER* CreateMonster(EMonsterType Type, int PositionX, int PositionY, int Ke
         c->Object.m_bRenderShadow = false;
         break;
     case MONSTER_LEVELING_WARP_GUIDE:
-    case MONSTER_LUKE_THE_HELPER:
+        c = Engine::Object::ServiceNpcs::Create(Key, MONSTER_MODEL_SERVICE_NOAH, PositionX, PositionY);
+        break;
     case MONSTER_LEO_THE_HELPER:
+        c = Engine::Object::ServiceNpcs::Create(Key, MONSTER_MODEL_SERVICE_LEO, PositionX, PositionY);
+        break;
+    case MONSTER_LUKE_THE_HELPER:
     case MONSTER_HELPER_ELLEN:
         c = CreateCharacter(Key, MODEL_PLAYER, PositionX, PositionY);
         wcscpy(c->ID, L"HelperName");

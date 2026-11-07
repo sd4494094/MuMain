@@ -1927,6 +1927,24 @@
       ]
     },
     {
+      "slot": "MONSTER_MODEL_SERVICE_NOAH",
+      "file": "Data/NPC/Noah/Noah.bmd",
+      "textureFolders": ["NPC/Noah"],
+      "animations": {"stop1": 0.18, "stop2": 0.18},
+      "headBone": 7,
+      "boundingBox": {"min": [-42, -35, 0], "max": [42, 35, 190]},
+      "linkBones": [22, 12]
+    },
+    {
+      "slot": "MONSTER_MODEL_SERVICE_LEO",
+      "file": "Data/NPC/Leo/Leo.bmd",
+      "textureFolders": ["NPC/Leo"],
+      "animations": {"stop1": 0.18, "stop2": 0.18, "walk": 0.22},
+      "headBone": 20,
+      "boundingBox": {"min": [-42, -35, 0], "max": [42, 35, 205]},
+      "linkBones": [28, 37]
+    },
+    {
       "slot": "MODEL_MERCHANT_FEMALE",
       "file": "Data/NPC/Female01.bmd",
       "textureFolders": ["NPC"],

@@ -4295,7 +4295,7 @@
         "zh-CN": "转生导师·里奥"
       },
       "kind": "npc",
-      "model": "player"
+      "model": "MONSTER_MODEL_SERVICE_LEO"
     },
     {
       "number": 372,
@@ -7209,7 +7209,7 @@
         "zh-CN": "传送使者·诺亚"
       },
       "kind": "npc",
-      "model": "player"
+      "model": "MONSTER_MODEL_SERVICE_NOAH"
     }
   ]
 }

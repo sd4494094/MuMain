@@ -7,6 +7,7 @@ mu_add_test(
     NAME monster_model_recorder_tests
     SOURCES
         MonsterCreationScope.cpp
+        test_service_npc_appearances.cpp
         MonsterModelRecorder.cpp
         test_monster_model_recorder.cpp
         test_monster_model_loader.cpp

@@ -842,3 +842,16 @@ and `view_*` events) and the kinds of this list (`monster`, `npc`, `trap`,
 of that number (traps, `other` objects and players are not found by it).
 Since monster and NPC names follow the UI language, scripts find NPCs by
 their number, not by their name.
+
+
+### Custom service NPC appearances
+
+Teleport Guide Noah (710) uses a purple mage body with a wayfinder staff.
+Rebirth Guide Leo (371) uses a dark warrior body with two swords. Their names,
+dialogues, reset/teleport rules, and the M travel menu are unchanged.
+Install the matching client release including both private NPC asset folders,
+the monster/model tables, and Main.exe as one unit. Mixing only the new executable
+with an old Data folder leaves the custom bodies unavailable.
+The release uses private adaptations of locally licensed client assets; its
+artifact manifest records the exact files. It does not replace the shared Devin
+body or any player equipment textures.

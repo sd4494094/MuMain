@@ -4551,6 +4551,8 @@ enum EMonsterModelType : int
     MONSTER_MODEL_CRYPOS = 214,
     MONSTER_MODEL_CONDRA = 215,
     MONSTER_MODEL_NACONDRA = 216,
+    MONSTER_MODEL_SERVICE_NOAH = 217,
+    MONSTER_MODEL_SERVICE_LEO = 218,
     MONSTER_MODEL_COUNT,            // keep last: number of monster models
 };
 
