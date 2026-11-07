@@ -4292,7 +4292,7 @@
         "en": "Leo the Helper",
         "es": "Leo el Ayudante",
         "pt": "Leo, o ajudante",
-        "zh-CN": "助手里奥"
+        "zh-CN": "转生导师·里奥"
       },
       "kind": "npc",
       "model": "player"
@@ -5480,7 +5480,7 @@
         "en": "Reset Helper",
         "es": "Ayudante de Reinicio",
         "pt": "Assistente de Reinicialização",
-        "zh-CN": "转生管理员"
+        "zh-CN": "洗点师·艾琳"
       },
       "kind": "npc",
       "model": "player"
