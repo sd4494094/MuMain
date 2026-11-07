@@ -350,7 +350,7 @@ void SetPlayerStop(CHARACTER* c)
                 if (SceneFlag == MAIN_SCENE && (gMapManager.WorldActive == WD_7ATLANSE || gMapManager.InHellas() || gMapManager.WorldActive == WD_67DOPPLEGANGER3) && (TerrainWall[Index] & TW_SAFEZONE) != TW_SAFEZONE)
                     Fly = true;
 
-                if (c->MonsterIndex == MONSTER_ELF_SOLDIER)
+                if (c->MonsterIndex == MONSTER_ELF_SOLDIER || Engine::Object::ServiceNpcs::HasTownHover(c))
                     Fly = true;
 
                 if (Fly)
@@ -15160,8 +15160,10 @@ CHARACTER* CreateMonster(EMonsterType Type, int PositionX, int PositionY, int Ke
     case MONSTER_LEO_THE_HELPER:
         c = Engine::Object::ServiceNpcs::CreateLeo(Key, PositionX, PositionY);
         break;
-    case MONSTER_LUKE_THE_HELPER:
     case MONSTER_HELPER_ELLEN:
+        c = Engine::Object::ServiceNpcs::Create(Key, MONSTER_MODEL_SERVICE_ERIN, PositionX, PositionY);
+        break;
+    case MONSTER_LUKE_THE_HELPER:
         c = CreateCharacter(Key, MODEL_PLAYER, PositionX, PositionY);
         wcscpy(c->ID, L"HelperName");
         c->BodyPart[BODYPART_HELM].Type = MODEL_PLATE_HELM;

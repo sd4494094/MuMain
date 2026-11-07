@@ -5483,7 +5483,7 @@
         "zh-CN": "洗点师·艾琳"
       },
       "kind": "npc",
-      "model": "player"
+      "model": "MONSTER_MODEL_SERVICE_ERIN"
     },
     {
       "number": 465,

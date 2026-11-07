@@ -1945,6 +1945,15 @@
       "linkBones": [28, 37]
     },
     {
+      "slot": "MONSTER_MODEL_SERVICE_ERIN",
+      "file": "Data/NPC/Erin/Erin.bmd",
+      "textureFolders": ["NPC/Erin"],
+      "animations": {"stop1": 0.18, "stop2": 0.18},
+      "headBone": 6,
+      "boundingBox": {"min": [-36, -36, 0], "max": [36, 36, 200]},
+      "linkBones": [21, 13]
+    },
+    {
       "slot": "MODEL_MERCHANT_FEMALE",
       "file": "Data/NPC/Female01.bmd",
       "textureFolders": ["NPC"],

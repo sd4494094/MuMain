@@ -6,6 +6,8 @@
 #include "Core/Globals/_enum.h"
 #include "Data/GameData/MonsterData/MonsterModelSlots.h"
 #include "Engine/Object/ZzzOpenData.h"
+#include "Engine/Object/ZzzCharacter.h"
+#include "Engine/Object/ServiceNpcAppearance.h"
 #include "Data/DataHandler/LoadData.h"
 #include "Render/Models/ZzzBMD.h"
 
@@ -90,7 +92,7 @@ TEST_CASE("Service NPC appearances: creation keeps NPC kind bounds and unrelated
         CHECK(character->Weapon[1].Type == -1);
         CHECK(character->BodyPart[BODYPART_ARMOR].Type == -1);
     }
-    for (const int number : {static_cast<int>(MONSTER_LUKE_THE_HELPER), static_cast<int>(MONSTER_HELPER_ELLEN)})
+    for (const int number : {static_cast<int>(MONSTER_LUKE_THE_HELPER)})
     {
         CHARACTER* character = scope.Create(number);
         REQUIRE(character != nullptr);
@@ -101,7 +103,11 @@ TEST_CASE("Service NPC appearances: creation keeps NPC kind bounds and unrelated
 
 TEST_CASE("Service NPC appearances: Leo uses native +15 excellent Black Dragon parts and Storm wings [service-npc]")
 {
+    if (!HasPrivateAssets())
+        return;
     MonsterRecorder::CreationScope scope(0);
+    REQUIRE(gLoadData.AccessModel(MODEL_PLAYER, L"Data\\Player\\", L"player"));
+    REQUIRE(Models[MODEL_PLAYER].NumActions > PLAYER_STOP_FLY);
     for (int creation = 0; creation < 2; ++creation)
     {
         CHARACTER* character = scope.Create(LeoNumber);
@@ -131,6 +137,15 @@ TEST_CASE("Service NPC appearances: Leo uses native +15 excellent Black Dragon p
         CHECK(character->Wing.Type == MODEL_WING_OF_STORM);
         CHECK(character->Wing.Level == 15);
         CHECK(character->Helper.Type == -1);
+        CHECK(character->Object.CurrentAction == PLAYER_STOP_FLY);
+        character->SafeZone = true;
+        SetPlayerStop(character);
+        CHECK(character->Object.CurrentAction == PLAYER_STOP_FLY);
+        CHECK(Engine::Object::ServiceNpcs::HasTownHover(character));
+        character->Object.Kind = KIND_PLAYER;
+        CHECK_FALSE(Engine::Object::ServiceNpcs::HasTownHover(character));
+        SetPlayerStop(character);
+        CHECK(character->Object.CurrentAction != PLAYER_STOP_FLY);
     }
 }
 
@@ -180,4 +195,43 @@ TEST_CASE("Service NPC appearances: native Leo equipment models textures and win
     }
     const auto wing = scope.ReadSlot(MODEL_WING_OF_STORM);
     CHECK(wing.actions.front().keys > 1);
+}
+
+TEST_CASE("Service NPC appearances: Erin has an independent animated female model [service-npc]")
+{
+    if (!HasPrivateAssets())
+        return;
+    const int slot = MODEL_MONSTER01 + static_cast<int>(MONSTER_MODEL_SERVICE_ERIN);
+    CHECK(MONSTER_MODEL_SERVICE_ERIN == 219);
+    CHECK(Data::Monsters::FindMonsterModelSlot("MONSTER_MODEL_SERVICE_ERIN") == slot);
+    MonsterRecorder::LoadScope load(0);
+    const auto changes = load.Run([] { OpenMonsterModel(MONSTER_MODEL_SERVICE_ERIN); });
+    CHECK(changes.textureErrors.empty());
+    const auto model = load.ReadSlot(slot);
+    CHECK(model.numMeshs == 2);
+    CHECK(model.numBones == 49);
+    CHECK(model.numActions == 2);
+    CHECK(model.boneHead == 6);
+    for (const auto& action : model.actions)
+    {
+        CHECK(action.keys == 21);
+        CHECK(action.speed > 0.f);
+    }
+    for (const auto& texture : model.textures)
+    {
+        CHECK(texture.bitmap != L"unknown");
+        CHECK(texture.bitmap != L"hidden");
+    }
+    MonsterRecorder::CreationScope creation(0);
+    for (int i = 0; i < 2; ++i)
+    {
+        const CHARACTER* character = creation.Create(MONSTER_HELPER_ELLEN);
+        REQUIRE(character != nullptr);
+        CHECK(character->Object.Type == slot);
+        CHECK(character->Object.Kind == KIND_NPC);
+        CHECK(character->MonsterIndex == MONSTER_HELPER_ELLEN);
+        CHECK(character->Object.CurrentAction < model.numActions);
+        CHECK(character->Wing.Type == -1);
+        CHECK_FALSE(Engine::Object::ServiceNpcs::HasTownHover(character));
+    }
 }
