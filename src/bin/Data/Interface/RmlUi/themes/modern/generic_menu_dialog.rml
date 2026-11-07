@@ -53,5 +53,9 @@
 			<span class="gmd-sys-keycap">Esc</span><span class="gmd-sys-footer-label">{{close_label}}</span>
 		</div>
 	</div>
+	<!-- Cancellation stays outside the destination scroll pane. It shares Escape's cleanup. -->
+	<div class="gmd-leveling-footer" data-if="menu_id == 'leveling-warp'">
+		<div class="btn gmd-leveling-close" data-event-click="gmd_cancel">{{close_label}}</div>
+	</div>
 </body>
 </rml>

@@ -1,5 +1,4 @@
 <rml>
-<!-- rml-contract-optional-callback: gmd_cancel: this legacy menu closes through Escape or its configured button actions, without a separate cancel control -->
 <head>
 	<title>Generic Menu Dialog</title>
 	<link type="text/rcss" href="base.rcss"/>
@@ -46,7 +45,7 @@
 		     text that describes one specific button (e.g. CChaosMixMenuMsgBox's per-recipe blurb)
 		     renders directly above that button instead of bunched into the shared summary above. -->
 		<div class="gmd-button-cell" data-for="button : buttons" data-class-compact="button.compact" data-class-has-lines="button.has_lines" data-class-cols-2="button.cols2"
-		     data-class-lines-below="button.lines_below">
+		     data-class-lines-below="button.lines_below" data-class-dismiss="button.dismiss">
 			<div class="gmd-line" data-for="line : button.lines" data-class-bold="line.bold"
 			     data-style-color="line.color == '' ? '#ffffff' : line.color"><span
 			     data-class-native-fit="kind == 'chaos-mix'">{{line.text}}</span></div>
@@ -61,6 +60,10 @@
                 <div class="gmd-btn-details" data-if="button.details != ''">{{button.details}}</div>
 			</div>
 		</div>
+	</div>
+	<!-- Cancellation stays outside the destination scroll pane. It shares Escape's cleanup. -->
+	<div class="gmd-leveling-footer" data-if="menu_id == 'leveling-warp'">
+		<div class="btn gmd-leveling-close" data-event-click="gmd_cancel">{{close_label}}</div>
 	</div>
 </body>
 </rml>

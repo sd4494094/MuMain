@@ -431,3 +431,17 @@ mu_add_test(
 target_include_directories(leveling_warp_dialogue_tests BEFORE PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/leveling_warp_stubs
 )
+
+# Load real themed documents with live data-for/if bindings and the shared UI scale.
+mu_add_test(
+    NAME leveling_warp_layout_tests
+    SOURCES
+        test_leveling_warp_layout.cpp
+        RmlLayoutFixture.cpp
+        ${CMAKE_SOURCE_DIR}/src/source/App/Platform/Windows/Winmain.cpp
+    LINK_LIBS MuClient
+)
+target_compile_definitions(leveling_warp_layout_tests PRIVATE
+    MU_RMLUI_DIR="${CMAKE_SOURCE_DIR}/src/bin/Data/Interface/RmlUi"
+    MU_FONT_DIR="${CMAKE_SOURCE_DIR}/src/bin/fonts"
+)
