@@ -2,9 +2,11 @@
 #include <doctest.h>
 
 #include "Network/Server/WSclient.h"
+#include "Data/GameData/MonsterData/MonsterDatabase.h"
 #include "UI/Core/WindowSystem.h"
 #include "UI/Dialogs/GenericMenuDialog.h"
 #include "UI/NPCs/StatResetDialogue.h"
+#include "I18N/All.h"
 
 namespace
 {
@@ -71,4 +73,15 @@ TEST_CASE("stat reset callbacks tolerate a disconnected socket")
     CHECK_NOTHROW(config.buttons[0].onClick());
     CHECK(statResetTestSocket.connection.resetRequests == 0);
     CHECK(statResetTestSocket.connection.closeRequests == 0);
+}
+
+TEST_CASE("stat reset title uses the same localized name as the world NPC")
+{
+    g_MonsterDatabase.name = L"洗点师·艾琳";
+    OpenMenu();
+    CHECK(mu::ui::window::statResetTestMenu.active.title == g_MonsterDatabase.name);
+    g_MonsterDatabase.name = nullptr;
+    OpenMenu();
+    CHECK(mu::ui::window::statResetTestMenu.active.title == I18N::Game::ReInitializationHelper);
+    g_MonsterDatabase.name = L"洗点师·艾琳";
 }

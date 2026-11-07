@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include "UI/NPCs/RefiningDialogue.h"
 #include "Core/Utilities/Random.h"
 #include "App/Control/ControlTaps.h"
 #include "Audio/SoundPlaces.h"
@@ -6462,6 +6463,11 @@ BOOL ReceiveTalk(const BYTE* ReceiveBuffer, BOOL bEncrypted)
             UI::Windows::HideAll();
             mu::ui::window::ShowGemIntegrationMenuDialog();
         }
+        else
+        {
+            // No UI was opened: release the session accepted by the server.
+            SocketClient->ToGameServer()->SendCloseNpcRequest();
+        }
     }
     break;
 
@@ -6479,18 +6485,7 @@ BOOL ReceiveTalk(const BYTE* ReceiveBuffer, BOOL bEncrypted)
     break;
     case 0x12:
     {
-        UI::Dialogs::ConfirmRequest cfg;
-        cfg.lines = {
-            {I18N::Game::Warning2223, true, RGBA(255, 0, 0, 255)},
-            {L" ", false},
-            {I18N::Game::RefineryHasStartedRefineryIsA, true, RGBA(223, 191, 103, 255)},
-        };
-        cfg.onAccept = []
-        {
-            g_MixRecipeMgr.SetMixType(SEASON3A::MIXTYPE_OSBOURNE);
-            UI::Windows::Show(mu::ui::window::INTERFACE_MIXINVENTORY);
-        };
-        UI::Dialogs::ShowConfirm(std::move(cfg));
+        UI::Npc::ShowRefiningDialogue();
     }
     break;
     case 0x13:

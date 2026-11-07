@@ -13,3 +13,16 @@ struct StatResetTestLog
 };
 inline StatResetTestLog statResetTestLog;
 inline StatResetTestLog* g_pSystemLogBox = &statResetTestLog;
+
+inline int refiningTestWindow = -1;
+namespace mu::ui::window
+{
+inline constexpr int INTERFACE_MIXINVENTORY = 17;
+}
+namespace UI::Windows
+{
+inline void Show(int window)
+{
+    refiningTestWindow = window;
+}
+} // namespace UI::Windows

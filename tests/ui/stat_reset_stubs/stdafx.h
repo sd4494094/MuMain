@@ -15,3 +15,8 @@ struct StatResetTestCharacter
 };
 inline StatResetTestCharacter statResetTestCharacter;
 inline StatResetTestCharacter* CharacterMachine = &statResetTestCharacter;
+
+inline constexpr unsigned long RGBA(unsigned long r, unsigned long g, unsigned long b, unsigned long a)
+{
+    return r | (g << 8) | (b << 16) | (a << 24);
+}

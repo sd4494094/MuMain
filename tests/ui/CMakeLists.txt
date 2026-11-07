@@ -411,3 +411,13 @@ mu_add_test(
 target_include_directories(stat_reset_dialogue_tests BEFORE PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/stat_reset_stubs
 )
+
+mu_add_test(
+    NAME refining_dialogue_tests
+    SOURCES
+        test_refining_dialogue.cpp
+        ${CMAKE_SOURCE_DIR}/src/source/UI/NPCs/RefiningDialogue.cpp
+)
+target_include_directories(refining_dialogue_tests BEFORE PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/stat_reset_stubs
+)

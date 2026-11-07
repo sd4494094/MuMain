@@ -150,6 +150,7 @@ void CEmpireGuardianNPC::OpenningProcess()
 
 void CEmpireGuardianNPC::ClosingProcess()
 {
+    SocketClient->ToGameServer()->SendCloseNpcRequest();
 }
 
 // Into the theme's .entry-item-box (the original's 20x27 centred at y 50 + 70).

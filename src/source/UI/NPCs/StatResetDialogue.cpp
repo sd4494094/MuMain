@@ -2,6 +2,7 @@
 #include "UI/NPCs/StatResetDialogue.h"
 
 #include "I18N/All.h"
+#include "Data/GameData/MonsterData/MonsterDatabase.h"
 #include "Network/Server/WSclient.h"
 #include "UI/Core/WindowSystem.h"
 #include "UI/Dialogs/GenericMenuDialog.h"
@@ -44,7 +45,9 @@ void ShowStatResetDialogue()
     GenericMenuConfig config;
     config.id = "reset-points";
     config.kind = "reset-points";
-    config.title = I18N::Game::ReInitializationHelper;
+    constexpr int statResetNpcNumber = 464;
+    const wchar_t* npcName = g_MonsterDatabase.FindDisplayName(statResetNpcNumber);
+    config.title = npcName != nullptr ? npcName : I18N::Game::ReInitializationHelper;
     config.lines.push_back({I18N::Game::ClickOnTheButtonToReinitializeAllStatPoints, false});
 
     GenericMenuConfig::MenuButton reset;
