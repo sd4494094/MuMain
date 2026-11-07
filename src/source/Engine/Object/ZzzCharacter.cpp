@@ -15158,7 +15158,7 @@ CHARACTER* CreateMonster(EMonsterType Type, int PositionX, int PositionY, int Ke
         c = Engine::Object::ServiceNpcs::Create(Key, MONSTER_MODEL_SERVICE_NOAH, PositionX, PositionY);
         break;
     case MONSTER_LEO_THE_HELPER:
-        c = Engine::Object::ServiceNpcs::Create(Key, MONSTER_MODEL_SERVICE_LEO, PositionX, PositionY);
+        c = Engine::Object::ServiceNpcs::CreateLeo(Key, PositionX, PositionY);
         break;
     case MONSTER_LUKE_THE_HELPER:
     case MONSTER_HELPER_ELLEN:

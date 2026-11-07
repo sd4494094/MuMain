@@ -847,7 +847,11 @@ their number, not by their name.
 ### Custom service NPC appearances
 
 Teleport Guide Noah (710) uses a purple mage body with a wayfinder staff.
-Rebirth Guide Leo (371) uses a dark warrior body with two swords. Their names,
+Rebirth Guide Leo (371) uses the native Blade Master equipment renderer: a full
++15 excellent Black Dragon set, two +15 excellent Swords of Destruction, and
+animated Wings of Storm. These are cosmetic NPC parts; no player inventory or
+character stats change. Item glow follows the existing client effect settings.
+The earlier merged Leo model slot remains reserved for compatibility. Their names,
 dialogues, reset/teleport rules, and the M travel menu are unchanged.
 Install the matching client release including both private NPC asset folders,
 the monster/model tables, and Main.exe as one unit. Mixing only the new executable
