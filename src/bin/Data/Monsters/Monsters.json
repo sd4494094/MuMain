@@ -7201,6 +7201,15 @@
       "kind": "monster",
       "model": "MONSTER_MODEL_BULL_FIGHTER",
       "soundSet": "Bull Fighter"
+    },
+    {
+      "number": 710,
+      "name": {
+        "en": "Teleport Guide Noah",
+        "zh-CN": "传送使者·诺亚"
+      },
+      "kind": "npc",
+      "model": "player"
     }
   ]
 }

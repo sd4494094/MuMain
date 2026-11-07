@@ -15153,6 +15153,7 @@ CHARACTER* CreateMonster(EMonsterType Type, int PositionX, int PositionY, int Ke
         c->Object.EnableShadow = false;
         c->Object.m_bRenderShadow = false;
         break;
+    case MONSTER_LEVELING_WARP_GUIDE:
     case MONSTER_LUKE_THE_HELPER:
     case MONSTER_LEO_THE_HELPER:
     case MONSTER_HELPER_ELLEN:

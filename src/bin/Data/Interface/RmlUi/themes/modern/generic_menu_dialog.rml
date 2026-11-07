@@ -15,7 +15,7 @@
      The in-game system menu (is_system_menu) fills the screen instead, like the options screen:
      its own heading and close action, the buttons as a list (generic_menu_dialog.rcss). -->
 <body template="window_shell" data-model="generic_menu_dialog" data-class-system-menu="is_system_menu"
-      data-attr-data-id="menu_id" data-class-reset-npc="menu_id == 'reset-npc'">
+      data-attr-data-id="menu_id" data-class-reset-npc="menu_id == 'reset-npc'" data-class-leveling-warp="menu_id == 'leveling-warp'">
 	<div class="gmd-sys-header" data-class-hidden="!is_system_menu">
 		<div class="gmd-sys-title">{{system_menu_label}}</div>
 		<div class="gmd-sys-close" data-event-click="gmd_cancel">
@@ -43,6 +43,8 @@
 				     engine) and why .gmd-btn-label needs position:relative. -->
 				<div class="gmd-btn-fill"></div>
 				<div class="gmd-btn-label">{{button.label}}</div>
+                <div class="gmd-btn-description" data-if="button.description != ''">{{button.description}}</div>
+                <div class="gmd-btn-details" data-if="button.details != ''">{{button.details}}</div>
 			</div>
 		</div>
 	</div>

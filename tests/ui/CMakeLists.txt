@@ -421,3 +421,13 @@ mu_add_test(
 target_include_directories(refining_dialogue_tests BEFORE PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/stat_reset_stubs
 )
+
+mu_add_test(
+    NAME leveling_warp_dialogue_tests
+    SOURCES
+        test_leveling_warp_dialogue.cpp
+        ${CMAKE_SOURCE_DIR}/src/source/UI/NPCs/LevelingWarpDialogue.cpp
+)
+target_include_directories(leveling_warp_dialogue_tests BEFORE PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/leveling_warp_stubs
+)

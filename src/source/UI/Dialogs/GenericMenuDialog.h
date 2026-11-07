@@ -43,6 +43,8 @@ namespace mu::ui::window
         struct MenuButton
         {
             std::wstring label;
+            std::wstring description;      // optional location description inside the same clickable row
+            std::wstring details;          // optional requirements inside the same row
             std::wstring tooltip;          // optional hover text; empty = no tooltip
             std::vector<Line> lines;        // optional description text rendered directly above
                                             // this button (not the shared summary above) --
@@ -144,6 +146,8 @@ namespace mu::ui::window
         struct MenuButtonEntry
         {
             Rml::String label;
+            Rml::String description;
+            Rml::String details;
             Rml::String tooltip;
             std::vector<LineEntry> lines;
             bool hasLines = false;  // toggles .gmd-button-cell's extra bottom margin (RCSS)

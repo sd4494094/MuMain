@@ -15,6 +15,8 @@
 #include "UI/Events/CursedTempleUpdates.h"
 #include "UI/NPCs/NpcDialogueUpdates.h"
 #include "UI/NPCs/ResetNpcDialogue.h"
+#include "UI/NPCs/LevelingWarpDialogue.h"
+#include "Network/Server/LevelingWarpDialogPacket.h"
 #include "Network/Server/ResetNpcDialogPacket.h"
 #include "UI/Quests/QuestUpdates.h"
 #include "UI/Options/OptionUpdates.h"
@@ -1232,6 +1234,7 @@ BOOL ReceiveJoinMapServer(std::span<const BYTE> ReceiveBuffer)
 
     CreateEffect(BITMAP_MAGIC + 2, o->Position, o->Angle, o->Light, 0, o);
     CurrentProtocolState = RECEIVE_JOIN_MAP_SERVER;
+    UI::Npc::AnnounceLevelingWarpSupport();
 
     LockInputStatus = false;
     Input::IME::CheckStatus(true, 0);
@@ -2318,6 +2321,7 @@ BOOL ReceiveTeleport(const BYTE* ReceiveBuffer, BOOL bEncrypted)
         }
 
         SocketClient->ToGameServer()->SendClientReadyAfterMapChange();
+        UI::Npc::AnnounceLevelingWarpSupport();
 
         g_dwLatestZoneMoving = GetTickCount();
         g_bWhileMovingZone = FALSE;
@@ -10684,6 +10688,26 @@ void ReceiveResetNpcDialog(std::span<const BYTE> bytes)
         UI::Npc::ShowResetDialogue(dialog->confirmationToken, dialog->title, dialog->text,
                                    dialog->queryLabel, dialog->applyLabel, dialog->closeLabel);
 }
+
+namespace
+{
+void ReceiveExtendedNpcDialog(std::span<const BYTE> bytes)
+{
+    if (bytes.size() < 5)
+        return;
+    if (bytes[4] == 0x01)
+        ReceiveResetNpcDialog(bytes);
+    else if (bytes[4] == 0x02)
+    {
+        if (const auto dialog = Network::LevelingWarpDialogPacket::Parse(bytes))
+            UI::Npc::ShowLevelingWarpDialogue(*dialog);
+        else if (SocketClient != nullptr)
+            SocketClient->ToGameServer()->SendCloseNpcRequest();
+    }
+}
+} // namespace
+
+
 }
 
 void ReceiveNPCDlgUIStart(const BYTE* ReceiveBuffer)
@@ -13489,7 +13513,7 @@ static void ProcessPacket(const BYTE* ReceiveBuffer, int32_t Size)
         break;
     }
     case 0xF2:
-        ReceiveResetNpcDialog(received_span);
+        ReceiveExtendedNpcDialog(received_span);
         break;
     case 0xF3:
     {

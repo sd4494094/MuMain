@@ -13,6 +13,7 @@ bool IsForcedNpcMonsterType(int rawType)
 {
     switch (rawType)
     {
+    case static_cast<int>(MONSTER_LEVELING_WARP_GUIDE):
     case 367:
     case 371:
     case 375:

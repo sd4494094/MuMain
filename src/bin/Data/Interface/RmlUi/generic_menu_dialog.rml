@@ -19,7 +19,7 @@
      this document supplies only its own content, spliced into that template's #content slot. -->
 <body template="window_shell" data-model="generic_menu_dialog" data-class-system-menu="is_system_menu"
       data-class-highlight-title="highlight_title"
-      data-class-native-frame="kind != ''" data-attr-data-kind="kind" data-attr-data-id="menu_id" data-class-reset-npc="menu_id == 'reset-npc'"
+      data-class-native-frame="kind != ''" data-attr-data-kind="kind" data-attr-data-id="menu_id" data-class-reset-npc="menu_id == 'reset-npc'" data-class-leveling-warp="menu_id == 'leveling-warp'"
       data-style---canvas-top="canvas_top + 'dp'">
 	<!-- The menu's own lines. A menu that names the native box it replaces (GenericMenuConfig::kind,
 	     data-kind) is laid out like that box in generic_menu_dialog.rcss: its lines where the box's
@@ -57,6 +57,8 @@
 				     .gmd-btn -- see generic_menu_dialog.rcss's own .gmd-btn.cols-2 comment
 				     for why (a decorator change, not a markup requirement of its own). -->
 				<div class="gmd-btn-label">{{button.label}}</div>
+                <div class="gmd-btn-description" data-if="button.description != ''">{{button.description}}</div>
+                <div class="gmd-btn-details" data-if="button.details != ''">{{button.details}}</div>
 			</div>
 		</div>
 	</div>

@@ -157,3 +157,10 @@ mu_add_test(
         test_reset_npc_dialog_packet.cpp
         ${CMAKE_SOURCE_DIR}/src/source/Network/Server/ResetNpcDialogPacket.cpp
 )
+
+mu_add_test(
+    NAME test_leveling_warp_dialog_packet
+    SOURCES
+        test_leveling_warp_dialog_packet.cpp
+        ${CMAKE_SOURCE_DIR}/src/source/Network/Server/LevelingWarpDialogPacket.cpp
+)

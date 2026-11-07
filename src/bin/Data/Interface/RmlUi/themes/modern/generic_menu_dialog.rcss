@@ -385,3 +385,18 @@
     margin-top: 10dp;
     overflow: visible;
 }
+
+/* The leveling NPC uses full map names and location descriptions in one clickable row.
+   A bounded scroll area keeps every destination reachable without changing other menus. */
+#panel.leveling-warp { width: 320dp; height: 400dp; max-height: 88vh; }
+body.leveling-warp .gmd-button-row { display: block; height: 290dp; max-height: 65vh; overflow: hidden auto; }
+body.leveling-warp .gmd-button-cell { width: 264dp; margin: 0 auto 6dp auto; }
+body.leveling-warp .gmd-btn { display: block; position: relative; width: 264dp; height: 60dp; line-height: 18dp; white-space: normal; }
+body.leveling-warp .gmd-btn-label { position: relative; display: block; font-size: 13dp; line-height: 19dp; padding-top: 3dp; }
+body.leveling-warp .gmd-btn-description { position: relative; display: block; font-size: 11dp; line-height: 17dp; }
+body.leveling-warp .gmd-btn-details { position: relative; display: block; font-size: 10dp; line-height: 17dp; }
+body.leveling-warp .gmd-button-cell.compact { width: 100dp; }
+body.leveling-warp .gmd-btn.compact { width: 100dp; height: 28dp; }
+body.leveling-warp .gmd-btn.compact .gmd-btn-label { padding-top: 0; line-height: 28dp; }
+
+#panel.leveling-warp.window-shell-positioned { margin-left: 0; }

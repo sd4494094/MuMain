@@ -47,6 +47,8 @@ void CGenericMenuDialog::BindRmlModel(Rml::DataModelConstructor& c, GenericMenuR
     auto button = c.RegisterStruct<MenuButtonEntry>();
     button.RegisterMember("label", &MenuButtonEntry::label);
     button.RegisterMember("tooltip", &MenuButtonEntry::tooltip);
+    button.RegisterMember("description", &MenuButtonEntry::description);
+    button.RegisterMember("details", &MenuButtonEntry::details);
     // Reuses the LineEntry/std::vector<LineEntry> array type already registered above for
     // the top-level `lines` -- per-button description text, rendered directly above that
     // button rather than lumped into the shared summary (see MenuButton::lines).
@@ -309,6 +311,8 @@ void CGenericMenuDialog::SyncRmlModel()
         MenuButtonEntry entry;
         entry.label = StringUtils::WideToNarrow(button.label.c_str());
         entry.tooltip = StringUtils::WideToNarrow(button.tooltip.c_str());
+        entry.description = StringUtils::WideToNarrow(button.description.c_str());
+        entry.details = StringUtils::WideToNarrow(button.details.c_str());
         entry.lines.reserve(button.lines.size());
         for (const auto& line : button.lines)
             entry.lines.push_back(ToLineEntry(line));
@@ -326,7 +330,7 @@ void CGenericMenuDialog::SyncRmlModel()
     {
         const auto& a = newButtons[i];
         const auto& b = model.buttons[i];
-        buttonsChanged = a.label != b.label || a.tooltip != b.tooltip ||
+        buttonsChanged = a.label != b.label || a.tooltip != b.tooltip || a.description != b.description || a.details != b.details ||
                          a.enabled != b.enabled || a.compact != b.compact || a.cols2 != b.cols2 ||
                          a.narrow != b.narrow ||
                          a.linesBelow != b.linesBelow || a.dismiss != b.dismiss || a.lines.size() != b.lines.size();
