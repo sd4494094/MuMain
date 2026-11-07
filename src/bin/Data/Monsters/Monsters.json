@@ -1779,7 +1779,7 @@
         "en": "Necron",
         "es": "Necron",
         "pt": "Necron",
-        "zh-CN": "太空死灵"
+        "zh-CN": "暗黑巫师 1"
       },
       "kind": "monster",
       "model": "MONSTER_MODEL_NECRON",
@@ -2191,7 +2191,7 @@
         "en": "Necron",
         "es": "Necron",
         "pt": "Necron",
-        "zh-CN": "太空死灵"
+        "zh-CN": "暗黑巫师 2"
       },
       "kind": "monster",
       "model": "MONSTER_MODEL_NECRON",
@@ -2332,7 +2332,7 @@
         "en": "Necron",
         "es": "Necron",
         "pt": "Necron",
-        "zh-CN": "太空死灵"
+        "zh-CN": "暗黑巫师 3"
       },
       "kind": "monster",
       "model": "MONSTER_MODEL_NECRON",
@@ -2473,7 +2473,7 @@
         "en": "Necron",
         "es": "Necron",
         "pt": "Necron",
-        "zh-CN": "太空死灵"
+        "zh-CN": "暗黑巫师 4"
       },
       "kind": "monster",
       "model": "MONSTER_MODEL_NECRON",
@@ -3160,7 +3160,7 @@
         "en": "Necron",
         "es": "Necron",
         "pt": "Necron",
-        "zh-CN": "太空死灵"
+        "zh-CN": "暗黑巫师 5"
       },
       "kind": "monster",
       "model": "MONSTER_MODEL_NECRON",
@@ -3301,7 +3301,7 @@
         "en": "Necron",
         "es": "Necron",
         "pt": "Necron",
-        "zh-CN": "太空死灵"
+        "zh-CN": "暗黑巫师 6"
       },
       "kind": "monster",
       "model": "MONSTER_MODEL_NECRON",
@@ -3830,7 +3830,7 @@
         "en": "Necron",
         "es": "Necron",
         "pt": "Necron",
-        "zh-CN": "太空死灵"
+        "zh-CN": "暗黑巫师 7"
       },
       "kind": "monster",
       "model": "MONSTER_MODEL_NECRON",

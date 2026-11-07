@@ -265,7 +265,7 @@
     <value>幸运（会心一击概率+5%%）</value>
   </data>
   <data name="Can only be used in moving unit" xml:space="preserve">
-    <value>只能在移动单位中使用</value>
+    <value>仅可在骑乘时使用</value>
   </data>
   <data name="Skill Power: %d ~ %d" xml:space="preserve">
     <value>技能威力：%d ~ %d</value>
@@ -1926,7 +1926,7 @@
     <value>没有足够的金币来组合物品</value>
   </data>
   <data name="Point - no more dates" xml:space="preserve">
-    <value>要点 - 不再有日期</value>
+    <value>点数计费有效期已过。</value>
   </data>
   <data name="Point - no more points left" xml:space="preserve">
     <value>点 - 没有更多的点了</value>
@@ -2910,7 +2910,7 @@
     <value>双倍伤害率%d %%</value>
   </data>
   <data name="Ignore enemies defensive skill %d%%" xml:space="preserve">
-    <value>忽略敌人的防御技能%d %%</value>
+    <value>有%d%%概率无视目标防御</value>
   </data>
   <data name="Ice attribute skill increase damage +%d" xml:space="preserve">
     <value>冰属性技能增加伤害+%d</value>
@@ -3234,7 +3234,7 @@
     <value>最大 AG 增加%d %%</value>
   </data>
   <data name="Set" xml:space="preserve">
-    <value>设置</value>
+    <value>套装</value>
   </data>
   <data name="Ancient Metal" xml:space="preserve">
     <value>古代金属</value>
