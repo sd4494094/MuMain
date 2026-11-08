@@ -376,13 +376,13 @@
     overflow: visible;
 }
 
-/* Layout intent: a centred, draggable menu with compact two-line destinations.
+/* Layout intent: a centred, draggable menu with compact single-line destinations.
    Only destinations scroll; Close remains reachable at both ends and on short screens.
    dp participates once in the shared scale, with viewport caps for the complete panel. */
 #panel.leveling-warp {
-    width: 310dp;
+    width: 360dp;
     max-width: 92vw;
-    height: 350dp;
+    height: 290dp;
     max-height: 82vh;
     min-height: 0;
     left: 50%;
@@ -414,43 +414,51 @@
     width: 100%;
     height: auto;
     max-height: none;
-    overflow: hidden auto;
+    overflow: auto;
     pointer-events: auto;
 }
 #panel.leveling-warp .gmd-button-cell {
     display: block;
     width: auto;
-    margin: 0 6dp 4dp 0;
+    margin: 0 6dp 3dp 0;
 }
 #panel.leveling-warp .gmd-btn {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
     position: relative;
     box-sizing: border-box;
     width: 100%;
     height: auto;
-    min-height: 38dp;
-    line-height: 16dp;
-    padding: 3dp 8dp;
-    white-space: normal;
+    min-height: 22dp;
+    line-height: 14dp;
+    padding: 2dp 6dp;
+    white-space: nowrap;
     text-align: left;
 }
 #panel.leveling-warp .gmd-btn-label,
 #panel.leveling-warp .gmd-btn-description {
     position: relative;
-    display: inline;
+    display: block;
+    flex: 0 0 auto;
     width: auto;
     height: auto;
     padding: 0;
-    font-size: 11dp;
-    line-height: 16dp;
-    white-space: normal;
+    font-size: 10dp;
+    line-height: 14dp;
+    white-space: nowrap;
 }
 #panel.leveling-warp .gmd-btn-description { margin-left: 6dp; color: token(text-secondary); }
 #panel.leveling-warp .gmd-btn-details {
     position: relative;
     display: block;
-    font-size: 10dp;
-    line-height: 15dp;
+    flex: 0 0 auto;
+    margin-left: auto;
+    padding-left: 8dp;
+    font-size: 9dp;
+    line-height: 14dp;
+    white-space: nowrap;
 }
 .gmd-leveling-footer { display: none; }
 #panel.leveling-warp .gmd-leveling-footer {

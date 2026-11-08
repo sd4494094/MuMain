@@ -22,8 +22,8 @@ struct Line
 
 struct Button
 {
-    Rml::String label = "失落之塔七层";
-    Rml::String description = "通往六层的入口";
+    Rml::String label;
+    Rml::String description;
     Rml::String details = "等级 170    金币 10000";
     Rml::String tooltip;
     std::vector<Line> lines;
@@ -43,7 +43,29 @@ struct Menu
     bool no = false;
     float zero = 0.f;
     std::vector<Line> lines;
-    std::vector<Button> buttons{26};
+    std::vector<Button> buttons;
+    Menu()
+    {
+        // Real destination names include the longest map/location pairs and repeated map names.
+        const std::vector<std::pair<Rml::String, Rml::String>> destinations = {
+            {"地下城一层", "幽灵房"},       {"地下城一层", "一层尽头"},        {"地下城二层", "地牢"},
+            {"地下城二层", "大厅"},         {"地下城二层", "毒牛房"},          {"失落之塔三层", "牛房"},
+            {"失落之塔三层", "二号黄金点"}, {"失落之塔三层", "三号黄金点"},    {"失落之塔五层", "通往六层的入口"},
+            {"失落之塔六层", "十字路口"},   {"失落之塔七层", "一号拐角"},      {"失落之塔七层", "大厅"},
+            {"失落之塔七层", "二号拐角"},   {"亚特兰蒂斯一区", "五点练级区"},  {"亚特兰蒂斯", "浅海魔区"},
+            {"死亡沙漠", "铁轮战士聚集点"}, {"死亡沙漠", "破坏骑士聚集点"},    {"死亡沙漠", "黑炎魔聚集点"},
+            {"天空之城", "蓝魔龙聚集点"},   {"天空之城", "恶灵王聚集点"},      {"天空之城", "幻影骑士聚集点"},
+            {"天空之城", "红魔龙聚集点"},   {"亚特兰蒂斯", "首领·海魔希特拉"}, {"死亡沙漠", "首领·魔王扎坎"},
+            {"死亡沙漠", "首领·炽炎魔"},    {"天空之城", "首领·天魔菲尼斯"},
+        };
+        for (const auto& [name, description] : destinations)
+        {
+            Button button;
+            button.label = name;
+            button.description = description;
+            buttons.push_back(button);
+        }
+    }
     int selected = -1;
     int cancelled = 0;
 };
@@ -141,16 +163,27 @@ void CheckLayout(UI::Tests::RmlLayoutFixture& fixture, Rml::ElementDocument& doc
         CHECK(position.x + size.x <= panePosition.x + paneSize.x + Tolerance);
         CHECK(position.y >= panePosition.y - Tolerance);
         CHECK(position.y + size.y <= panePosition.y + paneSize.y + Tolerance);
-        // Long names and requirements must remain within their own row.
+        // Every field stays on a single line, within the same clickable row, without overlap.
+        float previousRight = position.x;
+        float lineTop = -1.f;
         for (const char* selector : {".gmd-btn-label", ".gmd-btn-description", ".gmd-btn-details"})
         {
             auto* text = button.QuerySelector(selector);
             REQUIRE(text);
             Rml::Vector2f textPosition, textSize;
             REQUIRE(UI::RmlBridge::DrawnBox(*text, Rml::BoxArea::Border, textPosition, textSize));
+            CHECK(textPosition.x >= previousRight - Tolerance);
+            CHECK(textPosition.x + textSize.x <= position.x + size.x + Tolerance);
             CHECK(textPosition.y >= position.y - Tolerance);
             CHECK(textPosition.y + textSize.y <= position.y + size.y + Tolerance);
+            if (lineTop < 0.f)
+                lineTop = textPosition.y;
+            CHECK(textPosition.y == doctest::Approx(lineTop).epsilon(0.005));
+            previousRight = textPosition.x + textSize.x;
         }
+        const float dp = fixture.context->GetDensityIndependentPixelRatio();
+        CHECK(size.y <= 24.f * dp + Tolerance);
+        CHECK(paneSize.y >= 7.f * (size.y + 3.f * dp) - Tolerance);
         CheckHit(fixture, button);
         button.Click();
         CHECK(menu.selected == static_cast<int>(i));

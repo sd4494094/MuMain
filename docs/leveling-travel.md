@@ -4,8 +4,10 @@ On servers with this optional service enabled, speak to **Travel Guide Noah** in
 Lorencia at **143, 131**. The server supplies a scrollable list with the full map/floor
 name, location description, your effective required level and the Zen price.
 
-The compact list keeps full map and location names together, with requirements on the
-next line. Only destinations scroll; the Close button stays visible below the list.
+The compact list keeps the full map name, location description, required level and
+Zen price on one line. Only destinations scroll; the Close button stays visible below
+the list. The shared UI scale still applies. “五点练级区” retains the historical location
+name; it does not describe a compass direction or a time.
 
 Click an enabled row to travel immediately. Close or Escape cancels without spending
 anything and ends the NPC conversation. Locations are shared map positions, not private
