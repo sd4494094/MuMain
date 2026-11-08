@@ -4,6 +4,7 @@
 #include "UI/Dialogs/GenericConfirmDialog.h"
 #include "UI/Dialogs/GenericMenuDialog.h"
 #include "UI/NPCs/StatResetDialogue.h"
+#include "UI/NPCs/StatAdvisorWindow.h"
 #include "Audio/DSPlaySound.h"
 #include "UI/Social/SocialWindowBase.h"
 #include "Render/Models/ZzzBMD.h"
@@ -1644,7 +1645,8 @@ void mu::ui::window::ShowSeedInvestigatorMenuDialog()
 
 void mu::ui::window::ShowResetCharacterPointDialog()
 {
-    UI::Npc::ShowStatResetDialogue();
+    if (mu::ui::window::g_pStatAdvisorWindow)
+        mu::ui::window::g_pStatAdvisorWindow->Begin();
 }
 
 mu::ui::window::CGuild_ToPerson_Position::CGuild_ToPerson_Position()

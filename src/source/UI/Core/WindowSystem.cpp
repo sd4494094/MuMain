@@ -536,6 +536,10 @@ bool CSystem::LoadMainSceneInterface()
     m_pGenericMenuDialog->Create(m_pNewUIMng);
     g_pGenericMenuDialog = m_pGenericMenuDialog;
 
+    m_pStatAdvisorWindow = new CStatAdvisorWindow;
+    m_pStatAdvisorWindow->Create(m_pNewUIMng);
+    g_pStatAdvisorWindow = m_pStatAdvisorWindow;
+
     m_pMuHelperConfig = new CMuHelperConfigWindow;
     if (m_pMuHelperConfig->Create(m_pNewUIMng) == false)
         return false;
@@ -714,6 +718,9 @@ void CSystem::UnloadMainSceneInterface()
 #endif // LEM_FIX_LUCKYITEM_UICLASS_SAFEDELETE
     g_pGenericConfirmDialog = nullptr;
     SAFE_DELETE(m_pGenericConfirmDialog);
+
+    g_pStatAdvisorWindow = nullptr;
+    SAFE_DELETE(m_pStatAdvisorWindow);
 
     g_pGenericMenuDialog = nullptr;
     SAFE_DELETE(m_pGenericMenuDialog);

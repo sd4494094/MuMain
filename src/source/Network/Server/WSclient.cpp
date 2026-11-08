@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include "UI/NPCs/StatAdvisorWindow.h"
 #include "UI/NPCs/RefiningDialogue.h"
 #include "Core/Utilities/Random.h"
 #include "App/Control/ControlTaps.h"
@@ -10697,6 +10698,16 @@ void ReceiveExtendedNpcDialog(std::span<const BYTE> bytes)
         return;
     if (bytes[4] == 0x01)
         ReceiveResetNpcDialog(bytes);
+    else if (bytes[4] == 0x03)
+    {
+        if (auto reply = Network::StatAdvisorPacket::Parse(bytes))
+        {
+            if (mu::ui::window::g_pStatAdvisorWindow)
+                mu::ui::window::g_pStatAdvisorWindow->Receive(std::move(*reply));
+        }
+        else if (SocketClient != nullptr)
+            SocketClient->ToGameServer()->SendCloseNpcRequest();
+    }
     else if (bytes[4] == 0x02)
     {
         if (const auto dialog = Network::LevelingWarpDialogPacket::Parse(bytes))

@@ -1,29 +1,26 @@
-# Character reset NPC
+# Character reset NPCs
 
-On servers with the reset-dialog extension enabled, speaking to the configured
-reset NPC opens a menu with its name, your current requirements and the result of
-a reset. The server supplies the text and the rules in your character's language.
+On servers with the reset-dialog extension enabled, speaking to Leo opens the server's
+live reset requirements and result. Querying does not change the character. Apply for
+reset displays a review step; only **Confirm reset** performs the reset. The operation
+can be confirmed once, expires after two minutes and is invalidated when the character
+state changes. Leave or Escape closes the conversation.
 
-- **Query reset conditions** refreshes your level, zen, required items and the
-  resulting level and points without spending anything.
-- **Apply for reset** shows the conditions again with a **Confirm reset** button.
-  Only that confirmation requests the reset.
-- **Leave** or Escape closes the conversation.
+Season 6 NPC 464 opens the stat advisor when the server also has the MuMain extension.
+Choose **Stat reset** to review the current fee, level, item and equipment requirements,
+the invested points to be returned and the point balance after reset. Only **Confirm
+stat reset** charges and changes the character. Back, Leave and Escape do not spend
+anything. The server checks the current quote again before execution.
 
-A confirmation can be used only once and expires after two minutes. Reopening,
-refreshing conditions or changes in the displayed requirements require a new
-confirmation. Attributes, reset counts, fees, relocation and returning to character
-selection follow the server configuration.
+Choose **Batch allocate** to enter how many normal points to add to each supported
+attribute. The table shows each base value, the increase and the resulting value.
+Ordinary classes show Strength, Agility, Vitality and Energy; classes configured to
+allocate Leadership show it as a fifth row. Master points and equipment bonuses are not
+part of the form. You can allocate fewer points than are available, but the total must
+be at least one and cannot exceed the balance or an attribute limit. Next shows a review
+of the complete allocation. Only **Confirm batch allocation** applies it, once and as a
+single server operation.
 
-The menu supports both themes. Long requirements scroll while the action buttons
-stay visible. It requires a server with the MuMain reset-dialog extension; an
-ordinary Season 6 server does not send this menu. Stat resets remain a separate
-NPC feature. Its Close action (including a theme's close control) and Escape end the
-NPC conversation without spending anything. If equipment blocks a stat reset, the
-menu reports the problem and also ends the conversation; other NPCs remain available.
-
-
-The Leo menu stays open while querying or applying. Server replies replace its current
-requirements in place and return the text area to the top, so the refresh acknowledgement
-or insufficient-level message is visible without closing and reopening the dialog.
-Leave or Escape ends the conversation. Final confirmation closes the menu.
+The new workflow requires matching MuMain client and OpenMU server versions. Older
+clients keep their native stat reset dialog. The existing /resetinfo, /reset and
+single-attribute add commands remain available.

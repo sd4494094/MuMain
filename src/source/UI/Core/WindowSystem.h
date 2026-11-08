@@ -86,6 +86,7 @@
 #include "UI/MuHelper/MuHelperDetailWindow.h"
 #include "UI/Dialogs/GenericConfirmDialog.h"
 #include "UI/Dialogs/GenericMenuDialog.h"
+#include "UI/NPCs/StatAdvisorWindow.h"
 
 namespace mu::ui::window
 {
@@ -228,6 +229,7 @@ namespace mu::ui::window
         CMuHelperSkillPicker* m_pMuHelperSkillPicker;
         CGenericConfirmDialog* m_pGenericConfirmDialog;
         CGenericMenuDialog* m_pGenericMenuDialog;
+        CStatAdvisorWindow* m_pStatAdvisorWindow;
 
         bool CreateChatCommandWindow();
 

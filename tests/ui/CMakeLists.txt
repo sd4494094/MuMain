@@ -401,6 +401,27 @@ target_compile_definitions(rml_click_sound_tests PRIVATE
     MU_FONT_DIR="${CMAKE_SOURCE_DIR}/src/bin/fonts"
 )
 
+mu_add_test(
+    NAME stat_advisor_layout_tests
+    SOURCES
+        test_stat_advisor_layout.cpp
+        RmlLayoutFixture.cpp
+        ${CMAKE_SOURCE_DIR}/src/source/App/Platform/Windows/Winmain.cpp
+    LINK_LIBS MuClient
+)
+target_compile_definitions(stat_advisor_layout_tests PRIVATE
+    MU_RMLUI_DIR="${CMAKE_SOURCE_DIR}/src/bin/Data/Interface/RmlUi"
+    MU_FONT_DIR="${CMAKE_SOURCE_DIR}/src/bin/fonts"
+)
+
+mu_add_test(
+    NAME stat_advisor_packet_tests
+    SOURCES
+        test_stat_advisor_packet.cpp
+    LINK_LIBS MuClient
+)
+target_include_directories(stat_advisor_packet_tests PRIVATE ${CMAKE_SOURCE_DIR}/src/source)
+
 # Exercise the production NPC callbacks with a headless dialog and network host.
 mu_add_test(
     NAME stat_reset_dialogue_tests

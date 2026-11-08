@@ -1,0 +1,43 @@
+<rml>
+<head>
+    <title>Stat advisor</title>
+    <link type="text/rcss" href="base.rcss"/>
+    <link type="text/rcss" href="stat_advisor.rcss"/>
+</head>
+<body>
+<div id="panel" class="center-both" data-model="stat_advisor">
+    <div class="advisor-title">{{title}}</div>
+    <div id="advisor-body">
+        <div class="advisor-message">{{message}}</div>
+        <div class="advisor-home" data-if="page == 0">
+            <button class="btn advisor-action" data-class-disabled="pending" data-event-click="advisor_action(1)">{{reset}}</button>
+            <button class="btn advisor-action" data-class-disabled="pending" data-event-click="advisor_action(3)">{{allocate}}</button>
+        </div>
+        <div class="advisor-form" data-if="page == 2 || page == 3">
+            <div class="advisor-balance">{{available}}</div>
+            <div class="advisor-row advisor-header">
+                <span>{{attribute_label}}</span><span>{{current_label}}</span><span>{{increase_label}}</span><span>{{result_label}}</span>
+            </div>
+            <div class="advisor-row" data-for="row : rows">
+                <span>{{row.name}}</span><span>{{row.current}}</span>
+                <input class="text-field text-field--numeric advisor-input" type="text" maxlength="5"
+                       data-value="row.amount" data-attr-disabled="pending || page == 3"/>
+                <span>{{row.result}}</span>
+            </div>
+            <div class="advisor-summary">{{total}}</div>
+            <div class="advisor-summary">{{remaining}}</div>
+        </div>
+    </div>
+    <div class="advisor-feedback">{{feedback}}</div>
+    <div class="advisor-footer">
+        <button class="btn" data-if="page == 1" data-class-disabled="pending || !can_confirm" data-event-click="advisor_action(2)">{{confirm_reset}}</button>
+        <button class="btn" data-if="page == 2" data-class-disabled="pending || !valid" data-event-click="advisor_action(4)">{{next}}</button>
+        <button class="btn" data-if="page == 3" data-class-disabled="pending || !can_confirm" data-event-click="advisor_action(5)">{{confirm_allocation}}</button>
+        <button class="btn" data-if="page == 2" data-class-disabled="pending" data-event-click="advisor_action(8)">{{clear}}</button>
+        <button class="btn" data-if="page == 1 || page == 2" data-class-disabled="pending" data-event-click="advisor_action(6)">{{back}}</button>
+        <button class="btn" data-if="page == 3" data-class-disabled="pending" data-event-click="advisor_action(3)">{{back}}</button>
+        <button class="btn" data-event-click="advisor_action(7)">{{leave}}</button>
+    </div>
+</div>
+</body>
+</rml>
