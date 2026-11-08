@@ -6,6 +6,7 @@
 #include "UI/RmlBridge/RmlClickSounds.h"
 #include "UI/RmlBridge/ThemeInheritance.h"
 #include <RmlUi/Core/ElementScroll.h>
+#include <RmlUi/Core/ElementText.h>
 #include <algorithm>
 #include <filesystem>
 #include <string>
@@ -126,6 +127,40 @@ void CheckHit(UI::Tests::RmlLayoutFixture& fixture, Rml::Element& element)
     CHECK(Descendant(fixture.context->GetElementAtPoint(position + size * 0.5f), &element));
 }
 
+// The element box alone does not prove that its rendered glyphs fit inside the button art.
+void CheckRowText(Rml::Element& button, Rml::Vector2f position, Rml::Vector2f size)
+{
+    constexpr float PixelTolerance = 2.f;
+    constexpr float RightInsetFraction = 0.05f;
+    const float safeRight = position.x + size.x * (1.f - RightInsetFraction);
+    float previousRight = position.x;
+    float lineTop = -1.f;
+    for (const char* selector : {".gmd-btn-label", ".gmd-btn-description", ".gmd-btn-details"})
+    {
+        auto* field = button.QuerySelector(selector);
+        REQUIRE(field);
+        Rml::Vector2f textPosition, textSize;
+        REQUIRE(UI::RmlBridge::DrawnBox(*field, Rml::BoxArea::Border, textPosition, textSize));
+        CHECK(textPosition.x >= previousRight - PixelTolerance);
+        CHECK(textPosition.x + textSize.x <= safeRight + PixelTolerance);
+        CHECK(textPosition.y >= position.y - PixelTolerance);
+        CHECK(textPosition.y + textSize.y <= position.y + size.y + PixelTolerance);
+        if (lineTop < 0.f)
+            lineTop = textPosition.y;
+        CHECK(textPosition.y == doctest::Approx(lineTop).epsilon(0.005));
+        previousRight = textPosition.x + textSize.x;
+        auto* text = rmlui_dynamic_cast<Rml::ElementText*>(field->GetFirstChild());
+        REQUIRE(text);
+        REQUIRE(text->GetLines().size() == 1);
+        const auto& line = text->GetLines().front();
+        const float glyphRight =
+            text->GetAbsoluteOffset(Rml::BoxArea::Content).x + line.position.x + static_cast<float>(line.width);
+        CHECK(glyphRight <= button.GetAbsoluteOffset(Rml::BoxArea::Border).x +
+                                button.GetBox().GetSize(Rml::BoxArea::Border).x * (1.f - RightInsetFraction) +
+                                PixelTolerance);
+    }
+}
+
 void CheckLayout(UI::Tests::RmlLayoutFixture& fixture, Rml::ElementDocument& document, Menu& menu)
 {
     constexpr float Tolerance = 2.f;
@@ -163,24 +198,7 @@ void CheckLayout(UI::Tests::RmlLayoutFixture& fixture, Rml::ElementDocument& doc
         CHECK(position.x + size.x <= panePosition.x + paneSize.x + Tolerance);
         CHECK(position.y >= panePosition.y - Tolerance);
         CHECK(position.y + size.y <= panePosition.y + paneSize.y + Tolerance);
-        // Every field stays on a single line, within the same clickable row, without overlap.
-        float previousRight = position.x;
-        float lineTop = -1.f;
-        for (const char* selector : {".gmd-btn-label", ".gmd-btn-description", ".gmd-btn-details"})
-        {
-            auto* text = button.QuerySelector(selector);
-            REQUIRE(text);
-            Rml::Vector2f textPosition, textSize;
-            REQUIRE(UI::RmlBridge::DrawnBox(*text, Rml::BoxArea::Border, textPosition, textSize));
-            CHECK(textPosition.x >= previousRight - Tolerance);
-            CHECK(textPosition.x + textSize.x <= position.x + size.x + Tolerance);
-            CHECK(textPosition.y >= position.y - Tolerance);
-            CHECK(textPosition.y + textSize.y <= position.y + size.y + Tolerance);
-            if (lineTop < 0.f)
-                lineTop = textPosition.y;
-            CHECK(textPosition.y == doctest::Approx(lineTop).epsilon(0.005));
-            previousRight = textPosition.x + textSize.x;
-        }
+        CheckRowText(button, position, size);
         const float dp = fixture.context->GetDensityIndependentPixelRatio();
         CHECK(size.y <= 24.f * dp + Tolerance);
         CHECK(paneSize.y >= 7.f * (size.y + 3.f * dp) - Tolerance);

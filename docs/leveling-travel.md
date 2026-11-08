@@ -5,7 +5,8 @@ Lorencia at **143, 131**. The server supplies a scrollable list with the full ma
 name, location description, your effective required level and the Zen price.
 
 The compact list keeps the full map name, location description, required level and
-Zen price on one line. Only destinations scroll; the Close button stays visible below
+Zen price on one line, with space between the price and the visible button frame.
+Only destinations scroll; the Close button stays visible below
 the list. The shared UI scale still applies. “五点练级区” retains the historical location
 name; it does not describe a compass direction or a time.
 

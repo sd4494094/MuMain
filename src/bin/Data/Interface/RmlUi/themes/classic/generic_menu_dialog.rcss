@@ -904,7 +904,9 @@
     height: auto;
     min-height: 22dp;
     line-height: 14dp;
-    padding: 2dp 6dp;
+    /* The stretched button art includes its right frame inside the element box.
+       Reserve a proportional inset so text stays inside the visible frame. */
+    padding: 2dp 5% 2dp 6dp;
     white-space: nowrap;
     text-align: left;
 }
