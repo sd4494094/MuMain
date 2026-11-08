@@ -21,3 +21,9 @@ ordinary Season 6 server does not send this menu. Stat resets remain a separate
 NPC feature. Its Close action (including a theme's close control) and Escape end the
 NPC conversation without spending anything. If equipment blocks a stat reset, the
 menu reports the problem and also ends the conversation; other NPCs remain available.
+
+
+The Leo menu stays open while querying or applying. Server replies replace its current
+requirements in place and return the text area to the top, so the refresh acknowledgement
+or insufficient-level message is visible without closing and reopening the dialog.
+Leave or Escape ends the conversation. Final confirmation closes the menu.

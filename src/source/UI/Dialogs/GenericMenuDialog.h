@@ -62,9 +62,8 @@ namespace mu::ui::window
             bool linesBelow = false;        // `lines` sit under the button (CTrainerRecoverMsgBox)
             bool dismiss = false;           // only closes the menu, as Esc does; a theme with a
                                             // close action of its own may leave it out
-            std::function<void()> onClick;  // fires, then the dialog closes -- every native
-                                            // button in this family destroys its own box on click,
-                                            // none need a KeepOpen()-style veto
+            bool closeOnClick = true;       // false for a server-backed action which updates this menu
+            std::function<void()> onClick;
         };
         std::vector<MenuButton> buttons; // 1..N, data-driven -- no hardcoded max
 
@@ -110,6 +109,8 @@ namespace mu::ui::window
 
         // Shows now if idle, otherwise queues (see class comment).
         void Show(GenericMenuConfig cfg);
+        // Opens idle or replaces the matching active id; preserves unrelated menus on false.
+        bool ShowOrUpdate(GenericMenuConfig cfg);
 
         bool Render() override;
         bool Update() override;

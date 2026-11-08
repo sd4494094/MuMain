@@ -454,3 +454,26 @@ mu_add_test(
         ${CMAKE_SOURCE_DIR}/src/source/Core/Text/TextLineWrap.cpp
         ${CMAKE_SOURCE_DIR}/src/source/Core/Text/WideString.cpp
 )
+
+mu_add_test(
+    NAME reset_npc_dialogue_tests
+    SOURCES
+        test_reset_npc_dialogue.cpp
+        ${CMAKE_SOURCE_DIR}/src/source/UI/NPCs/ResetNpcDialogue.cpp
+)
+target_include_directories(reset_npc_dialogue_tests BEFORE PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/leveling_warp_stubs
+)
+
+mu_add_test(
+    NAME reset_npc_menu_tests
+    SOURCES
+        test_reset_npc_menu.cpp
+        RmlLayoutFixture.cpp
+        ${CMAKE_SOURCE_DIR}/src/source/App/Platform/Windows/Winmain.cpp
+    LINK_LIBS MuClient
+)
+target_compile_definitions(reset_npc_menu_tests PRIVATE
+    MU_RMLUI_DIR="${CMAKE_SOURCE_DIR}/src/bin/Data/Interface/RmlUi"
+    MU_FONT_DIR="${CMAKE_SOURCE_DIR}/src/bin/fonts"
+)

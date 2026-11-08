@@ -146,6 +146,28 @@ void CGenericMenuDialog::Show(GenericMenuConfig cfg)
     }
 }
 
+bool CGenericMenuDialog::ShowOrUpdate(GenericMenuConfig cfg)
+{
+    if (!m_bActive)
+    {
+        Show(std::move(cfg));
+        return true;
+    }
+    if (cfg.id.empty() || cfg.id != m_Active.id)
+        return false;
+
+    m_Active = std::move(cfg);
+    m_bButtonClicked = false;
+    m_iClickedButtonIndex = -1;
+    SyncRmlModel();
+    // A refreshed reply starts with its acknowledgement or rejection. Never retain
+    // a scroll offset that could put that first line above the visible body.
+    if (auto* document = m_RmlView.Document())
+        if (auto* lines = document->QuerySelector(".gmd-lines"))
+            lines->SetScrollTop(0.f);
+    return true;
+}
+
 void CGenericMenuDialog::ShowNext()
 {
     if (m_Queue.empty())
@@ -169,6 +191,16 @@ void CGenericMenuDialog::ShowNext()
 
 void CGenericMenuDialog::Resolve(int buttonIndex)
 {
+    if (buttonIndex >= 0 && buttonIndex < static_cast<int>(m_Active.buttons.size()) &&
+        !m_Active.buttons[buttonIndex].closeOnClick)
+    {
+        // Copy before invoking: a synchronous reply may replace the active config.
+        auto onClick = m_Active.buttons[buttonIndex].onClick;
+        if (onClick)
+            onClick();
+        return;
+    }
+
     GenericMenuConfig cfg = std::move(m_Active);
 
     if (buttonIndex >= 0 && buttonIndex < static_cast<int>(cfg.buttons.size()))
