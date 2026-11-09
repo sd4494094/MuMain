@@ -25,3 +25,5 @@
 
 #title { position: absolute; left: 0; top: 12px; width: calc(100% * var(--root-scale)); text-align: center; color: token(text-warm); font-weight: bold; }
 #btn_exit .btn-exit-label { display: block; }
+
+.advisor-feedback.busy { color: token(text-narrative); }

@@ -5,8 +5,9 @@ Lorencia at **143, 131**. The server supplies a scrollable list with the full ma
 name, location description, your effective required level and the Zen price.
 
 The fixed right-side panel uses the ordinary NPC dialogue frame, title and native
-text size. Rows show the full map/floor and location description; hovering shows
-the effective level requirement and Zen price. Only destinations scroll, and the
+text size. Rows show the full map/floor and location description on one line. A fixed
+summary above the list shows the initial destination and updates on hover or focus,
+including the effective level requirement and Zen price even for unavailable rows. Only destinations scroll, and the
 native X button stays visible. The panel cannot be dragged. The shared UI scale still applies. “五点练级区” retains the historical location
 name; it does not describe a compass direction or a time.
 

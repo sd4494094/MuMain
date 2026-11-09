@@ -22,3 +22,5 @@
 .btn-exit-label { display: none; }
 
 .advisor-action.disabled, .advisor-footer .disabled { color: token(text-disabled); pointer-events: none; }
+
+.advisor-feedback.busy { color: token(text-narrative); }

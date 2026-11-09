@@ -20,6 +20,7 @@ namespace
 struct Row
 {
     Rml::String name, current, amount, result;
+    Rml::String action_label;
     int id = 0;
 };
 
@@ -32,6 +33,7 @@ struct Model
     Rml::String reset = "洗点", allocate = "增加", leave = "离开", back = "返回", clear = "清空";
     Rml::String next = "下一步", confirm_reset = "确认洗点", confirm_allocation = "确认加点";
     Rml::String attribute_label = "属性", current_label = "当前", increase_label = "增加", result_label = "加点后";
+    bool busy = false;
     bool pending = false, valid = true, can_confirm = true;
     std::vector<Row> rows;
     int selected_action = 0;
@@ -44,11 +46,13 @@ void Bind(Rml::Context& context, Model& model)
     auto row = constructor.RegisterStruct<Row>();
     row.RegisterMember("id", &Row::id);
     row.RegisterMember("name", &Row::name);
+    row.RegisterMember("action_label", &Row::action_label);
     row.RegisterMember("current", &Row::current);
     row.RegisterMember("amount", &Row::amount);
     row.RegisterMember("result", &Row::result);
     constructor.RegisterArray<std::vector<Row>>();
     constructor.Bind("text_px", &model.textPx);
+    constructor.Bind("busy", &model.busy);
     constructor.Bind("selected_attribute", &model.selected_attribute);
     for (const auto* name : {"rows", "page", "title", "message", "feedback", "available", "total", "remaining",
                              "pending", "valid", "can_confirm", "reset", "allocate", "leave", "back", "clear", "next",
@@ -114,7 +118,7 @@ TEST_CASE(
                         UI::Scaling::NativeTextPixelSize(UI::Scaling::FontRole::Normal, viewport.x, viewport.y);
                     const std::vector<std::string> names = {"力量", "敏捷", "体力", "智力", "统率"};
                     for (int i = 0; i < row_count; ++i)
-                        model.rows.push_back({names[i], "100", "", "100", i});
+                        model.rows.push_back({names[i], "100", "", "100", names[i] + "加点", i});
                     Bind(*fixture.context, model);
                     const auto path = std::filesystem::path(MU_RMLUI_DIR) / "themes" / theme / "stat_advisor.rml";
                     auto markupPath = path;
@@ -139,6 +143,17 @@ TEST_CASE(
                     REQUIRE(UI::RmlBridge::DrawnBox(*message, Rml::BoxArea::Border, messagePosition, messageSize));
                     CHECK(messageSize.y > 0.f);
                     auto handle = fixture.context->GetDataModel("stat_advisor").GetModelHandle();
+                    Rml::ElementList actions, allActions;
+                    document->QuerySelectorAll(allActions, ".advisor-action");
+                    for (auto* action : allActions)
+                        if (action->IsVisible(true))
+                            actions.push_back(action);
+                    REQUIRE(actions.size() == static_cast<size_t>(row_count + 1));
+                    for (int i = 0; i < row_count; ++i)
+                    {
+                        CHECK(actions[i + 1]->GetInnerRML().find(std::to_string(i + 2) + ".") != Rml::String::npos);
+                        CHECK(actions[i + 1]->GetInnerRML().find(names[i] + "加点") != Rml::String::npos);
+                    }
                     for (int page : {2, 3, 2, 1, 0, 2})
                     {
                         model.page = page;

@@ -15,9 +15,14 @@
   <div id="npc_lines_container" class="nd-npc-lines gmd-lines scroll-pane sharp-text" data-style-font-size="text_px + 'px'">
    <div class="nd-line gmd-line" data-for="line : lines">{{line.text}}</div>
   </div>
+  <div id="warp_preview" class="sharp-text" data-style-font-size="text_px + 'px'">
+   <div id="warp_preview_name">{{preview_name}}</div>
+   <div id="warp_preview_details">{{preview_details}}</div>
+  </div>
   <div class="nd-divider"></div>
   <div id="answers_container" class="nd-answers scroll-pane sharp-text" data-style-font-size="text_px + 'px'">
    <div class="nd-answer-row gmd-btn" data-for="button : buttons" data-class-disabled="!button.enabled"
+        data-event-mouseover="gmd_preview(it_index)" data-event-focus="gmd_preview(it_index)"
         data-event-click="gmd_button_click(it_index)" data-attr-data-hint="button.tooltip">
     <span class="npc-option-number">{{it_index + 1}}. </span><span>{{button.label}}</span><span class="npc-option-description"> {{button.description}}</span>
     <span class="npc-option-details">{{button.details}}</span>

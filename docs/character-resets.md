@@ -12,8 +12,8 @@ the invested points to be returned and the point balance after reset. Only **Con
 stat reset** charges and changes the character. Back, Leave and Escape do not spend
 anything. The server checks the current quote again before execution.
 
-Choose the separate **Increase Strength**, **Increase Agility**, **Increase Vitality**
-or **Increase Energy** option. **Increase Leadership** appears only for classes that
+Choose the separate **Allocate Strength**, **Allocate Agility**, **Allocate Vitality**
+or **Allocate Energy** option. **Allocate Leadership** appears only for classes that
 can allocate it. Enter how many points to add to the selected attribute, review it,
 then **Confirm allocation**. Only one attribute is editable and submitted at a time.
 The server uses the same action as its existing single-attribute add commands,
@@ -31,3 +31,7 @@ and native text size as ordinary NPC dialogue. They cannot be dragged. Erin's
 instructions and allocation table have separate bounded regions; entering values
 does not spend points until the review is explicitly confirmed. X and Escape leave
 the conversation, while Back stays within it.
+
+Erin numbers all home-menu options consecutively. Buttons are disabled during a
+request; a neutral processing message appears only if the reply takes over one
+second. Ordinary navigation does not immediately show a yellow warning.

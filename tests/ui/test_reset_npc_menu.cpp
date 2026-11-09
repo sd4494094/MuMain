@@ -253,3 +253,49 @@ TEST_CASE("Existing generic menu queue and final confirmation retain closing beh
     fixture.Click(2);
     CHECK_FALSE(fixture.dialog.IsVisible());
 }
+
+TEST_CASE("Warp preview shows authoritative quotes before action including disabled destinations [ui][warp-preview]")
+{
+    MenuFixture fixture("legacy", {1920, 1080}, 100);
+    int selected = -1;
+    auto config = Menu(selected);
+    config.id = "leveling-warp";
+    config.buttons[0].label = L"冰风谷";
+    config.buttons[0].description = L"雪人房1号";
+    config.buttons[0].details = L"等级 20    金币 2000";
+    config.buttons[1].label = L"天空之城";
+    config.buttons[1].description = L"红魔龙聚集点";
+    config.buttons[1].details = L"等级 170    金币 10000";
+    config.buttons[1].enabled = false;
+    REQUIRE(fixture.dialog.ShowOrUpdate(config));
+    fixture.SelectDocument();
+    auto* details = fixture.document->GetElementById("warp_preview_details");
+    auto* name = fixture.document->GetElementById("warp_preview_name");
+    REQUIRE(details);
+    REQUIRE(name);
+    CHECK(details->IsVisible(true));
+    CHECK(details->GetInnerRML() == "等级 20    金币 2000");
+    Rml::ElementList buttons;
+    fixture.document->QuerySelectorAll(buttons, ".gmd-btn");
+    REQUIRE(buttons.size() >= 2);
+    buttons[1]->DispatchEvent("mouseover", {});
+    fixture.layout.Refresh();
+    CHECK(details->GetInnerRML() == "等级 170    金币 10000");
+    CHECK(name->GetInnerRML().find("红魔龙聚集点") != Rml::String::npos);
+    CHECK(selected == -1);
+    buttons[1]->Click();
+    fixture.dialog.Update();
+    CHECK(selected == -1);
+    buttons[0]->DispatchEvent("focus", {});
+    fixture.layout.Refresh();
+    CHECK(details->GetInnerRML() == "等级 20    金币 2000");
+    REQUIRE(fixture.dialog.ShowOrUpdate(config));
+    fixture.layout.Refresh();
+    CHECK(details->GetInnerRML() == "等级 20    金币 2000");
+    fixture.document->GetElementById("btn_exit")->Click();
+    fixture.dialog.Update();
+    CHECK_FALSE(fixture.dialog.IsVisible());
+    REQUIRE(fixture.dialog.ShowOrUpdate(Menu(selected)));
+    fixture.SelectDocument();
+    CHECK_FALSE(fixture.document->GetElementById("warp_preview")->IsVisible(true));
+}

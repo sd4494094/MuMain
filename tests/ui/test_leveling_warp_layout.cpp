@@ -42,6 +42,7 @@ struct Menu
     Rml::String kind;
     Rml::String title = "传送使者·诺亚";
     Rml::String close = "关闭";
+    Rml::String previewName = "地下城一层 幽灵房", previewDetails = "等级 170    金币 10000";
     bool yes = true;
     bool no = false;
     float zero = 0.f, textPx = 12.f;
@@ -51,15 +52,16 @@ struct Menu
     {
         // Real destination names include the longest map/location pairs and repeated map names.
         const std::vector<std::pair<Rml::String, Rml::String>> destinations = {
-            {"地下城一层", "幽灵房"},       {"地下城一层", "一层尽头"},        {"地下城二层", "地牢"},
-            {"地下城二层", "大厅"},         {"地下城二层", "毒牛房"},          {"失落之塔三层", "牛房"},
-            {"失落之塔三层", "二号黄金点"}, {"失落之塔三层", "三号黄金点"},    {"失落之塔五层", "通往六层的入口"},
-            {"失落之塔六层", "十字路口"},   {"失落之塔七层", "一号拐角"},      {"失落之塔七层", "大厅"},
-            {"失落之塔七层", "二号拐角"},   {"亚特兰蒂斯一区", "五点练级区"},  {"亚特兰蒂斯", "浅海魔区"},
-            {"死亡沙漠", "铁轮战士聚集点"}, {"死亡沙漠", "破坏骑士聚集点"},    {"死亡沙漠", "黑炎魔聚集点"},
-            {"天空之城", "蓝魔龙聚集点"},   {"天空之城", "恶灵王聚集点"},      {"天空之城", "幻影骑士聚集点"},
-            {"天空之城", "红魔龙聚集点"},   {"亚特兰蒂斯", "首领·海魔希特拉"}, {"死亡沙漠", "首领·魔王扎坎"},
-            {"死亡沙漠", "首领·炽炎魔"},    {"天空之城", "首领·天魔菲尼斯"},
+            {"地下城一层", "幽灵房"},        {"地下城一层", "一层尽头"},        {"地下城二层", "地牢"},
+            {"地下城二层", "大厅"},          {"地下城二层", "毒牛房"},          {"失落之塔三层", "牛房"},
+            {"失落之塔三层", "二号黄金点"},  {"失落之塔三层", "三号黄金点"},    {"失落之塔五层", "通往六层的入口"},
+            {"失落之塔六层", "十字路口"},    {"失落之塔七层", "一号拐角"},      {"失落之塔七层", "大厅"},
+            {"失落之塔七层", "二号拐角"},    {"亚特兰蒂斯一区", "五点练级区"},  {"亚特兰蒂斯", "浅海魔区"},
+            {"死亡沙漠", "铁轮战士聚集点"},  {"死亡沙漠", "破坏骑士聚集点"},    {"死亡沙漠", "黑炎魔聚集点"},
+            {"天空之城", "蓝魔龙聚集点"},    {"天空之城", "恶灵王聚集点"},      {"天空之城", "幻影骑士聚集点"},
+            {"天空之城", "红魔龙聚集点"},    {"亚特兰蒂斯", "首领·海魔希特拉"}, {"死亡沙漠", "首领·魔王扎坎"},
+            {"冰风谷", "雪人房1号"},         {"冰风谷", "雪人房2号"},           {"死亡沙漠", "首领·炽炎魔"},
+            {"天空之城", "首领·天魔菲尼斯"},
         };
         for (const auto& [name, description] : destinations)
         {
@@ -99,6 +101,8 @@ void Bind(Rml::Context& context, Menu& menu)
     model.Bind("menu_id", &menu.id);
     model.Bind("kind", &menu.kind);
     model.Bind("title", &menu.title);
+    model.Bind("preview_name", &menu.previewName);
+    model.Bind("preview_details", &menu.previewDetails);
     model.Bind("close_label", &menu.close);
     model.Bind("text_px", &menu.textPx);
     model.Bind("system_menu_label", &menu.title);
@@ -109,6 +113,17 @@ void Bind(Rml::Context& context, Menu& menu)
         model.Bind(field, &menu.zero);
     model.BindEventCallback("gmd_button_click", [&menu](Rml::DataModelHandle, Rml::Event&, const Rml::VariantList& args)
                             { menu.selected = args.at(0).Get<int>(); });
+    model.BindEventCallback("gmd_preview",
+                            [&menu](Rml::DataModelHandle handle, Rml::Event&, const Rml::VariantList& args)
+                            {
+                                const auto& button = menu.buttons.at(args.at(0).Get<int>());
+                                if (button.dismiss)
+                                    return;
+                                menu.previewName = button.label + " " + button.description;
+                                menu.previewDetails = button.details;
+                                handle.DirtyVariable("preview_name");
+                                handle.DirtyVariable("preview_details");
+                            });
     model.BindEventCallback("gmd_cancel",
                             [&menu](Rml::DataModelHandle, Rml::Event&, const Rml::VariantList&) { ++menu.cancelled; });
 }
@@ -167,6 +182,17 @@ void CheckLayout(UI::Tests::RmlLayoutFixture& fixture, Rml::ElementDocument& doc
         CHECK(button.GetInnerRML().find(menu.buttons[i].label) != Rml::String::npos);
         CHECK(button.GetInnerRML().find(menu.buttons[i].description) != Rml::String::npos);
         CheckHit(fixture, button);
+        button.DispatchEvent("mouseover", {});
+        fixture.Refresh();
+        auto* preview = document.GetElementById("warp_preview_details");
+        REQUIRE(preview);
+        CHECK(preview->IsVisible(true));
+        if (!menu.buttons[i].dismiss)
+            CHECK(preview->GetInnerRML() == menu.buttons[i].details);
+        Rml::Vector2f previewPosition, previewSize;
+        REQUIRE(UI::RmlBridge::DrawnBox(*preview, Rml::BoxArea::Border, previewPosition, previewSize));
+        CHECK(previewSize.y > 0.f);
+        CHECK(previewPosition.y + previewSize.y <= panePosition.y + 1.f);
         button.Click();
         CHECK(menu.selected == static_cast<int>(i));
         CheckHit(fixture, *close);

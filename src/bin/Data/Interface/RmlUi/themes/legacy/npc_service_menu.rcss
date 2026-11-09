@@ -7,6 +7,9 @@
 .nd-answer-row.disabled { color: token(text-disabled); }
 .npc-option-details { display: none; }
 #panel.warp #npc_lines_container { display: none; }
-#panel.warp .nd-divider { top: 40px; }
-#panel.warp #answers_container { top: 63px; height: calc(314px * var(--root-scale)); }
+#warp_preview { display: none; }
+#panel.warp #warp_preview { display: block; position: absolute; top: 48px; left: 15px; right: 15px; height: calc(46px * var(--root-scale)); overflow-y: auto; overflow-x: hidden; white-space: normal; word-break: break-word; line-height: calc(14px * var(--root-scale)); }
+#warp_preview_details { color: token(accent-gold); }
+#panel.warp .nd-divider { top: 94px; }
+#panel.warp #answers_container { top: 117px; height: calc(260px * var(--root-scale)); }
 #panel.warp .nd-answer-row { white-space: nowrap; overflow-x: hidden; }

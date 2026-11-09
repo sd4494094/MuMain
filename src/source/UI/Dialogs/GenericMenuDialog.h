@@ -140,6 +140,7 @@ namespace mu::ui::window
         void OnRmlBuilt();
         void SyncRmlModel();
         void SyncCanvasTop();
+        void UpdatePreview(int index);
         Rml::ElementDocument* ActiveDocument() const
         {
             return m_RmlView.Document(IsNpcMenuVisible() ? 1 : 0);
@@ -185,6 +186,7 @@ namespace mu::ui::window
             float textPx = 12.f;
             float canvasTop = 0.f; // UI::RmlBridge::DialogCanvasTop, in dp
             Rml::String title;
+            Rml::String previewName, previewDetails;
             std::vector<LineEntry> lines;
             std::vector<MenuButtonEntry> buttons;
 

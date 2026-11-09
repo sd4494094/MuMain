@@ -20,7 +20,7 @@
         <div class="advisor-home" data-if="page == 0">
             <button class="nd-answer-row advisor-action" data-class-disabled="pending" data-event-click="advisor_action(1)">1. {{reset}}</button>
             <button class="nd-answer-row advisor-action" data-for="row : rows" data-class-disabled="pending"
-                    data-event-click="advisor_action(10 + row.id)">{{allocate}} {{row.name}}</button>
+                    data-event-click="advisor_action(10 + row.id)">{{it_index + 2}}. {{row.action_label}}</button>
         </div>
         <div class="advisor-form" data-if="page == 2 || page == 3">
             <div class="advisor-balance">{{available}}</div>
@@ -39,7 +39,7 @@
             <div class="advisor-summary">{{remaining}}</div>
         </div>
     </div>
-    <div class="advisor-feedback sharp-text" data-style-font-size="text_px + 'px'">{{feedback}}</div>
+    <div class="advisor-feedback sharp-text" data-class-busy="busy" data-style-font-size="text_px + 'px'">{{feedback}}</div>
     <div class="advisor-footer sharp-text" data-style-font-size="text_px + 'px'">
         <button class="nd-answer-row" data-if="page == 1" data-class-disabled="pending || !can_confirm" data-event-click="advisor_action(2)">{{confirm_reset}}</button>
         <button class="nd-answer-row" data-if="page == 2" data-class-disabled="pending || !valid" data-event-click="advisor_action(4)">{{next}}</button>

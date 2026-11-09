@@ -73,6 +73,8 @@ void CGenericMenuDialog::BindRmlModel(Rml::DataModelConstructor& c, GenericMenuR
     c.Bind("canvas_top", &model.canvasTop);
     c.Bind("text_px", &model.textPx);
     c.Bind("title", &model.title);
+    c.Bind("preview_name", &model.previewName);
+    c.Bind("preview_details", &model.previewDetails);
     c.Bind("system_menu_label", &model.systemMenuLabel);
     c.Bind("close_label", &model.closeLabel);
 
@@ -95,6 +97,12 @@ void CGenericMenuDialog::BindRmlModel(Rml::DataModelConstructor& c, GenericMenuR
             m_bButtonClicked = true;
             m_iClickedButtonIndex = index;
         });
+    c.BindEventCallback("gmd_preview",
+                        [this](Rml::DataModelHandle, Rml::Event&, const Rml::VariantList& args)
+                        {
+                            if (m_bActive && !args.empty())
+                                UpdatePreview(args[0].Get<int>(-1));
+                        });
     // A close action outside the button list: the same as Esc.
     c.BindEventCallback("gmd_cancel",
         [this](Rml::DataModelHandle, Rml::Event&, const Rml::VariantList&)
@@ -137,6 +145,7 @@ void CGenericMenuDialog::Show(GenericMenuConfig cfg)
     }
 
     m_Active = std::move(cfg);
+    UpdatePreview(-1);
     m_bActive = true;
     m_bButtonClicked = false;
     m_iClickedButtonIndex = -1;
@@ -160,6 +169,7 @@ bool CGenericMenuDialog::ShowOrUpdate(GenericMenuConfig cfg)
         return false;
 
     m_Active = std::move(cfg);
+    UpdatePreview(-1);
     m_bButtonClicked = false;
     m_iClickedButtonIndex = -1;
     SyncRmlModel();
@@ -181,6 +191,7 @@ void CGenericMenuDialog::ShowNext()
 
     m_Active = std::move(m_Queue.front());
     m_Queue.pop_front();
+    UpdatePreview(-1);
     m_bButtonClicked = false;
     m_iClickedButtonIndex = -1;
 
@@ -307,6 +318,32 @@ std::vector<CGenericMenuDialog::MenuButtonEntry> CGenericMenuDialog::BuildButton
         buttons.push_back(std::move(entry));
     }
     return buttons;
+}
+
+void CGenericMenuDialog::UpdatePreview(int index)
+{
+    auto& model = m_RmlView.GetModel();
+    if (index < 0)
+    {
+        model.previewName.clear();
+        model.previewDetails.clear();
+        for (size_t i = 0; i < m_Active.buttons.size(); ++i)
+            if (!m_Active.buttons[i].dismiss && !m_Active.buttons[i].details.empty())
+            {
+                index = static_cast<int>(i);
+                break;
+            }
+    }
+    if (index >= 0 && index < static_cast<int>(m_Active.buttons.size()))
+    {
+        const auto& button = m_Active.buttons[index];
+        if (button.dismiss || button.details.empty())
+            return;
+        model.previewName = StringUtils::WideToNarrow((button.label + L" " + button.description).c_str());
+        model.previewDetails = StringUtils::WideToNarrow(button.details.c_str());
+    }
+    m_RmlView.MarkDirty("preview_name");
+    m_RmlView.MarkDirty("preview_details");
 }
 
 void CGenericMenuDialog::SyncRmlModel()

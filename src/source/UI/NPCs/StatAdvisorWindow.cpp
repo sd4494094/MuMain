@@ -35,6 +35,7 @@ void CStatAdvisorWindow::Bind(Rml::DataModelConstructor& c, Model& m)
     auto row = c.RegisterStruct<Row>();
     row.RegisterMember("id", &Row::id);
     row.RegisterMember("name", &Row::name);
+    row.RegisterMember("action_label", &Row::actionLabel);
     row.RegisterMember("current", &Row::current);
     row.RegisterMember("amount", &Row::amount);
     row.RegisterMember("result", &Row::result);
@@ -50,10 +51,10 @@ void CStatAdvisorWindow::Bind(Rml::DataModelConstructor& c, Model& m)
     c.Bind("total", &m.totalText);
     c.Bind("remaining", &m.remainingText);
     c.Bind("pending", &m.pending);
+    c.Bind("busy", &m.busy);
     c.Bind("valid", &m.valid);
     c.Bind("can_confirm", &m.canConfirm);
     c.Bind("reset", &m.reset);
-    c.Bind("allocate", &m.allocate);
     c.Bind("leave", &m.leave);
     c.Bind("back", &m.back);
     c.Bind("clear", &m.clear);
@@ -150,22 +151,29 @@ void CStatAdvisorWindow::Receive(Network::StatAdvisorPacket reply)
     m.rows.clear();
     for (const auto& value : m_Reply.rows)
     {
-        Row row{value.id,      value.current, value.maximum,
-                value.current, value.name,    (value.amount == 0 ? std::string{} : std::to_string(value.amount))};
+        Row row{value.id,
+                value.current,
+                value.maximum,
+                value.current,
+                value.name,
+                {},
+                (value.amount == 0 ? std::string{} : std::to_string(value.amount))};
         const auto old = std::find_if(oldRows.begin(), oldRows.end(), [&](const Row& r) { return r.id == value.id; });
         if (m.page == 2 && !m_Reply.clearInputs && old != oldRows.end())
             row.amount = old->amount;
         m.rows.push_back(std::move(row));
     }
     const auto& l = m_Reply.labels;
-    m.reset = l.at("Reset"); m.allocate = l.at("Allocate"); m.leave = l.at("Leave");
+    UpdateAllocationLabels();
+    m.reset = l.at("Reset");
+    m.leave = l.at("Leave");
     m.back = l.at("Back"); m.clear = l.at("Clear"); m.next = l.at("Next");
     m.confirmReset = l.at("ConfirmReset"); m.confirmAllocation = l.at("ConfirmAllocation");
     m.attributeLabel = l.at("Attribute"); m.currentLabel = l.at("Current");
     m.increaseLabel = l.at("Increase"); m.resultLabel = l.at("Result");
-    for (const auto* key : {"rows", "page", "title", "message", "can_confirm", "reset", "allocate", "leave", "back",
-                            "clear", "next", "confirm_reset", "confirm_allocation", "attribute_label", "current_label",
-                            "increase_label", "result_label"})
+    for (const auto* key :
+         {"rows", "page", "title", "message", "can_confirm", "reset", "leave", "back", "clear", "next", "confirm_reset",
+          "confirm_allocation", "attribute_label", "current_label", "increase_label", "result_label"})
         m_View.MarkDirty(key);
     SetPending(false);
     Recalculate();
@@ -174,6 +182,18 @@ void CStatAdvisorWindow::Receive(Network::StatAdvisorPacket reply)
         document->Show(Rml::ModalFlag::Modal, Rml::FocusFlag::Document);
     if (auto* body = document->GetElementById("advisor-body"))
         body->SetScrollTop(0.f);
+}
+void CStatAdvisorWindow::UpdateAllocationLabels()
+{
+    for (auto& row : m_View.GetModel().rows)
+    {
+        row.actionLabel = m_Reply.labels.at("Allocate");
+        const auto placeholder = row.actionLabel.find("{0}");
+        if (placeholder != std::string::npos)
+            row.actionLabel.replace(placeholder, 3, row.name);
+        else
+            row.actionLabel += " " + row.name;
+    }
 }
 void CStatAdvisorWindow::SelectAttribute(int id)
 {
@@ -227,9 +247,28 @@ void CStatAdvisorWindow::Recalculate()
     sync(m.availableText, l.at("Available") + ": " + std::to_string(m.available), "available");
     sync(m.totalText, l.at("Total") + ": " + std::to_string(total), "total");
     sync(m.remainingText, l.at("Remaining") + ": " + std::to_string(static_cast<std::int64_t>(m.available) - total), "remaining");
-    sync(m.feedback, m.pending ? l.at("Waiting") : (!valid || total > m.available) ? l.at("InvalidInput") : std::string{}, "feedback");
+    UpdateFeedback((m.page == 2 || m.page == 3) && (!valid || total > m.available));
     if (rowsChanged)
         m_View.MarkDirty("rows");
+}
+void CStatAdvisorWindow::UpdateFeedback(bool invalidInput)
+{
+    auto& model = m_View.GetModel();
+    constexpr DWORD BusyFeedbackDelayMs = 1000;
+    const bool busy = model.pending && GetTickCount() - m_SentAt >= BusyFeedbackDelayMs;
+    if (model.busy != busy)
+    {
+        model.busy = busy;
+        m_View.MarkDirty("busy");
+    }
+    const auto feedback = busy                             ? m_Reply.labels.at("Waiting")
+                          : !model.pending && invalidInput ? m_Reply.labels.at("InvalidInput")
+                                                           : std::string{};
+    if (model.feedback != feedback)
+    {
+        model.feedback = feedback;
+        m_View.MarkDirty("feedback");
+    }
 }
 void CStatAdvisorWindow::Close()
 {

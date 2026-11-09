@@ -37,16 +37,16 @@ private:
     struct Row
     {
         int id = 0, current = 0, maximum = 0, result = 0;
-        Rml::String name, amount = "0";
+        Rml::String name, actionLabel, amount = "0";
     };
     struct Model
     {
         float textPx = 12.f;
         int page = 0, available = 0, selectedAttribute = -1;
         Rml::String title, message, feedback, availableText, totalText, remainingText;
-        Rml::String reset, allocate, leave, back, clear, next, confirmReset, confirmAllocation;
+        Rml::String reset, leave, back, clear, next, confirmReset, confirmAllocation;
         Rml::String attributeLabel, currentLabel, increaseLabel, resultLabel;
-        bool pending = false, valid = false, canConfirm = false;
+        bool pending = false, busy = false, valid = false, canConfirm = false;
         std::vector<Row> rows;
     };
     void Bind(Rml::DataModelConstructor& constructor, Model& model);
@@ -54,6 +54,8 @@ private:
     void Send(std::uint8_t operation);
     void Close();
     void Recalculate();
+    void UpdateFeedback(bool invalidInput);
+    void UpdateAllocationLabels();
     void SyncInputState();
     void Clear();
     void SelectAttribute(int id);
