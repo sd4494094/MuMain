@@ -1,6 +1,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include "stdafx.h"
+#include "Render/Characters/ServiceNpcRendering.h"
 #include "Data/DataHandler/DataFileIO.h"
 #include "Core/Utilities/FileHandle.h"
 #include "Core/Utilities/Random.h"
@@ -534,6 +535,31 @@ static void LittleSantaLight(int type, vec3_t light)
     }
 }
 
+namespace
+{
+void ApplyMapObjectLight(BMD* b, const OBJECT* o, int ExtraMon)
+{
+    if (gMapManager.WorldActive == WD_10HEAVEN)
+    {
+        if (o->Type == MODEL_DRAGON_)
+        {
+            Vector(0.02f, 0.05f, 0.15f, b->BodyLight);
+        }
+    }
+    if (gMapManager.InDevilSquare())
+    {
+        if (o->Type == MODEL_ICE_QUEEN)
+        {
+            Vector(0.0f, 0.3f, 1.0f, b->BodyLight);
+        }
+    }
+    if (ExtraMon && o->Type == MODEL_BALROG)
+    {
+        Vector(0.0f, 0.0f, 1.0f, b->BodyLight);
+    }
+}
+} // namespace
+
 void Draw_RenderObject(const OBJECT* o, bool Translate, int Select, int ExtraMon, const ObjectGhost* ghost)
 {
     DrawLook look = DrawLook::Of(*o);
@@ -608,29 +634,16 @@ void Draw_RenderObject(const OBJECT* o, bool Translate, int Select, int ExtraMon
 
             return;
         }
-        if (gMapManager.WorldActive == WD_10HEAVEN)
-        {
-            if (o->Type == MODEL_DRAGON_)
-            {
-                Vector(0.02f, 0.05f, 0.15f, b->BodyLight);
-            }
-        }
-        if (gMapManager.InDevilSquare())
-        {
-            if (o->Type == MODEL_ICE_QUEEN)
-            {
-                Vector(0.0f, 0.3f, 1.0f, b->BodyLight);
-            }
-        }
-        if (ExtraMon && o->Type == MODEL_BALROG)
-        {
-            Vector(0.0f, 0.0f, 1.0f, b->BodyLight);
-        }
+        ApplyMapObjectLight(b, o, ExtraMon);
 
         if (o->RenderType == RENDER_DARK)
         {
             b->RenderBody(RENDER_TEXTURE | RENDER_DARK, look.alpha, look.blendMesh, look.blendMeshLight,
                           look.blendMeshU, look.blendMeshV, look.hiddenMesh);
+        }
+        else if (Render::Characters::ServiceNpcRendering::DrawBody(b, o, look))
+        {
+            // Selection, hidden-object checks and dark/shadow passes keep their native paths.
         }
         else if (o->Type == MODEL_CHANGE_UP_EFF)
         {
@@ -7598,6 +7611,57 @@ void RefreshStunSkull(OBJECT* o, vec3_t Light)
 
 extern float g_Luminosity;
 
+namespace
+{
+void DrawPartObjectShadow(BMD* b, const OBJECT* o, const DrawLook& look, int Type)
+{
+    if (gMapManager.WorldActive == 7)
+    {
+        EnableAlphaTest();
+    }
+    else
+    {
+        DisableAlphaBlend();
+    }
+    bool bRenderShadow = true;
+
+    if (gMapManager.InHellas())
+    {
+        bRenderShadow = false;
+    }
+
+    if (WD_10HEAVEN == gMapManager.WorldActive || o->m_bySkillCount == 3 || g_Direction.m_CKanturu.IsMayaScene())
+    {
+        bRenderShadow = false;
+    }
+
+    if (g_isCharacterBuff(o, eBuff_Cloaking))
+    {
+        bRenderShadow = false;
+    }
+
+    if (bRenderShadow)
+    {
+        if (o->m_bRenderShadow)
+        {
+            int iHiddenMesh = s_shadowHiddenMesh != ShadowPass::ObjectHiddenMesh ? s_shadowHiddenMesh : look.hiddenMesh;
+
+            if (o->Type == MODEL_DREADFEAR)
+            {
+                iHiddenMesh = 2;
+            }
+            else if (o->Type == MODEL_GAYION)
+            {
+                iHiddenMesh = 0;
+            }
+
+            const DrawnModelLodScope lod(*b, *o, Type);
+            b->RenderBodyShadow(look.blendMesh, iHiddenMesh);
+        }
+    }
+}
+} // namespace
+
 void RenderPartObjectEffect(const OBJECT* o, int Type, const vec3_t Light, float Alpha, int ItemLevel,
                             int ExcellentFlags, int ancientDiscriminator, int Select, int RenderType)
 {
@@ -7614,53 +7678,13 @@ void RenderPartObjectEffect(const OBJECT* o, int Type, const vec3_t Light, float
 
     if (DrawsShadow(o))
     {
-        if (gMapManager.WorldActive == 7)
-        {
-            EnableAlphaTest();
-        }
-        else
-        {
-            DisableAlphaBlend();
-        }
-        bool bRenderShadow = true;
-
-        if (gMapManager.InHellas())
-        {
-            bRenderShadow = false;
-        }
-
-        if (WD_10HEAVEN == gMapManager.WorldActive || o->m_bySkillCount == 3 || g_Direction.m_CKanturu.IsMayaScene())
-        {
-            bRenderShadow = false;
-        }
-
-        if (g_isCharacterBuff(o, eBuff_Cloaking))
-        {
-            bRenderShadow = false;
-        }
-
-        if (bRenderShadow)
-        {
-            if (o->m_bRenderShadow)
-            {
-                int iHiddenMesh =
-                    s_shadowHiddenMesh != ShadowPass::ObjectHiddenMesh ? s_shadowHiddenMesh : look.hiddenMesh;
-
-                if (o->Type == MODEL_DREADFEAR)
-                {
-                    iHiddenMesh = 2;
-                }
-                else if (o->Type == MODEL_GAYION)
-                {
-                    iHiddenMesh = 0;
-                }
-
-                const DrawnModelLodScope lod(*b, *o, Type);
-                b->RenderBodyShadow(look.blendMesh, iHiddenMesh);
-            }
-        }
+        DrawPartObjectShadow(b, o, look, Type);
         return;
     }
+
+    if (Render::Characters::ServiceNpcRendering::DrawWing(b, Type, look, ItemLevel, ExcellentFlags, renderLevel,
+                                                          RenderType))
+        return;
 
     Level = Render::Items::Glow::GetLevel(Type, Level);
 

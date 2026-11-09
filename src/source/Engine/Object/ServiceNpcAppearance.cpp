@@ -78,7 +78,7 @@ bool PrepareDisplayWing(CHARACTER* character)
     if (!HasDisplayWing(character))
         return false;
     constexpr unsigned char BackBone = 47;
-    constexpr float FlyingWingSpeed = 1.f;
+    constexpr float FlyingWingSpeed = 0.3f;
     character->Wing.LinkBone = BackBone;
     character->Wing.PlaySpeed = FlyingWingSpeed;
     return true;

@@ -12,6 +12,8 @@
 #include "Data/GameData/MonsterData/ServiceNpcPresentation.h"
 #include "Data/GameData/ItemData/ItemModelJsonFormat.h"
 #include "Render/Characters/ServiceNpcEffects.h"
+#include "Render/Characters/ServiceNpcRendering.h"
+#include "Render/Models/ModelDraw.h"
 #include "Render/Effects/ZzzEffect.h"
 #include "Render/Items/ItemGlow.h"
 #include "../data/ItemModelDatabaseScope.h"
@@ -318,7 +320,7 @@ TEST_CASE("Service NPC appearances: Aria uses independent female geometry and a 
         CHECK(character->Object.BlendMesh == Data::Monsters::ServiceNpcPresentation::AriaHaloMesh);
         CHECK(Engine::Object::ServiceNpcs::PrepareDisplayWing(character));
         CHECK(character->Wing.LinkBone == 47);
-        CHECK(character->Wing.PlaySpeed == 1.f);
+        CHECK(character->Wing.PlaySpeed == doctest::Approx(0.3f));
         CHECK(character->Weapon[0].Type == -1);
         CHECK(character->BodyPart[BODYPART_ARMOR].Type == -1);
         CHECK_FALSE(Engine::Object::ServiceNpcs::HasTownHover(character));
@@ -384,8 +386,8 @@ TEST_CASE(
     ClearSprites();
     REQUIRE(Render::Characters::ServiceNpcEffects::Update(character.get(), &object, &model));
     CHECK(object.BlendMesh == Presentation::AriaHaloMesh);
-    CHECK(object.BlendMeshLight >= 0.8f);
-    CHECK(object.BlendMeshLight <= 1.2f);
+    CHECK(object.BlendMeshLight >= 0.75f);
+    CHECK(object.BlendMeshLight <= 0.95f);
     int lights = 0;
     int stars = 0;
     for (int index = 0; index < MAX_SPRITES; ++index)
@@ -398,8 +400,8 @@ TEST_CASE(
         for (const float component : sprite.Position)
             CHECK(std::isfinite(component));
     }
-    CHECK(lights == 8);
-    CHECK(stars == 4);
+    CHECK(lights == 11);
+    CHECK(stars == 7);
     ClearSprites();
     model.NumBones = 60;
     CHECK(Render::Characters::ServiceNpcEffects::Update(character.get(), &object, &model));
@@ -412,4 +414,188 @@ TEST_CASE(
     // A BMD with metadata only owns no allocation in this unit test.
     model.NumBones = 0;
     model.NumMeshs = 0;
+}
+
+namespace
+{
+class AriaDrawRecorder final : public Render::ModelDrawing::ModelDrawer
+{
+public:
+    AriaDrawRecorder()
+    {
+        Render::ModelDrawing::SetModelDrawer(this);
+    }
+    ~AriaDrawRecorder() override
+    {
+        Render::ModelDrawing::SetModelDrawer(nullptr);
+    }
+    void DrawMesh(const Render::ModelDrawing::MeshDraw& draw) override
+    {
+        draws.push_back(draw);
+    }
+    void DrawShadow(const Render::ModelDrawing::ShadowDraw&) override {}
+    std::vector<Render::ModelDrawing::MeshDraw> draws;
+};
+} // namespace
+
+TEST_CASE("Service NPC rendering: fill light and armor shine exclude the face cloth and hidden meshes [service-npc]")
+{
+    namespace Rendering = Render::Characters::ServiceNpcRendering;
+    if (!HasPrivateAssets())
+        return;
+    MonsterRecorder::LoadScope load(0);
+    load.Run([] { OpenMonsterModel(MONSTER_MODEL_SERVICE_ARIA); });
+    BMD& model = Models[Data::Monsters::ServiceNpcPresentation::AriaBodyModel];
+    model.LightEnable = true;
+    Vector(0.2f, 0.3f, 0.4f, model.BodyLight);
+    OBJECT object;
+    object.Kind = KIND_NPC;
+    object.Type = Data::Monsters::ServiceNpcPresentation::AriaBodyModel;
+    DrawLook look;
+    look.alpha = 0.5f;
+    look.hiddenMesh = 5;
+    AriaDrawRecorder recorder;
+    ClearSprites();
+    REQUIRE(Rendering::DrawBody(&model, &object, look));
+    CHECK(recorder.draws.size() == 14);
+    for (const auto& draw : recorder.draws)
+    {
+        CHECK(draw.mesh != 5);
+        CHECK(draw.alpha == doctest::Approx(0.5f));
+        if (draw.flags == RENDER_TEXTURE && draw.mesh == 0)
+        {
+            CHECK_FALSE(draw.lightEnable);
+            CHECK(draw.bodyLight[0] > 0.9f);
+        }
+        if (draw.flags != RENDER_TEXTURE)
+        {
+            CHECK(draw.mesh != 0);
+            CHECK(draw.mesh != 9);
+            CHECK(draw.bodyLight[0] < 0.5f);
+        }
+    }
+    CHECK(model.LightEnable);
+    CHECK(model.BodyLight[0] == doctest::Approx(0.2f));
+    CHECK(model.BodyLight[1] == doctest::Approx(0.3f));
+    CHECK(model.BodyLight[2] == doctest::Approx(0.4f));
+    recorder.draws.clear();
+    look.hiddenMesh = -2;
+    CHECK(Rendering::DrawBody(&model, &object, look));
+    CHECK(recorder.draws.empty());
+    look.hiddenMesh = -1;
+    object.Kind = KIND_PLAYER;
+    CHECK_FALSE(Rendering::DrawBody(&model, &object, look));
+    object.Kind = KIND_NPC;
+    object.Type = MODEL_MONSTER01;
+    CHECK_FALSE(Rendering::DrawBody(&model, &object, look));
+    for (int i = 0; i < MAX_SPRITES; ++i)
+        CHECK_FALSE(Sprites[i].Live);
+}
+
+TEST_CASE("Service NPC rendering: private wing keeps +15 passes with bounded platinum violet light [service-npc]")
+{
+    namespace Rendering = Render::Characters::ServiceNpcRendering;
+    const int wing = Data::Monsters::ServiceNpcPresentation::AriaWingModel;
+    if (!HasPrivateAssets())
+        return;
+    MonsterRecorder::LoadScope load(0);
+    load.Run([] { OpenMonsterModel(MONSTER_MODEL_SERVICE_ARIA_WINGS); });
+    BMD& model = Models[wing];
+    Vector(0.2f, 0.3f, 0.4f, model.BodyLight);
+    DrawLook look;
+    AriaDrawRecorder recorder;
+    REQUIRE(Rendering::DrawWing(&model, wing, look, 15, 63, 4, RENDER_TEXTURE));
+    REQUIRE(recorder.draws.size() == 5);
+    CHECK(recorder.draws.front().flags == RENDER_TEXTURE);
+    bool chrome = false, metal = false, chrome4 = false, excellent = false;
+    for (size_t index = 1; index < recorder.draws.size(); ++index)
+    {
+        const auto& draw = recorder.draws[index];
+        chrome |= draw.flags == (RENDER_CHROME | RENDER_BRIGHT);
+        metal |= draw.flags == (RENDER_METAL | RENDER_BRIGHT);
+        chrome4 |= draw.flags == (RENDER_CHROME4 | RENDER_BRIGHT);
+        excellent |= draw.flags == (RENDER_TEXTURE | RENDER_BRIGHT);
+        CHECK(draw.bodyLight[0] < 0.1f);
+        CHECK(draw.bodyLight[2] > draw.bodyLight[0]);
+        CHECK(draw.bodyLight[0] > draw.bodyLight[1]);
+    }
+    CHECK(chrome);
+    CHECK(metal);
+    CHECK(chrome4);
+    CHECK(excellent);
+    CHECK(model.BodyLight[0] == doctest::Approx(0.2f));
+    recorder.draws.clear();
+    CHECK(Rendering::DrawWing(&model, wing, look, 15, 63, 0, RENDER_TEXTURE));
+    CHECK(recorder.draws.size() == 1);
+    recorder.draws.clear();
+    CHECK(Rendering::DrawWing(&model, wing, look, 0, 0, 4, RENDER_TEXTURE));
+    CHECK(recorder.draws.size() == 1);
+    CHECK_FALSE(Rendering::DrawWing(&model, MODEL_WING_OF_ILLUSION, look, 15, 63, 4, RENDER_TEXTURE));
+    CHECK_FALSE(Rendering::DrawWing(&model, wing, look, 15, 63, 4, RENDER_DARK));
+    CHECK(recorder.draws.size() == 1);
+}
+
+TEST_CASE(
+    "Service NPC effects: wing lights use animated anchors and never emit the native red green palette [service-npc]")
+{
+    namespace Presentation = Data::Monsters::ServiceNpcPresentation;
+    auto bones = std::make_unique<vec34_t[]>(MAX_BONES);
+    for (int bone = 0; bone < 39; ++bone)
+        bones[bone][0][3] = static_cast<float>(bone);
+    BMD model;
+    model.NumBones = 39;
+    model.BodyScale = 1.f;
+    Vector(0.f, 0.f, 0.f, model.BodyOrigin);
+    OBJECT object;
+    ClearSprites();
+    Render::Characters::ServiceNpcEffects::SpawnWing(&model, &object, Presentation::AriaWingModel, bones.get());
+    int count = 0;
+    for (int i = 0; i < MAX_SPRITES; ++i)
+    {
+        const auto& sprite = Sprites[i];
+        if (!sprite.Live)
+            continue;
+        ++count;
+        CHECK(sprite.Type != BITMAP_FLARE);
+        CHECK(sprite.Light[2] > sprite.Light[0]);
+        CHECK(sprite.Light[0] > sprite.Light[1]);
+        CHECK(sprite.Position[0] >= 4.f);
+        CHECK(sprite.Position[0] <= 38.f);
+    }
+    CHECK(count == 12);
+    ClearSprites();
+    model.NumBones = 38;
+    Render::Characters::ServiceNpcEffects::SpawnWing(&model, &object, Presentation::AriaWingModel, bones.get());
+    model.NumBones = 39;
+    Render::Characters::ServiceNpcEffects::SpawnWing(&model, &object, MODEL_WING_OF_ILLUSION, bones.get());
+    Render::Characters::ServiceNpcEffects::SpawnWing(&model, &object, Presentation::AriaWingModel, nullptr);
+    for (int i = 0; i < MAX_SPRITES; ++i)
+        CHECK_FALSE(Sprites[i].Live);
+    model.NumBones = 0;
+}
+
+TEST_CASE("Service NPC animation: wing speed advances at thirty percent for different frame factors [service-npc]")
+{
+    if (!HasPrivateAssets())
+        return;
+    MonsterRecorder::CreationScope creation(0);
+    CHARACTER* character = creation.Create(MONSTER_CREATOR_GODDESS_ARIA);
+    REQUIRE(Engine::Object::ServiceNpcs::PrepareDisplayWing(character));
+    BMD& wing = Models[character->Wing.Type];
+    const float savedFactor = FPS_ANIMATION_FACTOR;
+    for (const float factor : {0.5f, 1.f, 2.f})
+    {
+        FPS_ANIMATION_FACTOR = factor;
+        float slow = 1.f, native = 1.f, slowPrior = 1.f, nativePrior = 1.f;
+        unsigned short slowAction = 0, nativeAction = 0;
+        vec3_t origin = {}, angle = {};
+        wing.CurrentAction = 0;
+        for (int tick = 0; tick < 2; ++tick)
+        {
+            wing.PlayAnimation(&slow, &slowPrior, &slowAction, character->Wing.PlaySpeed, origin, angle);
+            wing.PlayAnimation(&native, &nativePrior, &nativeAction, 1.f, origin, angle);
+        }
+        CHECK((slow - 1.f) / (native - 1.f) == doctest::Approx(0.3f));
+    }
+    FPS_ANIMATION_FACTOR = savedFactor;
 }

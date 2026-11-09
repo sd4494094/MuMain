@@ -56,8 +56,12 @@ client model slot is **220**. Her model combines adapted native MU geometry, ani
 wings, a halo and raised flying poses; the concept artwork is a visual direction,
 not a screenshot of the finished low-poly model. The upgraded appearance uses
 independent animated Illusion-style wings in a platinum, gold and violet palette,
-with +15/excellent equipment glow. Her double halo has pulsing light and orbiting
-star points. Equipment glow follows the client's effect quality settings; compare
+with controlled platinum/violet +15/excellent glow. Her wing animation runs at 30%
+of the initial display speed. Her raised double halo has pulsing light and orbiting
+star points. The face receives soft fill light; armor receives restrained native
+metallic sheen and shoulder/chest stars, leaving skin and cloth out of the sheen.
+Name height and native NPC selection highlighting remain unchanged. Wing glow
+follows the client's effect quality settings; compare
 the effect with nearby upgraded equipment using the same settings.
 
 Existing Season 6 installations use the optional **Add creator goddess NPC** update.
