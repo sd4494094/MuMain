@@ -4554,6 +4554,7 @@ enum EMonsterModelType : int
     MONSTER_MODEL_SERVICE_NOAH = 217,
     MONSTER_MODEL_SERVICE_LEO = 218,
     MONSTER_MODEL_SERVICE_ERIN = 219,
+    MONSTER_MODEL_SERVICE_ARIA = 220,
     MONSTER_MODEL_COUNT,            // keep last: number of monster models
 };
 
@@ -5108,8 +5109,9 @@ enum EMonsterType : int
     MONSTER_CAPTURED_STONE_STATUE_10 = 668,
 
     MONSTER_LEVELING_WARP_GUIDE = 710,
+    MONSTER_CREATOR_GODDESS_ARIA = 711,
 
-    MONSTER_END = 710
+    MONSTER_END = 711
 };
 
 enum

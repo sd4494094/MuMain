@@ -250,7 +250,7 @@ TEST_CASE("Service NPC bindings: shipped numeric identities create the model dec
         Data::Monsters::LoadMonstersFile(MonsterRecorder::ClientFolder() / "Data" / "Monsters" / "Monsters.json");
     REQUIRE(data.monsters.size() > 500);
     MonsterRecorder::CreationScope creation(0);
-    for (const int number : {414, 464, 710})
+    for (const int number : {414, 464, 710, 711})
     {
         const auto entry = std::find_if(data.monsters.begin(), data.monsters.end(),
                                         [number](const auto& monster) { return monster.number == number; });
@@ -262,5 +262,50 @@ TEST_CASE("Service NPC bindings: shipped numeric identities create the model dec
         CHECK(character->MonsterIndex == number);
         CHECK(character->Object.Type == *expected);
         CHECK(character->Object.Kind == KIND_NPC);
+    }
+}
+
+TEST_CASE(
+    "Service NPC appearances: Aria uses independent female geometry and complete hovering wing cycles [service-npc]")
+{
+    CHECK(MONSTER_CREATOR_GODDESS_ARIA == 711);
+    CHECK(MONSTER_MODEL_SERVICE_ARIA == 220);
+    CHECK(MONSTER_MODEL_SERVICE_ERIN == 219);
+    const int slot = MODEL_MONSTER01 + static_cast<int>(MONSTER_MODEL_SERVICE_ARIA);
+    CHECK(Data::Monsters::FindMonsterModelSlot("MONSTER_MODEL_SERVICE_ARIA") == slot);
+    if (!HasPrivateAssets())
+        return;
+    MonsterRecorder::LoadScope load(0);
+    const auto changes = load.Run([] { OpenMonsterModel(MONSTER_MODEL_SERVICE_ARIA); });
+    REQUIRE(changes.textureErrors.empty());
+    const auto model = load.ReadSlot(slot);
+    CHECK(model.numMeshs == 12);
+    CHECK(model.numBones == 76);
+    CHECK(model.numActions == 2);
+    CHECK(model.boneHead == 20);
+    for (const auto& action : model.actions)
+    {
+        CHECK(action.keys == 42);
+        CHECK(action.speed > 0.f);
+    }
+    for (const auto& texture : model.textures)
+    {
+        CHECK(texture.bitmap != L"unknown");
+        CHECK(texture.bitmap != L"hidden");
+    }
+    MonsterRecorder::CreationScope creation(0);
+    for (int repeat = 0; repeat < 2; ++repeat)
+    {
+        const CHARACTER* character = creation.Create(MONSTER_CREATOR_GODDESS_ARIA);
+        REQUIRE(character != nullptr);
+        CHECK(character->MonsterIndex == MONSTER_CREATOR_GODDESS_ARIA);
+        CHECK(character->Object.Kind == KIND_NPC);
+        CHECK(character->Object.Type == slot);
+        CHECK(character->Object.BoundingBoxMax[2] == 280.f);
+        CHECK(character->Object.CurrentAction < model.numActions);
+        CHECK(character->Wing.Type == -1); // Animated wings are part of the independent BMD.
+        CHECK(character->Weapon[0].Type == -1);
+        CHECK(character->BodyPart[BODYPART_ARMOR].Type == -1);
+        CHECK_FALSE(Engine::Object::ServiceNpcs::HasTownHover(character));
     }
 }

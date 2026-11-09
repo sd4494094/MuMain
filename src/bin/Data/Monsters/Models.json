@@ -1954,6 +1954,15 @@
       "linkBones": [21, 13]
     },
     {
+      "slot": "MONSTER_MODEL_SERVICE_ARIA",
+      "file": "Data/NPC/Aria/Aria.bmd",
+      "textureFolders": ["NPC/Aria"],
+      "animations": {"stop1": 0.18, "stop2": 0.18},
+      "headBone": 20,
+      "boundingBox": {"min": [-42, -36, 0], "max": [42, 36, 280]},
+      "linkBones": [28, 37]
+    },
+    {
       "slot": "MODEL_MERCHANT_FEMALE",
       "file": "Data/NPC/Female01.bmd",
       "textureFolders": ["NPC"],

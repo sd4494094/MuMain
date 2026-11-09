@@ -15154,6 +15154,9 @@ CHARACTER* CreateMonster(EMonsterType Type, int PositionX, int PositionY, int Ke
         c->Object.EnableShadow = false;
         c->Object.m_bRenderShadow = false;
         break;
+    case MONSTER_CREATOR_GODDESS_ARIA:
+        c = Engine::Object::ServiceNpcs::Create(Key, MONSTER_MODEL_SERVICE_ARIA, PositionX, PositionY);
+        break;
     case MONSTER_LEVELING_WARP_GUIDE:
         c = Engine::Object::ServiceNpcs::Create(Key, MONSTER_MODEL_SERVICE_NOAH, PositionX, PositionY);
         break;

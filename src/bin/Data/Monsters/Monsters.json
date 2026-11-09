@@ -7210,6 +7210,15 @@
       },
       "kind": "npc",
       "model": "MONSTER_MODEL_SERVICE_NOAH"
+    },
+    {
+      "number": 711,
+      "name": {
+        "en": "Creator Goddess Aria",
+        "zh-CN": "创世神·艾莉雅"
+      },
+      "kind": "npc",
+      "model": "MONSTER_MODEL_SERVICE_ARIA"
     }
   ]
 }
