@@ -27,7 +27,7 @@ struct Button
 {
     Rml::String label;
     Rml::String description;
-    Rml::String details = "等级 170    金币 10000";
+    Rml::String details = "等级 170\n金币 10000";
     Rml::String tooltip;
     std::vector<Line> lines;
     bool enabled = true;
@@ -42,7 +42,7 @@ struct Menu
     Rml::String kind;
     Rml::String title = "传送使者·诺亚";
     Rml::String close = "关闭";
-    Rml::String previewName = "地下城一层 幽灵房", previewDetails = "等级 170    金币 10000";
+    Rml::String previewName = "地下城一层 幽灵房", previewDetails = "等级 170\n金币 10000";
     bool yes = true;
     bool no = false;
     float zero = 0.f, textPx = 12.f;
@@ -192,6 +192,21 @@ void CheckLayout(UI::Tests::RmlLayoutFixture& fixture, Rml::ElementDocument& doc
         Rml::Vector2f previewPosition, previewSize;
         REQUIRE(UI::RmlBridge::DrawnBox(*preview, Rml::BoxArea::Border, previewPosition, previewSize));
         CHECK(previewSize.y > 0.f);
+        auto* previewName = document.GetElementById("warp_preview_name");
+        REQUIRE(previewName);
+        CHECK(previewName->GetComputedValues().display() == Rml::Style::Display::Block);
+        CHECK(preview->GetComputedValues().display() == Rml::Style::Display::Block);
+        auto* text = rmlui_dynamic_cast<Rml::ElementText*>(preview->GetChild(0));
+        REQUIRE(text);
+        const auto& renderedLines = text->GetLines();
+        REQUIRE(renderedLines.size() == 2);
+        CHECK(renderedLines[0].text == "等级 170\n");
+        CHECK(renderedLines[1].text == "金币 10000");
+        for (const auto& line : renderedLines)
+            CHECK(line.width <= preview->GetClientWidth() + 1.f);
+        Rml::Vector2f namePosition, nameSize;
+        REQUIRE(UI::RmlBridge::DrawnBox(*previewName, Rml::BoxArea::Border, namePosition, nameSize));
+        CHECK(previewPosition.y >= namePosition.y + nameSize.y - 1.f);
         CHECK(previewPosition.y + previewSize.y <= panePosition.y + 1.f);
         button.Click();
         CHECK(menu.selected == static_cast<int>(i));

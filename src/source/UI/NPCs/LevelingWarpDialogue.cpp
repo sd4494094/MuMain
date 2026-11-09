@@ -6,12 +6,26 @@
 #include "Network/Server/WSclient.h"
 #include "UI/Dialogs/GenericMenuDialog.h"
 
+#include <algorithm>
+#include <vector>
+
 namespace
 {
 void SendCommand(const std::wstring& command)
 {
     if (SocketClient != nullptr && Hero != nullptr)
         SocketClient->ToGameServer()->SendPublicChatMessage(MU_C16(Hero->ID), MU_C16(command.c_str()));
+}
+
+std::vector<const Network::LevelingWarpEntry*> SortedDestinations(const Network::LevelingWarpDialogPacket& dialog)
+{
+    std::vector<const Network::LevelingWarpEntry*> entries;
+    entries.reserve(dialog.entries.size());
+    for (const auto& entry : dialog.entries)
+        entries.push_back(&entry);
+    std::stable_sort(entries.begin(), entries.end(),
+                     [](const auto* left, const auto* right) { return left->level < right->level; });
+    return entries;
 }
 
 void CloseDialogue()
@@ -40,12 +54,13 @@ void ShowLevelingWarpDialogue(const Network::LevelingWarpDialogPacket& dialog)
     GenericMenuConfig config;
     config.id = "leveling-warp";
     config.title = StringUtils::NarrowToWide(dialog.title);
-    for (const auto& entry : dialog.entries)
+    for (const auto* destination : SortedDestinations(dialog))
     {
+        const auto& entry = *destination;
         GenericMenuConfig::MenuButton button;
         button.label = StringUtils::NarrowToWide(entry.name);
         button.description = StringUtils::NarrowToWide(entry.description);
-        button.details = StringUtils::NarrowToWide(dialog.levelLabel) + L" " + std::to_wstring(entry.level) + L"    " +
+        button.details = StringUtils::NarrowToWide(dialog.levelLabel) + L" " + std::to_wstring(entry.level) + L"\n" +
                          StringUtils::NarrowToWide(dialog.costLabel) + L" " + std::to_wstring(entry.costs);
         button.tooltip = button.label + L" " + button.description + L"\n" + button.details;
         button.enabled = entry.enabled;
