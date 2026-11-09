@@ -12,14 +12,15 @@ the invested points to be returned and the point balance after reset. Only **Con
 stat reset** charges and changes the character. Back, Leave and Escape do not spend
 anything. The server checks the current quote again before execution.
 
-Choose **Batch allocate** to enter how many normal points to add to each supported
-attribute. The table shows each base value, the increase and the resulting value.
-Ordinary classes show Strength, Agility, Vitality and Energy; classes configured to
-allocate Leadership show it as a fifth row. Master points and equipment bonuses are not
-part of the form. You can allocate fewer points than are available, but the total must
-be at least one and cannot exceed the balance or an attribute limit. Next shows a review
-of the complete allocation. Only **Confirm batch allocation** applies it, once and as a
-single server operation.
+Choose the separate **Increase Strength**, **Increase Agility**, **Increase Vitality**
+or **Increase Energy** option. **Increase Leadership** appears only for classes that
+can allocate it. Enter how many points to add to the selected attribute, review it,
+then **Confirm allocation**. Only one attribute is editable and submitted at a time.
+The server uses the same action as its existing single-attribute add commands,
+without reloading the map or moving the character. The increase must be positive,
+fit the normal point balance and stay within the attribute limit. Duplicate or
+stale confirmations and requests containing multiple attributes cannot add points.
+Master points and equipment bonuses are not part of this operation.
 
 The new workflow requires matching MuMain client and OpenMU server versions. Older
 clients keep their native stat reset dialog. The existing /resetinfo, /reset and

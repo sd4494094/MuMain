@@ -51,14 +51,19 @@ std::optional<std::array<std::uint8_t, 91>> MakeStatAdvisorRequest(
     bytes[4] = operation;
     std::copy(sessionId.begin(), sessionId.end(), bytes.begin() + 5);
     std::copy(token.begin(), token.end(), bytes.begin() + 38);
+    int selectedAttributes = 0;
     for (std::size_t i = 0; i < amounts.size(); ++i)
     {
         std::uint32_t value;
         if (!ReadStatAdvisorAmount(amounts[i], value))
             return std::nullopt;
+        if (value > 0)
+            ++selectedAttributes;
         for (int shift = 0; shift < 4; ++shift)
             bytes[71 + 4 * i + shift] = static_cast<std::uint8_t>(value >> (shift * 8));
     }
+    if (operation == 4 && selectedAttributes != 1)
+        return std::nullopt;
     return bytes;
 }
 

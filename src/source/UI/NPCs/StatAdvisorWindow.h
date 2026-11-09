@@ -42,7 +42,7 @@ private:
     struct Model
     {
         float textPx = 12.f;
-        int page = 0, available = 0;
+        int page = 0, available = 0, selectedAttribute = -1;
         Rml::String title, message, feedback, availableText, totalText, remainingText;
         Rml::String reset, allocate, leave, back, clear, next, confirmReset, confirmAllocation;
         Rml::String attributeLabel, currentLabel, increaseLabel, resultLabel;
@@ -56,6 +56,7 @@ private:
     void Recalculate();
     void SyncInputState();
     void Clear();
+    void SelectAttribute(int id);
     void SetPending(bool pending);
     Rml::ElementList m_InputElements;
     Network::StatAdvisorPacket m_Reply;

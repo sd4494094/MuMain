@@ -19,18 +19,21 @@
     <div id="advisor-options" class="scroll-pane sharp-text" data-style-font-size="text_px + 'px'">
         <div class="advisor-home" data-if="page == 0">
             <button class="nd-answer-row advisor-action" data-class-disabled="pending" data-event-click="advisor_action(1)">1. {{reset}}</button>
-            <button class="nd-answer-row advisor-action" data-class-disabled="pending" data-event-click="advisor_action(3)">2. {{allocate}}</button>
+            <button class="nd-answer-row advisor-action" data-for="row : rows" data-class-disabled="pending"
+                    data-event-click="advisor_action(10 + row.id)">{{allocate}} {{row.name}}</button>
         </div>
         <div class="advisor-form" data-if="page == 2 || page == 3">
             <div class="advisor-balance">{{available}}</div>
             <div class="advisor-row advisor-header">
                 <span>{{attribute_label}}</span><span>{{current_label}}</span><span>{{increase_label}}</span><span>{{result_label}}</span>
             </div>
-            <div class="advisor-row" data-for="row : rows">
+            <div data-for="row : rows">
+            <div class="advisor-row" data-if="row.id == selected_attribute">
                 <span>{{row.name}}</span><span>{{row.current}}</span>
                 <input class="text-field text-field--numeric advisor-input" type="text" maxlength="5"
                        data-value="row.amount" data-class-disabled="pending || page == 3"/>
                 <span>{{row.result}}</span>
+            </div>
             </div>
             <div class="advisor-summary">{{total}}</div>
             <div class="advisor-summary">{{remaining}}</div>

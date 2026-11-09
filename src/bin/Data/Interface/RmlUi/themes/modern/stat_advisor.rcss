@@ -6,7 +6,7 @@
 #advisor-options { top: 204.5px; height: calc(116px * var(--root-scale)); overflow-y: auto; overflow-x: hidden; }
 .advisor-action, .advisor-footer > .nd-answer-row { display: block; width: 100%; padding: 0; border-width: 0; background-color: transparent; decorator: none; text-align: left; font-family: "token(font-body)"; font-size: var(--text-px); line-height: calc(15px * var(--root-scale)); color: token(text-primary); }
 .advisor-action:hover, .advisor-footer > .nd-answer-row:hover { background-color: token(surface-panel); }
-.advisor-action { margin-bottom: calc(5px * var(--root-scale)); }
+.advisor-action { margin-bottom: calc(2px * var(--root-scale)); }
 #panel.form #advisor-body { top: 45px; height: calc(52px * var(--root-scale)); }
 #panel.form .nd-divider { top: 88px; }
 #panel.form #advisor-options { top: 110px; height: calc(207px * var(--root-scale)); }

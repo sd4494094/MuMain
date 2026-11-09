@@ -33,6 +33,7 @@ void CStatAdvisorWindow::Built()
 void CStatAdvisorWindow::Bind(Rml::DataModelConstructor& c, Model& m)
 {
     auto row = c.RegisterStruct<Row>();
+    row.RegisterMember("id", &Row::id);
     row.RegisterMember("name", &Row::name);
     row.RegisterMember("current", &Row::current);
     row.RegisterMember("amount", &Row::amount);
@@ -40,6 +41,7 @@ void CStatAdvisorWindow::Bind(Rml::DataModelConstructor& c, Model& m)
     c.RegisterArray<std::vector<Row>>();
     c.Bind("rows", &m.rows);
     c.Bind("page", &m.page);
+    c.Bind("selected_attribute", &m.selectedAttribute);
     c.Bind("text_px", &m.textPx);
     c.Bind("title", &m.title);
     c.Bind("message", &m.message);
@@ -69,6 +71,8 @@ void CStatAdvisorWindow::Bind(Rml::DataModelConstructor& c, Model& m)
         const int action = args[0].Get<int>(-1);
         if (action == 7)
             Close();
+        else if (action >= 10 && action < 15 && !m_View.GetModel().pending)
+            SelectAttribute(action - 10);
         else if (action == 8 && !m_View.GetModel().pending)
             Clear();
         else if (action >= 1 && action <= 6 && !m_View.GetModel().pending)
@@ -91,6 +95,7 @@ void CStatAdvisorWindow::Begin()
     m_Active = m_AwaitingOpen = true;
     m_ConnectionId = SocketClient->GetId();
     m_View.GetModel().rows.clear();
+    m_View.GetModel().selectedAttribute = -1;
     Send(0);
 }
 void CStatAdvisorWindow::SetPending(bool pending)
@@ -105,7 +110,8 @@ void CStatAdvisorWindow::Send(std::uint8_t operation)
     std::array<std::string, 5> amounts{};
     if (operation == 4)
         for (const auto& row : m_View.GetModel().rows)
-            amounts[row.id] = row.amount;
+            if (row.id == m_View.GetModel().selectedAttribute)
+                amounts[row.id] = row.amount;
     const auto bytes = Network::MakeStatAdvisorRequest(operation, m_SessionId, m_Reply.token, amounts);
     if (!bytes)
         return;
@@ -169,6 +175,16 @@ void CStatAdvisorWindow::Receive(Network::StatAdvisorPacket reply)
     if (auto* body = document->GetElementById("advisor-body"))
         body->SetScrollTop(0.f);
 }
+void CStatAdvisorWindow::SelectAttribute(int id)
+{
+    auto& model = m_View.GetModel();
+    if (std::none_of(model.rows.begin(), model.rows.end(), [id](const Row& row) { return row.id == id; }))
+        return;
+    model.selectedAttribute = id;
+    m_View.MarkDirty("selected_attribute");
+    Clear();
+    Send(3);
+}
 void CStatAdvisorWindow::Clear()
 {
     for (auto& row : m_View.GetModel().rows)
@@ -183,8 +199,9 @@ void CStatAdvisorWindow::Recalculate()
     bool valid = true, rowsChanged = false;
     for (auto& row : m.rows)
     {
-        std::uint32_t amount;
-        const bool parsed = Network::ReadStatAdvisorAmount(row.amount, amount);
+        std::uint32_t amount = 0;
+        const bool selected = row.id == m.selectedAttribute;
+        const bool parsed = !selected || Network::ReadStatAdvisorAmount(row.amount, amount);
         const auto result = static_cast<std::int64_t>(row.current) + amount;
         valid = valid && parsed && result <= row.maximum;
         total += amount;
@@ -257,9 +274,15 @@ bool CStatAdvisorWindow::Update()
     if (m_FocusAllocationInput)
     {
         auto* document = m_View.Document();
-        auto* input = document ? document->QuerySelector(".advisor-input") : nullptr;
-        if (input && input->IsVisible(true))
-            m_FocusAllocationInput = !input->Focus();
+        if (document)
+        {
+            for (auto* input : m_InputElements)
+                if (input->IsVisible(true))
+                {
+                    m_FocusAllocationInput = !input->Focus();
+                    break;
+                }
+        }
     }
     Recalculate();
     return true;

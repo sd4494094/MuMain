@@ -18,7 +18,8 @@ std::vector<std::uint8_t> MakeReply(const std::string& json)
     return packet;
 }
 
-const char* labels = R"json({"Reset":"洗点","Allocate":"批量加点","Leave":"离开","Back":"返回","Clear":"清空","Next":"下一步","ConfirmReset":"确认洗点","ConfirmAllocation":"确认加点","Attribute":"属性","Current":"当前","Increase":"增加","Result":"结果","Available":"可用","Total":"合计","Remaining":"剩余","InvalidInput":"无效","Waiting":"等待"})json";
+const char* labels =
+    R"json({"Reset":"洗点","Allocate":"增加","Leave":"离开","Back":"返回","Clear":"清空","Next":"下一步","ConfirmReset":"确认洗点","ConfirmAllocation":"确认加点","Attribute":"属性","Current":"当前","Increase":"增加","Result":"结果","Available":"可用","Total":"合计","Remaining":"剩余","InvalidInput":"无效","Waiting":"等待"})json";
 
 std::string ReplyJson(const std::string& clearInputs = "false")
 {
@@ -33,7 +34,7 @@ std::string ReplyJson(const std::string& clearInputs = "false")
 
 TEST_CASE("stat advisor request encodes only bounded nonnegative increases")
 {
-    std::array<std::string, 5> amounts{"2", "", "0", "65535", "1"};
+    std::array<std::string, 5> amounts{"", "", "", "", "65535"};
     const auto packet = Network::MakeStatAdvisorRequest(4, "0123456789abcdef0123456789abcdef", "", amounts);
     REQUIRE(packet.has_value());
     CHECK((*packet)[0] == 0xC1);
@@ -41,14 +42,17 @@ TEST_CASE("stat advisor request encodes only bounded nonnegative increases")
     CHECK((*packet)[2] == 0xF2);
     CHECK((*packet)[3] == 0x03);
     CHECK((*packet)[4] == 4);
-    CHECK((*packet)[71] == 2);
-    CHECK((*packet)[83] == 0xff);
-    CHECK((*packet)[84] == 0xff);
-    CHECK((*packet)[87] == 1);
+    CHECK((*packet)[71] == 0);
+    CHECK((*packet)[87] == 0xff);
+    CHECK((*packet)[88] == 0xff);
     CHECK_FALSE(Network::MakeStatAdvisorRequest(5, "0123456789abcdef0123456789abcdef", "", amounts));
+    amounts[0] = "1";
+    CHECK_FALSE(Network::MakeStatAdvisorRequest(4, "0123456789abcdef0123456789abcdef", "", amounts));
     amounts[0] = "-1";
     CHECK_FALSE(Network::MakeStatAdvisorRequest(4, "0123456789abcdef0123456789abcdef", "", amounts));
     amounts[0] = "65536";
+    CHECK_FALSE(Network::MakeStatAdvisorRequest(4, "0123456789abcdef0123456789abcdef", "", amounts));
+    amounts = {};
     CHECK_FALSE(Network::MakeStatAdvisorRequest(4, "0123456789abcdef0123456789abcdef", "", amounts));
 }
 

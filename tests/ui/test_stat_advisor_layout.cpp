@@ -20,16 +20,17 @@ namespace
 struct Row
 {
     Rml::String name, current, amount, result;
+    int id = 0;
 };
 
 struct Model
 {
     float textPx = 12.f;
-    int page = 0, available_points = 5;
+    int page = 0, available_points = 5, selected_attribute = 0;
     Rml::String title = "洗点师·艾琳", message = "请填写本次增加的属性点数";
     Rml::String feedback, available = "可用点数：700", total = "合计：0", remaining = "剩余：700";
-    Rml::String reset = "洗点", allocate = "批量加点", leave = "离开", back = "返回", clear = "清空";
-    Rml::String next = "下一步", confirm_reset = "确认洗点", confirm_allocation = "确认批量加点";
+    Rml::String reset = "洗点", allocate = "增加", leave = "离开", back = "返回", clear = "清空";
+    Rml::String next = "下一步", confirm_reset = "确认洗点", confirm_allocation = "确认加点";
     Rml::String attribute_label = "属性", current_label = "当前", increase_label = "增加", result_label = "加点后";
     bool pending = false, valid = true, can_confirm = true;
     std::vector<Row> rows;
@@ -41,12 +42,14 @@ void Bind(Rml::Context& context, Model& model)
     auto constructor = context.CreateDataModel("stat_advisor");
     REQUIRE(constructor);
     auto row = constructor.RegisterStruct<Row>();
+    row.RegisterMember("id", &Row::id);
     row.RegisterMember("name", &Row::name);
     row.RegisterMember("current", &Row::current);
     row.RegisterMember("amount", &Row::amount);
     row.RegisterMember("result", &Row::result);
     constructor.RegisterArray<std::vector<Row>>();
     constructor.Bind("text_px", &model.textPx);
+    constructor.Bind("selected_attribute", &model.selected_attribute);
     for (const auto* name : {"rows", "page", "title", "message", "feedback", "available", "total", "remaining",
                              "pending", "valid", "can_confirm", "reset", "allocate", "leave", "back", "clear", "next",
                              "confirm_reset", "confirm_allocation", "attribute_label", "current_label", "increase_label", "result_label"})
@@ -89,7 +92,8 @@ void Bind(Rml::Context& context, Model& model)
 }
 } // namespace
 
-TEST_CASE("stat advisor allocation table and action buttons stay in bounds across themes and scales [ui][stat-advisor]")
+TEST_CASE(
+    "stat advisor single-attribute form and action buttons stay in bounds across themes and scales [ui][stat-advisor]")
 {
     for (const std::string theme : {"legacy", "classic", "modern"})
         for (const Rml::Vector2i viewport : {Rml::Vector2i{800, 600}, {1280, 720}, {1920, 1080}})
@@ -110,7 +114,7 @@ TEST_CASE("stat advisor allocation table and action buttons stay in bounds acros
                         UI::Scaling::NativeTextPixelSize(UI::Scaling::FontRole::Normal, viewport.x, viewport.y);
                     const std::vector<std::string> names = {"力量", "敏捷", "体力", "智力", "统率"};
                     for (int i = 0; i < row_count; ++i)
-                        model.rows.push_back({names[i], "100", "", "100"});
+                        model.rows.push_back({names[i], "100", "", "100", i});
                     Bind(*fixture.context, model);
                     const auto path = std::filesystem::path(MU_RMLUI_DIR) / "themes" / theme / "stat_advisor.rml";
                     auto markupPath = path;
@@ -146,8 +150,12 @@ TEST_CASE("stat advisor allocation table and action buttons stay in bounds acros
                         CHECK(form->IsVisible(true) == (page == 2 || page == 3));
                     }
 
-                    auto* firstInput = document->QuerySelector(".advisor-input");
-                    REQUIRE(firstInput);
+                    Rml::ElementList inputs;
+                    document->QuerySelectorAll(inputs, ".advisor-input");
+                    auto visibleInput =
+                        std::find_if(inputs.begin(), inputs.end(), [](auto* input) { return input->IsVisible(true); });
+                    REQUIRE(visibleInput != inputs.end());
+                    auto* firstInput = *visibleInput;
                     REQUIRE(firstInput->Focus());
                     fixture.context->ProcessTextInput("9");
                     fixture.Refresh();
@@ -185,12 +193,14 @@ TEST_CASE("stat advisor allocation table and action buttons stay in bounds acros
 
                     Rml::ElementList rows;
                     document->QuerySelectorAll(rows, ".advisor-row");
-                    REQUIRE(rows.size() == static_cast<size_t>(row_count + 2));
+
                     Rml::ElementList fields;
                     body->QuerySelectorAll(fields, ".advisor-input, .advisor-summary");
-                    REQUIRE(fields.size() == static_cast<size_t>(row_count + 2));
+
                     for (auto* field : fields)
                     {
+                        if (!field->IsVisible(true))
+                            continue;
                         Rml::Vector2f pos, size;
                         REQUIRE(UI::RmlBridge::DrawnBox(*field, Rml::BoxArea::Border, pos, size));
                         CHECK(size.y > 0.f);
@@ -198,6 +208,48 @@ TEST_CASE("stat advisor allocation table and action buttons stay in bounds acros
                         CHECK(pos.x + size.x <= bodyPosition.x + bodySize.x + 1.f);
                         CHECK(pos.y >= bodyPosition.y - 1.f);
                         CHECK(pos.y + size.y <= bodyPosition.y + bodySize.y + 1.f);
+                    }
+                    for (int selected = 0; selected < row_count; ++selected)
+                    {
+                        model.page = 0;
+                        handle.DirtyVariable("page");
+                        fixture.Refresh();
+                        Rml::ElementList choices;
+                        document->QuerySelectorAll(choices, ".advisor-home .advisor-action");
+                        REQUIRE(UI::RmlBridge::DrawnBox(*body, Rml::BoxArea::Border, bodyPosition, bodySize));
+                        int visibleChoices = 0;
+                        for (auto* choice : choices)
+                        {
+                            if (!choice->IsVisible(true))
+                                continue;
+                            ++visibleChoices;
+                            Rml::Vector2f pos, size;
+                            REQUIRE(UI::RmlBridge::DrawnBox(*choice, Rml::BoxArea::Border, pos, size));
+                            CHECK(pos.y + size.y <= bodyPosition.y + bodySize.y + 1.f);
+                            choice->Click();
+                            if (visibleChoices > 1)
+                                CHECK(model.selected_action == 8 + visibleChoices);
+                        }
+                        CHECK(visibleChoices == row_count + 1);
+                        model.page = 2;
+                        model.selected_attribute = selected;
+                        handle.DirtyVariable("page");
+                        handle.DirtyVariable("selected_attribute");
+                        fixture.Refresh();
+                        inputs.clear();
+                        document->QuerySelectorAll(inputs, ".advisor-input");
+                        int visibleInputs = 0;
+                        for (auto* input : inputs)
+                        {
+                            if (!input->IsVisible(true))
+                                continue;
+                            ++visibleInputs;
+                            REQUIRE(input->Focus());
+                            fixture.context->ProcessTextInput("1");
+                            fixture.Refresh();
+                        }
+                        CHECK(visibleInputs == 1);
+                        CHECK(model.rows[selected].amount == (selected == 0 ? "91" : "1"));
                     }
                     Rml::ElementList buttons;
                     footer->QuerySelectorAll(buttons, ".nd-answer-row");
