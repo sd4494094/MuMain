@@ -14,11 +14,15 @@ namespace Presentation = Data::Monsters::ServiceNpcPresentation;
 using Color = std::array<float, 3>;
 constexpr int FaceMesh = 0;
 constexpr int GemMesh = 10;
+constexpr int ShoulderAndArmMesh = 1;
+constexpr int ForearmMesh = 5;
 constexpr int BodyMeshCount = 11;
 // Native armor only: exclude the face, translucent decorations and cloth tabard.
 constexpr int ArmorMeshes[] = {1, 4, 5, 7};
 constexpr Color FaceLight{1.05f, 1.f, 0.97f};
 constexpr Color BodyFill{0.85f, 0.85f, 0.9f};
+constexpr Color ArmFill{1.f, 0.98f, 1.04f};
+constexpr Color ArmShine{0.28f, 0.24f, 0.34f};
 constexpr Color WingFill{0.85f, 0.85f, 0.9f};
 constexpr Color ArmorShine{0.18f, 0.15f, 0.24f};
 constexpr Color WingShine{0.075f, 0.065f, 0.095f};
@@ -67,6 +71,11 @@ void DrawMesh(BMD* model, int mesh, const DrawLook& look, int flags)
     model->RenderMesh(mesh, flags, look.alpha, look.blendMesh, look.blendMeshLight, look.blendMeshU, look.blendMeshV);
 }
 
+bool IsShoulderOrArm(int mesh)
+{
+    return mesh == ShoulderAndArmMesh || mesh == ForearmMesh;
+}
+
 void DrawBodyBase(BMD* model, const DrawLook& look, bool lit)
 {
     Color fill;
@@ -75,8 +84,9 @@ void DrawBodyBase(BMD* model, const DrawLook& look, bool lit)
     for (int mesh = 0; mesh < model->NumMeshs; ++mesh)
     {
         // A softly filled face must not inherit the terrain's dark directional lighting.
-        model->LightEnable = mesh == FaceMesh ? false : lit;
-        SetLight(model, mesh == FaceMesh ? FaceLight : fill);
+        model->LightEnable = mesh == FaceMesh || IsShoulderOrArm(mesh) ? false : lit;
+        const Color& color = mesh == FaceMesh ? FaceLight : (IsShoulderOrArm(mesh) ? ArmFill : fill);
+        SetLight(model, color);
         DrawMesh(model, mesh, look, RENDER_TEXTURE);
     }
 }
@@ -86,7 +96,7 @@ void DrawArmorShine(BMD* model, const DrawLook& look)
     model->LightEnable = false;
     for (const int mesh : ArmorMeshes)
     {
-        SetLight(model, ArmorShine, ShinePulse());
+        SetLight(model, IsShoulderOrArm(mesh) ? ArmShine : ArmorShine, ShinePulse());
         DrawMesh(model, mesh, look, RENDER_CHROME4 | RENDER_BRIGHT);
     }
     SetLight(model, GemLight, ShinePulse());

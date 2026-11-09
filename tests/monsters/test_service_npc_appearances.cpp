@@ -26,6 +26,7 @@
 #include <cstdlib>
 #include <fstream>
 #include <sstream>
+#include <limits>
 
 namespace
 {
@@ -400,8 +401,8 @@ TEST_CASE(
         for (const float component : sprite.Position)
             CHECK(std::isfinite(component));
     }
-    CHECK(lights == 11);
-    CHECK(stars == 7);
+    CHECK(lights == 13);
+    CHECK(stars == 9);
     ClearSprites();
     model.NumBones = 60;
     CHECK(Render::Characters::ServiceNpcEffects::Update(character.get(), &object, &model));
@@ -465,7 +466,15 @@ TEST_CASE("Service NPC rendering: fill light and armor shine exclude the face cl
         if (draw.flags == RENDER_TEXTURE && draw.mesh == 0)
         {
             CHECK_FALSE(draw.lightEnable);
-            CHECK(draw.bodyLight[0] > 0.9f);
+            CHECK(draw.bodyLight[0] == doctest::Approx(1.05f));
+            CHECK(draw.bodyLight[1] == doctest::Approx(1.f));
+            CHECK(draw.bodyLight[2] == doctest::Approx(0.97f));
+        }
+        if (draw.flags == RENDER_TEXTURE && draw.mesh == 1)
+        {
+            CHECK_FALSE(draw.lightEnable);
+            CHECK(draw.bodyLight[0] == doctest::Approx(1.f));
+            CHECK(draw.bodyLight[2] > 1.f);
         }
         if (draw.flags != RENDER_TEXTURE)
         {
@@ -598,4 +607,121 @@ TEST_CASE("Service NPC animation: wing speed advances at thirty percent for diff
         CHECK((slow - 1.f) / (native - 1.f) == doctest::Approx(0.3f));
     }
     FPS_ANIMATION_FACTOR = savedFactor;
+}
+
+namespace
+{
+float MeshHeightBound(BMD& model, int mesh, const vec34_t* bones, bool maximum)
+{
+    float bound = maximum ? std::numeric_limits<float>::lowest() : std::numeric_limits<float>::max();
+    const auto& geometry = model.Meshs[mesh];
+    for (int index = 0; index < geometry.NumVertices; ++index)
+    {
+        const auto& vertex = geometry.Vertices[index];
+        vec3_t position;
+        VectorTransform(vertex.Position, bones[vertex.Node], position);
+        bound = maximum ? std::max(bound, position[2]) : std::min(bound, position[2]);
+    }
+    return bound;
+}
+} // namespace
+
+TEST_CASE(
+    "Service NPC halo: actual overhead geometry and orbit stay clear of the head through both actions [service-npc]")
+{
+    if (!HasPrivateAssets())
+        return;
+    namespace Presentation = Data::Monsters::ServiceNpcPresentation;
+    MonsterRecorder::LoadScope load(0);
+    load.Run([] { OpenMonsterModel(MONSTER_MODEL_SERVICE_ARIA); });
+    BMD& model = Models[Presentation::AriaBodyModel];
+    auto bones = std::make_unique<vec34_t[]>(MAX_BONES);
+    auto character = std::make_unique<CHARACTER>();
+    character->MonsterIndex = MONSTER_CREATOR_GODDESS_ARIA;
+    OBJECT& object = character->Object;
+    object.Kind = KIND_NPC;
+    object.Type = Presentation::AriaBodyModel;
+    object.BoneTransform = bones.get();
+    model.BodyScale = 1.f;
+    Vector(0.f, 0.f, 0.f, model.BodyOrigin);
+    vec3_t angle = {}, headAngle = {};
+    for (int action = 0; action < model.NumActions; ++action)
+    {
+        model.CurrentAction = static_cast<unsigned short>(action);
+        // Fractional samples also cover interpolated head movement, rather than keyframes only.
+        for (float frame = 0.f; frame < model.Actions[action].NumAnimationKeys; frame += 0.5f)
+        {
+            model.Animation(bones.get(), frame, frame, static_cast<unsigned short>(action), angle, headAngle, false,
+                            true, nullptr);
+            const float headTop = MeshHeightBound(model, 0, bones.get(), true);
+            const float haloBottom = MeshHeightBound(model, Presentation::AriaHaloMesh, bones.get(), false);
+            CHECK(haloBottom - headTop >= 12.f);
+            ClearSprites();
+            REQUIRE(Render::Characters::ServiceNpcEffects::Update(character.get(), &object, &model));
+            int overheadSprites = 0;
+            for (int index = 0; index < MAX_SPRITES; ++index)
+            {
+                const auto& sprite = Sprites[index];
+                if (!sprite.Live)
+                    continue;
+                const float x = sprite.Position[0] - bones[20][0][3];
+                const float y = sprite.Position[1] - bones[20][1][3];
+                const float z = sprite.Position[2] - bones[20][2][3];
+                CHECK(x * x + y * y + z * z > 15.f * 15.f);
+                if (sprite.Position[2] > headTop + 12.f)
+                    ++overheadSprites;
+            }
+            CHECK(overheadSprites == 12);
+        }
+    }
+    object.BoneTransform = nullptr;
+    ClearSprites();
+}
+
+TEST_CASE(
+    "Service NPC armor: both arm meshes get local fill while the face and cloth keep their own material [service-npc]")
+{
+    if (!HasPrivateAssets())
+        return;
+    MonsterRecorder::LoadScope load(0);
+    load.Run([] { OpenMonsterModel(MONSTER_MODEL_SERVICE_ARIA); });
+    BMD& model = Models[Data::Monsters::ServiceNpcPresentation::AriaBodyModel];
+    model.LightEnable = true;
+    Vector(0.15f, 0.15f, 0.15f, model.BodyLight);
+    OBJECT object;
+    object.Kind = KIND_NPC;
+    object.Type = Data::Monsters::ServiceNpcPresentation::AriaBodyModel;
+    DrawLook look;
+    AriaDrawRecorder recorder;
+    REQUIRE(Render::Characters::ServiceNpcRendering::DrawBody(&model, &object, look));
+    int armBases = 0, armSheens = 0;
+    for (const auto& draw : recorder.draws)
+    {
+        CHECK((draw.flags & RENDER_NODEPTH) == 0);
+        if (draw.mesh == 1 || draw.mesh == 5)
+        {
+            CHECK_FALSE(draw.lightEnable);
+            if (draw.flags == RENDER_TEXTURE)
+            {
+                ++armBases;
+                CHECK(draw.bodyLight[0] == doctest::Approx(1.f));
+            }
+            else
+            {
+                ++armSheens;
+                CHECK(draw.bodyLight[0] >= 0.19f);
+                CHECK(draw.bodyLight[2] <= 0.34f);
+            }
+        }
+        if (draw.mesh == 9)
+        {
+            CHECK(draw.flags == RENDER_TEXTURE);
+            CHECK(draw.lightEnable);
+            CHECK(draw.bodyLight[0] == doctest::Approx(0.85f));
+        }
+    }
+    CHECK(armBases == 2);
+    CHECK(armSheens == 2);
+    CHECK(model.LightEnable);
+    CHECK(model.BodyLight[0] == doctest::Approx(0.15f));
 }

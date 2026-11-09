@@ -12,18 +12,19 @@ namespace
 {
 namespace Presentation = Data::Monsters::ServiceNpcPresentation;
 constexpr int HaloLightCount = 8;
-constexpr float HaloRadius = 30.f;
+constexpr float HaloRadius = 28.f;
 constexpr float HaloPulseRate = 0.001f;
 constexpr float HaloBaseBrightness = 0.85f;
 constexpr float HaloBrightnessRange = 0.1f;
 constexpr float HaloSpriteScale = 0.45f;
 constexpr float HaloStarScale = 0.16f;
 constexpr float HaloOrbitRate = 0.00015f;
-constexpr float ArmorSpriteScale = 0.3f;
-constexpr float ArmorStarScale = 0.14f;
+constexpr float ArmorSpriteScale = 0.22f;
+constexpr float ArmorStarScale = 0.1f;
 constexpr float WingSpriteScale = 0.28f;
 constexpr float WingStarScale = 0.16f;
-constexpr int ArmorLightBones[] = {18, 25, 34};
+// Chest, upper arms and forearms; avoid the neck and central clavicle anchors beside the face.
+constexpr int ArmorLightBones[] = {17, 26, 35, 27, 36};
 constexpr int WingLightBones[] = {5, 8, 18, 19, 23, 25, 27, 38};
 constexpr int WingStarBones[] = {4, 13, 26, 32};
 
@@ -35,7 +36,8 @@ void SpawnHaloLights(OBJECT* object, BMD* model)
     for (int index = 0; index < HaloLightCount; ++index)
     {
         const float angle = orbit + index * (2.f * std::numbers::pi_v<float> / HaloLightCount);
-        vec3_t local = {HaloRadius * std::sin(angle), 0.f, HaloRadius * std::cos(angle)};
+        // Matches the private asset's overhead ring in halo-bone XY; the bone supplies its tilt.
+        vec3_t local = {HaloRadius * std::sin(angle), HaloRadius * std::cos(angle), 0.f};
         vec3_t position;
         model->TransformPosition(object->BoneTransform[Presentation::AriaHaloBone], local, position, true);
         CreateSprite(BITMAP_LIGHT, position, HaloSpriteScale, gold, object);
