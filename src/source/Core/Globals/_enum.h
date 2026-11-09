@@ -4555,7 +4555,7 @@ enum EMonsterModelType : int
     MONSTER_MODEL_SERVICE_LEO = 218,
     MONSTER_MODEL_SERVICE_ERIN = 219,
     MONSTER_MODEL_SERVICE_ARIA = 220,
-    MONSTER_MODEL_COUNT,            // keep last: number of monster models
+    MONSTER_MODEL_COUNT, // keep last: number of monster models
 };
 
 enum EMonsterType : int
