@@ -7,7 +7,7 @@ struct GenericMenuConfig
     std::wstring title;
     struct MenuButton
     {
-        std::wstring label, description, details;
+        std::wstring label, description, details, tooltip;
         bool enabled = true, compact = false, dismiss = false, closeOnClick = true;
         std::function<void()> onClick;
     };

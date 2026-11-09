@@ -10,6 +10,7 @@
 #include "UI/Placement/WindowPlacement.h"
 #include "UI/Social/SocialWorkspace.h"
 #include "UI/Inventory/CursorItemLayer.h"
+#include <RmlUi/Core/ElementDocument.h>
 
 // Defined in Winmain.cpp; only ever declared at file scope (see MainScene.cpp).
 extern int LoadingWorld;
@@ -568,6 +569,8 @@ bool CSystem::LoadMainSceneInterface()
     slot(INTERFACE_GOLD_BOWMAN, "gold_bowman", m_pNewGoldBowman, "gold_bowman.rml");
     slot(INTERFACE_GOLD_BOWMAN_LENA, "gold_bowman_lena", m_pNewGoldBowmanLena, "gold_bowman_lena.rml");
     slot(INTERFACE_NPC_DIALOGUE, "npc_dialogue", m_pNewNPCDialogue, "npc_dialogue.rml");
+    slot(INTERFACE_STAT_ADVISOR, "stat_advisor", m_pStatAdvisorWindow, "stat_advisor.rml");
+    RegisterServiceNpcMenu();
     slot(INTERFACE_QUEST_PROGRESS, "quest_progress", m_pNewQuestProgress, "quest_progress.rml");
     slot(INTERFACE_NPCQUEST, "npc_quest", m_pNewNPCQuest, "npc_quest.rml");
     slot(INTERFACE_BLOODCASTLE, "blood_castle_entry", m_pNewEnterBloodCastle, "blood_castle_enter.rml");
@@ -2406,4 +2409,28 @@ CMuHelperDetailWindow* CSystem::GetUI_MuHelperDetail() const
 CMuHelperSkillPicker* CSystem::GetUI_MuHelperSkillPicker() const
 {
     return m_pMuHelperSkillPicker;
+}
+
+void CSystem::RegisterServiceNpcMenu()
+{
+    UI::Placement::PlacementParticipant npcMenu;
+    npcMenu.visible = [this] { return m_pGenericMenuDialog && m_pGenericMenuDialog->IsNpcMenuVisible(); };
+    npcMenu.measure = [this]
+    {
+        auto* document = m_pGenericMenuDialog->GetPlacedDocument();
+        if (!document)
+            return UI::Placement::PlacementParticipant::Size{};
+        document->UpdateDocument();
+        auto* panel = document->GetElementById("panel");
+        const auto size = panel ? panel->GetBox().GetSize(Rml::BoxArea::Border) : Rml::Vector2f{};
+        return UI::Placement::PlacementParticipant::Size{size.x, size.y};
+    };
+    npcMenu.place = [this](const UI::Placement::PlacementParticipant::Box* box)
+    {
+        if (box)
+            m_pGenericMenuDialog->PlaceDocument(box->left, box->top, box->scale);
+        else
+            m_pGenericMenuDialog->ClearPlacement();
+    };
+    UI::Placement::RegisterParticipant("npc_service_menu", std::move(npcMenu));
 }

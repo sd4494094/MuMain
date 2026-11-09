@@ -139,6 +139,8 @@ constexpr DocumentPlacement Placements[] = {
     // New-only dialogs that replace message boxes.
     {"generic_confirm_dialog.rml", MessageBoxDepth, MainScene},
     {"generic_menu_dialog.rml", MessageBoxDepth, MainScene},
+    {"npc_service_menu.rml", MessageBoxDepth, MainScene},
+    {"stat_advisor.rml", MessageBoxDepth, MainScene},
     // The item on the cursor: the original's camera at 10.9, over the windows and message boxes.
     {"cursor_item.rml", 10.9f, MainScene},
     {"notices.rml", NoticesDepth, AnyScene},

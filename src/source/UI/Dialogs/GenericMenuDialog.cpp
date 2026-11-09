@@ -16,6 +16,8 @@
 #include "UI/RmlBridge/RmlDialogCanvas.h"
 #include "UI/RmlBridge/RmlDraggable.h"
 #include "UI/RmlBridge/RmlTheme.h"
+#include "UI/RmlBridge/RmlNativeTextSize.h"
+#include "UI/Placement/WindowPlacement.h"
 
 #include <RmlUi/Core/DataModelHandle.h>
 #include <RmlUi/Core/ElementDocument.h>
@@ -69,6 +71,7 @@ void CGenericMenuDialog::BindRmlModel(Rml::DataModelConstructor& c, GenericMenuR
     c.Bind("kind", &model.kind);
     c.Bind("menu_id", &model.id);
     c.Bind("canvas_top", &model.canvasTop);
+    c.Bind("text_px", &model.textPx);
     c.Bind("title", &model.title);
     c.Bind("system_menu_label", &model.systemMenuLabel);
     c.Bind("close_label", &model.closeLabel);
@@ -138,11 +141,11 @@ void CGenericMenuDialog::Show(GenericMenuConfig cfg)
     m_bButtonClicked = false;
     m_iClickedButtonIndex = -1;
 
-    if (m_RmlView.Document())
+    if (ActiveDocument())
     {
-        UI::RmlBridge::ResetDraggedPosition(m_RmlView.Document());
+        UI::RmlBridge::ResetDraggedPosition(ActiveDocument());
         SyncRmlModel();
-        m_RmlView.Document()->Show(Rml::ModalFlag::Modal, Rml::FocusFlag::Document);
+        ActiveDocument()->Show(Rml::ModalFlag::Modal, Rml::FocusFlag::Document);
     }
 }
 
@@ -162,7 +165,7 @@ bool CGenericMenuDialog::ShowOrUpdate(GenericMenuConfig cfg)
     SyncRmlModel();
     // A refreshed reply starts with its acknowledgement or rejection. Never retain
     // a scroll offset that could put that first line above the visible body.
-    if (auto* document = m_RmlView.Document())
+    if (auto* document = ActiveDocument())
         if (auto* lines = document->QuerySelector(".gmd-lines"))
             lines->SetScrollTop(0.f);
     return true;
@@ -181,11 +184,11 @@ void CGenericMenuDialog::ShowNext()
     m_bButtonClicked = false;
     m_iClickedButtonIndex = -1;
 
-    if (m_RmlView.Document())
+    if (ActiveDocument())
     {
-        UI::RmlBridge::ResetDraggedPosition(m_RmlView.Document());
+        UI::RmlBridge::ResetDraggedPosition(ActiveDocument());
         SyncRmlModel();
-        m_RmlView.Document()->Show(Rml::ModalFlag::Modal, Rml::FocusFlag::Document);
+        ActiveDocument()->Show(Rml::ModalFlag::Modal, Rml::FocusFlag::Document);
     }
 }
 
@@ -212,8 +215,7 @@ void CGenericMenuDialog::Resolve(int buttonIndex)
         cfg.onCancel();
     }
 
-    if (m_RmlView.Document())
-        m_RmlView.Document()->Hide();
+    m_RmlView.Hide();
 
     ShowNext();
 }
@@ -230,6 +232,7 @@ bool CGenericMenuDialog::Update()
         return true;
 
     SyncCanvasTop();
+    SyncSlotPlacement();
 
     if (m_bButtonClicked)
     {
@@ -280,11 +283,40 @@ void CGenericMenuDialog::SyncCanvasTop()
     m_RmlView.MarkDirty("canvas_top");
 }
 
+std::vector<CGenericMenuDialog::MenuButtonEntry> CGenericMenuDialog::BuildButtons() const
+{
+    std::vector<MenuButtonEntry> buttons;
+    buttons.reserve(m_Active.buttons.size());
+    for (const auto& button : m_Active.buttons)
+    {
+        MenuButtonEntry entry;
+        entry.label = StringUtils::WideToNarrow(button.label.c_str());
+        entry.tooltip = StringUtils::WideToNarrow(button.tooltip.c_str());
+        entry.description = StringUtils::WideToNarrow(button.description.c_str());
+        entry.details = StringUtils::WideToNarrow(button.details.c_str());
+        entry.lines.reserve(button.lines.size());
+        for (const auto& line : button.lines)
+            entry.lines.push_back(ToLineEntry(line));
+        entry.hasLines = !button.lines.empty();
+        entry.enabled = button.enabled;
+        entry.compact = button.compact;
+        entry.cols2 = (m_Active.columns == 2) && !button.compact;
+        entry.narrow = button.narrow;
+        entry.linesBelow = button.linesBelow;
+        entry.dismiss = button.dismiss;
+        buttons.push_back(std::move(entry));
+    }
+    return buttons;
+}
+
 void CGenericMenuDialog::SyncRmlModel()
 {
-    if (!m_RmlView.Document()) return;
+    if (!ActiveDocument())
+        return;
 
     SyncCanvasTop();
+    UI::RmlBridge::SyncNativeTextSize(m_RmlView.Binder());
+    SyncSlotPlacement();
     auto& model = m_RmlView.GetModel();
 
     const bool hasTitle = !m_Active.title.empty();
@@ -336,27 +368,7 @@ void CGenericMenuDialog::SyncRmlModel()
         m_RmlView.MarkDirty("lines");
     }
 
-    std::vector<MenuButtonEntry> newButtons;
-    newButtons.reserve(m_Active.buttons.size());
-    for (const auto& button : m_Active.buttons)
-    {
-        MenuButtonEntry entry;
-        entry.label = StringUtils::WideToNarrow(button.label.c_str());
-        entry.tooltip = StringUtils::WideToNarrow(button.tooltip.c_str());
-        entry.description = StringUtils::WideToNarrow(button.description.c_str());
-        entry.details = StringUtils::WideToNarrow(button.details.c_str());
-        entry.lines.reserve(button.lines.size());
-        for (const auto& line : button.lines)
-            entry.lines.push_back(ToLineEntry(line));
-        entry.hasLines = !button.lines.empty();
-        entry.enabled = button.enabled;
-        entry.compact = button.compact;
-        entry.cols2 = (m_Active.columns == 2) && !button.compact;
-        entry.narrow = button.narrow;
-        entry.linesBelow = button.linesBelow;
-        entry.dismiss = button.dismiss;
-        newButtons.push_back(std::move(entry));
-    }
+    auto newButtons = BuildButtons();
     bool buttonsChanged = newButtons.size() != model.buttons.size();
     for (size_t i = 0; i < newButtons.size() && !buttonsChanged; ++i)
     {

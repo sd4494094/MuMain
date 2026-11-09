@@ -50,6 +50,8 @@
 					<div class="slot" data-window="gold_bowman"></div>
 					<div class="slot" data-window="gold_bowman_lena"></div>
 					<div class="slot" data-window="npc_dialogue"></div>
+                    <div class="slot" data-window="npc_service_menu"></div>
+                    <div class="slot" data-window="stat_advisor"></div>
 					<div class="slot" data-window="quest_progress"></div>
 					<div class="slot" data-window="npc_quest"></div>
 					<div class="slot" data-window="blood_castle_entry"></div>

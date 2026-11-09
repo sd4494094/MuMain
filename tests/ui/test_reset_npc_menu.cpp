@@ -7,6 +7,7 @@
 #include "UI/RmlBridge/RmlElementBox.h"
 #include "UI/RmlBridge/RmlTheme.h"
 #include <filesystem>
+#include "UI/RmlBridge/RmlNativeTextSize.h"
 
 namespace
 {
@@ -20,6 +21,10 @@ public:
     {
         UI::RmlBridge::RegisterClickSoundProperty();
         REQUIRE(Rml::LoadFontFace(std::string(MU_FONT_DIR) + "/NotoSansSC-Regular.otf", true));
+        previousWidth = WindowWidth;
+        previousHeight = WindowHeight;
+        WindowWidth = viewport.x;
+        WindowHeight = viewport.y;
         layout.Configure(viewport, scale);
         std::filesystem::current_path(std::filesystem::path(MU_RMLUI_DIR).parent_path().parent_path().parent_path());
         UI::RmlBridge::SetActiveThemeName(theme);
@@ -30,16 +35,64 @@ public:
     }
     ~MenuFixture()
     {
+        WindowWidth = previousWidth;
+        WindowHeight = previousHeight;
         dialog.Release();
         manager.RemoveUIObj(&dialog);
         UI::RmlBridge::SetContextResolver({});
         std::filesystem::current_path(previousDirectory);
         UI::RmlBridge::SetActiveThemeName(previousTheme);
     }
+    void SelectDocument()
+    {
+        document = dialog.GetPlacedDocument();
+        if (!document)
+            document = layout.context->GetDocument(0);
+        const auto dock =
+            UI::Scaling::DockRightTransform(layout.context->GetDimensions().x, layout.context->GetDimensions().y);
+        if (dialog.IsNpcMenuVisible())
+        {
+            document->UpdateDocument();
+            const float width = document->GetElementById("panel")->GetBox().GetSize(Rml::BoxArea::Border).x;
+            dialog.PlaceDocument(layout.context->GetDimensions().x - width * dock.scaleX, std::max(0.f, dock.offsetY),
+                                 dock.scaleX);
+            CHECK_FALSE(document->GetElementById("panel")->IsClassSet("center-both"));
+        }
+        layout.Refresh();
+    }
+    void CheckFixedPanel()
+    {
+        SelectDocument();
+        auto* panel = document->GetElementById("panel");
+        auto* title = document->GetElementById("title");
+        REQUIRE(panel);
+        REQUIRE(title);
+        CHECK(title->GetInnerRML() == "转生导师·里奥");
+        CHECK(title->GetComputedValues().font_size() ==
+              doctest::Approx(UI::RmlBridge::NativeTextPx(UI::Scaling::FontRole::Normal)));
+        Rml::Vector2f before, size;
+        REQUIRE(UI::RmlBridge::DrawnBox(*panel, Rml::BoxArea::Border, before, size));
+        const auto start = before + Rml::Vector2f(size.x * .5f, size.y * .1f);
+        layout.context->ProcessMouseMove(static_cast<int>(start.x), static_cast<int>(start.y), 0);
+        layout.context->ProcessMouseButtonDown(0, 0);
+        layout.context->ProcessMouseMove(static_cast<int>(start.x - 100), static_cast<int>(start.y + 50), 0);
+        layout.context->ProcessMouseButtonUp(0, 0);
+        layout.Refresh();
+        Rml::Vector2f after, afterSize;
+        REQUIRE(UI::RmlBridge::DrawnBox(*panel, Rml::BoxArea::Border, after, afterSize));
+        CHECK(after.x == doctest::Approx(before.x));
+        CHECK(after.y == doctest::Approx(before.y));
+        CHECK_FALSE(panel->IsClassSet("dragged"));
+    }
     void Click(int index)
     {
+        SelectDocument();
         Rml::ElementList buttons;
-        document->QuerySelectorAll(buttons, ".gmd-btn");
+        Rml::ElementList allButtons;
+        document->QuerySelectorAll(allButtons, ".gmd-btn");
+        for (auto* button : allButtons)
+            if (button->IsVisible(true))
+                buttons.push_back(button);
         REQUIRE(index >= 0);
         REQUIRE(index < static_cast<int>(buttons.size()));
         Rml::Vector2f position, size;
@@ -54,10 +107,13 @@ public:
     }
     void CheckFirstLine(const std::string& text)
     {
-        layout.Refresh();
+        SelectDocument();
         auto* body = document->QuerySelector(".gmd-lines");
         REQUIRE(body);
-        auto* line = body->QuerySelector(".gmd-line");
+        Rml::ElementList lines;
+        body->QuerySelectorAll(lines, ".gmd-line");
+        auto found = std::find_if(lines.begin(), lines.end(), [](auto* line) { return line->IsVisible(true); });
+        auto* line = found == lines.end() ? nullptr : *found;
         REQUIRE(line);
         CHECK(line->GetInnerRML().find(text) != Rml::String::npos);
         Rml::Vector2f bodyPosition, bodySize, linePosition, lineSize;
@@ -75,6 +131,7 @@ public:
     mu::ui::window::CManager manager;
     mu::ui::window::CGenericMenuDialog dialog;
     Rml::ElementDocument* document = nullptr;
+    unsigned int previousWidth = 0, previousHeight = 0;
 };
 
 GenericMenuConfig Menu(int& selected)
@@ -108,7 +165,8 @@ void CheckReplySequence(MenuFixture& fixture)
     auto config = Menu(selected);
     REQUIRE(fixture.dialog.ShowOrUpdate(config));
     REQUIRE(fixture.dialog.ShowOrUpdate(config)); // a repeated opening must not create stale pages
-    fixture.layout.Refresh();
+    fixture.SelectDocument();
+    fixture.CheckFixedPanel();
     for (int index : {0, 1, 0, 1})
     {
         CAPTURE(index);

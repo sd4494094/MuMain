@@ -1,0 +1,15 @@
+/* The same fixed native NPC frame and typography as npc_dialogue. */
+#panel { pointer-events: auto; color: token(text-primary); }
+#npc_lines_container { height: calc(109px * var(--root-scale)); overflow-y: auto; overflow-x: hidden; }
+#npc_lines_container .nd-line { white-space: pre-wrap; word-break: break-word; }
+#answers_container { height: calc(174px * var(--root-scale)); overflow-y: auto; overflow-x: hidden; }
+.nd-answer-row { min-height: calc(18px * var(--root-scale)); white-space: normal; word-break: break-word; }
+.nd-answer-row.disabled { color: token(text-disabled); }
+.npc-option-details { display: none; }
+#panel.warp #npc_lines_container { display: none; }
+#panel.warp .nd-divider { top: 40px; }
+#panel.warp #answers_container { top: 63px; height: calc(314px * var(--root-scale)); }
+#panel.warp .nd-answer-row { white-space: nowrap; overflow-x: hidden; }
+
+#title { position: absolute; left: 0; top: 12px; width: calc(100% * var(--root-scale)); text-align: center; color: token(text-warm); font-weight: bold; }
+#btn_exit .btn-exit-label { display: block; }

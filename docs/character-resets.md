@@ -24,3 +24,9 @@ single server operation.
 The new workflow requires matching MuMain client and OpenMU server versions. Older
 clients keep their native stat reset dialog. The existing /resetinfo, /reset and
 single-attribute add commands remain available.
+
+Leo and Erin use fixed right-side panels with the same NPC frame, cyan name heading
+and native text size as ordinary NPC dialogue. They cannot be dragged. Erin's
+instructions and allocation table have separate bounded regions; entering values
+does not spend points until the review is explicitly confirmed. X and Escape leave
+the conversation, while Back stays within it.

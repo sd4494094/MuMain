@@ -47,6 +47,7 @@ void ShowLevelingWarpDialogue(const Network::LevelingWarpDialogPacket& dialog)
         button.description = StringUtils::NarrowToWide(entry.description);
         button.details = StringUtils::NarrowToWide(dialog.levelLabel) + L" " + std::to_wstring(entry.level) + L"    " +
                          StringUtils::NarrowToWide(dialog.costLabel) + L" " + std::to_wstring(entry.costs);
+        button.tooltip = button.label + L" " + button.description + L"\n" + button.details;
         button.enabled = entry.enabled;
         const auto command =
             L"/levelwarp " + StringUtils::NarrowToWide(dialog.token) + L" " + std::to_wstring(entry.number);

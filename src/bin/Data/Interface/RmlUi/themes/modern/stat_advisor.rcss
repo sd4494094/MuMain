@@ -1,29 +1,27 @@
-/* A centered fixed-size advisor panel, using global dp auto-fit and theme controls.
-   The body scrolls; close/confirm actions always remain outside the scroll area. */
-#panel {
-    width: 520dp;
-    height: 400dp;
-    box-sizing: border-box;
-    padding: 16dp;
-    background-color: #141d28;
-    border: 2dp #547e9f;
-    color: token(text-primary);
-    font-family: "token(font-body)";
-    font-size: 14dp;
-    pointer-events: auto;
-}
-.advisor-title { height: 25dp; font-weight: bold; color: token(accent-gold); }
-#advisor-body { height: 260dp; overflow-y: auto; overflow-x: hidden; }
-.advisor-message { white-space: pre-wrap; word-break: break-word; margin-bottom: 12dp; }
-.advisor-home { display: flex; flex-direction: column; align-items: center; }
-.advisor-home > .btn { position: relative; }
-.advisor-action { margin-bottom: 12dp; }
-.advisor-row { display: flex; align-items: center; height: 32dp; width: 100%; box-sizing: border-box; }
-.advisor-row > span { width: 25%; min-width: 0; text-align: center; overflow: hidden; }
-.advisor-input { width: 23%; margin-left: 1%; margin-right: 1%; height: 25dp; box-sizing: border-box; }
-.advisor-header { font-size: 12dp; color: token(accent-gold); }
-.advisor-balance { margin-bottom: 6dp; }
-.advisor-summary { text-align: right; margin-top: 5dp; }
-.advisor-feedback { height: 30dp; font-size: 12dp; color: #ffb060; white-space: normal; word-break: break-word; }
-.advisor-footer { display: flex; justify-content: center; align-items: center; height: 42dp; }
-.advisor-footer > .btn { position: relative; margin-left: 3dp; margin-right: 3dp; min-width: 92dp; }
+/* Native NPC pane. Every scrolling viewport has a definite height. */
+#panel { pointer-events: auto; color: token(text-primary); }
+#advisor-body, #advisor-options, .advisor-feedback, .advisor-footer { position: absolute; left: 15.5px; width: calc(160px * var(--root-scale)); line-height: calc(15px * var(--root-scale)); }
+#advisor-body { top: 56.5px; height: calc(109px * var(--root-scale)); overflow-y: auto; overflow-x: hidden; }
+.advisor-message { white-space: pre-wrap; word-break: break-word; }
+#advisor-options { top: 204.5px; height: calc(116px * var(--root-scale)); overflow-y: auto; overflow-x: hidden; }
+.advisor-action, .advisor-footer > .nd-answer-row { display: block; width: 100%; padding: 0; border-width: 0; background-color: transparent; decorator: none; text-align: left; font-family: "token(font-body)"; font-size: var(--text-px); line-height: calc(15px * var(--root-scale)); color: token(text-primary); }
+.advisor-action:hover, .advisor-footer > .nd-answer-row:hover { background-color: token(surface-panel); }
+.advisor-action { margin-bottom: calc(5px * var(--root-scale)); }
+#panel.form #advisor-body { top: 45px; height: calc(52px * var(--root-scale)); }
+#panel.form .nd-divider { top: 88px; }
+#panel.form #advisor-options { top: 110px; height: calc(207px * var(--root-scale)); }
+.advisor-row { display: flex; align-items: center; height: calc(22px * var(--root-scale)); width: 100%; box-sizing: border-box; }
+.advisor-row > span { width: 25%; min-width: 0; text-align: center; }
+.advisor-input { position: relative; width: 25%; min-width: 0; height: calc(20px * var(--root-scale)); box-sizing: border-box; font-family: "token(font-body)"; font-size: var(--text-px); focus: auto; }
+.advisor-header { color: token(accent-gold); height: calc(30px * var(--root-scale)); }
+.advisor-header > span { white-space: normal; line-height: calc(13px * var(--root-scale)); }
+.advisor-balance, .advisor-summary { line-height: calc(15px * var(--root-scale)); }
+.advisor-feedback { top: 319px; height: calc(25px * var(--root-scale)); color: token(accent-gold); white-space: normal; word-break: break-word; }
+.advisor-footer { top: 345px; height: calc(44px * var(--root-scale)); }
+.advisor-footer > .nd-answer-row { line-height: calc(14px * var(--root-scale)); height: calc(14px * var(--root-scale)); margin: 0; box-sizing: border-box; }
+.btn-exit-label { display: none; }
+
+.advisor-action.disabled, .advisor-footer .disabled { color: token(text-disabled); pointer-events: none; }
+
+#title { position: absolute; left: 0; top: 12px; width: calc(100% * var(--root-scale)); text-align: center; color: token(text-warm); font-weight: bold; }
+#btn_exit .btn-exit-label { display: block; }

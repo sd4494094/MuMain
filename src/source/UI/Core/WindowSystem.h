@@ -146,6 +146,8 @@ namespace mu::ui::window
 
         /* Interface classes */
     private:
+        void RegisterServiceNpcMenu();
+
         CChatInputBox* m_pNewChatInputBox;
         CChatLogWindow* m_pNewChatLogWindow;
         CSystemLogWindow* m_pNewSystemLogWindow;

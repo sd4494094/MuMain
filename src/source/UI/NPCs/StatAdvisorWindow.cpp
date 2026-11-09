@@ -3,8 +3,9 @@
 #include "Network/Server/WSclient.h"
 #include "UI/Core/WindowManager.h"
 #include "UI/Core/WindowCommon.h"
-#include "UI/RmlBridge/RmlDraggable.h"
 #include "UI/RmlBridge/RmlNumericInputFilter.h"
+#include "UI/RmlBridge/RmlNativeTextSize.h"
+#include <RmlUi/Core/Elements/ElementFormControlInput.h>
 
 #include <RmlUi/Core/ElementDocument.h>
 #include <RmlUi/Core/Element.h>
@@ -28,8 +29,6 @@ void CStatAdvisorWindow::Built()
 {
     auto* document = m_View.Document();
     UI::RmlBridge::AttachNumericInputFilter(document);
-    UI::RmlBridge::MakeDraggable(document, document->GetElementById("panel"), nullptr,
-                                 [document] { UI::RmlBridge::KeepInsideWindow(document); });
 }
 void CStatAdvisorWindow::Bind(Rml::DataModelConstructor& c, Model& m)
 {
@@ -41,6 +40,7 @@ void CStatAdvisorWindow::Bind(Rml::DataModelConstructor& c, Model& m)
     c.RegisterArray<std::vector<Row>>();
     c.Bind("rows", &m.rows);
     c.Bind("page", &m.page);
+    c.Bind("text_px", &m.textPx);
     c.Bind("title", &m.title);
     c.Bind("message", &m.message);
     c.Bind("feedback", &m.feedback);
@@ -131,10 +131,12 @@ void CStatAdvisorWindow::Receive(Network::StatAdvisorPacket reply)
         Close();
         return;
     }
+    UI::RmlBridge::SyncNativeTextSize(m_View.Binder());
     auto& m = m_View.GetModel();
     auto oldRows = std::move(m.rows);
     m_Reply = std::move(reply);
     m.page = m_Reply.page;
+    m_FocusAllocationInput = m.page == 2;
     m.title = m_Reply.title;
     m.message = m_Reply.message;
     m.canConfirm = m_Reply.canConfirm;
@@ -142,7 +144,8 @@ void CStatAdvisorWindow::Receive(Network::StatAdvisorPacket reply)
     m.rows.clear();
     for (const auto& value : m_Reply.rows)
     {
-        Row row{value.id, value.current, value.maximum, value.current, value.name, std::to_string(value.amount)};
+        Row row{value.id,      value.current, value.maximum,
+                value.current, value.name,    (value.amount == 0 ? std::string{} : std::to_string(value.amount))};
         const auto old = std::find_if(oldRows.begin(), oldRows.end(), [&](const Row& r) { return r.id == value.id; });
         if (m.page == 2 && !m_Reply.clearInputs && old != oldRows.end())
             row.amount = old->amount;
@@ -169,7 +172,7 @@ void CStatAdvisorWindow::Receive(Network::StatAdvisorPacket reply)
 void CStatAdvisorWindow::Clear()
 {
     for (auto& row : m_View.GetModel().rows)
-        row.amount = "0";
+        row.amount.clear();
     m_View.MarkDirty("rows");
     Recalculate();
 }
@@ -219,6 +222,20 @@ void CStatAdvisorWindow::Close()
     if (SocketClient)
         SocketClient->ToGameServer()->SendCloseNpcRequest();
 }
+void CStatAdvisorWindow::SyncInputState()
+{
+    auto* document = m_View.Document();
+    if (!document)
+        return;
+    const auto& model = m_View.GetModel();
+    const bool disabled = model.pending || model.page != 2;
+    m_InputElements.clear();
+    document->QuerySelectorAll(m_InputElements, ".advisor-input");
+    for (auto* element : m_InputElements)
+        if (auto* input = rmlui_dynamic_cast<Rml::ElementFormControlInput*>(element))
+            if (input->IsDisabled() != disabled)
+                input->SetDisabled(disabled);
+}
 bool CStatAdvisorWindow::Update()
 {
     if (!m_Active)
@@ -234,6 +251,15 @@ bool CStatAdvisorWindow::Update()
     if (m_View.GetModel().pending && GetTickCount() - m_SentAt > ReplyTimeoutMs)
     {
         Send(m_AwaitingOpen ? 0 : 3);
+    }
+    UI::RmlBridge::SyncNativeTextSize(m_View.Binder());
+    SyncInputState();
+    if (m_FocusAllocationInput)
+    {
+        auto* document = m_View.Document();
+        auto* input = document ? document->QuerySelector(".advisor-input") : nullptr;
+        if (input && input->IsVisible(true))
+            m_FocusAllocationInput = !input->Focus();
     }
     Recalculate();
     return true;

@@ -4,6 +4,9 @@
 #include "RmlLayoutFixture.h"
 #include "UI/RmlBridge/RmlClickSounds.h"
 #include "UI/RmlBridge/RmlElementBox.h"
+#include "UI/RmlBridge/RmlPanelGeometry.h"
+#include "UI/Scaling/UITransform.h"
+#include "UI/RmlBridge/RmlNumericInputFilter.h"
 #include "UI/RmlBridge/ThemeInheritance.h"
 #include <RmlUi/Core/Element.h>
 #include <RmlUi/Core/ElementDocument.h>
@@ -21,7 +24,8 @@ struct Row
 
 struct Model
 {
-    int page = 2, available_points = 700;
+    float textPx = 12.f;
+    int page = 0, available_points = 5;
     Rml::String title = "洗点师·艾琳", message = "请填写本次增加的属性点数";
     Rml::String feedback, available = "可用点数：700", total = "合计：0", remaining = "剩余：700";
     Rml::String reset = "洗点", allocate = "批量加点", leave = "离开", back = "返回", clear = "清空";
@@ -42,6 +46,7 @@ void Bind(Rml::Context& context, Model& model)
     row.RegisterMember("amount", &Row::amount);
     row.RegisterMember("result", &Row::result);
     constructor.RegisterArray<std::vector<Row>>();
+    constructor.Bind("text_px", &model.textPx);
     for (const auto* name : {"rows", "page", "title", "message", "feedback", "available", "total", "remaining",
                              "pending", "valid", "can_confirm", "reset", "allocate", "leave", "back", "clear", "next",
                              "confirm_reset", "confirm_allocation", "attribute_label", "current_label", "increase_label", "result_label"})
@@ -101,9 +106,11 @@ TEST_CASE("stat advisor allocation table and action buttons stay in bounds acros
                     REQUIRE(Rml::LoadFontFace(std::string(MU_FONT_DIR) + "/NotoSansSC-Regular.otf", true));
                     fixture.Configure(viewport, scale);
                     Model model;
+                    model.textPx =
+                        UI::Scaling::NativeTextPixelSize(UI::Scaling::FontRole::Normal, viewport.x, viewport.y);
                     const std::vector<std::string> names = {"力量", "敏捷", "体力", "智力", "统率"};
                     for (int i = 0; i < row_count; ++i)
-                        model.rows.push_back({names[i], "100", "25", "125"});
+                        model.rows.push_back({names[i], "100", "", "100"});
                     Bind(*fixture.context, model);
                     const auto path = std::filesystem::path(MU_RMLUI_DIR) / "themes" / theme / "stat_advisor.rml";
                     auto markupPath = path;
@@ -112,19 +119,63 @@ TEST_CASE("stat advisor allocation table and action buttons stay in bounds acros
                     auto* document = fixture.context->LoadDocumentFromMemory(UI::Tests::ReadFile(markupPath),
                                                                               UI::RmlBridge::ThemePathUtf8(path));
                     REQUIRE(document);
+                    UI::RmlBridge::AttachNumericInputFilter(document);
                     document->Show();
+                    const auto dock = UI::Scaling::DockRightTransform(viewport.x, viewport.y);
+                    UI::RmlBridge::SlotPlacement placement;
+                    document->UpdateDocument();
+                    const float width = document->GetElementById("panel")->GetBox().GetSize(Rml::BoxArea::Border).x;
+                    placement.Set(viewport.x - width * dock.scaleX, std::max(0.f, dock.offsetY), dock.scaleX);
+                    placement.Apply(document, "panel");
                     fixture.Refresh();
+                    auto* message = document->QuerySelector(".advisor-message");
+                    REQUIRE(message);
+                    CHECK(message->IsVisible(true));
+                    Rml::Vector2f messagePosition, messageSize;
+                    REQUIRE(UI::RmlBridge::DrawnBox(*message, Rml::BoxArea::Border, messagePosition, messageSize));
+                    CHECK(messageSize.y > 0.f);
+                    auto handle = fixture.context->GetDataModel("stat_advisor").GetModelHandle();
+                    for (int page : {2, 3, 2, 1, 0, 2})
+                    {
+                        model.page = page;
+                        handle.DirtyVariable("page");
+                        fixture.Refresh();
+                        CHECK(message->IsVisible(true));
+                        auto* form = document->QuerySelector(".advisor-form");
+                        REQUIRE(form);
+                        CHECK(form->IsVisible(true) == (page == 2 || page == 3));
+                    }
+
+                    auto* firstInput = document->QuerySelector(".advisor-input");
+                    REQUIRE(firstInput);
+                    REQUIRE(firstInput->Focus());
+                    fixture.context->ProcessTextInput("9");
+                    fixture.Refresh();
+                    CHECK(model.rows.front().amount == "9");
+                    fixture.context->ProcessTextInput("x");
+                    fixture.Refresh();
+                    CHECK(model.rows.front().amount == "9");
 
                     auto* panel = document->GetElementById("panel");
-                    auto* body = document->GetElementById("advisor-body");
+                    auto* body = document->GetElementById("advisor-options");
                     auto* footer = document->QuerySelector(".advisor-footer");
                     REQUIRE(panel);
                     REQUIRE(body);
+                    Rml::Vector2f bodyPosition, bodySize;
+                    REQUIRE(UI::RmlBridge::DrawnBox(*body, Rml::BoxArea::Border, bodyPosition, bodySize));
+                    CHECK(bodySize.y > 100.f);
+                    CHECK(firstInput->IsVisible(true));
+                    Rml::Vector2f inputPosition, inputSize;
+                    REQUIRE(UI::RmlBridge::DrawnBox(*firstInput, Rml::BoxArea::Border, inputPosition, inputSize));
+                    CHECK(inputPosition.y + inputSize.y <= bodyPosition.y + bodySize.y + 1.f);
                     REQUIRE(footer);
                     Rml::Vector2f panelPosition, panelSize, footerPosition, footerSize;
                     REQUIRE(UI::RmlBridge::DrawnBox(*panel, Rml::BoxArea::Border, panelPosition, panelSize));
                     REQUIRE(UI::RmlBridge::DrawnBox(*footer, Rml::BoxArea::Border, footerPosition, footerSize));
                     const auto dimensions = fixture.context->GetDimensions();
+                    CHECK(panelPosition.x == doctest::Approx(viewport.x - panelSize.x).epsilon(0.005));
+                    CHECK_FALSE(panel->IsClassSet("center-both"));
+                    CHECK_FALSE(panel->IsClassSet("dragged"));
                     CHECK(panelPosition.x >= -2.f);
                     CHECK(panelPosition.y >= -2.f);
                     CHECK(panelPosition.x + panelSize.x <= dimensions.x + 2.f);
@@ -135,13 +186,26 @@ TEST_CASE("stat advisor allocation table and action buttons stay in bounds acros
                     Rml::ElementList rows;
                     document->QuerySelectorAll(rows, ".advisor-row");
                     REQUIRE(rows.size() == static_cast<size_t>(row_count + 2));
+                    Rml::ElementList fields;
+                    body->QuerySelectorAll(fields, ".advisor-input, .advisor-summary");
+                    REQUIRE(fields.size() == static_cast<size_t>(row_count + 2));
+                    for (auto* field : fields)
+                    {
+                        Rml::Vector2f pos, size;
+                        REQUIRE(UI::RmlBridge::DrawnBox(*field, Rml::BoxArea::Border, pos, size));
+                        CHECK(size.y > 0.f);
+                        CHECK(pos.x >= bodyPosition.x - 1.f);
+                        CHECK(pos.x + size.x <= bodyPosition.x + bodySize.x + 1.f);
+                        CHECK(pos.y >= bodyPosition.y - 1.f);
+                        CHECK(pos.y + size.y <= bodyPosition.y + bodySize.y + 1.f);
+                    }
                     Rml::ElementList buttons;
-                    footer->QuerySelectorAll(buttons, ".btn");
+                    footer->QuerySelectorAll(buttons, ".nd-answer-row");
                     Rml::ElementList visibleButtons;
                     for (auto* button : buttons)
                         if (button->GetComputedValues().display() != Rml::Style::Display::None)
                             visibleButtons.push_back(button);
-                    REQUIRE(visibleButtons.size() == 4);
+                    REQUIRE(visibleButtons.size() == 3);
                     for (auto* button : visibleButtons)
                     {
                         Rml::Vector2f position, size;

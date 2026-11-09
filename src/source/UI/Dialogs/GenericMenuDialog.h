@@ -112,6 +112,14 @@ namespace mu::ui::window
         // Opens idle or replaces the matching active id; preserves unrelated menus on false.
         bool ShowOrUpdate(GenericMenuConfig cfg);
 
+        bool IsNpcMenuVisible() const
+        {
+            return m_bActive && (m_Active.id == "reset-npc" || m_Active.id == "leveling-warp");
+        }
+        Rml::ElementDocument* GetPlacedDocument() const override
+        {
+            return IsNpcMenuVisible() ? m_RmlView.Document(1) : nullptr;
+        }
         bool Render() override;
         bool Update() override;
         // Unconditionally claims input while shown -- a true modal, matching CMessageBoxMng's own
@@ -132,6 +140,10 @@ namespace mu::ui::window
         void OnRmlBuilt();
         void SyncRmlModel();
         void SyncCanvasTop();
+        Rml::ElementDocument* ActiveDocument() const
+        {
+            return m_RmlView.Document(IsNpcMenuVisible() ? 1 : 0);
+        }
         void ShowNext();           // pops m_Queue (if non-empty) and opens the document
         void Resolve(int buttonIndex); // -1 = cancel/no button; hides the document, invokes the
                                        // chosen callback, then ShowNext()
@@ -159,6 +171,7 @@ namespace mu::ui::window
             bool linesBelow = false;
             bool dismiss = false;
         };
+        std::vector<MenuButtonEntry> BuildButtons() const;
         struct GenericMenuRmlModel
         {
             bool hasTitle = false;
@@ -169,6 +182,7 @@ namespace mu::ui::window
             bool highlightTitle = false;
             Rml::String kind;      // GenericMenuConfig::kind
             Rml::String id;        // GenericMenuConfig::id
+            float textPx = 12.f;
             float canvasTop = 0.f; // UI::RmlBridge::DialogCanvasTop, in dp
             Rml::String title;
             std::vector<LineEntry> lines;
@@ -183,10 +197,12 @@ namespace mu::ui::window
             float rootY = 0.f;
         };
         void BindRmlModel(Rml::DataModelConstructor& c, GenericMenuRmlModel& model);
-        UI::RmlBridge::ThemedView<GenericMenuRmlModel> m_RmlView{"generic_menu_dialog",
+        UI::RmlBridge::ThemedView<GenericMenuRmlModel> m_RmlView{
+            "generic_menu_dialog",
             [this](Rml::DataModelConstructor& c, GenericMenuRmlModel& model) { BindRmlModel(c, model); },
-            {{"Data/Interface/RmlUi/generic_menu_dialog.rml"}},
-            {.modal = Rml::ModalFlag::Modal, .focus = Rml::FocusFlag::Document,
+            {{"Data/Interface/RmlUi/generic_menu_dialog.rml"}, {"Data/Interface/RmlUi/npc_service_menu.rml"}},
+            {.modal = Rml::ModalFlag::Modal,
+             .focus = Rml::FocusFlag::Document,
              .afterBuild = [this] { OnRmlBuilt(); }}};
 
         bool m_bButtonClicked = false;

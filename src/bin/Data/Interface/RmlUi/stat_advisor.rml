@@ -2,16 +2,24 @@
 <head>
     <title>Stat advisor</title>
     <link type="text/rcss" href="base.rcss"/>
+    <link type="text/rcss" href="docked_panel_frame.rcss"/>
+    <link type="text/rcss" href="npc_dialogue.rcss"/>
     <link type="text/rcss" href="stat_advisor.rcss"/>
 </head>
 <body>
-<div id="panel" class="center-both" data-model="stat_advisor">
-    <div class="advisor-title">{{title}}</div>
-    <div id="advisor-body">
+<div id="panel" data-model="stat_advisor" data-style---text-px="text_px + 'px'"
+     data-class-home="page == 0" data-class-reset="page == 1" data-class-form="page == 2 || page == 3">
+    <div class="frame-piece frame-top"></div><div class="frame-piece frame-left"></div>
+    <div class="frame-piece frame-right"></div><div class="frame-piece frame-bottom"></div>
+    <span id="title" class="sharp-text" data-style-font-size="text_px + 'px'">{{title}}</span>
+    <div id="advisor-body" class="scroll-pane sharp-text" data-style-font-size="text_px + 'px'">
         <div class="advisor-message">{{message}}</div>
+    </div>
+    <div class="nd-divider"></div>
+    <div id="advisor-options" class="scroll-pane sharp-text" data-style-font-size="text_px + 'px'">
         <div class="advisor-home" data-if="page == 0">
-            <button class="btn advisor-action" data-class-disabled="pending" data-event-click="advisor_action(1)">{{reset}}</button>
-            <button class="btn advisor-action" data-class-disabled="pending" data-event-click="advisor_action(3)">{{allocate}}</button>
+            <button class="nd-answer-row advisor-action" data-class-disabled="pending" data-event-click="advisor_action(1)">1. {{reset}}</button>
+            <button class="nd-answer-row advisor-action" data-class-disabled="pending" data-event-click="advisor_action(3)">2. {{allocate}}</button>
         </div>
         <div class="advisor-form" data-if="page == 2 || page == 3">
             <div class="advisor-balance">{{available}}</div>
@@ -21,23 +29,25 @@
             <div class="advisor-row" data-for="row : rows">
                 <span>{{row.name}}</span><span>{{row.current}}</span>
                 <input class="text-field text-field--numeric advisor-input" type="text" maxlength="5"
-                       data-value="row.amount" data-attr-disabled="pending || page == 3"/>
+                       data-value="row.amount" data-class-disabled="pending || page == 3"/>
                 <span>{{row.result}}</span>
             </div>
             <div class="advisor-summary">{{total}}</div>
             <div class="advisor-summary">{{remaining}}</div>
         </div>
     </div>
-    <div class="advisor-feedback">{{feedback}}</div>
-    <div class="advisor-footer">
-        <button class="btn" data-if="page == 1" data-class-disabled="pending || !can_confirm" data-event-click="advisor_action(2)">{{confirm_reset}}</button>
-        <button class="btn" data-if="page == 2" data-class-disabled="pending || !valid" data-event-click="advisor_action(4)">{{next}}</button>
-        <button class="btn" data-if="page == 3" data-class-disabled="pending || !can_confirm" data-event-click="advisor_action(5)">{{confirm_allocation}}</button>
-        <button class="btn" data-if="page == 2" data-class-disabled="pending" data-event-click="advisor_action(8)">{{clear}}</button>
-        <button class="btn" data-if="page == 1 || page == 2" data-class-disabled="pending" data-event-click="advisor_action(6)">{{back}}</button>
-        <button class="btn" data-if="page == 3" data-class-disabled="pending" data-event-click="advisor_action(3)">{{back}}</button>
-        <button class="btn" data-event-click="advisor_action(7)">{{leave}}</button>
+    <div class="advisor-feedback sharp-text" data-style-font-size="text_px + 'px'">{{feedback}}</div>
+    <div class="advisor-footer sharp-text" data-style-font-size="text_px + 'px'">
+        <button class="nd-answer-row" data-if="page == 1" data-class-disabled="pending || !can_confirm" data-event-click="advisor_action(2)">{{confirm_reset}}</button>
+        <button class="nd-answer-row" data-if="page == 2" data-class-disabled="pending || !valid" data-event-click="advisor_action(4)">{{next}}</button>
+        <button class="nd-answer-row" data-if="page == 3" data-class-disabled="pending || !can_confirm" data-event-click="advisor_action(5)">{{confirm_allocation}}</button>
+        <button class="nd-answer-row" data-if="page == 2" data-class-disabled="pending" data-event-click="advisor_action(8)">{{clear}}</button>
+        <button class="nd-answer-row" data-if="page == 1 || page == 2" data-class-disabled="pending" data-event-click="advisor_action(6)">{{back}}</button>
+        <button class="nd-answer-row" data-if="page == 3" data-class-disabled="pending" data-event-click="advisor_action(3)">{{back}}</button>
+
     </div>
+    <div id="btn_exit" class="modern-icon-btn-px nd-btn-exit" data-attr-data-hint="leave" data-event-click="advisor_action(7)"><span class="btn-exit-label modern-icon-btn-glyph-px">×</span></div>
+    <div id="frame_corner_close" data-event-click="advisor_action(7)"></div>
 </div>
 </body>
 </rml>

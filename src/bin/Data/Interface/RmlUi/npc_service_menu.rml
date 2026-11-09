@@ -1,0 +1,30 @@
+<rml>
+<head>
+ <title>NPC service</title>
+ <link type="text/rcss" href="base.rcss"/>
+ <link type="text/rcss" href="docked_panel_frame.rcss"/>
+ <link type="text/rcss" href="npc_dialogue.rcss"/>
+ <link type="text/rcss" href="npc_service_menu.rcss"/>
+</head>
+<body>
+ <div id="panel" data-model="generic_menu_dialog" data-style---text-px="text_px + 'px'"
+      data-class-warp="menu_id == 'leveling-warp'">
+  <div class="frame-piece frame-top"></div><div class="frame-piece frame-left"></div>
+  <div class="frame-piece frame-right"></div><div class="frame-piece frame-bottom"></div>
+  <span id="title" class="sharp-text" data-style-font-size="text_px + 'px'">{{title}}</span>
+  <div id="npc_lines_container" class="nd-npc-lines gmd-lines scroll-pane sharp-text" data-style-font-size="text_px + 'px'">
+   <div class="nd-line gmd-line" data-for="line : lines">{{line.text}}</div>
+  </div>
+  <div class="nd-divider"></div>
+  <div id="answers_container" class="nd-answers scroll-pane sharp-text" data-style-font-size="text_px + 'px'">
+   <div class="nd-answer-row gmd-btn" data-for="button : buttons" data-class-disabled="!button.enabled"
+        data-event-click="gmd_button_click(it_index)" data-attr-data-hint="button.tooltip">
+    <span class="npc-option-number">{{it_index + 1}}. </span><span>{{button.label}}</span><span class="npc-option-description"> {{button.description}}</span>
+    <span class="npc-option-details">{{button.details}}</span>
+   </div>
+  </div>
+  <div id="btn_exit" class="modern-icon-btn-px nd-btn-exit" data-event-click="gmd_cancel"><span class="btn-exit-label modern-icon-btn-glyph-px">×</span></div>
+  <div id="frame_corner_close" data-event-click="gmd_cancel"></div>
+ </div>
+</body>
+</rml>

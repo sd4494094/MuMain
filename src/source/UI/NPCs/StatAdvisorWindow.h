@@ -13,6 +13,14 @@ public:
     void Release();
     void Begin();
     void Receive(Network::StatAdvisorPacket reply);
+    Rml::ElementDocument* GetPlacedDocument() const override
+    {
+        return m_View.Document();
+    }
+    Rml::ElementDocument* GetFillDocument() const override
+    {
+        return m_View.Document();
+    }
     bool Render() override { return true; }
     bool Update() override;
     bool UpdateMouseEvent() override { return !IsVisible(); }
@@ -33,6 +41,7 @@ private:
     };
     struct Model
     {
+        float textPx = 12.f;
         int page = 0, available = 0;
         Rml::String title, message, feedback, availableText, totalText, remainingText;
         Rml::String reset, allocate, leave, back, clear, next, confirmReset, confirmAllocation;
@@ -45,11 +54,14 @@ private:
     void Send(std::uint8_t operation);
     void Close();
     void Recalculate();
+    void SyncInputState();
     void Clear();
     void SetPending(bool pending);
+    Rml::ElementList m_InputElements;
     Network::StatAdvisorPacket m_Reply;
     std::string m_SessionId;
     bool m_Active = false, m_AwaitingOpen = false;
+    bool m_FocusAllocationInput = false;
     DWORD m_SentAt = 0;
     int m_ConnectionId = 0;
     UI::RmlBridge::ThemedView<Model> m_View{"stat_advisor",

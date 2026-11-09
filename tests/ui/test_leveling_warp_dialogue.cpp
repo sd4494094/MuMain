@@ -33,6 +33,7 @@ TEST_CASE("Leveling selection captures immutable identifier and closes only on c
     REQUIRE(config.buttons.size() == 3);
     CHECK(config.buttons[0].label == L"天空之城");
     CHECK(config.buttons[0].description == L"首领·天魔菲尼斯");
+    CHECK(config.buttons[0].tooltip == L"天空之城 首领·天魔菲尼斯\n等级 170    金币 10000");
     CHECK_FALSE(config.buttons[1].enabled);
     packet.token = "changed";
     packet.entries[0].number = 999;
