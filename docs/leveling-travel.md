@@ -56,9 +56,10 @@ client model slot is **220**. Her model combines adapted native MU geometry, ani
 wings, a halo and raised flying poses; the concept artwork is a visual direction,
 not a screenshot of the finished low-poly model. The upgraded appearance uses
 independent animated Illusion-style wings in a platinum, gold and violet palette,
-with controlled platinum/violet +15/excellent glow. Her wing animation runs at 30%
+with visible native metallic +15 reflections and a cycling platinum/violet excellent glow. Her wing animation runs at 30%
 of the initial display speed. Her double halo floats above the head with a slight tilt and orbiting
-star points, separated from the face throughout the idle animation. The face receives soft fill light; armor receives restrained native
+star points, separated from the face throughout the idle animation. The halo stays
+above and behind the head while she looks around; head turns do not swing it sideways. The face receives soft fill light; armor receives restrained native
 metallic sheen and chest/arm stars, leaving skin and cloth out of the sheen.
 Shoulders and arms receive local fill light without changing face or hair brightness.
 Name height and native NPC selection highlighting remain unchanged. Wing glow

@@ -501,7 +501,7 @@ TEST_CASE("Service NPC rendering: fill light and armor shine exclude the face cl
         CHECK_FALSE(Sprites[i].Live);
 }
 
-TEST_CASE("Service NPC rendering: private wing keeps +15 passes with bounded platinum violet light [service-npc]")
+TEST_CASE("Service NPC rendering: private wing has visible +15 passes with bounded platinum violet light [service-npc]")
 {
     namespace Rendering = Render::Characters::ServiceNpcRendering;
     const int wing = Data::Monsters::ServiceNpcPresentation::AriaWingModel;
@@ -524,7 +524,8 @@ TEST_CASE("Service NPC rendering: private wing keeps +15 passes with bounded pla
         metal |= draw.flags == (RENDER_METAL | RENDER_BRIGHT);
         chrome4 |= draw.flags == (RENDER_CHROME4 | RENDER_BRIGHT);
         excellent |= draw.flags == (RENDER_TEXTURE | RENDER_BRIGHT);
-        CHECK(draw.bodyLight[0] < 0.1f);
+        CHECK(draw.bodyLight[0] >= 0.12f);
+        CHECK(draw.bodyLight[2] <= 0.45f);
         CHECK(draw.bodyLight[2] > draw.bodyLight[0]);
         CHECK(draw.bodyLight[0] > draw.bodyLight[1]);
     }
@@ -724,4 +725,103 @@ TEST_CASE(
     CHECK(armSheens == 2);
     CHECK(model.LightEnable);
     CHECK(model.BodyLight[0] == doctest::Approx(0.15f));
+}
+
+namespace
+{
+void CheckHaloAfterHeadTurn(BMD& model, vec34_t* bones, const vec34_t* reference, float frame, unsigned short action,
+                            const vec3_t bodyAngle, const vec3_t headAngle)
+{
+    namespace Presentation = Data::Monsters::ServiceNpcPresentation;
+    model.Animation(bones, frame, frame, action, bodyAngle, headAngle, false, true, nullptr);
+    for (int row = 0; row < 3; ++row)
+        for (int column = 0; column < 4; ++column)
+            CHECK(std::abs(bones[Presentation::AriaHaloBone][row][column] -
+                           reference[Presentation::AriaHaloBone][row][column]) < 0.002f);
+    const float headTop = MeshHeightBound(model, 0, bones, true);
+    const float haloBottom = MeshHeightBound(model, Presentation::AriaHaloMesh, bones, false);
+    CHECK(haloBottom - headTop >= 12.f);
+}
+} // namespace
+
+TEST_CASE("Service NPC halo: body anchor resists head turns at every facing and half frame [service-npc]")
+{
+    if (!HasPrivateAssets())
+        return;
+    MonsterRecorder::LoadScope load(0);
+    load.Run([] { OpenMonsterModel(MONSTER_MODEL_SERVICE_ARIA); });
+    BMD& model = Models[Data::Monsters::ServiceNpcPresentation::AriaBodyModel];
+    auto bones = std::make_unique<vec34_t[]>(MAX_BONES);
+    auto reference = std::make_unique<vec34_t[]>(MAX_BONES);
+    model.BodyScale = 1.f;
+    Vector(0.f, 0.f, 0.f, model.BodyOrigin);
+    const float headTurns[][2] = {{0.f, 0.f},   {-64.f, -16.f}, {-64.f, 16.f}, {64.f, -16.f},
+                                  {64.f, 16.f}, {0.f, -16.f},   {0.f, 16.f}};
+    vec3_t straight = {};
+    for (int action = 0; action < model.NumActions; ++action)
+    {
+        model.CurrentAction = static_cast<unsigned short>(action);
+        for (const float facing : {0.f, 90.f, 180.f, 270.f})
+        {
+            vec3_t bodyAngle = {0.f, 0.f, facing};
+            for (float frame = 0.f; frame < model.Actions[action].NumAnimationKeys; frame += 0.5f)
+            {
+                model.Animation(reference.get(), frame, frame, model.CurrentAction, bodyAngle, straight, false, true,
+                                nullptr);
+                for (const auto& turn : headTurns)
+                {
+                    vec3_t headAngle = {turn[0], turn[1], 0.f};
+                    CheckHaloAfterHeadTurn(model, bones.get(), reference.get(), frame, model.CurrentAction, bodyAngle,
+                                           headAngle);
+                }
+            }
+        }
+    }
+}
+
+TEST_CASE("Service NPC rendering: wing excellent cycles color and respects every quality setting [service-npc]")
+{
+    if (!HasPrivateAssets())
+        return;
+    namespace Rendering = Render::Characters::ServiceNpcRendering;
+    const int wing = Data::Monsters::ServiceNpcPresentation::AriaWingModel;
+    MonsterRecorder::LoadScope load(0);
+    load.Run([] { OpenMonsterModel(MONSTER_MODEL_SERVICE_ARIA_WINGS); });
+    BMD& model = Models[wing];
+    model.LightEnable = true;
+    Vector(0.2f, 0.3f, 0.4f, model.BodyLight);
+    DrawLook look;
+    look.alpha = 0.6f;
+    AriaDrawRecorder recorder;
+    const size_t qualityDraws[] = {1, 3, 4, 4, 5};
+    for (int quality = 0; quality <= 4; ++quality)
+    {
+        recorder.draws.clear();
+        REQUIRE(Rendering::DrawWing(&model, wing, look, 15, 63, quality, RENDER_TEXTURE));
+        CHECK(recorder.draws.size() == qualityDraws[quality]);
+        for (const auto& draw : recorder.draws)
+        {
+            CHECK(draw.alpha == doctest::Approx(look.alpha));
+            CHECK((draw.flags & RENDER_NODEPTH) == 0);
+        }
+    }
+    const float savedTime = WorldTime;
+    float excellentRed[2] = {};
+    int index = 0;
+    for (const float time : {785.398163f, 2356.19449f})
+    {
+        recorder.draws.clear();
+        WorldTime = time;
+        const bool drawn = Rendering::DrawWing(&model, wing, look, 15, 63, 4, RENDER_TEXTURE);
+        WorldTime = savedTime;
+        REQUIRE(drawn);
+        REQUIRE(recorder.draws.size() == 5);
+        const auto& excellent = recorder.draws.back();
+        excellentRed[index++] = excellent.bodyLight[0];
+        CHECK(excellent.bodyLight[0] >= 0.19f);
+        CHECK(excellent.bodyLight[2] <= 0.43f);
+        CHECK(model.LightEnable);
+        CHECK(model.BodyLight[0] == doctest::Approx(0.2f));
+    }
+    CHECK(std::abs(excellentRed[0] - excellentRed[1]) > 0.07f);
 }

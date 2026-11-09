@@ -25,8 +25,13 @@ constexpr Color ArmFill{1.f, 0.98f, 1.04f};
 constexpr Color ArmShine{0.28f, 0.24f, 0.34f};
 constexpr Color WingFill{0.85f, 0.85f, 0.9f};
 constexpr Color ArmorShine{0.18f, 0.15f, 0.24f};
-constexpr Color WingShine{0.075f, 0.065f, 0.095f};
-constexpr Color ExcellentShine{0.035f, 0.03f, 0.045f};
+// Native reflective passes, with enough contrast to read as upgraded equipment.
+constexpr Color WingChrome{0.28f, 0.24f, 0.34f};
+constexpr Color WingMetal{0.22f, 0.20f, 0.28f};
+constexpr Color WingChrome4{0.36f, 0.30f, 0.44f};
+constexpr Color ExcellentPlatinum{0.28f, 0.25f, 0.34f};
+constexpr Color ExcellentViolet{0.20f, 0.12f, 0.42f};
+constexpr float ExcellentPulseRate = 0.002f;
 constexpr Color GemLight{0.3f, 0.22f, 0.42f};
 constexpr float ShinePulseRate = 0.001f;
 constexpr float ShineBase = 0.85f;
@@ -103,31 +108,36 @@ void DrawArmorShine(BMD* model, const DrawLook& look)
     DrawMesh(model, GemMesh, look, RENDER_TEXTURE | RENDER_BRIGHT);
 }
 
+void DrawWingLayer(BMD* model, const DrawLook& look, const Color& color, int flags)
+{
+    SetLight(model, color, ShinePulse());
+    DrawMesh(model, 0, look, flags | RENDER_BRIGHT);
+}
+
+void DrawWingExcellent(BMD* model, const DrawLook& look)
+{
+    // Match the native excellent cycle's rate, retaining the private wing's platinum/violet palette.
+    const float phase = 0.5f + 0.5f * std::sin(WorldTime * ExcellentPulseRate);
+    Color color;
+    for (int axis = 0; axis < 3; ++axis)
+        color[axis] = ExcellentPlatinum[axis] + phase * (ExcellentViolet[axis] - ExcellentPlatinum[axis]);
+    SetLight(model, color);
+    DrawMesh(model, 0, look, RENDER_TEXTURE | RENDER_BRIGHT);
+}
+
 void DrawWingShine(BMD* model, const DrawLook& look, int level, int excellentFlags, int quality)
 {
     if (quality == 0)
         return;
     const int effectiveLevel = quality < EnhancedQuality ? std::min(level, quality * 2 + 5) : level;
     if (effectiveLevel >= 7)
-    {
-        SetLight(model, WingShine, ShinePulse());
-        DrawMesh(model, 0, look, RENDER_CHROME | RENDER_BRIGHT);
-    }
+        DrawWingLayer(model, look, WingChrome, RENDER_CHROME);
     if (effectiveLevel >= 9)
-    {
-        SetLight(model, WingShine, ShinePulse());
-        DrawMesh(model, 0, look, RENDER_METAL | RENDER_BRIGHT);
-    }
+        DrawWingLayer(model, look, WingMetal, RENDER_METAL);
     if (effectiveLevel >= 13)
-    {
-        SetLight(model, WingShine, ShinePulse());
-        DrawMesh(model, 0, look, RENDER_CHROME4 | RENDER_BRIGHT);
-    }
+        DrawWingLayer(model, look, WingChrome4, RENDER_CHROME4);
     if ((excellentFlags & ExcellentMask) != 0)
-    {
-        SetLight(model, ExcellentShine, ShinePulse());
-        DrawMesh(model, 0, look, RENDER_TEXTURE | RENDER_BRIGHT);
-    }
+        DrawWingExcellent(model, look);
 }
 } // namespace
 

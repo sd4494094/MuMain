@@ -21,8 +21,8 @@ constexpr float HaloStarScale = 0.16f;
 constexpr float HaloOrbitRate = 0.00015f;
 constexpr float ArmorSpriteScale = 0.22f;
 constexpr float ArmorStarScale = 0.1f;
-constexpr float WingSpriteScale = 0.28f;
-constexpr float WingStarScale = 0.16f;
+constexpr float WingSpriteScale = 0.45f;
+constexpr float WingStarScale = 0.26f;
 // Chest, upper arms and forearms; avoid the neck and central clavicle anchors beside the face.
 constexpr int ArmorLightBones[] = {17, 26, 35, 27, 36};
 constexpr int WingLightBones[] = {5, 8, 18, 19, 23, 25, 27, 38};
