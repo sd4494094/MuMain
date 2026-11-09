@@ -1963,6 +1963,13 @@
       "linkBones": [28, 37]
     },
     {
+      "slot": "MONSTER_MODEL_SERVICE_ARIA_WINGS",
+      "file": "Data/NPC/Aria/AriaWings.bmd",
+      "textureFolders": ["NPC/Aria"],
+      "animations": {"stop1": 0.25},
+      "headBone": -1
+    },
+    {
       "slot": "MODEL_MERCHANT_FEMALE",
       "file": "Data/NPC/Female01.bmd",
       "textureFolders": ["NPC"],

@@ -1,6 +1,7 @@
 #include "stdafx.h"
 
 #include "ServiceNpcAppearance.h"
+#include "Data/GameData/MonsterData/ServiceNpcPresentation.h"
 #include "Engine/AI/ZzzAI.h"
 
 #include "Engine/Object/ZzzCharacter.h"
@@ -55,5 +56,31 @@ CHARACTER* CreateLeo(int key, unsigned char x, unsigned char y)
     SetAction(&character->Object, PLAYER_STOP_FLY);
     character->Object.BoundingBoxMax[2] += HoverBoundsHeight;
     return character;
+}
+CHARACTER* CreateAria(int key, unsigned char x, unsigned char y)
+{
+    CHARACTER* character = Create(key, MONSTER_MODEL_SERVICE_ARIA, x, y);
+    OpenMonsterModel(MONSTER_MODEL_SERVICE_ARIA_WINGS);
+    EquipShowcasePart(character->Wing, Data::Monsters::ServiceNpcPresentation::AriaWingModel);
+    character->Object.BlendMesh = Data::Monsters::ServiceNpcPresentation::AriaHaloMesh;
+    return character;
+}
+
+bool HasDisplayWing(const CHARACTER* character)
+{
+    return character->Object.Kind == KIND_NPC && character->MonsterIndex == MONSTER_CREATOR_GODDESS_ARIA &&
+           character->Object.Type == Data::Monsters::ServiceNpcPresentation::AriaBodyModel &&
+           character->Wing.Type == Data::Monsters::ServiceNpcPresentation::AriaWingModel;
+}
+
+bool PrepareDisplayWing(CHARACTER* character)
+{
+    if (!HasDisplayWing(character))
+        return false;
+    constexpr unsigned char BackBone = 47;
+    constexpr float FlyingWingSpeed = 1.f;
+    character->Wing.LinkBone = BackBone;
+    character->Wing.PlaySpeed = FlyingWingSpeed;
+    return true;
 }
 } // namespace Engine::Object::ServiceNpcs

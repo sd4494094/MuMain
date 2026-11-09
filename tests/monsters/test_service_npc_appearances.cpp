@@ -9,12 +9,21 @@
 #include "Engine/Object/ZzzOpenData.h"
 #include "Engine/Object/ZzzCharacter.h"
 #include "Engine/Object/ServiceNpcAppearance.h"
+#include "Data/GameData/MonsterData/ServiceNpcPresentation.h"
+#include "Data/GameData/ItemData/ItemModelJsonFormat.h"
+#include "Render/Characters/ServiceNpcEffects.h"
+#include "Render/Effects/ZzzEffect.h"
+#include "Render/Items/ItemGlow.h"
+#include "../data/ItemModelDatabaseScope.h"
 #include "Data/DataHandler/LoadData.h"
 #include "Render/Models/ZzzBMD.h"
 
 #include <doctest.h>
 #include <algorithm>
+#include <cmath>
 #include <cstdlib>
+#include <fstream>
+#include <sstream>
 
 namespace
 {
@@ -265,8 +274,8 @@ TEST_CASE("Service NPC bindings: shipped numeric identities create the model dec
     }
 }
 
-TEST_CASE(
-    "Service NPC appearances: Aria uses independent female geometry and complete hovering wing cycles [service-npc]")
+TEST_CASE("Service NPC appearances: Aria uses independent female geometry and a separate excellent Illusion wing "
+          "[service-npc]")
 {
     CHECK(MONSTER_CREATOR_GODDESS_ARIA == 711);
     CHECK(MONSTER_MODEL_SERVICE_ARIA == 220);
@@ -279,8 +288,8 @@ TEST_CASE(
     const auto changes = load.Run([] { OpenMonsterModel(MONSTER_MODEL_SERVICE_ARIA); });
     REQUIRE(changes.textureErrors.empty());
     const auto model = load.ReadSlot(slot);
-    CHECK(model.numMeshs == 12);
-    CHECK(model.numBones == 76);
+    CHECK(model.numMeshs == 11);
+    CHECK(model.numBones == 61);
     CHECK(model.numActions == 2);
     CHECK(model.boneHead == 20);
     for (const auto& action : model.actions)
@@ -296,16 +305,111 @@ TEST_CASE(
     MonsterRecorder::CreationScope creation(0);
     for (int repeat = 0; repeat < 2; ++repeat)
     {
-        const CHARACTER* character = creation.Create(MONSTER_CREATOR_GODDESS_ARIA);
+        CHARACTER* character = creation.Create(MONSTER_CREATOR_GODDESS_ARIA);
         REQUIRE(character != nullptr);
         CHECK(character->MonsterIndex == MONSTER_CREATOR_GODDESS_ARIA);
         CHECK(character->Object.Kind == KIND_NPC);
         CHECK(character->Object.Type == slot);
         CHECK(character->Object.BoundingBoxMax[2] == 280.f);
         CHECK(character->Object.CurrentAction < model.numActions);
-        CHECK(character->Wing.Type == -1); // Animated wings are part of the independent BMD.
+        CHECK(character->Wing.Type == Data::Monsters::ServiceNpcPresentation::AriaWingModel);
+        CHECK(character->Wing.Level == 15);
+        CHECK(character->Wing.ExcellentFlags == 0x3F);
+        CHECK(character->Object.BlendMesh == Data::Monsters::ServiceNpcPresentation::AriaHaloMesh);
+        CHECK(Engine::Object::ServiceNpcs::PrepareDisplayWing(character));
+        CHECK(character->Wing.LinkBone == 47);
+        CHECK(character->Wing.PlaySpeed == 1.f);
         CHECK(character->Weapon[0].Type == -1);
         CHECK(character->BodyPart[BODYPART_ARMOR].Type == -1);
         CHECK_FALSE(Engine::Object::ServiceNpcs::HasTownHover(character));
     }
+}
+
+TEST_CASE(
+    "Service NPC appearances: private wing preserves its native skeleton and resolves its own texture [service-npc]")
+{
+    if (!HasPrivateAssets())
+        return;
+    MonsterRecorder::LoadScope load(0);
+    const auto changes = load.Run([] { OpenMonsterModel(MONSTER_MODEL_SERVICE_ARIA_WINGS); });
+    REQUIRE(changes.textureErrors.empty());
+    const auto wing = load.ReadSlot(Data::Monsters::ServiceNpcPresentation::AriaWingModel);
+    CHECK(wing.numMeshs == 1);
+    CHECK(wing.numBones == 39);
+    CHECK(wing.boneHead == -1);
+    REQUIRE(wing.actions.size() == 1);
+    CHECK(wing.actions[0].keys == 8);
+    CHECK(wing.actions[0].speed > 0.f);
+    REQUIRE(wing.textures.size() == 1);
+    CHECK(wing.textures[0].name == "aria_illusion.jpg");
+    CHECK(wing.textures[0].bitmap != L"unknown");
+}
+
+TEST_CASE("Service NPC appearances: private +15 excellent glow does not change player wing glow rules [service-npc]")
+{
+    ItemModelDatabaseScope restoreModels;
+    std::ifstream file(MonsterRecorder::ClientFolder() / "Data/Items/Models/Group12_Wing.json");
+    REQUIRE(file.good());
+    std::ostringstream text;
+    text << file.rdbuf();
+    std::vector<Data::Items::ItemModelDefinition> models;
+    std::vector<Data::Items::ItemDataIssue> issues;
+    Data::Items::ReadItemModelGroupJson(text.str(), "Group12_Wing.json", models, issues);
+    REQUIRE(issues.empty());
+    g_ItemModelDatabase.Build(models, Data::Effects::GlowColorList{});
+    CHECK(Render::Items::Glow::GetLevel(MODEL_WING_OF_ILLUSION, 15) == 0);
+    CHECK_FALSE(Render::Items::Glow::HasExcellentGlow(MODEL_WING_OF_ILLUSION));
+    CHECK(Render::Items::Glow::GetLevel(Data::Monsters::ServiceNpcPresentation::AriaWingModel, 15) == 15);
+    CHECK(Render::Items::Glow::HasExcellentGlow(Data::Monsters::ServiceNpcPresentation::AriaWingModel));
+}
+
+TEST_CASE(
+    "Service NPC appearances: halo emits update sprites only for Aria and tolerates old asset bones [service-npc]")
+{
+    namespace Presentation = Data::Monsters::ServiceNpcPresentation;
+    auto character = std::make_unique<CHARACTER>();
+    auto bones = std::make_unique<vec34_t[]>(MAX_BONES);
+    BMD model;
+    model.NumBones = 61;
+    model.NumMeshs = 11;
+    model.BodyScale = 1.f;
+    Vector(0.f, 0.f, 0.f, model.BodyOrigin);
+    for (int axis = 0; axis < 3; ++axis)
+        bones[Presentation::AriaHaloBone][axis][axis] = 1.f;
+    character->MonsterIndex = MONSTER_CREATOR_GODDESS_ARIA;
+    OBJECT& object = character->Object;
+    object.Type = Presentation::AriaBodyModel;
+    object.Kind = KIND_NPC;
+    object.BoneTransform = bones.get();
+    ClearSprites();
+    REQUIRE(Render::Characters::ServiceNpcEffects::Update(character.get(), &object, &model));
+    CHECK(object.BlendMesh == Presentation::AriaHaloMesh);
+    CHECK(object.BlendMeshLight >= 0.8f);
+    CHECK(object.BlendMeshLight <= 1.2f);
+    int lights = 0;
+    int stars = 0;
+    for (int index = 0; index < MAX_SPRITES; ++index)
+    {
+        const auto& sprite = Sprites[index];
+        if (!sprite.Live)
+            continue;
+        lights += sprite.Type == BITMAP_LIGHT ? 1 : 0;
+        stars += sprite.Type == BITMAP_SHINY + 1 ? 1 : 0;
+        for (const float component : sprite.Position)
+            CHECK(std::isfinite(component));
+    }
+    CHECK(lights == 8);
+    CHECK(stars == 4);
+    ClearSprites();
+    model.NumBones = 60;
+    CHECK(Render::Characters::ServiceNpcEffects::Update(character.get(), &object, &model));
+    character->MonsterIndex = MONSTER_LEVELING_WARP_GUIDE;
+    CHECK_FALSE(Render::Characters::ServiceNpcEffects::Update(character.get(), &object, &model));
+    CHECK_FALSE(Engine::Object::ServiceNpcs::PrepareDisplayWing(character.get()));
+    for (int index = 0; index < MAX_SPRITES; ++index)
+        CHECK_FALSE(Sprites[index].Live);
+    object.BoneTransform = nullptr;
+    // A BMD with metadata only owns no allocation in this unit test.
+    model.NumBones = 0;
+    model.NumMeshs = 0;
 }

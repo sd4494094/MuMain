@@ -54,7 +54,11 @@ The matching private client adds **创世神·艾莉雅 (Aria)**, a female decor
 at **Lorencia 147, 133**, east of Noah. Her independent wire number is **711** and
 client model slot is **220**. Her model combines adapted native MU geometry, animated
 wings, a halo and raised flying poses; the concept artwork is a visual direction,
-not a screenshot of the finished low-poly model.
+not a screenshot of the finished low-poly model. The upgraded appearance uses
+independent animated Illusion-style wings in a platinum, gold and violet palette,
+with +15/excellent equipment glow. Her double halo has pulsing light and orbiting
+star points. Equipment glow follows the client's effect quality settings; compare
+the effect with nearby upgraded equipment using the same settings.
 
 Existing Season 6 installations use the optional **Add creator goddess NPC** update.
 Fresh configuration includes her by default. The **Creator goddess NPC** talk plugin
@@ -69,3 +73,8 @@ have no binding for number 711. Keep private model assets outside the public Git
 repository and preserve licensed source assets. Back up changed files with the game
 closed; verify hover motion, name, Tab marker, selection bounds, greeting and nearby
 NPC access in the actual client after publication.
+
+The wing/halo appearance upgrade is client-only: install its matching executable,
+monster model definitions and private Aria assets together, with the game closed.
+It needs no server restart and changes neither player equipment nor NPC placement.
+Preserve the previous client backup until the appearance is verified in game.

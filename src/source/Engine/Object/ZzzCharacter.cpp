@@ -58,6 +58,8 @@
 #include "Data/GameData/MonsterData/MonsterModelDatabase.h"
 #include "Engine/Object/MonsterModelBody.h"
 #include "Engine/Object/ServiceNpcAppearance.h"
+#include "Data/GameData/MonsterData/ServiceNpcPresentation.h"
+#include "Render/Characters/ServiceNpcEffects.h"
 #include "GameLogic/Monsters/MonsterAttackPlay.h"
 #include "GameLogic/Monsters/MonsterSoundEvents.h"
 #include "GameLogic/Monsters/MonsterNames.h"
@@ -11922,7 +11924,11 @@ void SpawnSlotEffects(CHARACTER* c, Engine::Object::Attachments::Slot& slot, con
     VectorCopy(placement.angle, Object->Angle);
     VectorCopy(placement.origin, Object->Position);
     if (!Object->EnableShadow)
+    {
         SpawnLinkedPartEffects(c, slot.type, Object, Engine::Object::Attachments::Bones(slot), placement.position);
+        Render::Characters::ServiceNpcEffects::SpawnWing(b, Object, slot.type,
+                                                         Engine::Object::Attachments::Bones(slot));
+    }
 }
 
 bool IsImpOnRageFighterArmor(const CHARACTER* c)
@@ -12069,6 +12075,8 @@ static BMD* PlaceCharacterModel(OBJECT* o)
 // effects claim it.
 static void UpdateTypeAndMapMonsterEffects(CHARACTER* c, OBJECT* o, BMD* b)
 {
+    if (Render::Characters::ServiceNpcEffects::Update(c, o, b))
+        return;
     if (UpdateCharacterTypeEffects(c, o, b))
         return;
     // Same order and stop-on-claim as RenderCharacter's chain.
@@ -15155,7 +15163,7 @@ CHARACTER* CreateMonster(EMonsterType Type, int PositionX, int PositionY, int Ke
         c->Object.m_bRenderShadow = false;
         break;
     case MONSTER_CREATOR_GODDESS_ARIA:
-        c = Engine::Object::ServiceNpcs::Create(Key, MONSTER_MODEL_SERVICE_ARIA, PositionX, PositionY);
+        c = Engine::Object::ServiceNpcs::CreateAria(Key, PositionX, PositionY);
         break;
     case MONSTER_LEVELING_WARP_GUIDE:
         c = Engine::Object::ServiceNpcs::Create(Key, MONSTER_MODEL_SERVICE_NOAH, PositionX, PositionY);
@@ -15710,6 +15718,8 @@ bool DrawsWeaponOnBack(const CHARACTER* c, const OBJECT* o, int index)
 // them and the draw shows them, so no draw sets a part the update reads.
 void PrepareCarriedParts(CHARACTER* c)
 {
+    if (Engine::Object::ServiceNpcs::PrepareDisplayWing(c))
+        return;
     OBJECT* o = &c->Object;
     PART_t* w = &c->Wing;
     if (RendersWingCarriedModels(c))
@@ -15828,11 +15838,22 @@ namespace
 // The parts RenderCharacter attaches to the character, in its order and at its placements, decided from the
 // character's state: the update advances and poses each before any draw shows it. A part two attachments share (the
 // wing carries the quest item too) takes one step per attachment, each at that attachment's speed.
+void PlanServiceNpcWing(CHARACTER* c)
+{
+    if (!Engine::Object::ServiceNpcs::HasDisplayWing(c) || HidesLinkedPart(c, c->Wing.Type))
+        return;
+    namespace Presentation = Data::Monsters::ServiceNpcPresentation;
+    PART_t* wing = &c->Wing;
+    Engine::Object::Attachments::Plan(c, wing, wing->Type, 0.f, 0.f, Presentation::AriaWingOffsetZ, false, true,
+                                      wing->LinkBone, c->Object.Scale * Presentation::AriaWingScale, wing->PlaySpeed);
+}
+
 void PlanAttachments(CHARACTER* c)
 {
     OBJECT* o = &c->Object;
     if (!DrawsAttachments(c))
         return;
+    PlanServiceNpcWing(c);
     const auto plan = [c](float x, float y, float z, PART_t* part, int type, bool link, bool rightHandItem,
                           int linkBone, float playSpeed, float ownerScale)
     {
@@ -15908,8 +15929,23 @@ void PlanAttachments(CHARACTER* c)
 }
 } // namespace
 
+namespace
+{
+void RenderServiceNpcWing(const CHARACTER* c, bool translate)
+{
+    if (!Engine::Object::ServiceNpcs::HasDisplayWing(c))
+        return;
+    namespace Presentation = Data::Monsters::ServiceNpcPresentation;
+    const PART_t* wing = &c->Wing;
+    const LinkedPartLook look{c->Object.Scale * Presentation::AriaWingScale, c->Light};
+    RenderLinkObject(0.f, 0.f, Presentation::AriaWingOffsetZ, c, wing, wing->Type, wing->Level, wing->ExcellentFlags,
+                     false, translate, 0, true, -1, &look);
+}
+} // namespace
+
 bool RenderCharacterBackItem(const CHARACTER* c, const OBJECT* o, bool bTranslate)
 {
+    RenderServiceNpcWing(c, bTranslate);
     const bool bBindBack = AreWeaponsOnBack(c, o);
 
     if (o->Type == MODEL_PLAYER)

@@ -10,4 +10,7 @@ namespace Engine::Object::ServiceNpcs
 CHARACTER* Create(int key, EMonsterModelType model, unsigned char x, unsigned char y);
 bool HasTownHover(const CHARACTER* character);
 CHARACTER* CreateLeo(int key, unsigned char x, unsigned char y);
+CHARACTER* CreateAria(int key, unsigned char x, unsigned char y);
+bool HasDisplayWing(const CHARACTER* character);
+bool PrepareDisplayWing(CHARACTER* character);
 } // namespace Engine::Object::ServiceNpcs
