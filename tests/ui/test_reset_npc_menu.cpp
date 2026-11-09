@@ -105,6 +105,37 @@ public:
         dialog.Update();
         layout.Refresh();
     }
+    void CheckResetContentFits()
+    {
+        SelectDocument();
+        auto* body = document->GetElementById("npc_lines_container");
+        auto* answers = document->GetElementById("answers_container");
+        auto* close = document->GetElementById("btn_exit");
+        REQUIRE(body);
+        REQUIRE(answers);
+        REQUIRE(close);
+        CHECK(body->GetScrollHeight() <= body->GetClientHeight() + 1.f);
+        CHECK(answers->GetScrollHeight() <= answers->GetClientHeight() + 1.f);
+        CHECK(body->GetComputedValues().overflow_y() == Rml::Style::Overflow::Hidden);
+        CHECK(answers->GetComputedValues().overflow_y() == Rml::Style::Overflow::Hidden);
+        Rml::Vector2f bodyPosition, bodySize, answersPosition, answersSize, closePosition, closeSize;
+        REQUIRE(UI::RmlBridge::DrawnBox(*body, Rml::BoxArea::Border, bodyPosition, bodySize));
+        REQUIRE(UI::RmlBridge::DrawnBox(*answers, Rml::BoxArea::Border, answersPosition, answersSize));
+        REQUIRE(UI::RmlBridge::DrawnBox(*close, Rml::BoxArea::Border, closePosition, closeSize));
+        CHECK(bodyPosition.y + bodySize.y <= answersPosition.y);
+        CHECK(answersPosition.y + answersSize.y <= closePosition.y + 1.f);
+        Rml::ElementList lines;
+        body->QuerySelectorAll(lines, ".gmd-line");
+        for (auto* line : lines)
+        {
+            if (!line->IsVisible(true))
+                continue;
+            Rml::Vector2f position, size;
+            REQUIRE(UI::RmlBridge::DrawnBox(*line, Rml::BoxArea::Border, position, size));
+            CHECK(position.y >= bodyPosition.y - 1.f);
+            CHECK(position.y + size.y <= bodyPosition.y + bodySize.y + 1.f);
+        }
+    }
     void CheckFirstLine(const std::string& text)
     {
         SelectDocument();
@@ -140,7 +171,9 @@ GenericMenuConfig Menu(int& selected)
     config.id = "reset-npc";
     config.title = L"转生导师·里奥";
     config.lines = {{L"下一次：第1次转生；当前375级，需要400级。"},
-                    {L"需要金币：1；当前持有：180214647。"},
+                    {L"需要金币：2；当前持有：81001614。"},
+                    {L"需要物品：创造宝石×10；当前持有：10。"},
+                    {L"转生次数上限：1000。"},
                     {L"转生后10级；本次奖励1500点，可分配点数合计1500。"},
                     {L"已分配属性恢复为职业初始值。"},
                     {L"成功后回到出生点。"},
@@ -167,6 +200,7 @@ void CheckReplySequence(MenuFixture& fixture)
     REQUIRE(fixture.dialog.ShowOrUpdate(config)); // a repeated opening must not create stale pages
     fixture.SelectDocument();
     fixture.CheckFixedPanel();
+    fixture.CheckResetContentFits();
     for (int index : {0, 1, 0, 1})
     {
         CAPTURE(index);
@@ -178,6 +212,7 @@ void CheckReplySequence(MenuFixture& fixture)
                             {index == 0 ? L"已刷新当前转生条件，尚未执行转生。" : L"转生需要达到400级。"});
         REQUIRE(fixture.dialog.ShowOrUpdate(config));
         fixture.CheckFirstLine(index == 0 ? "已刷新当前转生条件" : "转生需要达到400级");
+        fixture.CheckResetContentFits();
         config.lines.erase(config.lines.begin());
     }
     fixture.Click(2);

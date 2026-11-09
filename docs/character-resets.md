@@ -35,3 +35,7 @@ the conversation, while Back stays within it.
 Erin numbers all home-menu options consecutively. Buttons are disabled during a
 request; a neutral processing message appears only if the reply takes over one
 second. Ordinary navigation does not immediately show a yellow warning.
+
+Leo reserves most of the fixed panel for the full reset conditions and result.
+His three actions sit below the text; the reset panel does not use scrollbars.
+Query and application replies remain visible in the same panel.

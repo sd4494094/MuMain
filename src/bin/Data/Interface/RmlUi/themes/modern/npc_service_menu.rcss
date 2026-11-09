@@ -17,3 +17,9 @@
 
 #title { position: absolute; left: 0; top: 12px; width: calc(100% * var(--root-scale)); text-align: center; color: token(text-warm); font-weight: bold; }
 #btn_exit .btn-exit-label { display: block; }
+
+/* Leo has three actions; reserve the panel's body for the full reset quote. */
+#panel.reset #npc_lines_container { top: 45px; height: calc(264px * var(--root-scale)); overflow-y: hidden; }
+#panel.reset .nd-divider { top: 314.5px; }
+#panel.reset #answers_container { top: 338px; height: calc(54px * var(--root-scale)); overflow-y: hidden; }
+#panel.reset .nd-answer-row { margin-bottom: 0; }

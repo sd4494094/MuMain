@@ -8,7 +8,7 @@
 </head>
 <body>
  <div id="panel" data-model="generic_menu_dialog" data-style---text-px="text_px + 'px'"
-      data-class-warp="menu_id == 'leveling-warp'">
+      data-class-warp="menu_id == 'leveling-warp'" data-class-reset="menu_id == 'reset-npc'">
   <div class="frame-piece frame-top"></div><div class="frame-piece frame-left"></div>
   <div class="frame-piece frame-right"></div><div class="frame-piece frame-bottom"></div>
   <span id="title" class="sharp-text" data-style-font-size="text_px + 'px'">{{title}}</span>

@@ -14,3 +14,9 @@
 #panel.warp .nd-divider { top: 108px; }
 #panel.warp #answers_container { top: 131px; height: calc(246px * var(--root-scale)); }
 #panel.warp .nd-answer-row { white-space: nowrap; overflow-x: hidden; }
+
+/* Leo has three actions; reserve the panel's body for the full reset quote. */
+#panel.reset #npc_lines_container { top: 45px; height: calc(264px * var(--root-scale)); overflow-y: hidden; }
+#panel.reset .nd-divider { top: 314.5px; }
+#panel.reset #answers_container { top: 338px; height: calc(54px * var(--root-scale)); overflow-y: hidden; }
+#panel.reset .nd-answer-row { margin-bottom: 0; }
