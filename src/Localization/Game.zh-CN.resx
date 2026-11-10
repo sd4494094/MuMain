@@ -9464,4 +9464,18 @@
   <data name="Base Attributes" xml:space="preserve">
     <value>基础属性</value>
   </data>
+  <data name="AriaGuideTitle" xml:space="preserve"><value>创世神·艾莉雅</value></data>
+  <data name="AriaGuideIntroduction" xml:space="preserve"><value>愿创世之光，照亮你的旅途。冒险中的疑惑，或旅途中的心事，都可以告诉我。</value></data>
+  <data name="AriaGuideTalkHeading" xml:space="preserve"><value>【如何交谈】</value></data>
+  <data name="AriaGuideTalk" xml:space="preserve"><value>关闭此窗口，按 Enter 打开聊天。
+输入 /Aria，空一格写下问题，
+再按 Enter 发送。</value></data>
+  <data name="AriaGuideExamplesHeading" xml:space="preserve"><value>例如：</value></data>
+  <data name="AriaGuideExamples" xml:space="preserve"><value>/Aria 剑士如何转职？
+/Aria 你好，我叫小明
+/Aria 洛克之羽打什么怪掉落？</value></data>
+  <data name="AriaGuideAnywhereHeading" xml:space="preserve"><value>【随时找我】</value></data>
+  <data name="AriaGuideAnywhere" xml:space="preserve"><value>身在其他地图，也能与我交谈。问答只在你的聊天栏显示。请等我回答后，再继续提问。</value></data>
+  <data name="AriaGuideAliasesHeading" xml:space="preserve"><value>也可使用：</value></data>
+  <data name="AriaGuideAliases" xml:space="preserve"><value>/aria、/艾莉雅、/小助理</value></data>
 </root>

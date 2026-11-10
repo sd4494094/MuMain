@@ -20,3 +20,10 @@
 #panel.reset .nd-divider { top: 314.5px; }
 #panel.reset #answers_container { top: 338px; height: calc(54px * var(--root-scale)); overflow-y: hidden; }
 #panel.reset .nd-answer-row { margin-bottom: 0; }
+
+
+/* Aria is a read-only guide: keep the native frame and exit control, and use
+   the full body without an empty answer list or a draggable title bar. */
+#panel.aria-guide #npc_lines_container { top: 45px; height: calc(338px * var(--root-scale)); overflow-y: auto; }
+#panel.aria-guide .nd-divider, #panel.aria-guide #answers_container { display: none; }
+#panel.aria-guide .nd-line.section { color: token(accent-gold); margin-top: calc(4px * var(--root-scale)); }

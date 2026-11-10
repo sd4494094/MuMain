@@ -9456,4 +9456,18 @@
   <data name="Base Attributes" xml:space="preserve">
     <value>Base Attributes</value>
   </data>
+  <data name="AriaGuideTitle" xml:space="preserve"><value>Creator Goddess Aria</value></data>
+  <data name="AriaGuideIntroduction" xml:space="preserve"><value>May the light of creation guide your journey. Share your questions and thoughts with me.</value></data>
+  <data name="AriaGuideTalkHeading" xml:space="preserve"><value>How to talk</value></data>
+  <data name="AriaGuideTalk" xml:space="preserve"><value>Close this window and press Enter to open chat.
+Type /Aria, a space, and your question.
+Press Enter again to send.</value></data>
+  <data name="AriaGuideExamplesHeading" xml:space="preserve"><value>Examples</value></data>
+  <data name="AriaGuideExamples" xml:space="preserve"><value>/Aria How does a swordsman change class?
+/Aria Hello, my name is Ming
+/Aria Which monsters drop the Loch Feather?</value></data>
+  <data name="AriaGuideAnywhereHeading" xml:space="preserve"><value>Find me anywhere</value></data>
+  <data name="AriaGuideAnywhere" xml:space="preserve"><value>You can talk to me from other maps, too. Questions and replies appear only in your chat. Please wait for my reply before asking again.</value></data>
+  <data name="AriaGuideAliasesHeading" xml:space="preserve"><value>You can also use:</value></data>
+  <data name="AriaGuideAliases" xml:space="preserve"><value>/aria, /艾莉雅, /小助理</value></data>
 </root>

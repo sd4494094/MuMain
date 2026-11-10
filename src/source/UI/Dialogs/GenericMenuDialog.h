@@ -114,7 +114,8 @@ namespace mu::ui::window
 
         bool IsNpcMenuVisible() const
         {
-            return m_bActive && (m_Active.id == "reset-npc" || m_Active.id == "leveling-warp");
+            return m_bActive &&
+                   (m_Active.id == "reset-npc" || m_Active.id == "leveling-warp" || m_Active.id == "aria-guide");
         }
         Rml::ElementDocument* GetPlacedDocument() const override
         {

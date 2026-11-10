@@ -3,6 +3,8 @@
 #include "RmlLayoutFixture.h"
 #include "UI/Core/WindowManager.h"
 #include "UI/Dialogs/GenericMenuDialog.h"
+#include "UI/NPCs/AriaGuideDialogue.h"
+#include "I18N/All.h"
 #include "UI/RmlBridge/RmlClickSounds.h"
 #include "UI/RmlBridge/RmlElementBox.h"
 #include "UI/RmlBridge/RmlTheme.h"
@@ -21,6 +23,12 @@ public:
     {
         UI::RmlBridge::RegisterClickSoundProperty();
         REQUIRE(Rml::LoadFontFace(std::string(MU_FONT_DIR) + "/NotoSansSC-Regular.otf", true));
+        previousLocale = I18N::GetCurrentLocale();
+        I18N::SetLocale("zh-CN");
+        previousScene = SceneFlag;
+        SceneFlag = MAIN_SCENE;
+        previousMenu = mu::ui::window::g_pGenericMenuDialog;
+        mu::ui::window::g_pGenericMenuDialog = &dialog;
         previousWidth = WindowWidth;
         previousHeight = WindowHeight;
         WindowWidth = viewport.x;
@@ -35,6 +43,9 @@ public:
     }
     ~MenuFixture()
     {
+        I18N::SetLocale(previousLocale.c_str());
+        SceneFlag = previousScene;
+        mu::ui::window::g_pGenericMenuDialog = previousMenu;
         WindowWidth = previousWidth;
         WindowHeight = previousHeight;
         dialog.Release();
@@ -60,14 +71,14 @@ public:
         }
         layout.Refresh();
     }
-    void CheckFixedPanel()
+    void CheckFixedPanel(const std::string& expectedTitle = "转生导师·里奥")
     {
         SelectDocument();
         auto* panel = document->GetElementById("panel");
         auto* title = document->GetElementById("title");
         REQUIRE(panel);
         REQUIRE(title);
-        CHECK(title->GetInnerRML() == "转生导师·里奥");
+        CHECK(title->GetInnerRML() == expectedTitle);
         CHECK(title->GetComputedValues().font_size() ==
               doctest::Approx(UI::RmlBridge::NativeTextPx(UI::Scaling::FontRole::Normal)));
         Rml::Vector2f before, size;
@@ -156,6 +167,9 @@ public:
         CHECK(body->GetScrollTop() == doctest::Approx(0.f));
     }
 
+    EGameScene previousScene = MAIN_SCENE;
+    std::string previousLocale;
+    mu::ui::window::CGenericMenuDialog* previousMenu = nullptr;
     UI::Tests::RmlLayoutFixture layout;
     std::filesystem::path previousDirectory;
     std::string previousTheme;
@@ -333,4 +347,107 @@ TEST_CASE("Warp preview shows authoritative quotes before action including disab
     REQUIRE(fixture.dialog.ShowOrUpdate(Menu(selected)));
     fixture.SelectDocument();
     CHECK_FALSE(fixture.document->GetElementById("warp_preview")->IsVisible(true));
+}
+
+TEST_CASE("Aria guide uses the fixed NPC frame and fits all three examples [ui][aria-guide]")
+{
+    for (const std::string theme : {"legacy", "classic", "modern"})
+        for (const Rml::Vector2i viewport :
+             {Rml::Vector2i{800, 600}, {1280, 720}, {1920, 1080}, {2560, 1440}, {3440, 1440}, {3840, 2160}})
+            for (int scale : {75, 100, 125, 150})
+            {
+                CAPTURE(theme);
+                CAPTURE(viewport.x);
+                CAPTURE(viewport.y);
+                CAPTURE(scale);
+                MenuFixture fixture(theme, viewport, scale);
+                CHARACTER aria{};
+                aria.Object.Live = true;
+                aria.Object.Kind = KIND_NPC;
+                aria.MonsterIndex = MONSTER_CREATOR_GODDESS_ARIA;
+                REQUIRE(UI::Npc::TryShowAriaGuide(aria));
+                REQUIRE(UI::Npc::TryShowAriaGuide(aria));
+                fixture.SelectDocument();
+                fixture.CheckFixedPanel("创世神·艾莉雅");
+                auto* body = fixture.document->GetElementById("npc_lines_container");
+                REQUIRE(body);
+                CHECK(body->GetScrollHeight() <= body->GetClientHeight() + 1.f);
+                CHECK(body->GetScrollWidth() <= body->GetClientWidth() + 1.f);
+                const auto content = body->GetInnerRML();
+                CHECK(content.find("/Aria 剑士如何转职？") != Rml::String::npos);
+                CHECK(content.find("/Aria 你好，我叫小明") != Rml::String::npos);
+                CHECK(content.find("/Aria 洛克之羽打什么怪掉落？") != Rml::String::npos);
+                CHECK(content.find("/aria、/艾莉雅、/小助理") != Rml::String::npos);
+                CHECK(content.find("再按 Enter 发送。") != Rml::String::npos);
+                CHECK_FALSE(fixture.document->GetElementById("answers_container")->IsVisible(true));
+                CHECK_FALSE(fixture.document->GetElementById("warp_preview")->IsVisible(true));
+                Rml::Vector2f bodyPosition, bodySize, closePosition, closeSize;
+                auto* close = fixture.document->GetElementById("btn_exit");
+                REQUIRE(close);
+                REQUIRE(UI::RmlBridge::DrawnBox(*body, Rml::BoxArea::Border, bodyPosition, bodySize));
+                REQUIRE(UI::RmlBridge::DrawnBox(*close, Rml::BoxArea::Border, closePosition, closeSize));
+                CHECK(bodyPosition.y + bodySize.y <= closePosition.y + 1.f);
+                close->Click();
+                fixture.dialog.Update();
+                CHECK_FALSE(fixture.dialog.IsVisible());
+                CHECK_FALSE(fixture.document->IsVisible());
+                REQUIRE(UI::Npc::TryShowAriaGuide(aria));
+                fixture.SelectDocument();
+                fixture.document->GetElementById("frame_corner_close")->Click();
+                fixture.dialog.Update();
+                CHECK_FALSE(fixture.dialog.IsVisible());
+                // Closing the guide must allow an unrelated NPC to open immediately,
+                // with no queued guide or duplicate page left behind.
+                int selected = -1;
+                REQUIRE(fixture.dialog.ShowOrUpdate(Menu(selected)));
+                fixture.SelectDocument();
+                fixture.CheckFirstLine("下一次");
+                fixture.Click(2);
+                CHECK_FALSE(fixture.dialog.IsVisible());
+            }
+}
+
+TEST_CASE("Aria guide ignores unrelated speakers and preserves other active menus [ui][aria-guide]")
+{
+    MenuFixture fixture("legacy", {1920, 1080}, 100);
+    CHARACTER aria{};
+    aria.Object.Live = true;
+    aria.Object.Kind = KIND_NPC;
+    aria.MonsterIndex = MONSTER_CREATOR_GODDESS_ARIA;
+    SUBCASE("different NPC")
+    {
+        aria.MonsterIndex = MONSTER_LEO_THE_HELPER;
+        CHECK_FALSE(UI::Npc::TryShowAriaGuide(aria));
+    }
+    SUBCASE("dead object")
+    {
+        aria.Object.Live = false;
+        CHECK_FALSE(UI::Npc::TryShowAriaGuide(aria));
+    }
+    SUBCASE("player cannot impersonate Aria")
+    {
+        aria.Object.Kind = KIND_PLAYER;
+        CHECK_FALSE(UI::Npc::TryShowAriaGuide(aria));
+    }
+    SUBCASE("outside the game")
+    {
+        SceneFlag = LOG_IN_SCENE;
+        CHECK_FALSE(UI::Npc::TryShowAriaGuide(aria));
+    }
+    SUBCASE("unavailable UI")
+    {
+        mu::ui::window::g_pGenericMenuDialog = nullptr;
+        CHECK_FALSE(UI::Npc::TryShowAriaGuide(aria));
+        mu::ui::window::g_pGenericMenuDialog = &fixture.dialog;
+    }
+    SUBCASE("unrelated menu stays open")
+    {
+        int selected = -1;
+        REQUIRE(fixture.dialog.ShowOrUpdate(Menu(selected)));
+        CHECK_FALSE(UI::Npc::TryShowAriaGuide(aria));
+        fixture.SelectDocument();
+        fixture.CheckFirstLine("下一次");
+        fixture.Click(2);
+    }
+    CHECK_FALSE(fixture.dialog.IsVisible());
 }

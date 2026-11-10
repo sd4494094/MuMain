@@ -7,6 +7,7 @@
 #include "Core/Utilities/Log/MuLogger.h"
 #include "UI/Chat/Chat.h"
 #include "UI/Chat/ChatMessages.h"
+#include "UI/NPCs/AriaGuideDialogue.h"
 #include "UI/Combat/SiegeUpdates.h"
 #include "UI/Events/DoppelgangerUpdates.h"
 #include "UI/Events/EmpireGuardianUpdates.h"
@@ -2016,6 +2017,10 @@ void ReceiveChatKey(const BYTE* ReceiveBuffer)
     auto Data = (LPPCHATING_KEY)ReceiveBuffer;
     int Key = ((int)(Data->KeyH) << 8) + Data->KeyL;
     int Index = FindCharacterIndex(Key);
+    if (Index < 0 || Index >= MAX_CHARACTERS_CLIENT)
+        return;
+    if (UI::Npc::TryShowAriaGuide(CharactersClient[Index]))
+        return;
 
     if (Hero->GuildStatus == G_MASTER && wcscmp(CharactersClient[Index].ID, L"길드 마스터") == 0)
     {

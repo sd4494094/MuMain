@@ -8,12 +8,12 @@
 </head>
 <body>
  <div id="panel" data-model="generic_menu_dialog" data-style---text-px="text_px + 'px'"
-      data-class-warp="menu_id == 'leveling-warp'" data-class-reset="menu_id == 'reset-npc'">
+      data-class-warp="menu_id == 'leveling-warp'" data-class-reset="menu_id == 'reset-npc'" data-class-aria-guide="menu_id == 'aria-guide'">
   <div class="frame-piece frame-top"></div><div class="frame-piece frame-left"></div>
   <div class="frame-piece frame-right"></div><div class="frame-piece frame-bottom"></div>
   <span id="title" class="sharp-text" data-style-font-size="text_px + 'px'">{{title}}</span>
   <div id="npc_lines_container" class="nd-npc-lines gmd-lines scroll-pane sharp-text" data-style-font-size="text_px + 'px'">
-   <div class="nd-line gmd-line" data-for="line : lines">{{line.text}}</div>
+   <div class="nd-line gmd-line" data-for="line : lines" data-class-section="line.bold">{{line.text}}</div>
   </div>
   <div id="warp_preview" class="sharp-text" data-style-font-size="text_px + 'px'">
    <div id="warp_preview_name">{{preview_name}}</div>

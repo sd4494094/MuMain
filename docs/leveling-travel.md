@@ -86,3 +86,16 @@ The wing/halo appearance upgrade is client-only: install its matching executable
 monster model definitions and private Aria assets together, with the game closed.
 It needs no server restart and changes neither player equipment nor NPC placement.
 Preserve the previous client backup until the appearance is verified in game.
+
+
+### Talking to Creator Goddess Aria
+
+Click Aria to open a fixed guide on the right, using the same frame and text size
+as other NPC dialogues. It includes three examples, all supported command aliases,
+and instructions to close the guide, press Enter, type `/Aria question`, then press
+Enter again. Replies and the question echo appear only in the asking player's chat.
+The commands also work on other maps. Wait for a reply before asking again.
+
+Use the fixed bottom exit button, the corner close area, or Escape to close the
+guide. The guide does not hold an NPC session, and can be reopened without queuing
+duplicate pages. Aria's appearance and other NPC menus are unchanged.
