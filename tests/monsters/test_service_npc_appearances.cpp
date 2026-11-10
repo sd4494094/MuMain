@@ -750,17 +750,22 @@ void CheckHaloAfterHeadTurn(BMD& model, vec34_t* bones, const vec34_t* reference
     const float headTop = MeshHeightBound(model, 0, bones, true);
     const float haloBottom = MeshHeightBound(model, Presentation::AriaHaloMesh, bones, false);
     CHECK(haloBottom - headTop >= 12.f);
-    // Head clearance alone allowed the old oversized halo to drift visually into the upper wing.
-    const float x = bones[Presentation::AriaHaloBone][0][3] - reference[20][0][3];
-    const float y = bones[Presentation::AriaHaloBone][1][3] - reference[20][1][3];
-    const float z = bones[Presentation::AriaHaloBone][2][3] - reference[20][2][3];
-    CHECK(x * x + y * y < 1.f);
+    // The player-visible center is the torso axis, not the independently offset head joint.
+    constexpr int PelvisBone = 2;
+    constexpr int ChestBone = 18;
+    constexpr int HeadBone = 20;
+    const float torsoX = (reference[PelvisBone][0][3] + reference[ChestBone][0][3]) * 0.5f;
+    const float torsoY = (reference[PelvisBone][1][3] + reference[ChestBone][1][3]) * 0.5f;
+    const float x = bones[Presentation::AriaHaloBone][0][3] - torsoX;
+    const float y = bones[Presentation::AriaHaloBone][1][3] - torsoY;
+    const float z = bones[Presentation::AriaHaloBone][2][3] - reference[HeadBone][2][3];
+    CHECK(x * x + y * y < 0.01f);
     CHECK(z >= 51.5f);
     CHECK(z <= 52.5f);
 }
 } // namespace
 
-TEST_CASE("Service NPC halo: body anchor resists head turns at every facing and half frame [service-npc]")
+TEST_CASE("Service NPC halo: torso axis stays aligned at every facing and half frame [service-npc]")
 {
     if (!HasPrivateAssets())
         return;
