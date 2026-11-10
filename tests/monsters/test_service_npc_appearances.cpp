@@ -2,6 +2,7 @@
 #include "Camera/CameraState.h"
 #include "Camera/CameraConfig.h"
 #include "Engine/Object/CharacterAttachments.h"
+#include "Engine/Object/ObjectPose.h"
 #include "json.hpp"
 #include "Camera/CameraProjection.h"
 #include "Render/Characters/ServiceNpcHalo.h"
@@ -474,10 +475,11 @@ TEST_CASE("Service NPC rendering: fill light and armor shine exclude the face cl
     AriaDrawRecorder recorder;
     ClearSprites();
     REQUIRE(Rendering::DrawBody(&model, &object, look));
-    CHECK(recorder.draws.size() == 14);
+    CHECK(recorder.draws.size() == 13);
     for (const auto& draw : recorder.draws)
     {
         CHECK(draw.mesh != 5);
+        CHECK(draw.mesh != Data::Monsters::ServiceNpcPresentation::AriaHaloMesh);
         CHECK(draw.alpha == doctest::Approx(0.5f));
         if (draw.flags == RENDER_TEXTURE && draw.mesh == 0)
         {
@@ -1191,4 +1193,109 @@ TEST_CASE("Service NPC halo: native camera preview retains ring geometry and the
         REQUIRE(Render::Characters::ServiceNpcHalo::Align(object, body, bones.get(), camera, false, &wing));
         ExportHaloPose(facing == 0.f ? "southwest-after" : "southeast-after", body, bones.get(), wing, camera);
     }
+}
+
+TEST_CASE("Service NPC halo: live attachment frame and late glow agree after wing draws [service-npc]")
+{
+    if (!HasPrivateAssets())
+        return;
+    namespace Rendering = Render::Characters::ServiceNpcRendering;
+    MonsterRecorder::CreationScope creation(0);
+    CHARACTER* character = creation.Create(MONSTER_CREATOR_GODDESS_ARIA);
+    REQUIRE(character != nullptr);
+    OBJECT& object = character->Object;
+    BMD& body = Models[HaloPresentation::AriaBodyModel];
+    BMD& wingModel = Models[HaloPresentation::AriaWingModel];
+    REQUIRE(Engine::Object::ServiceNpcs::PrepareDisplayWing(character));
+    if (object.BoneTransform == nullptr)
+        object.BoneTransform = new vec34_t[MAX_BONES];
+    object.EnableBoneMatrix = true;
+    object.Alpha = 1.f;
+    object.Scale = 1.f;
+    object.CurrentAction = 0;
+    object.PriorAction = 0;
+    object.AnimationFrame = 0.5f;
+    object.PriorAnimationFrame = 0.5f;
+    Vector(0.f, 200.f, 0.f, object.Position);
+    Vector(32.f, 8.f, 0.f, object.HeadAngle);
+    body.BodyHeight = 0.f;
+    body.BodyScale = object.Scale;
+    VectorCopy(object.Position, body.BodyOrigin);
+    const CameraState camera = NativeHaloCamera();
+    auto expected = std::make_unique<vec34_t[]>(MAX_BONES);
+    for (const float facing : {0.f, 90.f})
+        for (const float wingFrame : {0.f, 0.5f, 1.f, 2.5f})
+        {
+            Vector(0.f, 0.f, facing, object.Angle);
+            body.CurrentAction = 0;
+            body.Animation(object.BoneTransform, object.AnimationFrame, object.PriorAnimationFrame, 0, object.Angle,
+                           object.HeadAngle, false, false);
+            Engine::Object::Pose::Record(&object, &body, false);
+            REQUIRE(HaloAttachments::BeginPlan(character));
+            auto& wing = HaloAttachments::Plan(character, &character->Wing, HaloPresentation::AriaWingModel, 0.f, 0.f,
+                                               HaloPresentation::AriaWingOffsetZ, false, true, 47,
+                                               HaloPresentation::AriaWingScale, 0.3f);
+            PoseHaloWing(body, object.BoneTransform, wingModel, wing, wingFrame);
+            CHECK(HaloAttachments::Find(character, &character->Wing, wing.type, true) == nullptr);
+            std::copy_n(&object.BoneTransform[0][0][0], MAX_BONES * 12, &expected[0][0][0]);
+            REQUIRE(Render::Characters::ServiceNpcHalo::Align(object, body, expected.get(), camera, false, &wing));
+            ClearSprites();
+            REQUIRE(Render::Characters::ServiceNpcEffects::UpdateHaloForView(character, &object, &body, camera));
+            vec3_t lightCenter = {};
+            int lights = 0;
+            for (int index = 0; index < MAX_SPRITES; ++index)
+            {
+                const auto& sprite = Sprites[index];
+                if (!sprite.Live || sprite.Type != BITMAP_LIGHT)
+                    continue;
+                VectorAdd(lightCenter, sprite.Position, lightCenter);
+                ++lights;
+            }
+            REQUIRE(lights == 8);
+            for (int axis = 0; axis < 3; ++axis)
+            {
+                CHECK(object.BoneTransform[HaloPresentation::AriaHaloBone][axis][3] ==
+                      doctest::Approx(expected[HaloPresentation::AriaHaloBone][axis][3]).epsilon(0.00001));
+                const float center =
+                    expected[HaloPresentation::AriaHaloBone][axis][3] * body.BodyScale + body.BodyOrigin[axis];
+                CHECK(lightCenter[axis] / lights == doctest::Approx(center).epsilon(0.00001));
+            }
+
+            // Match the real transition from entity/view updates into character draws.
+            HaloAttachments::BeginFrame();
+            REQUIRE(HaloAttachments::Find(character, &character->Wing, wing.type, true) == &wing);
+            body.Transform(object.BoneTransform, object.BoundingBoxMin, object.BoundingBoxMax, nullptr, true);
+            AriaDrawRecorder recorder;
+            REQUIRE(Rendering::DrawBody(&body, &object, DrawLook::Of(object)));
+            CHECK(std::none_of(recorder.draws.begin(), recorder.draws.end(), [&](const auto& draw)
+                               { return draw.model == &body && draw.mesh == HaloPresentation::AriaHaloMesh; }));
+            const size_t bodyDraws = recorder.draws.size();
+            RenderCharacterBackItem(character, &object, true);
+            REQUIRE(recorder.draws.size() > bodyDraws + 1);
+            const auto& halo = recorder.draws.back();
+            CHECK(halo.model == &body);
+            CHECK(halo.mesh == HaloPresentation::AriaHaloMesh);
+            CHECK(halo.blendMesh == HaloPresentation::AriaHaloMesh);
+            CHECK(halo.flags == RENDER_TEXTURE);
+            CHECK((halo.flags & RENDER_NODEPTH) == 0);
+            CHECK(halo.skin.bones == object.BoneTransform);
+            CHECK(halo.skin.translate);
+            CHECK(halo.bodyScale == doctest::Approx(object.Scale));
+            for (size_t index = bodyDraws; index + 1 < recorder.draws.size(); ++index)
+                CHECK(recorder.draws[index].model == &wingModel);
+            for (int axis = 0; axis < 3; ++axis)
+                CHECK(halo.bodyOrigin[axis] == doctest::Approx(object.Position[axis]));
+            CHECK(std::count_if(recorder.draws.begin(), recorder.draws.end(), [&](const auto& draw)
+                                { return draw.model == &body && draw.mesh == HaloPresentation::AriaHaloMesh; }) == 1);
+
+            recorder.draws.clear();
+            DrawLook hidden = DrawLook::Of(object);
+            hidden.hiddenMesh = HaloPresentation::AriaHaloMesh;
+            CHECK(Rendering::DrawHalo(&body, &object, hidden, object.BoneTransform, true));
+            CHECK(recorder.draws.empty());
+            hidden.hiddenMesh = -2;
+            CHECK(Rendering::DrawHalo(&body, &object, hidden, object.BoneTransform, true));
+            CHECK(recorder.draws.empty());
+        }
+    ClearSprites();
 }

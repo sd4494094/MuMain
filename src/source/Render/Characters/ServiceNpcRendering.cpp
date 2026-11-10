@@ -88,6 +88,8 @@ void DrawBodyBase(BMD* model, const DrawLook& look, bool lit)
         fill[axis] = std::clamp(model->BodyLight[axis], BodyFill[axis], 1.f);
     for (int mesh = 0; mesh < model->NumMeshs; ++mesh)
     {
+        if (mesh == Presentation::AriaHaloMesh)
+            continue;
         // A softly filled face must not inherit the terrain's dark directional lighting.
         model->LightEnable = mesh == FaceMesh || IsShoulderOrArm(mesh) ? false : lit;
         const Color& color = mesh == FaceMesh ? FaceLight : (IsShoulderOrArm(mesh) ? ArmFill : fill);
@@ -152,6 +154,26 @@ bool DrawBody(BMD* model, const OBJECT* object, const DrawLook& look)
     const LightScope restore(model);
     DrawBodyBase(model, look, model->LightEnable);
     DrawArmorShine(model, look);
+    return true;
+}
+
+bool DrawHalo(BMD* model, const OBJECT* object, const DrawLook& look, vec34_t* bones, bool translate)
+{
+    if (object->Kind != KIND_NPC || object->Type != Presentation::AriaBodyModel || model->NumMeshs != BodyMeshCount ||
+        model->NumBones <= Presentation::AriaHaloBone || bones == nullptr)
+        return false;
+    if (look.hiddenMesh == -2 || look.hiddenMesh == Presentation::AriaHaloMesh || look.alpha < 0.01f ||
+        object->RenderType == RENDER_DARK)
+        return true;
+    // Wing and shadow passes change the shared skin state. Rebind the final body pose before this late mesh.
+    model->BodyHeight = 0.f;
+    model->BodyScale = object->Scale;
+    VectorCopy(object->Position, model->BodyOrigin);
+    model->Transform(bones, object->BoundingBoxMin, object->BoundingBoxMax, nullptr, translate);
+    const LightScope restore(model);
+    model->LightEnable = false;
+    SetLight(model, BodyFill);
+    DrawMesh(model, Presentation::AriaHaloMesh, look, RENDER_TEXTURE);
     return true;
 }
 

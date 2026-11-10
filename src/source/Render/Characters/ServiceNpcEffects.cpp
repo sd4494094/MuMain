@@ -5,6 +5,7 @@
 #include "Render/Renderer/MuRenderer.h"
 #include "Camera/CameraState.h"
 #include "Engine/Object/ZzzCharacter.h"
+#include "Engine/Object/CharacterAttachments.h"
 
 #include "Data/GameData/MonsterData/ServiceNpcPresentation.h"
 #include "Render/Effects/ZzzEffect.h"
@@ -83,8 +84,18 @@ bool Update(CHARACTER* character, OBJECT* object, BMD* model)
 
 bool UpdateHaloForView(CHARACTER* character, OBJECT* object, BMD* model, const CameraState& camera)
 {
-    if (character->MonsterIndex != MONSTER_CREATOR_GODDESS_ARIA ||
-        !ServiceNpcHalo::Align(*object, *model, object->BoneTransform, camera, false))
+    if (character->MonsterIndex != MONSTER_CREATOR_GODDESS_ARIA)
+        return false;
+    // This is the update's next draw plan. Find() only sees the current draw frame.
+    const Engine::Object::Attachments::Slot* wing = nullptr;
+    Engine::Object::Attachments::ForEachPlanned(character,
+                                                [&](Engine::Object::Attachments::Slot& slot)
+                                                {
+                                                    if (slot.part == &character->Wing &&
+                                                        slot.type == Presentation::AriaWingModel && slot.rightHandItem)
+                                                        wing = &slot;
+                                                });
+    if (!ServiceNpcHalo::Align(*object, *model, object->BoneTransform, camera, false, wing))
         return false;
     const mu::ScopedBloomExclusion classicCharacters;
     SpawnHaloLights(object, model);

@@ -61,7 +61,7 @@ of the initial display speed. Her compact double halo sits close above the visib
 star points, separated from the face throughout the idle animation. The halo stays
 vertically above the torso centerline while she looks around. Its center follows the midpoint
 between pelvis and chest, independent of head turns. The final view also keeps the ring visually centered above the torso when Aria is away from
-the middle of the screen; orbiting stars share that placement. Its complete ring clears the visible hair and sits ahead of its own animated wings, so an upper wing cannot hide it. Other world objects still occlude it normally. The face receives soft fill light; armor receives restrained native
+the middle of the screen; orbiting stars share that placement. Its complete ring clears the visible hair and sits ahead of its own animated wings, so an upper wing cannot hide it. The luminous ring is drawn after her own wings, so their opaque surface cannot overwrite it. Other world objects still occlude it normally. Its orbiting lights use the same frame of wing animation as the ring. The face receives soft fill light; armor receives restrained native
 metallic sheen and chest/arm stars, leaving skin and cloth out of the sheen.
 Shoulders and arms receive local fill light without changing face or hair brightness.
 Name height and native NPC selection highlighting remain unchanged. Wing glow

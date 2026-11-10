@@ -61,6 +61,7 @@
 #include "Data/GameData/MonsterData/ServiceNpcPresentation.h"
 #include "Render/Characters/ServiceNpcEffects.h"
 #include "Render/Characters/ServiceNpcHalo.h"
+#include "Render/Characters/ServiceNpcRendering.h"
 #include "GameLogic/Monsters/MonsterAttackPlay.h"
 #include "GameLogic/Monsters/MonsterSoundEvents.h"
 #include "GameLogic/Monsters/MonsterNames.h"
@@ -15942,6 +15943,10 @@ void RenderServiceNpcWing(const CHARACTER* c, bool translate)
     const LinkedPartLook look{c->Object.Scale * Presentation::AriaWingScale, c->Light};
     RenderLinkObject(0.f, 0.f, Presentation::AriaWingOffsetZ, c, wing, wing->Type, wing->Level, wing->ExcellentFlags,
                      false, translate, 0, true, -1, &look);
+    // Additive materials do not write depth: a wing drawn later would cover even a ring in front of it.
+    const OBJECT* object = &c->Object;
+    Render::Characters::ServiceNpcRendering::DrawHalo(&Models[object->Type], object, DrawLook::Of(*object),
+                                                      DrawnPose(object), translate);
 }
 } // namespace
 
