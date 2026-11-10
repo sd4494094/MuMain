@@ -1,5 +1,8 @@
 #include "stdafx.h"
 #include "Camera/CameraState.h"
+#include "Camera/CameraConfig.h"
+#include "Engine/Object/CharacterAttachments.h"
+#include "json.hpp"
 #include "Camera/CameraProjection.h"
 #include "Render/Characters/ServiceNpcHalo.h"
 
@@ -892,13 +895,15 @@ float CheckHaloScreenSample(const OBJECT& object, BMD& model, vec34_t* bones, co
     REQUIRE(CameraProjection::WorldToWindowPixel(camera, torso, &torsoX, &torsoY));
     REQUIRE(CameraProjection::WorldToWindowPixel(camera, halo, &haloX, &haloY));
     const float beforeError = std::abs(torsoX - haloX);
-    const float height = halo[2];
     REQUIRE(Render::Characters::ServiceNpcHalo::Align(object, model, bones, camera, world));
     HaloPoint(model, bones, Presentation::AriaHaloBone, world, halo);
     REQUIRE(CameraProjection::WorldToWindowPixel(camera, halo, &haloX, &haloY));
     CHECK(std::abs(torsoX - haloX) < 0.03f);
     CHECK(haloY < torsoY);
-    CHECK(halo[2] == height);
+    CHECK(std::isfinite(halo[2]));
+    for (int row = 0; row < 3; ++row)
+        for (int column = 0; column < 3; ++column)
+            CHECK(bones[Presentation::AriaHaloBone][row][column] == original[Presentation::AriaHaloBone][row][column]);
     for (int bone = 0; bone < Presentation::AriaHaloBone; ++bone)
         CHECK(std::memcmp(bones[bone], original[bone], sizeof(vec34_t)) == 0);
     const float alignedX = bones[Presentation::AriaHaloBone][0][3];
@@ -910,7 +915,7 @@ float CheckHaloScreenSample(const OBJECT& object, BMD& model, vec34_t* bones, co
 }
 } // namespace
 
-TEST_CASE("Service NPC halo: final perspective centers the actual mesh at screen edges [service-npc]")
+TEST_CASE("Service NPC halo: final perspective centers the halo anchor at screen edges [service-npc]")
 {
     if (!HasPrivateAssets())
         return;
@@ -971,4 +976,219 @@ TEST_CASE("Service NPC halo: invalid views and unrelated models remain unchanged
     object.Type = MODEL_PLAYER;
     CHECK_FALSE(Render::Characters::ServiceNpcHalo::Align(object, model, bones.get(), HaloCamera(), false));
     model.NumBones = 0;
+}
+
+namespace
+{
+namespace HaloPresentation = Data::Monsters::ServiceNpcPresentation;
+namespace HaloAttachments = Engine::Object::Attachments;
+
+CameraState NativeHaloCamera(float yaw = -45.f)
+{
+    constexpr float Distance = 1735.f;
+    constexpr float CameraHeightOffset = 150.f;
+    const float angle = yaw * Q_PI / 180.f;
+    CameraState camera;
+    Vector(-Distance * std::sin(angle), -Distance * std::cos(angle), Distance - CameraHeightOffset, camera.Position);
+    Vector(-48.5f, 0.f, yaw, camera.Angle);
+    camera.FOV = HFovToVFov(40.f, 1920.f / 1080.f);
+    CameraProjection::UpdateView(camera, 0, 0, 1920, 1080);
+    return camera;
+}
+
+void VertexEye(const Vertex_t& vertex, const vec34_t* bones, float scale, const vec3_t origin,
+               const CameraState& camera, vec3_t eye)
+{
+    vec3_t point;
+    VectorTransform(vertex.Position, bones[vertex.Node], point);
+    for (int axis = 0; axis < 3; ++axis)
+        point[axis] = point[axis] * scale + origin[axis];
+    VectorTransform(point, camera.Matrix, eye);
+}
+
+float MeshFront(const BMD& model, int meshIndex, const vec34_t* bones, float scale, const vec3_t origin,
+                const CameraState& camera)
+{
+    float front = std::numeric_limits<float>::lowest();
+    const auto& mesh = model.Meshs[meshIndex];
+    for (int index = 0; index < mesh.NumVertices; ++index)
+    {
+        vec3_t eye;
+        VertexEye(mesh.Vertices[index], bones, scale, origin, camera, eye);
+        front = std::max(front, eye[2]);
+    }
+    return front;
+}
+
+float MeshVerticalRatio(const BMD& model, int meshIndex, const vec34_t* bones, float scale, const vec3_t origin,
+                        const CameraState& camera, bool maximum)
+{
+    float bound = maximum ? std::numeric_limits<float>::lowest() : std::numeric_limits<float>::max();
+    const auto& mesh = model.Meshs[meshIndex];
+    for (int index = 0; index < mesh.NumVertices; ++index)
+    {
+        vec3_t eye;
+        VertexEye(mesh.Vertices[index], bones, scale, origin, camera, eye);
+        const float ratio = eye[1] / -eye[2];
+        bound = maximum ? std::max(bound, ratio) : std::min(bound, ratio);
+    }
+    return bound;
+}
+
+void PoseHaloWing(BMD& body, const vec34_t* bodyBones, BMD& wingModel, HaloAttachments::Slot& wing, float frame)
+{
+    wing.type = HaloPresentation::AriaWingModel;
+    wing.posed.scale = body.BodyScale * HaloPresentation::AriaWingScale;
+    vec3_t offset = {0.f, 0.f, HaloPresentation::AriaWingOffsetZ}, rotated, angle = {};
+    VectorRotate(offset, bodyBones[47], rotated);
+    for (int axis = 0; axis < 3; ++axis)
+        wing.posed.origin[axis] = body.BodyOrigin[axis] + rotated[axis] * body.BodyScale;
+    wingModel.CurrentAction = 0;
+    wingModel.Animation(wing.bones.get(), frame, frame, 0, angle, angle, true, true, bodyBones[47]);
+}
+
+nlohmann::json HaloMatrices(const vec34_t* bones, int count)
+{
+    auto result = nlohmann::json::array();
+    for (int bone = 0; bone < count; ++bone)
+        result.push_back({{bones[bone][0][0], bones[bone][0][1], bones[bone][0][2], bones[bone][0][3]},
+                          {bones[bone][1][0], bones[bone][1][1], bones[bone][1][2], bones[bone][1][3]},
+                          {bones[bone][2][0], bones[bone][2][1], bones[bone][2][2], bones[bone][2][3]}});
+    return result;
+}
+
+void ExportHaloPose(const char* label, const BMD& body, const vec34_t* bones, const HaloAttachments::Slot& wing,
+                    const CameraState& camera)
+{
+    const char* folder = std::getenv("MU_ARIA_VISIBILITY_EXPORT");
+    if (folder == nullptr)
+        return;
+    nlohmann::json data = {{"body", HaloMatrices(bones, body.NumBones)},
+                           {"wing", HaloMatrices(wing.bones.get(), HaloPresentation::AriaWingBoneCount)},
+                           {"scale", body.BodyScale},
+                           {"origin", {body.BodyOrigin[0], body.BodyOrigin[1], body.BodyOrigin[2]}},
+                           {"wingScale", wing.posed.scale},
+                           {"wingOrigin", {wing.posed.origin[0], wing.posed.origin[1], wing.posed.origin[2]}},
+                           {"camera", HaloMatrices(&camera.Matrix, 1)[0]},
+                           {"perspectiveX", camera.PerspectiveX},
+                           {"perspectiveY", camera.PerspectiveY}};
+    std::ofstream output(std::string(folder) + "/" + label + ".json");
+    REQUIRE(output.good());
+    output << data.dump(2);
+}
+} // namespace
+
+TEST_CASE("Service NPC halo: actual head and animated wings cannot cover the ring [service-npc]")
+{
+    if (!HasPrivateAssets())
+        return;
+    MonsterRecorder::LoadScope load(0);
+    load.Run(
+        []
+        {
+            OpenMonsterModel(MONSTER_MODEL_SERVICE_ARIA);
+            OpenMonsterModel(MONSTER_MODEL_SERVICE_ARIA_WINGS);
+        });
+    BMD& body = Models[HaloPresentation::AriaBodyModel];
+    BMD& wingModel = Models[HaloPresentation::AriaWingModel];
+    auto bones = std::make_unique<vec34_t[]>(MAX_BONES);
+    HaloAttachments::Slot wing;
+    wing.bones = std::make_unique<vec34_t[]>(MAX_BONES);
+    OBJECT object;
+    object.Kind = KIND_NPC;
+    object.Type = HaloPresentation::AriaBodyModel;
+    int samples = 0;
+    int previousDepthFailures = 0;
+    float minimumCrownGap = std::numeric_limits<float>::max();
+    for (const float scale : {0.7f, 1.5f})
+        for (const float side : {-450.f, 0.f, 450.f})
+            for (const float facing : {0.f, 45.f, 90.f, 135.f, 180.f, 225.f, 270.f, 315.f})
+                for (const float yaw : {-65.f, -45.f, -25.f})
+                    for (int action = 0; action < body.NumActions; ++action)
+                        for (const float bodyFrame : {0.f, 0.5f, 20.5f})
+                            for (const float wingFrame : {0.f, 0.5f, 1.f, 2.5f})
+                            {
+                                CameraState camera = NativeHaloCamera(yaw);
+                                body.BodyScale = scale;
+                                Vector(side, 0.f, 0.f, body.BodyOrigin);
+                                vec3_t angle = {0.f, 0.f, facing},
+                                       head = {bodyFrame == 0.f ? -64.f : 64.f, bodyFrame == 0.5f ? -16.f : 16.f};
+                                body.CurrentAction = static_cast<unsigned short>(action);
+                                body.Animation(bones.get(), bodyFrame, bodyFrame, body.CurrentAction, angle, head,
+                                               false, false);
+                                PoseHaloWing(body, bones.get(), wingModel, wing, wingFrame);
+                                const float wingFront = MeshFront(wingModel, 0, wing.bones.get(), wing.posed.scale,
+                                                                  wing.posed.origin, camera);
+                                const float previousRingFront = MeshFront(body, HaloPresentation::AriaHaloMesh,
+                                                                          bones.get(), scale, body.BodyOrigin, camera);
+                                previousDepthFailures += previousRingFront < wingFront ? 1 : 0;
+                                REQUIRE(Render::Characters::ServiceNpcHalo::Align(object, body, bones.get(), camera,
+                                                                                  false, &wing));
+                                const float headTop =
+                                    MeshVerticalRatio(body, 0, bones.get(), scale, body.BodyOrigin, camera, true);
+                                const float haloBottom =
+                                    MeshVerticalRatio(body, HaloPresentation::AriaHaloMesh, bones.get(), scale,
+                                                      body.BodyOrigin, camera, false);
+                                const float gap = (haloBottom - headTop) / camera.PerspectiveY;
+                                minimumCrownGap = std::min(minimumCrownGap, gap);
+                                CHECK(gap > 0.5f);
+                                const auto& mesh = body.Meshs[HaloPresentation::AriaHaloMesh];
+                                float nearest = std::numeric_limits<float>::max();
+                                for (int index = 0; index < mesh.NumVertices; ++index)
+                                {
+                                    vec3_t eye;
+                                    VertexEye(mesh.Vertices[index], bones.get(), scale, body.BodyOrigin, camera, eye);
+                                    nearest = std::min(nearest, eye[2]);
+                                }
+                                CHECK(nearest > wingFront + 0.5f * scale);
+                                ++samples;
+                            }
+    CHECK(samples == 3456);
+    CHECK(previousDepthFailures > 0);
+    MESSAGE("visibility samples: ", samples, "; minimum projected crown gap: ", minimumCrownGap,
+            "; old depth separation failures: ", previousDepthFailures);
+}
+
+TEST_CASE("Service NPC halo: native camera preview retains ring geometry and the selected facing [service-npc]")
+{
+    if (!HasPrivateAssets())
+        return;
+    MonsterRecorder::LoadScope load(0);
+    load.Run(
+        []
+        {
+            OpenMonsterModel(MONSTER_MODEL_SERVICE_ARIA);
+            OpenMonsterModel(MONSTER_MODEL_SERVICE_ARIA_WINGS);
+        });
+    BMD& body = Models[HaloPresentation::AriaBodyModel];
+    BMD& wingModel = Models[HaloPresentation::AriaWingModel];
+    auto bones = std::make_unique<vec34_t[]>(MAX_BONES);
+    HaloAttachments::Slot wing;
+    wing.bones = std::make_unique<vec34_t[]>(MAX_BONES);
+    OBJECT object;
+    object.Kind = KIND_NPC;
+    object.Type = HaloPresentation::AriaBodyModel;
+    const auto& mesh = body.Meshs[HaloPresentation::AriaHaloMesh];
+    for (int index = 0; index < mesh.NumVertices; ++index)
+    {
+        const auto& v = mesh.Vertices[index];
+        CHECK(v.Node == HaloPresentation::AriaHaloBone);
+        CHECK(std::abs(v.Position[0]) <= 24.001f);
+        CHECK(std::abs(v.Position[1]) <= 24.001f);
+        CHECK(std::abs(v.Position[2]) <= 1.201f);
+    }
+    // Server direction 2/4 -> wire 1/3 -> client (wire - 1) * 45 = 0/90 degrees.
+    for (const float facing : {0.f, 90.f})
+    {
+        CameraState camera = NativeHaloCamera();
+        body.BodyScale = 1.f;
+        Vector(0.f, 200.f, 0.f, body.BodyOrigin);
+        vec3_t angle = {0.f, 0.f, facing}, head = {};
+        body.CurrentAction = 0;
+        body.Animation(bones.get(), 0.f, 0.f, 0, angle, head, false, false);
+        PoseHaloWing(body, bones.get(), wingModel, wing, 0.f);
+        ExportHaloPose(facing == 0.f ? "southwest-before" : "southeast-before", body, bones.get(), wing, camera);
+        REQUIRE(Render::Characters::ServiceNpcHalo::Align(object, body, bones.get(), camera, false, &wing));
+        ExportHaloPose(facing == 0.f ? "southwest-after" : "southeast-after", body, bones.get(), wing, camera);
+    }
 }

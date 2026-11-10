@@ -51,17 +51,17 @@ player chat retains its previous-line behavior.
 ## Creator Goddess Aria
 
 The matching private client adds **创世神·艾莉雅 (Aria)**, a female decorative NPC
-at **Lorencia 140, 123**, beside the town fountain. Her independent wire number is **711** and
+at **Lorencia 140, 123**, beside the town fountain, facing southwest toward the square (spawn direction 2). Her independent wire number is **711** and
 client model slot is **220**. Her model combines adapted native MU geometry, animated
 wings, a halo and raised flying poses; the concept artwork is a visual direction,
 not a screenshot of the finished low-poly model. The upgraded appearance uses
 independent animated Illusion-style wings in a platinum, gold and violet palette,
 with visible native metallic +15 reflections and a cycling platinum/violet excellent glow. Her wing animation runs at 30%
-of the initial display speed. Her compact double halo sits close above the crown with a slight tilt and orbiting
+of the initial display speed. Her compact double halo sits close above the visible crown with a slight tilt and orbiting
 star points, separated from the face throughout the idle animation. The halo stays
 vertically above the torso centerline while she looks around. Its center follows the midpoint
 between pelvis and chest, independent of head turns. The final view also keeps the ring visually centered above the torso when Aria is away from
-the middle of the screen; orbiting stars share that placement. Normal depth overlap with wings is preserved. The face receives soft fill light; armor receives restrained native
+the middle of the screen; orbiting stars share that placement. Its complete ring clears the visible hair and sits ahead of its own animated wings, so an upper wing cannot hide it. Other world objects still occlude it normally. The face receives soft fill light; armor receives restrained native
 metallic sheen and chest/arm stars, leaving skin and cloth out of the sheen.
 Shoulders and arms receive local fill light without changing face or hair brightness.
 Name height and native NPC selection highlighting remain unchanged. Wing glow
