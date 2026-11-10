@@ -670,7 +670,16 @@ TEST_CASE(
                 const float z = sprite.Position[2] - bones[20][2][3];
                 CHECK(x * x + y * y + z * z > 15.f * 15.f);
                 if (sprite.Position[2] > headTop + 12.f)
+                {
                     ++overheadSprites;
+                    float radiusSquared = 0.f;
+                    for (int axis = 0; axis < 3; ++axis)
+                    {
+                        const float delta = sprite.Position[axis] - bones[Presentation::AriaHaloBone][axis][3];
+                        radiusSquared += delta * delta;
+                    }
+                    CHECK(std::sqrt(radiusSquared) == doctest::Approx(19.f));
+                }
             }
             CHECK(overheadSprites == 12);
         }
@@ -741,6 +750,13 @@ void CheckHaloAfterHeadTurn(BMD& model, vec34_t* bones, const vec34_t* reference
     const float headTop = MeshHeightBound(model, 0, bones, true);
     const float haloBottom = MeshHeightBound(model, Presentation::AriaHaloMesh, bones, false);
     CHECK(haloBottom - headTop >= 12.f);
+    // Head clearance alone allowed the old oversized halo to drift visually into the upper wing.
+    const float x = bones[Presentation::AriaHaloBone][0][3] - reference[20][0][3];
+    const float y = bones[Presentation::AriaHaloBone][1][3] - reference[20][1][3];
+    const float z = bones[Presentation::AriaHaloBone][2][3] - reference[20][2][3];
+    CHECK(x * x + y * y < 1.f);
+    CHECK(z >= 51.5f);
+    CHECK(z <= 52.5f);
 }
 } // namespace
 
@@ -753,6 +769,13 @@ TEST_CASE("Service NPC halo: body anchor resists head turns at every facing and 
     BMD& model = Models[Data::Monsters::ServiceNpcPresentation::AriaBodyModel];
     auto bones = std::make_unique<vec34_t[]>(MAX_BONES);
     auto reference = std::make_unique<vec34_t[]>(MAX_BONES);
+    const auto& halo = model.Meshs[Data::Monsters::ServiceNpcPresentation::AriaHaloMesh];
+    for (int index = 0; index < halo.NumVertices; ++index)
+    {
+        const auto& vertex = halo.Vertices[index];
+        CHECK(vertex.Node == Data::Monsters::ServiceNpcPresentation::AriaHaloBone);
+        CHECK(std::hypot(vertex.Position[0], vertex.Position[1]) <= 25.f);
+    }
     model.BodyScale = 1.f;
     Vector(0.f, 0.f, 0.f, model.BodyOrigin);
     const float headTurns[][2] = {{0.f, 0.f},   {-64.f, -16.f}, {-64.f, 16.f}, {64.f, -16.f},

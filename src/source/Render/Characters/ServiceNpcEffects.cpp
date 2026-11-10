@@ -12,7 +12,7 @@ namespace
 {
 namespace Presentation = Data::Monsters::ServiceNpcPresentation;
 constexpr int HaloLightCount = 8;
-constexpr float HaloRadius = 28.f;
+constexpr float HaloRadius = 19.f;
 constexpr float HaloPulseRate = 0.001f;
 constexpr float HaloBaseBrightness = 0.85f;
 constexpr float HaloBrightnessRange = 0.1f;
