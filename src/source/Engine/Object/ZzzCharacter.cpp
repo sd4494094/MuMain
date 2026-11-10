@@ -60,6 +60,7 @@
 #include "Engine/Object/ServiceNpcAppearance.h"
 #include "Data/GameData/MonsterData/ServiceNpcPresentation.h"
 #include "Render/Characters/ServiceNpcEffects.h"
+#include "Render/Characters/ServiceNpcHalo.h"
 #include "GameLogic/Monsters/MonsterAttackPlay.h"
 #include "GameLogic/Monsters/MonsterSoundEvents.h"
 #include "GameLogic/Monsters/MonsterNames.h"
@@ -6512,6 +6513,7 @@ void CheckCharacterPose(const OBJECT* o, BMD* model, bool reused)
     VectorCopy(o->HeadAngle, headAngle);
     model->Animation(PrepassBones, o->AnimationFrame, o->PriorAnimationFrame, o->PriorAction, angle, headAngle, false,
                      o->Pose.World, nullptr, o->CurrentAction);
+    Render::Characters::ServiceNpcHalo::Align(*o, *model, PrepassBones, g_Camera, o->Pose.World);
     RecordPrepassBones(PrepassBones, o->BoneTransform, model->NumBones, o->Type == MODEL_PLAYER);
 }
 

@@ -1,6 +1,10 @@
 #include "stdafx.h"
 
 #include "ServiceNpcEffects.h"
+#include "ServiceNpcHalo.h"
+#include "Render/Renderer/MuRenderer.h"
+#include "Camera/CameraState.h"
+#include "Engine/Object/ZzzCharacter.h"
 
 #include "Data/GameData/MonsterData/ServiceNpcPresentation.h"
 #include "Render/Effects/ZzzEffect.h"
@@ -73,9 +77,33 @@ bool Update(CHARACTER* character, OBJECT* object, BMD* model)
         return true;
     object->BlendMesh = Presentation::AriaHaloMesh;
     object->BlendMeshLight = HaloBaseBrightness + HaloBrightnessRange * std::sin(WorldTime * HaloPulseRate);
-    SpawnHaloLights(object, model);
     SpawnArmorLights(object, model);
     return true;
+}
+
+bool UpdateHaloForView(CHARACTER* character, OBJECT* object, BMD* model, const CameraState& camera)
+{
+    if (character->MonsterIndex != MONSTER_CREATOR_GODDESS_ARIA ||
+        !ServiceNpcHalo::Align(*object, *model, object->BoneTransform, camera, false))
+        return false;
+    const mu::ScopedBloomExclusion classicCharacters;
+    SpawnHaloLights(object, model);
+    return true;
+}
+
+void UpdateHalosForView(const CameraState& camera)
+{
+    for (int index = 0; index < MAX_CHARACTERS_CLIENT; ++index)
+    {
+        CHARACTER* character = &CharactersClient[index];
+        if (character->MonsterIndex != MONSTER_CREATOR_GODDESS_ARIA || !IsCharacterDrawn(character))
+            continue;
+        OBJECT* object = &character->Object;
+        BMD* model = &Models[object->Type];
+        model->BodyScale = object->Scale;
+        VectorCopy(object->Position, model->BodyOrigin);
+        UpdateHaloForView(character, object, model, camera);
+    }
 }
 
 void SpawnWing(BMD* model, OBJECT* object, int modelType, vec34_t* bones)

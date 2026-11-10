@@ -1,6 +1,8 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include "stdafx.h"
+#include "Render/Characters/ServiceNpcHalo.h"
+#include "Camera/CameraState.h"
 #include "Render/Characters/ServiceNpcRendering.h"
 #include "Data/DataHandler/DataFileIO.h"
 #include "Core/Utilities/FileHandle.h"
@@ -285,7 +287,7 @@ extern float BoneScale;
 // changed since. Other objects are animated into the shared bones for each draw.
 // The bones an object is drawn with: its own pose when the update built it, else bones of this draw's (it came into
 // view after the update ran). The draw records nothing on the object.
-static float (*DrawPose(const OBJECT* o, BMD* b, bool Translate, const ObjectGhost* ghost))[3][4]
+static float (*SampleDrawPose(const OBJECT* o, BMD* b, bool Translate, const ObjectGhost* ghost))[3][4]
 {
     const float frame = ghost != nullptr ? ghost->animationFrame : o->AnimationFrame;
     if (!o->EnableBoneMatrix)
@@ -303,8 +305,17 @@ static float (*DrawPose(const OBJECT* o, BMD* b, bool Translate, const ObjectGho
         bones = Engine::Object::Attachments::DrawBones();
         b->Animation(bones, frame, o->PriorAnimationFrame, o->PriorAction, o->Angle, o->HeadAngle, false, world);
     }
+    return bones;
+}
+
+static float (*DrawPose(const OBJECT* o, BMD* b, bool Translate, const ObjectGhost* ghost))[3][4]
+{
+    vec34_t* bones = SampleDrawPose(o, b, Translate, ghost);
+    Render::Characters::ServiceNpcHalo::Align(*o, *b, bones, g_Camera, !Translate);
 #ifdef MU_ENABLE_CONTROL_SOCKET
-    CheckCharacterPose(o, b, reused);
+    const bool reused = ghost == nullptr && Engine::Object::Pose::IsCurrent(o, b, !Translate);
+    if (o->EnableBoneMatrix)
+        CheckCharacterPose(o, b, reused);
 #endif
     return bones;
 }

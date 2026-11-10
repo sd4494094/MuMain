@@ -1,4 +1,7 @@
 #include "stdafx.h"
+#include "Camera/CameraState.h"
+#include "Camera/CameraProjection.h"
+#include "Render/Characters/ServiceNpcHalo.h"
 
 #include "MonsterCreationScope.h"
 #include "MonsterModelRecorder.h"
@@ -34,6 +37,15 @@ constexpr int NoahNumber = 710;
 constexpr int LeoNumber = 371;
 // The wire identity of the stat reset NPC, independent of similarly named helpers.
 constexpr int ErinNumber = 464;
+CameraState HaloCamera(float yaw = 0.f)
+{
+    CameraState camera;
+    Vector(0.f, -1100.f, 1000.f, camera.Position);
+    Vector(-45.f, 0.f, yaw, camera.Angle);
+    CameraProjection::UpdateView(camera, 0, 0, 1920, 1080);
+    return camera;
+}
+
 constexpr int NoahSlot = MODEL_MONSTER01 + static_cast<int>(MONSTER_MODEL_SERVICE_NOAH);
 constexpr int LeoSlot = MODEL_MONSTER01 + static_cast<int>(MONSTER_MODEL_SERVICE_LEO);
 
@@ -386,6 +398,7 @@ TEST_CASE(
     object.BoneTransform = bones.get();
     ClearSprites();
     REQUIRE(Render::Characters::ServiceNpcEffects::Update(character.get(), &object, &model));
+    REQUIRE(Render::Characters::ServiceNpcEffects::UpdateHaloForView(character.get(), &object, &model, HaloCamera()));
     CHECK(object.BlendMesh == Presentation::AriaHaloMesh);
     CHECK(object.BlendMeshLight >= 0.75f);
     CHECK(object.BlendMeshLight <= 0.95f);
@@ -659,6 +672,8 @@ TEST_CASE(
             CHECK(haloBottom - headTop >= 12.f);
             ClearSprites();
             REQUIRE(Render::Characters::ServiceNpcEffects::Update(character.get(), &object, &model));
+            REQUIRE(Render::Characters::ServiceNpcEffects::UpdateHaloForView(character.get(), &object, &model,
+                                                                             HaloCamera()));
             int overheadSprites = 0;
             for (int index = 0; index < MAX_SPRITES; ++index)
             {
@@ -852,4 +867,108 @@ TEST_CASE("Service NPC rendering: wing excellent cycles color and respects every
         CHECK(model.BodyLight[0] == doctest::Approx(0.2f));
     }
     CHECK(std::abs(excellentRed[0] - excellentRed[1]) > 0.07f);
+}
+
+namespace
+{
+void HaloPoint(const BMD& model, const vec34_t* bones, int bone, bool world, vec3_t result)
+{
+    for (int axis = 0; axis < 3; ++axis)
+        result[axis] = world ? bones[bone][axis][3] : bones[bone][axis][3] * model.BodyScale + model.BodyOrigin[axis];
+}
+
+float CheckHaloScreenSample(const OBJECT& object, BMD& model, vec34_t* bones, const CameraState& camera, bool world)
+{
+    namespace Presentation = Data::Monsters::ServiceNpcPresentation;
+    auto original = std::make_unique<vec34_t[]>(MAX_BONES);
+    std::memcpy(original.get(), bones, MAX_BONES * sizeof(vec34_t));
+    vec3_t pelvis, chest, torso, halo;
+    HaloPoint(model, bones, 2, world, pelvis);
+    HaloPoint(model, bones, 18, world, chest);
+    for (int axis = 0; axis < 3; ++axis)
+        torso[axis] = (pelvis[axis] + chest[axis]) * 0.5f;
+    HaloPoint(model, bones, Presentation::AriaHaloBone, world, halo);
+    float torsoX, torsoY, haloX, haloY;
+    REQUIRE(CameraProjection::WorldToWindowPixel(camera, torso, &torsoX, &torsoY));
+    REQUIRE(CameraProjection::WorldToWindowPixel(camera, halo, &haloX, &haloY));
+    const float beforeError = std::abs(torsoX - haloX);
+    const float height = halo[2];
+    REQUIRE(Render::Characters::ServiceNpcHalo::Align(object, model, bones, camera, world));
+    HaloPoint(model, bones, Presentation::AriaHaloBone, world, halo);
+    REQUIRE(CameraProjection::WorldToWindowPixel(camera, halo, &haloX, &haloY));
+    CHECK(std::abs(torsoX - haloX) < 0.03f);
+    CHECK(haloY < torsoY);
+    CHECK(halo[2] == height);
+    for (int bone = 0; bone < Presentation::AriaHaloBone; ++bone)
+        CHECK(std::memcmp(bones[bone], original[bone], sizeof(vec34_t)) == 0);
+    const float alignedX = bones[Presentation::AriaHaloBone][0][3];
+    const float alignedY = bones[Presentation::AriaHaloBone][1][3];
+    REQUIRE(Render::Characters::ServiceNpcHalo::Align(object, model, bones, camera, world));
+    CHECK(bones[Presentation::AriaHaloBone][0][3] == alignedX);
+    CHECK(bones[Presentation::AriaHaloBone][1][3] == alignedY);
+    return beforeError;
+}
+} // namespace
+
+TEST_CASE("Service NPC halo: final perspective centers the actual mesh at screen edges [service-npc]")
+{
+    if (!HasPrivateAssets())
+        return;
+    namespace Presentation = Data::Monsters::ServiceNpcPresentation;
+    MonsterRecorder::LoadScope load(0);
+    load.Run([] { OpenMonsterModel(MONSTER_MODEL_SERVICE_ARIA); });
+    BMD& model = Models[Presentation::AriaBodyModel];
+    auto bones = std::make_unique<vec34_t[]>(MAX_BONES);
+    OBJECT object;
+    object.Kind = KIND_NPC;
+    object.Type = Presentation::AriaBodyModel;
+    float maximumBeforeError = 0.f;
+    for (const bool world : {false, true})
+        for (const float scale : {0.7f, 1.f, 1.5f})
+            for (const float side : {-600.f, 0.f, 600.f})
+                for (const float facing : {0.f, 90.f, 180.f, 270.f})
+                    for (const float yaw : {-20.f, 0.f, 20.f})
+                    {
+                        const CameraState camera = HaloCamera(yaw);
+                        model.BodyScale = scale;
+                        Vector(side, 0.f, 0.f, model.BodyOrigin);
+                        for (int action = 0; action < model.NumActions; ++action)
+                        {
+                            model.CurrentAction = static_cast<unsigned short>(action);
+                            for (float frame = 0.f; frame < model.Actions[action].NumAnimationKeys; frame += 0.5f)
+                            {
+                                vec3_t angle = {0.f, 0.f, facing}, head = {64.f, 16.f, 0.f};
+                                model.Animation(bones.get(), frame, frame, model.CurrentAction, angle, head, false,
+                                                world);
+                                maximumBeforeError =
+                                    std::max(maximumBeforeError,
+                                             CheckHaloScreenSample(object, model, bones.get(), camera, world));
+                            }
+                        }
+                    }
+    CHECK(maximumBeforeError > 20.f);
+    MESSAGE("maximum uncorrected screen error: ", maximumBeforeError);
+}
+
+TEST_CASE("Service NPC halo: invalid views and unrelated models remain unchanged [service-npc]")
+{
+    namespace Presentation = Data::Monsters::ServiceNpcPresentation;
+    OBJECT object;
+    object.Kind = KIND_NPC;
+    object.Type = Presentation::AriaBodyModel;
+    BMD model;
+    model.NumBones = Presentation::AriaHaloBone + 1;
+    model.BodyScale = 1.f;
+    Vector(0.f, 0.f, 0.f, model.BodyOrigin);
+    auto bones = std::make_unique<vec34_t[]>(MAX_BONES);
+    const CameraState unset;
+    CHECK_FALSE(Render::Characters::ServiceNpcHalo::Align(object, model, bones.get(), unset, false));
+    CameraState behind = HaloCamera();
+    for (int axis = 0; axis < 3; ++axis)
+        behind.Matrix[2][axis] = -behind.Matrix[2][axis];
+    behind.Matrix[2][3] = -behind.Matrix[2][3];
+    CHECK_FALSE(Render::Characters::ServiceNpcHalo::Align(object, model, bones.get(), behind, false));
+    object.Type = MODEL_PLAYER;
+    CHECK_FALSE(Render::Characters::ServiceNpcHalo::Align(object, model, bones.get(), HaloCamera(), false));
+    model.NumBones = 0;
 }

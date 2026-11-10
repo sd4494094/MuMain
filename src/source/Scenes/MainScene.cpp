@@ -9,6 +9,7 @@
 #include "Engine/Object/EditObjects.h"
 #include "UI/Chat/Chat.h"
 #include "MainScene.h"
+#include "Render/Characters/ServiceNpcEffects.h"
 #include "SceneCommon.h"
 #include "Camera/CameraUtility.h"
 #include "Render/Textures/ZzzOpenglUtil.h"
@@ -361,6 +362,7 @@ static void UpdateMainSceneView()
                    static_cast<float>(viewport.height) / WindowHeight);
     CameraProjection::ScreenToWorldRay(g_Camera, MouseX, MouseY, MouseTarget);
     CullWorld();
+    Render::Characters::ServiceNpcEffects::UpdateHalosForView(g_Camera);
     // The frame's lights, from every light the update added; the draw only shows them.
     AddFrameHistoryLights();
 }
