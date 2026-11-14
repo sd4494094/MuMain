@@ -457,3 +457,14 @@ mu_add_test(
         ${CMAKE_SOURCE_DIR}/src/source/Render/Sprites/GlobalBitmapLoad.cpp
     LINK_LIBS MuClient
 )
+
+mu_add_test(
+    NAME magic_skeleton_cloth_tests
+    SOURCES
+        test_magic_skeleton_cloth.cpp
+        ${CMAKE_SOURCE_DIR}/src/source/App/Platform/Windows/Winmain.cpp
+    LINK_LIBS MuClient
+)
+target_compile_definitions(magic_skeleton_cloth_tests PRIVATE
+    MU_TEST_DATA_DIR="${CMAKE_SOURCE_DIR}/src/bin/Data"
+)

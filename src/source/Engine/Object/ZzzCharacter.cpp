@@ -6,6 +6,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include "stdafx.h"
+#include "Engine/Object/MagicSkeletonCloth.h"
 #include "Core/Utilities/Random.h"
 #include <execution>
 #include <algorithm>
@@ -9426,19 +9427,7 @@ void UpdateCharacterCloth(CHARACTER* c)
         monster == MONSTER_MAGIC_SKELETON_5 || monster == MONSTER_MAGIC_SKELETON_6 ||
         monster == MONSTER_MAGIC_SKELETON_7)
     {
-        if (!o->m_pCloth)
-        {
-            auto* pCloth = new CPhysicsClothMesh[1];
-            pCloth[0].Create(o, 2, 18, PCT_HEAVY);
-            pCloth[0].AddCollisionSphere(0.0f, 0.0f, 0.0f, 50.0f, 18);
-            pCloth[0].AddCollisionSphere(0.0f, -20.0f, 0.0f, 30.0f, 18);
-            o->m_pCloth = (void*)pCloth;
-            o->m_byNumCloth = 1;
-        }
-        if (!((CPhysicsCloth*)o->m_pCloth)[0].Move2(0.005f, 5))
-        {
-            DeleteCloth(c, o);
-        }
+        Engine::Object::MagicSkeletonCloth::Update(*c);
     }
     else if (c->MonsterIndex == MONSTER_MEGA_CRUST || c->MonsterIndex == MONSTER_ALPHA_CRUST ||
              c->MonsterIndex == MONSTER_OMEGA_WING)

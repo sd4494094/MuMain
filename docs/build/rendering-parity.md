@@ -187,3 +187,13 @@ Bind Pipe:<pipeline> Samp:<sampler> VU:<vertex> FU:<fragment>
 2D Merge:<count> Glyph upload:<count>
 Skin GPU:<submitted> CPU-ineligible:<cpu> Failed:<failed>
 ```
+
+
+## Blood Castle robe regression check
+
+After updating the client, enter Blood Castle and approach the broken bridge
+until the Magic Skeletons become visible. Their first appearance must not close
+the client. Keep two or more skeletons in view, move between them, and check
+that each robe stays attached to its own monster. Repeat after leaving and
+re-entering the event. Record native Windows results separately from automated
+cloth tests; those tests do not exercise the live event or GPU driver.
