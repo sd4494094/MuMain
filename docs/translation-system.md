@@ -572,3 +572,24 @@ data files, two commits are the headlines:
 The leftover binary `text.bmd` / `NPCDialogue.bmd` / per-language
 `Dialog_*.bmd` files are pure data; nothing in the C++ source loads them
 anymore.
+
+## Player character names
+
+The character creation field accepts ASCII letters, digits and BMP Han
+characters (U+3400–U+4DBF, U+4E00–U+9FFF), with at least three characters.
+The existing OpenMU protocol holds **ten UTF-8 bytes** for a name, so a pure
+Chinese name can contain three Han characters, an ASCII name ten characters,
+and mixed names must fit the same byte budget. Four or five Han characters
+require a coordinated protocol extension across creation, chat, parties,
+guilds and friends.
+
+The RmlUi input bounds keyboard and pasted text through its data-model setter,
+removing incomplete UTF-8 suffixes at the byte boundary. Both bundled themes
+also declare a ten-character maxlength, and creation validates the complete
+model value before copying it into the legacy submit buffer. Validation
+messages are localized through Game resources. Guild naming remains unchanged.
+
+The server must permit Han characters as well: fresh Season Six initialization
+does so, while existing OpenMU configurations use the optional Allow Chinese
+character names update. It preserves customized naming policies. Servers with
+a custom regex may still reject a name allowed by the default client.

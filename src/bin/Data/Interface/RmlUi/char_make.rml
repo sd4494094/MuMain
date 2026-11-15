@@ -56,7 +56,7 @@
 		     g_pSingleTextInputBox->GiveFocus() -- ElementDocument::Show()'s FocusFlag::Auto picks it
 		     up. maxlength comes from C++ (ApplyNameLimit()). Replaces #input_text_anchor, which only
 		     existed so C++ could position a native widget over this frame. -->
-		<input id="char_name" type="text" class="text-field char-make-name-field"
+		<input id="char_name" type="text" maxlength="10" class="text-field char-make-name-field"
 		       data-value="char_name" autofocus/>
 
 		<div id="btn_ok" class="btn btn-ok" data-event-click="charmake_ok_click"><span class="btn-text text-fit">{{ok_label}}</span></div>

@@ -403,7 +403,7 @@ void CMsgWin::PopUp(int nMsgCode, wchar_t* pszMsg)
         lpszMsg = I18N::Game::ThisIsABlockedCharacter;
         break;
     case MESSAGE_MIN_LENGTH:
-        lpszMsg = I18N::Game::TypeMoreThan4Letters;
+        lpszMsg = I18N::Game::CharacterNameRequirements;
         break;
     case MESSAGE_ID_SPACE_ERROR:
         lpszMsg = I18N::Game::ItContainsProhibitedWords;

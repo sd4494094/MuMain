@@ -9478,4 +9478,7 @@
   <data name="AriaGuideAnywhere" xml:space="preserve"><value>身在其他地图，也能与我交谈。问答只在你的聊天栏显示。请等我回答后，再继续提问。</value></data>
   <data name="AriaGuideAliasesHeading" xml:space="preserve"><value>也可使用：</value></data>
   <data name="AriaGuideAliases" xml:space="preserve"><value>/aria、/艾莉雅、/小助理</value></data>
+  <data name="CharacterNameRequirements" xml:space="preserve">
+    <value>请输入3至10个汉字、字母或数字；最多10字节，纯中文最多3字。</value>
+  </data>
 </root>

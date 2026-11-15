@@ -23,6 +23,8 @@
 #include "App/Platform/Windows/Local.h"
 #include "CharacterManager.h"
 #include "ClassStep.h"
+#include "CharacterName.h"
+#include "UI/RmlBridge/RmlCharacterNameInput.h"
 
 #include <algorithm>
 #include <array>
@@ -41,8 +43,6 @@
 
 namespace
 {
-    constexpr std::size_t kMinCharacterNameLength = 4;
-
     // A class's name, indexed by CLASS_*.
     const wchar_t* const* const kJobNames[] = {
         &I18N::Game::DarkWizard, &I18N::Game::DarkKnight, &I18N::Game::Elf,        &I18N::Game::MagicGladiator,
@@ -136,11 +136,6 @@ namespace
             return { false, 0.0f, 0.0f, 0.0f, 6.0f, 0.0f, 0.0f };
         }
     }
-
-    // Character-name length cap, the same limit the native CUITextInputBox was configured with
-    // (textLimit = 10). Set on the <input> from ApplyNameLimit() rather than written into each
-    // theme's .rml, and reused when copying into the legacy InputText[0] buffer.
-    constexpr int kCharNameMaxLength = 10;
 }
 
 void MoveCharacterCamera(vec3_t Origin, vec3_t Position, vec3_t Angle);
@@ -225,7 +220,7 @@ void CCharMakeWin::BindRmlModel(Rml::DataModelConstructor& c, CharMakeRmlModel& 
     c.Bind("desc_line2", &model.descLine2);
     c.Bind("ok_label", &model.okLabel);
     c.Bind("cancel_label", &model.cancelLabel);
-    c.Bind("char_name", &model.charName);
+    UI::RmlBridge::BindCharacterNameInput(c, model.charName);
     c.Bind("name_label", &model.nameLabel);
     c.Bind("class_label", &model.classLabel);
     c.Bind("attributes_label", &model.attributesLabel);
@@ -248,14 +243,14 @@ void CCharMakeWin::OnRmlReloaded()
     UpdateDisplay();
 }
 
-// Caps the <input>'s own edit buffer at the same limit the native CUITextInputBox was configured
-// with. Set from here rather than written into each theme's .rml so it can't drift per theme.
+// RmlUi counts characters; the data-model setter additionally limits UTF-8 bytes.
+// afterBuild also runs when changing themes, including custom theme markup.
 void CCharMakeWin::ApplyNameLimit()
 {
     if (!m_RmlView.Document()) return;
 
     if (Rml::Element* field = m_RmlView.Document()->GetElementById("char_name"))
-        field->SetAttribute("maxlength", kCharNameMaxLength);
+        field->SetAttribute("maxlength", static_cast<int>(Character::MaximumNameBytes));
 }
 
 void CCharMakeWin::Release()
@@ -421,23 +416,21 @@ bool CCharMakeWin::Update()
 
 void CCharMakeWin::RequestCreateCharacter()
 {
-    // Hand the RmlUi-owned value to the legacy buffer the validation/submit path below still reads,
-    // so CheckSpecialText()/SendCreateCharacter() keep their existing contract.
-    const std::wstring typedName = StringUtils::NarrowToWide(m_RmlView.GetModel().charName);
-    wcsncpy(InputText[0], typedName.c_str(), kCharNameMaxLength);
-    InputText[0][kCharNameMaxLength] = L'\0';
-
     CSceneUICoordinator& rUIMng = CSceneUICoordinator::Instance();
-
-    const std::wstring characterName = InputText[0];
-
-    // todo: check with regex from server
-    if (characterName.length() < kMinCharacterNameLength)
+    const auto& name = m_RmlView.GetModel().charName;
+    if (!Character::IsValidName(name))
+    {
         rUIMng.PopUpMsgWin(MESSAGE_MIN_LENGTH);
-    else if (::CheckName())
+        return;
+    }
+
+    // Validate before copying: never silently submit a different, truncated name.
+    const std::wstring typedName = StringUtils::NarrowToWide(name);
+    std::copy(typedName.begin(), typedName.end(), InputText[0]);
+    InputText[0][typedName.size()] = L'\0';
+
+    if (::CheckName())
         rUIMng.PopUpMsgWin(MESSAGE_ID_SPACE_ERROR);
-    else if (CheckSpecialText(InputText[0]))
-        rUIMng.PopUpMsgWin(MESSAGE_SPECIAL_NAME);
     else
     {
         const auto classByte = static_cast<CharacterClassNumber>((CharacterView.Class << 2) + CharacterView.Skin);

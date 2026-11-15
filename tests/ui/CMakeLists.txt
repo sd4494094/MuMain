@@ -498,3 +498,11 @@ target_compile_definitions(reset_npc_menu_tests PRIVATE
     MU_RMLUI_DIR="${CMAKE_SOURCE_DIR}/src/bin/Data/Interface/RmlUi"
     MU_FONT_DIR="${CMAKE_SOURCE_DIR}/src/bin/fonts"
 )
+
+mu_add_test(
+    NAME character_name_input_tests
+    SOURCES
+        test_character_name_input.cpp
+        ${CMAKE_SOURCE_DIR}/src/source/UI/RmlBridge/RmlCharacterNameInput.cpp
+    LINK_LIBS RmlUi::Core
+)

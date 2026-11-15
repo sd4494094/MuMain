@@ -19,7 +19,7 @@
 
 		<img id="preview" class="awaiting-frame"/>
 
-		<input id="char_name" type="text" class="text-field char-make-name-field"
+		<input id="char_name" type="text" maxlength="10" class="text-field char-make-name-field"
 		       data-value="char_name" autofocus/>
 
 		<div class="class-name" data-for="job : jobs" data-if="job.checked">{{job.label}}</div>
