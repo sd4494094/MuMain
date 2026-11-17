@@ -9473,4 +9473,16 @@ Press Enter again to send.</value></data>
   <data name="CharacterNameRequirements" xml:space="preserve">
     <value>Use 3-10 letters, digits or Chinese characters (max 10 UTF-8 bytes; 3 Chinese characters).</value>
   </data>
+  <data name="BloodCastleDestroyGate" xml:space="preserve">
+    <value>Destroy the castle gate</value>
+  </data>
+  <data name="BloodCastleDestroyStatue" xml:space="preserve">
+    <value>Destroy the crystal statue</value>
+  </data>
+  <data name="BloodCastlePickUpWeapon" xml:space="preserve">
+    <value>Pick up the archangel weapon</value>
+  </data>
+  <data name="BloodCastleReturnWeapon" xml:space="preserve">
+    <value>Return the archangel weapon</value>
+  </data>
 </root>

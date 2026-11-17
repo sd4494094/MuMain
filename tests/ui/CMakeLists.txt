@@ -506,3 +506,11 @@ mu_add_test(
         ${CMAKE_SOURCE_DIR}/src/source/UI/RmlBridge/RmlCharacterNameInput.cpp
     LINK_LIBS RmlUi::Core
 )
+
+mu_add_test(
+    NAME blood_castle_objective_tests
+    SOURCES
+        test_blood_castle_objective.cpp
+        ${CMAKE_SOURCE_DIR}/src/source/App/Platform/Windows/Winmain.cpp
+    LINK_LIBS MuClient
+)

@@ -5,8 +5,11 @@
 #pragma once
 
 #include "UI/Core/WindowObject.h"
+#include "GameLogic/Events/BloodCastleObjective.h"
 #include "UI/Events/EventTimerView.h"
 #include "UI/Core/WindowManager.h"
+
+#include <string>
 
 namespace mu::ui::window
 {
@@ -33,11 +36,6 @@ private:
         BC_TIME_STATE_IMMINENCE,
     };
 
-    enum
-    {
-        MAX_KILL_MONSTER = 65535,
-    };
-
 private:
     CManager* m_pNewUIMng;
 
@@ -45,8 +43,9 @@ private:
     wchar_t m_szTime[256]; // 시간
     int m_iTime;           // 시간
     int m_iTimeState;      // 시간상태( 기본, 임박 )
-    int m_iMaxKillMonster; // 죽여야하는 몬스터숫자
-    int m_iKilledMonster;  // 현재 죽인 몬스터숫자
+    GameLogic::Events::BloodCastleObjective m_Objective;
+    std::wstring m_ObjectiveText;
+    std::string m_ObjectiveLocale;
     EventTimerView m_View{"blood_castle_time", "Data/Interface/RmlUi/blood_castle_time.rml"};
 
 public:
@@ -75,7 +74,7 @@ private:
 
 public:
     void SetTime(int m_iTime);
-    void SetKillMonsterStatue(int iKilled, int iMaxKill);
+    void SetObjective(const GameLogic::Events::BloodCastleObjective& objective);
 };
 }
 

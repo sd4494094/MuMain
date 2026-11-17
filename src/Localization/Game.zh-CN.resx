@@ -9481,4 +9481,16 @@
   <data name="CharacterNameRequirements" xml:space="preserve">
     <value>请输入3至10个汉字、字母或数字；最多10字节，纯中文最多3字。</value>
   </data>
+  <data name="BloodCastleDestroyGate" xml:space="preserve">
+    <value>摧毁城门</value>
+  </data>
+  <data name="BloodCastleDestroyStatue" xml:space="preserve">
+    <value>摧毁水晶圣像</value>
+  </data>
+  <data name="BloodCastlePickUpWeapon" xml:space="preserve">
+    <value>拾取大天使武器</value>
+  </data>
+  <data name="BloodCastleReturnWeapon" xml:space="preserve">
+    <value>归还大天使武器</value>
+  </data>
 </root>

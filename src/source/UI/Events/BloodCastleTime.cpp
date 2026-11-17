@@ -3,6 +3,7 @@
 #include "World/MapInfra/MapManager.h"
 #include "UI/Events/EventPreview.h"
 #include "UI/Events/BloodCastleTime.h"
+#include "UI/Events/BloodCastleObjectiveText.h"
 #include "UI/Core/WindowSystem.h"
 #include "GameLogic/Events/MatchEvent.h"
 #include "I18N/All.h"
@@ -22,8 +23,6 @@ CBloodCastle::CBloodCastle()
     // whatever the buffer held.
     m_szTime[0] = L'\0';
     m_iTimeState = BC_TIME_STATE_NORMAL;
-    m_iMaxKillMonster = MAX_KILL_MONSTER;
-    m_iKilledMonster = 0;
 }
 
 CBloodCastle::~CBloodCastle()
@@ -104,21 +103,10 @@ void CBloodCastle::SyncView()
     // The original's Render(): the kill count once a target was received, "Time left", the time.
     const bool shown =
         IsVisible() && (g_csMatchInfo != NULL || UI::EventPreview::IsShowing(UI::EventPreview::Event::BloodCastle));
-    std::wstring kills;
-    if (shown)
-    {
-        if (m_iMaxKillMonster != MAX_KILL_MONSTER)
-        {
-            wchar_t szText[256] = {};
-            if (g_csMatchInfo != NULL && g_csMatchInfo->GetMatchType() == 5)
-                mu_swprintf(szText, I18N::Game::MagicSkeletonDD, m_iKilledMonster, m_iMaxKillMonster);
-            else
-                mu_swprintf(szText, I18N::Game::MonsterDD, m_iKilledMonster, m_iMaxKillMonster);
-            kills = szText;
-        }
-    }
+    // Refresh the localized objective only when its state or the UI language changes.
+    SetObjective(m_Objective);
     // the theme's colours, the time turning imminent under five minutes.
-    m_View.Sync(shown, {kills, "normal"}, {I18N::Game::TimeLeft, "normal"},
+    m_View.Sync(shown, {m_ObjectiveText, "normal"}, {I18N::Game::TimeLeft, "normal"},
                 {m_szTime, m_iTimeState == BC_TIME_STATE_IMMINENCE ? "imminent" : "normal"});
 }
 
@@ -157,8 +145,12 @@ void CBloodCastle::SetTime(int iTime)
     }
 }
 
-void CBloodCastle::SetKillMonsterStatue(int iKilled, int iMaxKill)
+void CBloodCastle::SetObjective(const GameLogic::Events::BloodCastleObjective& objective)
 {
-    m_iKilledMonster = iKilled;
-    m_iMaxKillMonster = iMaxKill;
+    const char* locale = I18N::GetCurrentLocale();
+    if (m_Objective == objective && m_ObjectiveLocale == locale)
+        return;
+    m_Objective = objective;
+    m_ObjectiveLocale = locale;
+    m_ObjectiveText = UI::Events::FormatBloodCastleObjective(objective);
 }

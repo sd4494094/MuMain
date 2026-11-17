@@ -8,6 +8,7 @@
 #pragma once
 
 #include "CSEventMatch.h"
+#include "BloodCastleObjective.h"
 
 namespace SEASON3B
 {
@@ -22,6 +23,14 @@ public:
     virtual void SetMatchResult(const int iNumDevil, const int iMyRank, const MatchResult* pMatchResult,
                                 const int Success = false);
     virtual void CollectMatchResult(std::vector<MatchResultLine>& lines) const;
+    const GameLogic::Events::BloodCastleObjective& GetObjective() const
+    {
+        return m_Objective;
+    }
+
+private:
+    void UpdateMatchState(const PRECEIVE_MATCH_GAME_STATE& data);
+    GameLogic::Events::BloodCastleObjective m_Objective;
 };
 }; // namespace SEASON3B
 

@@ -467,3 +467,12 @@ a wrapper:
 Reuse a listed mechanism within its scope. When a new mechanism proves useful across consumers,
 add its purpose, essential constraints and a working reference here. Keep configuration fields
 in headers, engine quirks in Engine Findings, and migration history in the migration ledger.
+
+
+### Blood Castle objective timer
+
+The Blood Castle timer keeps its existing position, theme and countdown. Its first line follows
+the current objective: monster kill progress, destroy the gate, magic skeleton kill progress,
+destroy the crystal statue, pick up the archangel weapon, then return the weapon. A completed
+kill phase no longer displays a misleading `0/0` monster target. The weapon prompt follows the
+server's item and carrier state, including dropping it again after its carrier leaves.

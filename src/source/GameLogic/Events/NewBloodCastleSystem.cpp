@@ -42,24 +42,11 @@ void CNewBloodCastleSystem::SetMatchGameCommand(const LPPRECEIVE_MATCH_GAME_STAT
         PlayBuffer(SOUND_BLOODCASTLE, NULL, true);
 
     case 1:
-        SetMatchInfo(data->m_byPlayState + 1, 15 * 60, data->m_wRemainSec, data->m_wMaxKillMonster, data->m_wCurKillMonster);
-
-        if (data->m_wIndex != 65535 && data->m_byItemType != 255 && data->m_byItemType != 0)
-        {
-            WORD Key = data->m_wIndex;
-            Key &= 0x7FFF;
-
-            int  index = HangerBloodCastleQuestItem(Key);
-            CHARACTER* c = &CharactersClient[index];
-
-            if (c != NULL)
-            {
-                c->EtcPart = data->m_byItemType;
-            }
-        }
+        UpdateMatchState(*data);
         break;
 
     case 2:
+        m_Objective = {};
         clearMatchInfo();
         StopBuffer(SOUND_BLOODCASTLE, true);
 
@@ -69,23 +56,32 @@ void CNewBloodCastleSystem::SetMatchGameCommand(const LPPRECEIVE_MATCH_GAME_STAT
         SetActionObject(gMapManager.WorldActive, 36, 20, 1.f);
         break;
     case 4:
-        SetMatchInfo(data->m_byPlayState + 1, 15 * 60, data->m_wRemainSec, data->m_wMaxKillMonster, data->m_wCurKillMonster);
-
-        if (data->m_wIndex != 65535 && data->m_byItemType != 255 && data->m_byItemType != 0)
-        {
-            WORD Key = data->m_wIndex;
-            Key &= 0x7FFF;
-
-            int  index = HangerBloodCastleQuestItem(Key);
-            CHARACTER* c = &CharactersClient[index];
-
-            if (c != NULL)
-            {
-                c->EtcPart = data->m_byItemType;
-            }
-        }
+        UpdateMatchState(*data);
         break;
     }
+}
+
+void CNewBloodCastleSystem::UpdateMatchState(const PRECEIVE_MATCH_GAME_STATE& data)
+{
+    constexpr int kLegacyMatchDuration = 15 * 60;
+    SetMatchInfo(data.m_byPlayState + 1, kLegacyMatchDuration, data.m_wRemainSec, data.m_wMaxKillMonster,
+                 data.m_wCurKillMonster);
+    m_Objective = GameLogic::Events::BloodCastleObjective::FromState(
+        data.m_byPlayState, data.m_wMaxKillMonster, data.m_wCurKillMonster, data.m_byItemType, data.m_wIndex);
+
+    // No weapon owner is sent as 0x00FF by OpenMU or 0xFFFF by original servers.
+    constexpr WORD kOpenMuNoOwner = 0x00FF;
+    constexpr WORD kOriginalNoOwner = 0xFFFF;
+    constexpr BYTE kFirstQuestWeapon = 1;
+    constexpr BYTE kLastQuestWeapon = 3;
+    if (data.m_wIndex == kOpenMuNoOwner || data.m_wIndex == kOriginalNoOwner || data.m_byItemType < kFirstQuestWeapon ||
+        data.m_byItemType > kLastQuestWeapon || CharactersClient == nullptr)
+        return;
+
+    constexpr WORD kObjectIndexMask = 0x7FFF;
+    const int index = HangerBloodCastleQuestItem(data.m_wIndex & kObjectIndexMask);
+    if (index >= 0 && index < MAX_CHARACTERS_CLIENT)
+        CharactersClient[index].EtcPart = data.m_byItemType;
 }
 
 void CNewBloodCastleSystem::RenderMatchTimes(void)
@@ -106,7 +102,7 @@ void CNewBloodCastleSystem::RenderMatchTimes(void)
                 }
 
                 g_pBloodCastle->SetTime(m_iMatchTime);
-                g_pBloodCastle->SetKillMonsterStatue(m_iKillMonster, m_iMaxKillMonster);
+                g_pBloodCastle->SetObjective(m_Objective);
             }
             break;
 

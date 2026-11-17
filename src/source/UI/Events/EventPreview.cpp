@@ -116,7 +116,7 @@ void SetWindowShown(DWORD window, bool shown)
 void SeedBloodCastle()
 {
     g_pBloodCastle->SetTime(8 * 60 + 15);
-    g_pBloodCastle->SetKillMonsterStatue(23, 40);
+    g_pBloodCastle->SetObjective({GameLogic::Events::BloodCastleObjective::Phase::KillMonsters, 23, 40});
 }
 
 void SeedChaosCastle()
