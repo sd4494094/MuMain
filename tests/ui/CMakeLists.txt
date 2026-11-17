@@ -514,3 +514,10 @@ mu_add_test(
         ${CMAKE_SOURCE_DIR}/src/source/App/Platform/Windows/Winmain.cpp
     LINK_LIBS MuClient
 )
+
+mu_add_test(
+    NAME jewel_mix_materials_tests
+    SOURCES
+        test_jewel_mix_materials.cpp
+        ${CMAKE_SOURCE_DIR}/src/source/GameLogic/Items/JewelMixMaterials.cpp
+)

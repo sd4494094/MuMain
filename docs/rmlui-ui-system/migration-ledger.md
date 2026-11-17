@@ -215,3 +215,13 @@ A mismatch between a drawn control and its native rectangle can let world click 
 character selection. `Core::Input::IsMouseOverUI()` supplements matching geometry rather than
 replacing it. Prefer drawn-box readback for new integrations; see
 [Layout, Anchoring & Scaling](layout-and-scaling.md#data-driven-geometry-and-native-companions).
+
+
+### Lahap whole-bundle combining
+
+Combining now recognizes loose jewels and smaller bundles of the selected jewel
+type in the main and expanded inventory. For example, three x10 bundles or an x20
+plus x10 can make x30. Materials must fill the target exactly; larger or already
+target-size bundles are not split or repacked. Extra materials stay untouched.
+The matching OpenMU server update is required. Unmix selection and the existing
+conversation window are unchanged.

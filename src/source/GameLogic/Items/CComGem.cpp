@@ -1,5 +1,6 @@
 ﻿#include "stdafx.h"
 #include "GameLogic/Items/CComGem.h"
+#include "GameLogic/Items/JewelMixMaterials.h"
 #include "Render/Textures/ZzzOpenglUtil.h"
 #include "Render/Textures/ZzzTexture.h"
 #include "I18N/All.h"
@@ -51,6 +52,34 @@ BYTE m_cPercent = 0;
 namespace
 {
 GameLogic::Items::JewelUnmixSelection unmixSelection;
+
+bool HasCombineMaterials()
+{
+    if (GetInventoryCtrl() == nullptr || m_cGemType < eBLESS || m_cGemType > eUPPER || (m_cGemType & 1))
+        return false;
+
+    int singles = 0;
+    int tenBundles = 0;
+    int twentyBundles = 0;
+    for (int slot = MAX_EQUIPMENT_INDEX; slot < MAX_MY_INVENTORY_EX_INDEX; ++slot)
+    {
+        const ITEM* item = UI::Inventory::FindPlayerItem(slot);
+        if (!item)
+            continue;
+
+        const int kind = Check_Jewel(item->Type);
+        if (kind == m_cGemType)
+            ++singles;
+        else if (kind == m_cGemType + 1)
+        {
+            if (item->Level == 0)
+                ++tenBundles;
+            else if (item->Level == 1)
+                ++twentyBundles;
+        }
+    }
+    return GameLogic::Items::CanCombineJewels(singles, tenBundles, twentyBundles, m_cComType);
+}
 
 bool MatchesSelectedUnmixItem(const ITEM* item)
 {
@@ -176,37 +205,16 @@ bool COMGEM::CheckMyInvValid()
 
     if (m_bType == ATTACH)
     {
-        if (GetInventoryCtrl() == nullptr)
+        if (!HasCombineMaterials())
         {
             m_cErr = COMERROR_NOTALLOWED;
-            m_cPercent = 0;
             return false;
         }
 
-        for (int slot = MAX_EQUIPMENT_INDEX; slot < MAX_MY_INVENTORY_EX_INDEX; ++slot)
-        {
-            const ITEM* pItem = UI::Inventory::FindPlayerItem(slot);
-            if (!pItem)
-            {
-                continue;
-            }
-
-            if (m_cGemType == Check_Jewel_Unit(pItem->Type))
-                ++m_cCount;
-
-            if (m_cCount == m_cComType)
-            {
-                m_cPercent = 100;
-                CalcGen();
-                return true;
-            }
-        }
-        if ((m_cCount < m_cComType) || (m_cComType == NOCOM))
-        {
-            m_cPercent = 0;
-            m_cErr = COMERROR_NOTALLOWED;
-            return false;
-        }
+        m_cCount = m_cComType;
+        m_cPercent = 100;
+        CalcGen();
+        return true;
     }
     else if (m_bType == DETACH)
     {
